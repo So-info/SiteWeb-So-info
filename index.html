@@ -411,6 +411,188 @@ a.button,button.button,.header-contact,.nav-cta{border-radius:12px!important}
  background:radial-gradient(ellipse at 18% 50%,rgba(255,208,0,.055),transparent 46%)
 }
 .soinfo-approach-clean>*{position:relative;z-index:1}
+
+/* QR code : image locale ajoutée explicitement et affichage forcé */
+.experience-qr-frame{display:flex!important;align-items:center!important;justify-content:center!important;min-width:150px;min-height:150px;background:#fff!important;padding:9px!important;overflow:hidden}
+.experience-qr-frame img{display:block!important;visibility:visible!important;opacity:1!important;width:clamp(125px,12vw,175px)!important;height:auto!important;max-width:100%!important;object-fit:contain!important}
+@media(max-width:620px){.experience-qr-frame{min-width:0;min-height:0}.experience-qr-frame img{width:145px!important}}
+
+/* Carte « Votre expérience compte » placée juste sous la rangée services */
+.experience-review-under-services{
+ width:min(calc(100% - 90px), 1120px)!important;
+ max-width:1120px!important;
+ margin:22px auto 36px!important;
+ padding:0!important;
+}
+.experience-review-under-services .experience-review-card{
+ width:100%!important;max-width:100%!important;margin:0!important;
+}
+@media(max-width:700px){
+ .experience-review-under-services{width:calc(100% - 28px)!important;margin:18px auto 28px!important}
+}
+/* S'assurer que le bloc avis reste après la rangée des cartes de services */
+
+
+/* Carte de contact déplacée sous les trois services ; carte avis reste dans Avis clients */
+.contact-card.contact-under-services,
+.contact-card{
+ box-sizing:border-box;
+}
+.contact-under-services{
+ width:100%!important;
+ max-width:1120px!important;
+ margin:18px auto 30px!important;
+ min-height:0!important;
+ height:auto!important;
+}
+.contact-under-services .contact-options{
+ display:flex;flex-direction:row;flex-wrap:wrap;gap:10px;
+}
+.contact-under-services .contact-options a,
+.contact-under-services .contact-options button{
+ width:auto;min-width:145px;flex:1 1 145px;
+}
+@media(max-width:640px){
+ .contact-under-services{width:calc(100% - 28px)!important;margin:16px auto 24px!important}
+ .contact-under-services .contact-options{flex-direction:column}
+ .contact-under-services .contact-options a,
+ .contact-under-services .contact-options button{width:100%;flex:auto}
+}
+/* Le bloc de contact doit prendre la largeur du contenu, sous les cartes services */
+.experience-review-under-services{width:auto!important;max-width:none!important;margin:0!important}
+
+
+/* Barre de navigation SO INFO — version plus dynamique et premium */
+.topbar{
+  height:78px;
+  background:rgba(7,7,7,.88);
+  border-bottom:1px solid rgba(255,208,0,.18);
+  box-shadow:0 8px 28px rgba(0,0,0,.18);
+  -webkit-backdrop-filter:blur(18px) saturate(145%);
+  backdrop-filter:blur(18px) saturate(145%);
+  transition:background .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.topbar::after{
+  content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,208,0,.55),transparent);
+  opacity:.65;pointer-events:none
+}
+.nav{gap:clamp(14px,2vw,28px)}
+.brand{min-width:0;gap:12px;flex-shrink:0}
+.mark{
+  width:47px;height:47px;border-color:rgba(255,208,0,.72);
+  background:radial-gradient(circle at 35% 20%,rgba(255,208,0,.14),transparent 65%);
+  box-shadow:0 0 0 4px rgba(255,208,0,.035),inset 0 1px 0 rgba(255,255,255,.14);
+  transition:transform .25s ease,box-shadow .25s ease
+}
+.brand:hover .mark{transform:rotate(-7deg) scale(1.04);box-shadow:0 0 18px rgba(255,208,0,.18)}
+.brand-name{font-size:1.22rem;letter-spacing:-.055em}
+.brand small{font-size:.46rem;letter-spacing:.15em}
+.navlinks{gap:clamp(13px,1.75vw,25px);font-size:.73rem}
+.navlinks>a:not(.nav-cta){position:relative;padding:10px 0;color:#dedede;transition:color .2s ease}
+.navlinks>a:not(.nav-cta)::after{
+ content:"";position:absolute;left:0;right:100%;bottom:3px;height:2px;
+ border-radius:2px;background:var(--y);transition:right .22s ease
+}
+.navlinks>a:not(.nav-cta):hover{color:#fff}
+.navlinks>a:not(.nav-cta):hover::after{right:0}
+.nav-cta{
+ position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:13px;
+ padding:12px 17px!important;min-height:44px;border:1px solid rgba(255,226,91,.85);
+ border-radius:13px!important;color:#080808!important;
+ background:linear-gradient(145deg,#ffe982 0%,#ffd000 52%,#efbd00 100%);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.72),0 5px 16px rgba(255,208,0,.12);
+ font-size:.75rem;font-weight:900;white-space:nowrap;overflow:hidden;
+ transition:transform .2s ease,box-shadow .2s ease,filter .2s ease
+}
+.nav-cta::before{
+ content:"";position:absolute;z-index:-1;top:-40%;bottom:-40%;left:-70%;width:42%;
+ transform:skewX(-22deg);
+ background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent);
+ transition:left .55s ease
+}
+.nav-cta:hover{transform:translateY(-2px);filter:saturate(1.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 8px 24px rgba(255,208,0,.24)}
+.nav-cta:hover::before{left:140%}
+.nav-cta span{font-size:1rem;transition:transform .2s ease}
+.nav-cta:hover span{transform:translate(2px,-2px)}
+@media(max-width:900px){
+ .topbar{height:72px}
+ .navlinks{gap:14px}
+ .nav-cta{padding:11px 14px!important;min-height:42px}
+}
+@media(max-width:600px){
+ .topbar{height:70px;background:rgba(7,7,7,.92)}
+ .nav{gap:10px}
+ .brand{gap:9px}
+ .mark{width:41px;height:41px}
+ .mark svg{width:29px;height:29px}
+ .brand-name{font-size:1.08rem}
+ .brand small{font-size:.39rem;letter-spacing:.105em}
+ .nav-cta{min-height:43px;padding:10px 13px!important;border-radius:14px!important;font-size:.72rem;gap:8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.72),0 4px 14px rgba(255,208,0,.13)}
+ .nav-cta span{font-size:.9rem}
+}
+@media(prefers-reduced-motion:reduce){
+ .topbar,.mark,.navlinks a,.nav-cta,.nav-cta::before{transition:none!important}
+}
+
+
+/* Carte expérience sans QR code : contenu équilibré */
+.experience-review-card{grid-template-columns:minmax(0,1fr) minmax(220px,.75fr)!important}
+@media(max-width:1000px){.experience-review-card{grid-template-columns:minmax(0,1fr)!important}.experience-review-benefits{grid-column:1!important}}
+
+/* SO INFO — carte « Votre expérience compte » : finition premium */
+.experience-review-card{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border:1px solid rgba(255,208,0,.48)!important;
+  border-radius:22px!important;
+  background:
+    radial-gradient(ellipse at 0% 0%,rgba(255,208,0,.13),transparent 42%),
+    linear-gradient(135deg,rgba(28,27,22,.98),rgba(13,13,13,.98) 58%,rgba(24,21,10,.98))!important;
+  box-shadow:0 18px 45px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.07)!important;
+  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease;
+}
+.experience-review-card::before{
+  content:"";
+  position:absolute;inset:0 0 auto;height:2px;z-index:-1;
+  background:linear-gradient(90deg,transparent,#ffe56b 22%,#ffd000 52%,transparent);
+  opacity:.9;
+}
+.experience-review-card::after{
+  content:"";
+  position:absolute;right:-70px;top:-95px;width:220px;height:220px;
+  border-radius:50%;pointer-events:none;z-index:-1;
+  background:radial-gradient(circle,rgba(255,208,0,.12),transparent 68%);
+}
+.experience-review-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(255,208,0,.72)!important;
+  box-shadow:0 22px 55px rgba(0,0,0,.34),0 0 24px rgba(255,208,0,.06),inset 0 1px 0 rgba(255,255,255,.09)!important;
+}
+.experience-review-card h2,
+.experience-review-card h3{
+  letter-spacing:-.025em;
+}
+.experience-review-card p{
+  line-height:1.65;
+}
+.experience-review-card a{
+  transition:transform .2s ease,filter .2s ease,box-shadow .2s ease;
+}
+.experience-review-card a:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.04);
+  box-shadow:0 8px 22px rgba(255,208,0,.18);
+}
+@media(max-width:700px){
+  .experience-review-card{border-radius:18px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .experience-review-card,.experience-review-card a{transition:none!important}
+  .experience-review-card:hover,.experience-review-card a:hover{transform:none}
+}
+
 </style>
 <style>
 /* Cartes de démonstration pour la section Avis */
@@ -429,14 +611,14 @@ a.button,button.button,.header-contact,.nav-cta{border-radius:12px!important}
 @media(max-width:760px){.review-cards{grid-template-columns:1fr;gap:12px}.review-card{padding:18px}.review-demo-note{display:block}.review-demo-note strong{display:block;margin-bottom:5px}}
 </style>
 </head><body>
-<header class="topbar"><div class="wrap nav"><a aria-label="SO INFO, accueil" class="brand" href="#accueil"><span class="mark"><svg aria-hidden="true" viewbox="0 0 100 100"><path d="M59 8 24 29Q13 36 22 45L52 63 38 72 17 59 8 68 31 84Q39 90 47 84L67 71Q77 64 66 56L38 39 68 21Z" fill="#ffd000"></path><path d="M67 35 84 46Q93 52 84 60L58 78 47 70 72 53 57 44Z" fill="#ffb900"></path></svg></span><span class="brand-name">SO INFO<small>RÉPARATION &amp; MAINTENANCE</small></span></a><nav aria-label="Navigation" class="navlinks"><a href="#services">Services</a><a href="#vehicule">Notre véhicule</a><a href="#methode">Comment ça marche</a><a href="#apropos">À propos</a><a href="#avis">Avis</a><a href="#contact">Contact</a><a class="nav-cta" href="#contact">Contact</a></nav></div></header>
+<header class="topbar"><div class="wrap nav"><a aria-label="SO INFO, accueil" class="brand" href="#accueil"><span class="mark"><svg aria-hidden="true" viewbox="0 0 100 100"><path d="M59 8 24 29Q13 36 22 45L52 63 38 72 17 59 8 68 31 84Q39 90 47 84L67 71Q77 64 66 56L38 39 68 21Z" fill="#ffd000"></path><path d="M67 35 84 46Q93 52 84 60L58 78 47 70 72 53 57 44Z" fill="#ffb900"></path></svg></span><span class="brand-name">SO INFO<small>RÉPARATION &amp; MAINTENANCE</small></span></a><nav aria-label="Navigation" class="navlinks"><a href="#services">Services</a><a href="#vehicule">Notre véhicule</a><a href="#methode">Comment ça marche</a><a href="#apropos">À propos</a><a href="#avis">Avis</a><a class="nav-cta" href="#contact">Parlons-en <span aria-hidden="true">↗</span></a></nav></div></header>
 <main><section class="hero" id="accueil"><div class="wrap hero-inner"><div class="hero-copy"><div class="eyebrow">Assistance informatique<br/>à Argelès-sur-Mer et alentours</div><h1>Un PC qui rame ?<br/><span>On remonte à la source.</span></h1><p>Dépannage, réparation et maintenance pour particuliers. Des solutions claires, un service humain et une intervention adaptée à votre matériel.</p><div class="actions"><a class="btn btn-yellow" href="tel:+33781232763">Appeler SO INFO</a><a class="btn btn-outline" href="#services">Voir les prestations</a></div></div><div class="hero-benefits"><div class="benefit"><span class="benefit-icon"><svg viewbox="0 0 24 24"><path d="m3 11 9-8 9 8M5 10v10h14V10M9 20v-6h6v6"></path></svg></span><div><strong>À domicile</strong><small>Argelès-sur-Mer<br/>et alentours</small></div></div><div class="benefit"><span class="benefit-icon"><svg viewbox="0 0 24 24"><rect height="13" rx="2" width="18" x="3" y="4"></rect><path d="M8 21h8M12 17v4M9 9l3-2 3 2M12 7v5"></path></svg></span><div><strong>Assistance à distance</strong><small>Une solution rapide<br/>et sécurisée</small></div></div><div class="benefit"><span class="benefit-icon"><svg viewbox="0 0 24 24"><path d="m12 3 8 3v5c0 5-3 8-8 10-5-2-8-5-8-10V6z"></path><path d="m8 12 2.5 2.5L16 9"></path></svg></span><div><strong>Diagnostic clair</strong><small>Des explications simples<br/>et sans jargon</small></div></div><div class="benefit"><span class="benefit-icon"><svg viewbox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M3 20v-2a6 6 0 0 1 12 0v2M16 15a5 5 0 0 1 5 5"></path></svg></span><div><strong>Un interlocuteur local</strong><small>Un service humain<br/>et de proximité</small></div></div></div></div></section>
 <section class="vehicle-feature" id="vehicule"><div class="wrap vehicle-grid"><img alt="Fourgon noir et jaune aux couleurs de SO INFO, réparation et maintenance informatique" class="vehicle-photo" height="1086" loading="lazy" src="assets/fourgon-so-info.webp" width="1448"/><div class="vehicle-copy"><div class="kicker">SO INFO sur le terrain</div><h2>Un service de proximité,<br/><span>jusqu’à votre porte.</span></h2><p>SO INFO vous accompagne pour le dépannage, la réparation et la maintenance informatique à domicile autour d’Argelès-sur-Mer, ou à distance lorsque la situation le permet.</p><div class="vehicle-points"><div class="vehicle-point"><b>✓</b> Dépannage à domicile</div><div class="vehicle-point"><b>✓</b> Assistance à distance</div><div class="vehicle-point"><b>✓</b> Diagnostic expliqué</div><div class="vehicle-point"><b>✓</b> Devis avant intervention</div></div><div class="actions"><a class="btn btn-yellow" href="tel:+33781232763">Contacter SO INFO</a><a class="btn btn-outline" href="#contact">Demander un renseignement</a></div></div></div></section>
 <section class="services" id="services"><div class="wrap"><div class="section-top"><div><div class="kicker">Nos services</div><h2>Des solutions pour <span>chaque besoin</span></h2></div></div><div class="services-layout">
 <article class="service"><img alt="Réparation d’un ordinateur ouvert" class="service-photo" loading="lazy" src="assets/reparation-pc.jpg"/><div class="service-body"><span class="service-icon"><svg viewbox="0 0 24 24"><path d="m14 6 4 4M4 20l4-1 10-10a2.1 2.1 0 0 0-3-3L5 16z"></path></svg></span><h3>Réparation PC et Mac</h3><p>Panne, PC lent, écran cassé, batterie, surchauffe… Un diagnostic précis et des réparations adaptées.</p><a class="learn" href="#contact">En savoir plus</a></div></article>
 <article class="service"><img alt="Ordinateur portable préparé pour une assistance à distance" class="service-photo" loading="lazy" src="assets/assistance-distance.jpg"/><div class="service-body"><span class="service-icon"><svg viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="4"></rect><path d="M8 21h8M12 18v3M8 8h8"></path></svg></span><h3>Assistance à distance</h3><p>Aide pour un problème logiciel, une configuration ou une question. Une prise en main sécurisée et rapide.</p><a class="learn" href="#contact">En savoir plus</a></div></article>
 <article class="service"><img alt="Intervention informatique sur un ordinateur de bureau" class="service-photo" loading="lazy" src="assets/depannage-domicile.jpg"/><div class="service-body"><span class="service-icon"><svg viewbox="0 0 24 24"><path d="m3 11 9-8 9 8M5 10v10h14V10M9 20v-6h6v6"></path></svg></span><h3>Dépannage à domicile</h3><p>Intervention chez vous autour d’Argelès-sur-Mer et dans les communes voisines. Un service de proximité et un vrai contact.</p><a class="learn" href="#contact">En savoir plus</a></div></article>
-<aside class="contact-card" id="contact">
+</div><aside class="contact-card contact-under-services" id="contact">
 <div class="kicker">Un doute ?<br/>Un problème ?</div>
 <h3>Parlons-en simplement.</h3>
 <p class="micro">Choisissez le moyen de contact qui vous convient.</p>
@@ -459,7 +641,7 @@ a.button,button.button,.header-contact,.nav-cta{border-radius:12px!important}
 <div class="field full"><button class="btn btn-yellow" type="submit">Préparer mon e-mail</button></div>
 </div>
 </form>
-</aside></div></div></section>
+</aside></div></section>
 <section class="reviews" id="avis">
 <div class="wrap">
 <div class="reviews-head">
@@ -468,7 +650,25 @@ a.button,button.button,.header-contact,.nav-cta{border-radius:12px!important}
 <h2>La confiance se construit <span>intervention après intervention.</span></h2>
 <p class="reviews-intro">Quelques retours de clients après leur intervention avec SO INFO.</p>
 </div>
+<section class="experience-review-section experience-review-in-reviews" id="avis-google">
+<div class="experience-review-card experience-review-wide">
+<div class="experience-review-main">
+<div class="experience-kicker"><span></span>Votre expérience compte</div>
+<h3>Vous avez fait appel à <strong>SO INFO</strong> ?</h3>
+<p>Vous pouvez partager votre expérience pour aider les habitants d’Argelès-sur-Mer et des alentours. Merci pour votre confiance !</p>
+<a class="experience-review-button" href="https://g.page/r/CaKMiWacrlfJEBM/review?utm_source=gbp&amp;utm_medium=reviews&amp;utm_campaign=qr" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="experience-google-icon" viewbox="0 0 48 48"><path d="M43.6 24.5c0-1.4-.1-2.8-.4-4.1H24v7.8h11a9.4 9.4 0 0 1-4.1 6.2v5.1h6.6c3.9-3.6 6.1-8.8 6.1-15z" fill="#4285F4"></path><path d="M24 44c5.5 0 10.1-1.8 13.5-4.8l-6.6-5.1c-1.8 1.2-4.1 2-6.9 2-5.3 0-9.8-3.6-11.4-8.4H5.8v5.3A20 20 0 0 0 24 44z" fill="#34A853"></path><path d="M12.6 27.7a12 12 0 0 1 0-7.5v-5.3H5.8a20 20 0 0 0 0 18.1z" fill="#FBBC05"></path><path d="M24 12c3 0 5.7 1 7.8 3.1l5.9-5.9C34.1 5.8 29.5 4 24 4A20 20 0 0 0 5.8 14.9l6.8 5.3C14.2 15.6 18.7 12 24 12z" fill="#EA4335"></path></svg>
+        Consulter / laisser un avis sur Google <span aria-hidden="true">↗</span>
+</a>
 </div>
+
+<div class="experience-review-benefits">
+<div><span class="experience-benefit-icon">★</span><span>Votre avis aide d’autres personnes à nous trouver.</span></div>
+<div><span class="experience-benefit-icon">⌂</span><span>Soutenez un service local et de proximité.</span></div>
+<div><span class="experience-benefit-icon">♥</span><span>Merci pour votre confiance !</span></div>
+</div>
+</div>
+</section></div>
 <div class="review-cards">
 <article class="review-card">
 <div class="review-card-top"><span aria-hidden="true" class="review-stars">DS</span></div>
@@ -488,28 +688,6 @@ a.button,button.button,.header-contact,.nav-cta{border-radius:12px!important}
 <p>« Après avoir laissé mon mari bricoler, notre ordinateur ne s’allumait plus ! Comme quoi, même avec des tutoriels, cela ne remplace pas un professionnel. Merci ! »</p>
 <div class="review-author">Cliente de SO INFO</div>
 </article>
-</div>
-</div>
-</section>
-<section class="experience-review-section" id="avis-google">
-<div class="experience-review-card">
-<div class="experience-review-main">
-<div class="experience-kicker"><span></span>Votre expérience compte</div>
-<h3>Vous avez fait appel à <strong>SO INFO</strong> ?</h3>
-<p>Vous pouvez partager votre expérience pour aider les habitants d’Argelès-sur-Mer et des alentours. Merci pour votre confiance !</p>
-<a class="experience-review-button" href="https://g.page/r/CaKMiWacrlfJEBM/review?utm_source=gbp&amp;utm_medium=reviews&amp;utm_campaign=qr" rel="noopener noreferrer" target="_blank">
-<svg aria-hidden="true" class="experience-google-icon" viewbox="0 0 48 48"><path d="M43.6 24.5c0-1.4-.1-2.8-.4-4.1H24v7.8h11a9.4 9.4 0 0 1-4.1 6.2v5.1h6.6c3.9-3.6 6.1-8.8 6.1-15z" fill="#4285F4"></path><path d="M24 44c5.5 0 10.1-1.8 13.5-4.8l-6.6-5.1c-1.8 1.2-4.1 2-6.9 2-5.3 0-9.8-3.6-11.4-8.4H5.8v5.3A20 20 0 0 0 24 44z" fill="#34A853"></path><path d="M12.6 27.7a12 12 0 0 1 0-7.5v-5.3H5.8a20 20 0 0 0 0 18.1z" fill="#FBBC05"></path><path d="M24 12c3 0 5.7 1 7.8 3.1l5.9-5.9C34.1 5.8 29.5 4 24 4A20 20 0 0 0 5.8 14.9l6.8 5.3C14.2 15.6 18.7 12 24 12z" fill="#EA4335"></path></svg>
-        Consulter / laisser un avis sur Google <span aria-hidden="true">↗</span>
-</a>
-</div>
-<div class="experience-review-qr">
-<div class="experience-qr-frame"><img alt="QR code pour consulter ou laisser un avis Google à SO INFO" src="assets/qr-avis-so-info.png"/></div>
-<span>Scannez ce QR code avec votre téléphone</span>
-</div>
-<div class="experience-review-benefits">
-<div><span class="experience-benefit-icon">★</span><span>Votre avis aide d’autres personnes à nous trouver.</span></div>
-<div><span class="experience-benefit-icon">⌂</span><span>Soutenez un service local et de proximité.</span></div>
-<div><span class="experience-benefit-icon">♥</span><span>Merci pour votre confiance !</span></div>
 </div>
 </div>
 </section>
