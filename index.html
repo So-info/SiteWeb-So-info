@@ -152,6 +152,25 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
 .contest-mobile .join{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 20px;border-radius:999px;background:var(--gold);color:#111;font-weight:900;font-size:.82rem}
 @media(max-width:700px){.contest-banner-image{width:calc(100% - 24px);margin:16px auto 24px;border-radius:14px}.contest-banner-image>a>img{display:none}.contest-mobile{display:block}}
 
+
+/* Cartes cadeaux de Noël — mise en avant discrète sur l'accueil */
+.gift-home{position:relative;isolation:isolate;overflow:hidden;margin:38px auto 12px;width:min(1200px,calc(100% - 48px));border:1px solid #66551d;border-radius:14px;background:linear-gradient(105deg,#15130d 0%,#100f0c 62%,#1b1608 100%);box-shadow:0 12px 34px #0005}
+.gift-home:before{content:"";position:absolute;z-index:-1;right:-55px;top:-130px;width:300px;height:300px;border:1px solid #ffd00020;border-radius:50%;box-shadow:0 0 0 22px #ffd00008,0 0 0 46px #ffd00006}
+.gift-home-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:24px;padding:23px 28px}
+.gift-home-copy{min-width:0}.gift-home-kicker{display:flex;align-items:center;gap:8px;margin:0 0 5px;color:var(--gold);font-size:.64rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.gift-home-title{margin:0;color:#f5f1e8;font-size:clamp(1.15rem,2.2vw,1.55rem);font-weight:800;letter-spacing:-.035em;line-height:1.25}
+.gift-home-title span{color:var(--gold)}
+.gift-home-text{margin:6px 0 0;color:#bdb7a9;font-size:.8rem;line-height:1.55}
+.gift-home-values{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.gift-home-values span{display:inline-flex;align-items:center;justify-content:center;min-width:48px;padding:5px 9px;border:1px solid #51451e;border-radius:5px;color:#e9dfc5;font-size:.69rem;font-weight:800}
+.gift-home-action{display:flex;align-items:center;gap:13px}
+.gift-home-card{position:relative;width:74px;height:51px;border:1px solid #d2ad4e;border-radius:7px;background:linear-gradient(135deg,#405c43,#142d23);box-shadow:0 8px 20px #0007;transform:rotate(-7deg)}
+.gift-home-card:before{content:"S";position:absolute;left:10px;top:7px;width:18px;height:18px;display:grid;place-items:center;border:1px solid #e8cd8a;border-radius:50%;color:#f4d98e;font:700 10px Georgia}
+.gift-home-card:after{content:"SO INFO";position:absolute;left:10px;bottom:7px;color:#f3e6c5;font-size:7px;font-weight:800;letter-spacing:1px}
+.gift-home-link{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding:11px 17px;border:1px solid var(--gold);border-radius:999px;background:var(--gold);color:#0a0a09;font-size:.75rem;font-weight:900;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.gift-home-link:hover{transform:translateY(-2px);box-shadow:0 8px 22px #ffd00030}
+@media(max-width:700px){.gift-home{width:calc(100% - 24px);margin:24px auto 8px;border-radius:12px}.gift-home-inner{grid-template-columns:1fr;gap:14px;padding:19px 18px}.gift-home-action{justify-content:space-between}.gift-home-card{width:66px;height:46px}.gift-home-link{flex:1}.gift-home-text{font-size:.76rem}}
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ComputerRepair","name":"SO INFO","url":"https://so-info.fr/","telephone":"+33781232763","email":"contact@so-info.fr","description":"Dépannage, réparation et maintenance informatique pour particuliers à Argelès-sur-Mer et alentours.","areaServed":{"@type":"City","name":"Argelès-sur-Mer"},"serviceType":["Dépannage informatique à domicile","Réparation PC et Mac","Maintenance informatique","Assistance informatique à distance"]}
@@ -189,7 +208,24 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
 </div></div>
 <div class="hud"><div class="wrap"><div id="cap">Faites défiler pour assembler<small>souris : tourner autour de la machine</small></div><div class="pct"><span id="pct">0</span><sup>%</sup></div></div></div>
 </div></section>
-<div class="marq" aria-hidden="true"><div class="mt"><span>Réparation PC &amp; Mac</span><span>Dépannage à domicile</span><span>Assistance à distance</span><span>Maintenance &amp; optimisation</span><span>Devis avant travaux</span><span>Réparation PC &amp; Mac</span><span>Dépannage à domicile</span><span>Assistance à distance</span><span>Maintenance &amp; optimisation</span><span>Devis avant travaux</span></div></div>
+<div class="marq" aria-hidden="true"><div class="mt"><span>Réparation PC &amp; Mac</span><span>Dépannage à domicile</span><span>Assistance à distance</span><span>Maintenance &amp; optimisation</span><span>Devis avant travaux</span><span>Réparation PC &amp; Mac</span><span>Dépannage à domicile</span><span>Assistance à distance</span><span>Maintenance &amp; optimisation</span><span>Devis avant travaux</span></div>
+
+<!-- Mise en avant discrète des cartes cadeaux de Noël -->
+<section class="gift-home" aria-label="Cartes cadeaux de Noël SO INFO">
+  <div class="gift-home-inner">
+    <div class="gift-home-copy">
+      <p class="gift-home-kicker">✦ Une idée cadeau signée SO INFO</p>
+      <h2 class="gift-home-title">Cette année, offrez-lui <span>le choix.</span></h2>
+      <p class="gift-home-text">La carte cadeau SO INFO : un cadeau utile et personnalisé, à partir de 25 €.</p>
+      <div class="gift-home-values" aria-label="Montants disponibles"><span>25 €</span><span>50 €</span><span>75 €</span><span>100 €</span></div>
+    </div>
+    <div class="gift-home-action">
+      <span class="gift-home-card" aria-hidden="true"></span>
+      <a class="gift-home-link" href="cartes-cadeaux-noel-so-info.html">Découvrir les cartes <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+</div>
 <section class="section paper" id="services"><div class="wrap"><div class="intro"><h2>Que puis-je faire <span class="gold">pour vous ?</span></h2><p>Un besoin précis ou une panne à résoudre ? Choisissez le service adapté, puis contactez-moi directement.</p></div>
 <div class="rows">
 <article class="row"><span class="ico">⌘</span><h3>Réparation PC &amp; Mac</h3><p>Panne, ordinateur lent, écran, batterie, surchauffe ou problème logiciel.</p><a href="#contact">Demander un diagnostic →</a></article>
