@@ -112,38 +112,17 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
 @keyframes gl{0%,90%,100%{text-shadow:none}92%{text-shadow:4px 0 #00e5ff,-4px 0 #ff2bd6}94%{text-shadow:-4px 0 #00e5ff,4px 0 #ff2bd6}96%{text-shadow:none}}
 .row:hover h3{transform:translateX(10px)}.row h3{transition:transform .3s}
 @media(prefers-reduced-motion:reduce){.stick:after{display:none}.logo,.cta:after,.ln.gold>span{animation:none}.ln.gold>span{transform:none}}
-
-.works-section{background:linear-gradient(#0a0a09f0,#0a0a09f0),repeating-linear-gradient(90deg,#ffd0000d 0 1px,transparent 1px 80px)}
-.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,430px),1fr));gap:24px}
-.work{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:18px;background:#100f0d;overflow:hidden;transition:border-color .3s,translate .3s}.work:hover{border-color:var(--gold);translate:0 -8px}
-.work.rv{transition:opacity .9s,transform 1s cubic-bezier(.2,.8,.2,1),filter .9s,border-color .3s,translate .3s}
-.frame{display:block}.bar{display:flex;align-items:center;gap:7px;padding:12px 14px;background:#1c1b17;border-bottom:1px solid var(--line)}
-.bar i{width:10px;height:10px;border-radius:50%;background:#ff5f57}.bar i:nth-child(2){background:#febc2e}.bar i:nth-child(3){background:#28c840}
-.bar span{margin-left:10px;flex:1;background:#0a0a09;border-radius:6px;padding:3px 12px;font-size:.72rem;color:#8e8a80}
-.view{height:310px;position:relative;overflow:hidden;background:#0a0a09}.view iframe{position:absolute;left:0;top:0;width:1280px;height:960px;border:0;transform-origin:0 0;pointer-events:none}
-.mini{position:absolute;inset:0;padding:30px;background:radial-gradient(ellipse at 80% 65%,#52410a,#0e0d0a 62%)}
-.mini b{display:block;height:20px;border-radius:10px;background:#f4f1ea;margin-bottom:12px;width:64%}.mini b.g{background:var(--gold);width:48%}.mini s{display:block;height:7px;border-radius:4px;background:#ffffff26;margin-top:10px;width:55%}.mini s+s{width:40%}
-.mini .pcb{position:absolute;right:34px;bottom:30px;width:96px;height:140px;border:2px solid var(--gold);border-radius:8px;box-shadow:0 0 34px #ffd00066,inset 0 0 20px #ffd00022;animation:fl 3s ease-in-out infinite alternate}
-.mini .btn{position:absolute;left:30px;bottom:30px;width:120px;height:34px;border-radius:17px;background:var(--gold)}
-@keyframes fl{to{translate:0 -14px}}
-.view.new{display:grid;place-items:center;align-content:center;gap:14px;background:radial-gradient(circle at 50% 50%,#2c2300,#0a0a09 70%)}
-.plus{width:64px;height:64px;border:2px dashed var(--gold);border-radius:50%;display:grid;place-items:center;font-size:2rem;color:var(--gold);animation:pulse 2.6s ease-in-out infinite}
-.typed{font:600 1.1rem ui-monospace,Consolas,monospace;color:#fff;overflow:hidden;white-space:nowrap;width:0;border-right:2px solid var(--gold);animation:ty 3.2s steps(13) infinite alternate}@keyframes ty{to{width:13ch}}
-.meta{padding:24px 26px 28px;display:grid;gap:4px}.meta h3{font-size:1.45rem}.meta em{font-style:normal;color:var(--gold);font-size:.84rem;font-weight:700}.meta p{margin:6px 0 16px;color:#c9c5b9;font-size:.92rem}.meta .cta{justify-self:start}
-@media(prefers-reduced-motion:reduce){.mini .pcb,.plus,.typed{animation:none}.typed{width:auto}}
-.stick:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#0a0a09f2 0%,#0a0a09b8 38%,transparent 72%);pointer-events:none}
-@media(max-width:700px){.stick:before{background:linear-gradient(180deg,#0a0a09f2 0%,#0a0a09a0 48%,transparent 78%)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta,.row{transition:none}.boot.pre p{opacity:1;animation:none!important}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ComputerRepair","name":"SO INFO","url":"https://so-info.fr/","telephone":"+33781232763","email":"contact@so-info.fr","description":"Dépannage, réparation et maintenance informatique pour particuliers à Argelès-sur-Mer et alentours.","areaServed":{"@type":"City","name":"Argelès-sur-Mer"},"serviceType":["Dépannage informatique à domicile","Réparation PC et Mac","Maintenance informatique","Assistance informatique à distance","Création de site web"]}
+{"@context":"https://schema.org","@type":"ComputerRepair","name":"SO INFO","url":"https://so-info.fr/","telephone":"+33781232763","email":"contact@so-info.fr","description":"Dépannage, réparation et maintenance informatique pour particuliers à Argelès-sur-Mer et alentours.","areaServed":{"@type":"City","name":"Argelès-sur-Mer"},"serviceType":["Dépannage informatique à domicile","Réparation PC et Mac","Maintenance informatique","Assistance informatique à distance"]}
 </script>
 </head>
 <body>
 <div class="cg" id="cg" aria-hidden="true"></div>
 <header class="top"><i class="sp" id="sp"></i><div class="wrap nav">
 <a class="brand" href="#accueil" aria-label="SO INFO, accueil"><span class="logo">S</span><span>SO INFO<small>réparation &amp; maintenance</small></span></a>
-<nav class="links" aria-label="Navigation principale"><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#methode">Déroulement</a><a href="#avis">Avis</a><a href="#contact">Contact</a><a class="cta" href="#contact">Demander un dépannage</a></nav>
+<nav class="links" aria-label="Navigation principale"><a href="#services">Services</a><a href="#methode">Déroulement</a><a href="#avis">Avis</a><a href="#contact">Contact</a><a class="cta" href="#contact">Demander un dépannage</a></nav>
 </div></header>
 <main>
 <section class="hero" id="accueil"><div class="stick">
@@ -154,21 +133,16 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
 <p class="lead">Dépannage, réparation et maintenance pour particuliers. Un diagnostic clair, des explications simples et une solution adaptée à votre matériel.</p>
 <div class="actions"><a class="cta" href="tel:+33781232763">☎ Appeler SO INFO</a><a class="cta ghost" href="#contact">Décrire mon problème</a></div>
 </div></div>
-<div class="hud"><div class="wrap"><div id="cap">Faites défiler pour arriver chez vous<small>souris : tourner autour du fourgon</small></div><div class="pct"><span id="pct">0</span><sup>km/h</sup></div></div></div>
+<div class="hud"><div class="wrap"><div id="cap">Faites défiler pour assembler<small>souris : tourner autour de la machine</small></div><div class="pct"><span id="pct">0</span><sup>%</sup></div></div></div>
 </div></section>
-<div class="marq" aria-hidden="true"><div class="mt"><span>Réparation PC &amp; Mac</span><span>Dépannage à domicile</span><span>Assistance à distance</span><span>Maintenance &amp; optimisation</span><span>Création de sites web</span><span>Devis avant travaux</span><span>Réparation PC &amp; Mac</span><span>Dépannage à domicile</span><span>Assistance à distance</span><span>Maintenance &amp; optimisation</span><span>Création de sites web</span><span>Devis avant travaux</span></div></div>
+<div class="marq" aria-hidden="true"><div class="mt"><span>Réparation PC &amp; Mac</span><span>Dépannage à domicile</span><span>Assistance à distance</span><span>Maintenance &amp; optimisation</span><span>Devis avant travaux</span><span>Réparation PC &amp; Mac</span><span>Dépannage à domicile</span><span>Assistance à distance</span><span>Maintenance &amp; optimisation</span><span>Devis avant travaux</span></div></div>
 <section class="section paper" id="services"><div class="wrap"><div class="intro"><h2>Que puis-je faire <span class="gold">pour vous ?</span></h2><p>Un besoin précis ou une panne à résoudre ? Choisissez le service adapté, puis contactez-moi directement.</p></div>
 <div class="rows">
 <article class="row"><span class="ico">⌘</span><h3>Réparation PC &amp; Mac</h3><p>Panne, ordinateur lent, écran, batterie, surchauffe ou problème logiciel.</p><a href="#contact">Demander un diagnostic →</a></article>
 <article class="row"><span class="ico">⌂</span><h3>Dépannage à domicile</h3><p>Intervention chez vous à Argelès-sur-Mer et dans les communes alentours.</p><a href="#contact">Organiser une intervention →</a></article>
 <article class="row"><span class="ico">◎</span><h3>Assistance à distance</h3><p>Configuration, logiciel, messagerie et aide informatique lorsque le problème le permet.</p><a href="#contact">Obtenir de l’aide →</a></article>
 <article class="row"><span class="ico">⚙</span><h3>Maintenance &amp; optimisation</h3><p>Entretien, mises à jour, sécurisation et amélioration des performances.</p><a href="#contact">Parler de mon matériel →</a></article>
-<article class="row"><span class="ico">✦</span><h3>Création de sites web</h3><p>Site vitrine sur mesure, animations 3D et formulaire de contact : une image professionnelle pour votre activité.</p><a href="#realisations">Voir mes réalisations →</a></article>
 </div></div></section>
-<section class="section works-section" id="realisations"><div class="wrap">
-<div class="intro"><h2>Des sites qui travaillent <span class="gold">pour vous.</span></h2><p>Au-delà du dépannage, je conçois des sites rapides, animés et 100 % sur mesure. Voici mes réalisations.</p></div>
-<div class="works" id="works"></div>
-</div></section>
 <section class="section split-section" id="apropos"><div class="wrap split">
 <img class="vehicle" src="assets/fourgon-so-info.webp" alt="Véhicule d’intervention SO INFO" loading="lazy">
 <div><h2>Un service local,<br><span class="gold">sans complication.</span></h2><p>Je vous accompagne avec une approche simple : comprendre votre problème, vous expliquer les possibilités et intervenir après validation du devis.</p><div class="checks"><span><b>✓</b>Diagnostic expliqué</span><span><b>✓</b>Devis avant travaux</span><span><b>✓</b>Conseils adaptés</span><span><b>✓</b>Suivi après intervention</span></div><a class="cta" href="#contact">Me contacter</a></div>
@@ -196,7 +170,7 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
 <form class="form" id="contact-form">
 <div class="field"><label for="name">Votre nom</label><input id="name" name="name" autocomplete="name" required></div>
 <div class="field"><label for="email">Votre e-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-<div class="field full"><label for="subject">Votre demande</label><select id="subject" name="subject"><option>Dépannage informatique</option><option>Réparation PC ou Mac</option><option>Assistance à distance</option><option>Maintenance informatique</option><option>Demande de devis</option><option>Création de site web</option><option>Autre demande</option></select></div>
+<div class="field full"><label for="subject">Votre demande</label><select id="subject" name="subject"><option>Dépannage informatique</option><option>Réparation PC ou Mac</option><option>Assistance à distance</option><option>Maintenance informatique</option><option>Demande de devis</option><option>Autre demande</option></select></div>
 <div class="field full"><label for="message">Décrivez brièvement le problème</label><textarea id="message" name="message" placeholder="Quel appareil ? Quel problème rencontrez-vous ?" required></textarea></div>
 <div class="field full"><label class="consent"><input type="checkbox" required><span>J’accepte que ces informations soient utilisées uniquement pour répondre à ma demande. Voir la <a href="politique-confidentialite.html" style="color:var(--gold)">politique de confidentialité</a>.</span></label></div>
 <input type="text" name="_honey" id="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
@@ -225,133 +199,78 @@ form.addEventListener('submit',async function(e){
   st.textContent='L’envoi automatique a échoué. Vous pouvez ';st.appendChild(a);st.append(' ou m’appeler au 07 81 23 27 63.');btn.textContent='Envoyer ma demande'}
  btn.disabled=false;
 });
-/* ===== RÉALISATIONS : ajoutez vos sites dans cette liste ===== */
-(function(){
- const PROJECTS=[
-  {name:'SO INFO',type:'Site vitrine · animation 3D interactive',url:'https://so-info.fr',live:false,desc:'Le site que vous visitez : fourgon 3D qui roule jusqu’à chez vous, formulaire à envoi direct, design sur mesure.'}
-  // Exemple pour ajouter un client (aperçu en direct du site) :
-  // ,{name:'Nom du client',type:'Restaurant · Site vitrine',url:'https://exemple.fr',desc:'Ce que vous avez réalisé.'}
- ];
- const box=document.getElementById('works');if(!box)return;const nested=window.top!==window;
- let h='';
- PROJECTS.forEach(p=>{const host=new URL(p.url).hostname.replace('www.','');
-  const view=(p.live===false||nested)?'<div class="mini"><b></b><b class="g"></b><s></s><s></s><span class="btn"></span><span class="pcb"></span></div>':'<iframe src="'+p.url+'" loading="lazy" tabindex="-1" title="Aperçu de '+p.name+'"></iframe>';
-  h+='<article class="work"><a class="frame" href="'+p.url+'" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir '+p.name+'"><div class="bar"><i></i><i></i><i></i><span>'+host+'</span></div><div class="view">'+view+'</div></a><div class="meta"><h3>'+p.name+'</h3><em>'+p.type+'</em><p>'+p.desc+'</p><a class="cta ghost" href="'+p.url+'" target="_blank" rel="noopener noreferrer">Voir le site ↗</a></div></article>'});
- h+='<article class="work"><a class="frame" href="#contact" onclick="document.getElementById(\'subject\').value=\'Création de site web\'"><div class="bar"><i></i><i></i><i></i><span>votresite.fr</span></div><div class="view new"><div class="plus">+</div><div class="typed">votresite.fr</div></div></a><div class="meta"><h3>Le prochain, c’est le vôtre</h3><em>Site vitrine · boutique · prise de rendez-vous</em><p>Un site rapide, soigné et pensé pour attirer vos clients. Parlons de votre projet.</p><a class="cta" href="#contact" onclick="document.getElementById(\'subject\').value=\'Création de site web\'">Demander un devis</a></div></article>';
- box.innerHTML=h;
- const fit=()=>box.querySelectorAll('.view iframe').forEach(f=>f.style.transform='scale('+(f.parentNode.clientWidth/1280)+')');fit();addEventListener('resize',fit);
-})();
 (function(){const b=document.getElementById('boot');if(!('IntersectionObserver' in window))return;b.classList.add('pre');
  new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){b.classList.add('on');o.disconnect()}},{threshold:.35}).observe(b)})();
 
-/* ===== Fourgon SO INFO 3D : le trajet jusqu'au client ===== */
+/* ===== PC gamer 3D : blueprint → machine, assemblage au scroll ===== */
 (function(){
 try{
  if(!window.THREE)throw 0;
  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
  const cv=document.getElementById('gl'),hero=document.getElementById('accueil'),stick=hero.querySelector('.stick');
  const cap=document.getElementById('cap'),pct=document.getElementById('pct'),tagBox=document.getElementById('tags');
- const R=new THREE.WebGLRenderer({canvas:cv,antialias:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
- const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(30,1,.1,140);
- S.fog=new THREE.Fog(0xb8602e,22,78);
- S.add(new THREE.HemisphereLight(0xffb27a,0x1a1008,.9));
- const sun=new THREE.DirectionalLight(0xff9a50,1.5);sun.position.set(-12,5,-8);S.add(sun);
- const key=new THREE.DirectionalLight(0xffffff,.75);key.position.set(5,7,9);S.add(key);const rim=new THREE.DirectionalLight(0x8fa8ff,.9);rim.position.set(-6,4,-8);S.add(rim);
- const M=(c,o)=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:.5,metalness:.3},o||{}));
- const B=(c,o)=>new THREE.MeshBasicMaterial(Object.assign({color:c},o||{}));
- const redraws=[];
- function tex(w,h,draw){const c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d'),t=new THREE.CanvasTexture(c);t.anisotropy=4;const f=()=>{x.clearRect(0,0,w,h);draw(x,w,h);t.needsUpdate=true};f();redraws.push(f);return t}
- if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>redraws.forEach(f=>f()));
- // ciel de coucher de soleil + soleil
- const skyT=tex(4,512,(x,w,h)=>{const g=x.createLinearGradient(0,0,0,h);g.addColorStop(0,'#0b1430');g.addColorStop(.25,'#2a2b5c');g.addColorStop(.42,'#a44f5a');g.addColorStop(.5,'#f4903a');g.addColorStop(.5001,'#6a3a22');g.addColorStop(1,'#2a1a10');x.fillStyle=g;x.fillRect(0,0,w,h)});
- S.add(new THREE.Mesh(new THREE.SphereGeometry(100,24,16),B(0xffffff,{map:skyT,side:THREE.BackSide,fog:false})));
- const sunM=new THREE.Mesh(new THREE.CircleGeometry(2.4,32),B(0xffe9a0,{fog:false}));sunM.position.set(-55,6,-55);sunM.lookAt(0,0,0);S.add(sunM);
- const glowM=new THREE.Mesh(new THREE.CircleGeometry(8,32),B(0xff9a3c,{fog:false,transparent:true,opacity:.35,blending:THREE.AdditiveBlending,depthWrite:false}));glowM.position.set(-55.2,6,-55.2);glowM.lookAt(0,0,0);S.add(glowM);
- [[-30,-52,16,7],[10,-58,22,10],[45,-50,14,6]].forEach(a=>{const m=new THREE.Mesh(new THREE.ConeGeometry(a[2],a[3],5),M(0x3a2a3a,{flatShading:true,roughness:1}));m.position.set(a[0],a[3]/2-.3,a[1]);S.add(m)});
- // décor qui défile
- const scn=[],add=(o,L)=>{S.add(o);scn.push([o,L])};
- const gr=new THREE.Mesh(new THREE.PlaneGeometry(240,80).rotateX(-Math.PI/2),M(0x4a3a2c,{roughness:1,metalness:0}));gr.position.set(0,-.01,-26);S.add(gr);
- const rd=new THREE.Mesh(new THREE.PlaneGeometry(240,5.2).rotateX(-Math.PI/2),M(0x161616,{roughness:.8,metalness:0}));rd.position.set(0,.01,.2);S.add(rd);
- const edge=new THREE.Mesh(new THREE.BoxGeometry(240,.012,.08),B(0xcfc6b0));edge.position.set(0,.02,2.4);S.add(edge);
- for(let i=0;i<28;i++){const d=new THREE.Mesh(new THREE.BoxGeometry(1.4,.012,.1),B(0xffd000));d.position.set(-49+i*3.5,.02,-2.0);add(d,98)}
- for(let i=0;i<30;i++){const w=new THREE.Mesh(new THREE.BoxGeometry(2.1,.5+Math.random()*.3,.5),M(0x7a7266,{roughness:1,metalness:0}));w.position.set(-34.5+i*2.3,.3,-3.5);add(w,69)}
- for(let i=0;i<14;i++){const g=new THREE.Group(),h=1.2+Math.random()*.6;
-  const tr=new THREE.Mesh(new THREE.CylinderGeometry(.12,.2,h,6),M(0x3b2a1a,{roughness:1,metalness:0}));tr.position.y=h/2;g.add(tr);
-  for(let j=0;j<2;j++){const f=new THREE.Mesh(new THREE.IcosahedronGeometry(.8+Math.random()*.35,1),M(0x34452a,{flatShading:true,roughness:1,metalness:0}));f.position.set(j*.5-.2,h+.5+j*.4,j*.3);g.add(f)}
-  g.position.set(-34.5+i*4.9+Math.random()*2,0,-7-Math.random()*6);add(g,69)}
- // fourgon : silhouette extrudée + détails
- const van=new THREE.Group();S.add(van);
- const blk=new THREE.MeshPhysicalMaterial({color:0x17171c,metalness:.55,roughness:.28,clearcoat:1,clearcoatRoughness:.15});
- const yel=B(0xffd000),dk=M(0x060606,{roughness:.8,metalness:.2,side:THREE.DoubleSide}),grey=M(0xa8a8a8,{metalness:.9,roughness:.3}),glass=M(0x0a131c,{metalness:1,roughness:.08});
- const sh=new THREE.Shape();
- sh.moveTo(-2.2,.3);sh.lineTo(-2.2,.6);sh.lineTo(-2.23,1.1);sh.lineTo(-2.2,1.62);sh.quadraticCurveTo(-2.18,1.82,-1.98,1.83);
- sh.lineTo(.75,1.83);sh.quadraticCurveTo(1.05,1.83,1.2,1.7);sh.lineTo(1.78,1.2);sh.quadraticCurveTo(1.85,1.12,1.98,1.1);
- sh.lineTo(2.18,1.02);sh.quadraticCurveTo(2.3,.98,2.3,.84);sh.lineTo(2.28,.5);sh.lineTo(2.24,.3);sh.closePath();
- const bg=new THREE.ExtrudeGeometry(sh,{depth:1.6,bevelEnabled:true,bevelThickness:.1,bevelSize:.1,bevelSegments:4,curveSegments:10});bg.translate(0,0,-.8);
- van.add(new THREE.Mesh(bg,blk));
- const vb=(w,h,d,m,x,y,z,rz)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.set(x,y,z);if(rz)o.rotation.z=rz;van.add(o);return o};
- const poly=(pts,z,m)=>{const p=new THREE.Shape();pts.forEach((q,i)=>i?p.lineTo(q[0],q[1]):p.moveTo(q[0],q[1]));const o=new THREE.Mesh(new THREE.ShapeGeometry(p),m);o.position.z=z;van.add(o);return o};
- vb(.72,.02,1.5,glass,1.49+.05,1.45+.06,0,-.712); // pare-brise
- poly([[.25,1.24],[1.62,1.24],[1.24,1.68],[.25,1.68]],.912,glass); // vitre porte
- poly([[-1.95,1.24],[.05,1.24],[.05,1.68],[-1.95,1.68]],.912,glass); // vitre arrière
- poly([[.62,.38],[.92,.38],[1.22,1.02],[.92,1.02]],.918,yel);poly([[1.0,.38],[1.12,.38],[1.42,1.02],[1.3,1.02]],.918,yel);
- poly([[-1.25,.42],[-.9,.42],[-.52,1.12],[-.87,1.12]],.918,yel);poly([[-2.0,.9],[-1.75,.9],[-1.55,1.2],[-1.8,1.2]],.918,yel);
- const logoT=tex(1024,320,(x,w,h)=>{x.lineWidth=14;x.strokeStyle='#ffd000';x.beginPath();x.arc(130,150,86,0,7);x.stroke();x.fillStyle='#ffd000';x.font='800 130px "Plus Jakarta Sans",Arial';x.fillText('S',88,196);x.font='800 170px "Plus Jakarta Sans",Arial';x.fillText('SO',260,190);x.fillStyle='#fff';x.fillText('INFO',500,190);x.font='700 36px "Plus Jakarta Sans",Arial';x.fillStyle='#ddd';x.fillText('RÉPARATION & MAINTENANCE',270,250);x.fillStyle='#ffd000';x.font='700 28px "Plus Jakarta Sans",Arial';x.fillText('PC & Mac · Smartphones · Maintenance · Données',150,306)});
- const bandT=tex(1024,120,(x,w,h)=>{x.fillStyle='#ffd000';x.fillRect(0,0,w,h);x.fillStyle='#0a0a09';x.font='800 62px "Plus Jakarta Sans",Arial';x.textAlign='center';x.fillText('VOTRE MATÉRIEL ENTRE DE BONNES MAINS',w/2,82)});
- const lg=new THREE.Mesh(new THREE.PlaneGeometry(1.45,.453),B(0xffffff,{map:logoT,transparent:true}));lg.position.set(-.95,1.46,.92);van.add(lg);
- const bd=new THREE.Mesh(new THREE.PlaneGeometry(1.2,.14),B(0xffffff,{map:bandT}));bd.position.set(.05,.62,.92);van.add(bd);
- // façade, feux, pare-chocs, rétros, rails
- vb(.02,.2,.95,dk,2.41,.78,0);vb(.14,.14,1.8,dk,2.36,.4,0);vb(.14,.16,1.8,dk,-2.3,.38,0);vb(.02,.12,.5,B(0xeeeeee),2.41,.52,0);
- [1,-1].forEach(sd=>{vb(.03,.16,.42,B(0xfff4d0),2.41,.98,sd*.62);vb(.03,.5,.14,B(0xff2020),-2.34,1.15,sd*.8);
-  vb(.14,.1,.22,dk,1.55,1.35,sd*1.0);vb(.05,.05,.14,dk,1.5,1.32,sd*.93);
-  const rl=new THREE.Mesh(new THREE.CylinderGeometry(.025,.025,2.6,8).rotateZ(Math.PI/2),grey);rl.position.set(-.55,1.98,sd*.72);van.add(rl)});
- [-1.5,-.6,.3].forEach(x=>vb(.04,.04,1.5,grey,x,1.97,0));
- vb(.14,.03,.03,grey,.2,1.0,.92);vb(.14,.03,.03,grey,-.9,1.0,.92);
- const ant=new THREE.Mesh(new THREE.CylinderGeometry(.012,.012,.7,6),grey);ant.position.set(-1.7,2.3,.3);ant.rotation.z=.15;van.add(ant);
- const shT=tex(256,256,(x,w,h)=>{const g=x.createRadialGradient(128,128,10,128,128,128);g.addColorStop(0,'rgba(0,0,0,.8)');g.addColorStop(1,'rgba(0,0,0,0)');x.fillStyle=g;x.fillRect(0,0,w,h)});
- const shd=new THREE.Mesh(new THREE.PlaneGeometry(6.8,3.4).rotateX(-Math.PI/2),new THREE.MeshBasicMaterial({map:shT,transparent:true,depthWrite:false}));shd.position.y=.03;van.add(shd);
- const bm=B(0xfff2c0,{transparent:true,opacity:.1,blending:THREE.AdditiveBlending,depthWrite:false,side:THREE.DoubleSide,fog:false});
- [.62,-.62].forEach(z=>{const c=new THREE.Mesh(new THREE.ConeGeometry(.9,6,20,1,true).rotateZ(Math.PI/2),bm);c.position.set(5.4,.98,z);van.add(c)});
- const wheels=[];
- [[1.45,1],[-1.3,1],[1.45,-1],[-1.3,-1]].forEach(p=>{const z=p[1]*.86,g=new THREE.Group(),s=new THREE.Group();g.position.set(p[0],.34,z);g.add(s);van.add(g);wheels.push(s);
-  if(p[1]>0){const ar=new THREE.Mesh(new THREE.CircleGeometry(.44,32),dk);ar.position.set(p[0],.4,.915);van.add(ar)}
-  s.add(new THREE.Mesh(new THREE.CylinderGeometry(.34,.34,.22,32).rotateX(Math.PI/2),M(0x0a0a0a,{roughness:.9,metalness:0})));
-  s.add(new THREE.Mesh(new THREE.CylinderGeometry(.22,.22,.24,24).rotateX(Math.PI/2),M(0x3a3a3e,{metalness:.9,roughness:.25})));
-  for(let i=0;i<5;i++){const k=new THREE.Mesh(new THREE.BoxGeometry(.05,.4,.03),M(0x8a8a8e,{metalness:.9,roughness:.3}));k.rotation.z=i*Math.PI*2/5;k.position.z=p[1]*.125;s.add(k)}
-  const cp=new THREE.Mesh(new THREE.CylinderGeometry(.05,.05,.03,12).rotateX(Math.PI/2),B(0xffd000));cp.position.z=p[1]*.13;s.add(cp)});
- // lignes de vitesse + onde d'arrivée
- const lm=B(0xffe9a0,{transparent:true,opacity:0,fog:false}),lines=[];
- for(let i=0;i<8;i++){const l=new THREE.Mesh(new THREE.BoxGeometry(3+Math.random()*3,.015,.015),lm);l.position.set(-22+Math.random()*44,.3+Math.random()*3,3+Math.random()*2.5);S.add(l);lines.push(l)}
- const shock=new THREE.Mesh(new THREE.RingGeometry(1,1.1,64).rotateX(-Math.PI/2),B(0xffd000,{transparent:true,opacity:0}));shock.position.y=.05;S.add(shock);
- // étiquettes
- const defs=[['À domicile','Argelès-sur-Mer et alentours',[.9,1.0,.92]],['Assistance à distance','sans vous déplacer',[-1.7,2.65,.3]],['Diagnostic clair','devis avant travaux',[-.2,1.75,.92]],['07 81 23 27 63','appelez-moi',[-2.35,1.2,.5]]];
- const tags=defs.map(d=>{const e=document.createElement('div');e.className='tag';e.innerHTML='<i></i><u></u><span><b>'+d[0]+'</b>'+d[1]+'</span>';tagBox.appendChild(e);return{e,p:new THREE.Vector3(...d[2])}});
- const caps=[[0,'En route','départ de l’atelier'],[.3,'Direction chez vous','Argelès-sur-Mer et alentours'],[.62,'Arrivée imminente','je ralentis'],[.86,'Arrivé','diagnostic sur place'],[.98,'À votre service','votre matériel entre de bonnes mains']];
+ const R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
+ const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(32,1,.1,90);
+ S.fog=new THREE.Fog(0x0a0a09,18,48);S.add(new THREE.AmbientLight(0xffffff,.55));
+ const key=new THREE.DirectionalLight(0xffffff,.9);key.position.set(5,8,7);S.add(key);
+ const rgbL=new THREE.PointLight(0xffd000,0,10);rgbL.position.set(0,-.4,.4);S.add(rgbL);
+ const rig=new THREE.Group();S.add(rig);
+ const M=(c,o)=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:.45,metalness:.65},o||{}));
+ const dark=M(0x1d1d1b),dark2=M(0x11110f),gold=M(0xffd000,{metalness:.9,roughness:.3});
+ const glow=new THREE.MeshBasicMaterial({color:0x2a2a2a});
+ const box=(w,h,d,m,x,y,z,g)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.set(x,y,z);g.add(o);
+  const l=new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry),new THREE.LineBasicMaterial({color:0xffd000,transparent:true}));l.position.copy(o.position);g.add(l);return o};
+ const fans=[];
+ function fan(g,x,y,z,r,ry){const f=new THREE.Group();f.position.set(x,y,z);f.rotation.y=ry||0;
+  f.add(new THREE.Mesh(new THREE.TorusGeometry(r,.035,8,40),glow));const bl=new THREE.Group();
+  for(let i=0;i<7;i++){const p=new THREE.Group();p.rotation.z=i*Math.PI*2/7;const b=new THREE.Mesh(new THREE.BoxGeometry(r*.8,r*.24,.015),dark);b.position.x=r*.5;b.rotation.x=.6;p.add(b);bl.add(p)}
+  bl.add(new THREE.Mesh(new THREE.CylinderGeometry(r*.2,r*.2,.05,16).rotateX(Math.PI/2),gold));f.add(bl);fans.push(bl);g.add(f)}
+ const parts=[];
+ const part=(s,e,from,build)=>{const g=new THREE.Group();build(g);rig.add(g);const mats=[],lines=[],seen=new Set();
+  g.traverse(o=>{if(o.isLineSegments)lines.push(o.material);else if(o.isMesh&&o.material.isMeshStandardMaterial&&!o.material.isMeshPhysicalMaterial){const m=o.material.clone();o.material=m;m.transparent=true;mats.push(m)}});
+  parts.push({g,s,e,mats,lines,k:0,from:new THREE.Vector3(...from),rot:new THREE.Vector3(Math.random()*2-1,Math.random()*2-1,Math.random()*2-1).multiplyScalar(2.2)})};
+ part(0,.12,[0,-9,0],g=>{box(4.4,5.6,.1,dark2,0,0,-1.25,g)});
+ part(.1,.26,[0,9,3],g=>{box(4.4,.14,2.5,dark,0,-2.8,0,g);box(4.4,.14,2.5,dark,0,2.8,0,g);box(.14,5.6,2.5,dark,-2.2,0,0,g);box(.1,5.6,2.5,dark,2.2,0,0,g);box(.03,5.2,.06,glow,2.27,0,1.1,g);box(4.2,.03,.06,glow,0,2.88,1.1,g)});
+ part(.24,.36,[-9,-4,2],g=>{box(3.0,.9,2.2,dark2,-.6,-2.25,-.05,g);box(3.0,.06,.06,gold,-.6,-1.78,1.05,g)});
+ part(.34,.48,[9,2,-3],g=>{box(3.4,3.8,.07,M(0x0d1c14,{metalness:.3}),-.1,.35,-1.15,g);box(.7,.7,.12,gold,.6,-.7,-1.07,g);box(.8,1.5,.3,dark,-1.3,1.15,-1.0,g)});
+ part(.46,.6,[0,8,6],g=>{const c=new THREE.Mesh(new THREE.CylinderGeometry(.55,.55,.35,24).rotateX(Math.PI/2),M(0x777777,{metalness:.9}));c.position.set(-.4,1.1,-.85);g.add(c);fan(g,-.4,1.1,-.62,.5,0)});
+ part(.58,.7,[3,9,2],g=>{for(let i=0;i<2;i++){box(.09,1.4,.5,dark,.55+i*.2,1.3,-.9,g);box(.09,.06,.5,glow,.55+i*.2,2.03,-.9,g)}});
+ part(.68,.84,[0,-9,9],g=>{box(3.0,1.15,.35,M(0x171715),-.1,-.7,.55,g);box(3.0,.04,.38,glow,-.1,-.1,.55,g);for(let i=0;i<3;i++)fan(g,-.9+i*.8,-.7,.74,.4,0)});
+ part(.82,.93,[9,0,4],g=>{for(let i=-1;i<=1;i++)fan(g,2.08,i*1.6,0,.7,Math.PI/2)});
+ part(.9,.99,[0,6,12],g=>{box(4.4,5.6,.04,new THREE.MeshPhysicalMaterial({color:0x99bbdd,transparent:true,opacity:.12,roughness:0}),0,0,1.25,g)});
+ const N=reduce?0:320,pa=new Float32Array(N*3);for(let i=0;i<N*3;i++)pa[i]=(Math.random()-.5)*(i%3==1?18:34);
+ const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pa,3));
+ const pts=new THREE.Points(pg,new THREE.PointsMaterial({color:0xffd000,size:.08,transparent:true,opacity:.75}));rig.add(pts);
+ const grid=new THREE.GridHelper(40,40,0xffd000,0x4a4000);grid.position.y=-2.95;grid.material.transparent=true;grid.material.opacity=.3;rig.add(grid);
+ const ring=new THREE.Mesh(new THREE.RingGeometry(3.7,3.76,72).rotateX(-Math.PI/2),new THREE.MeshBasicMaterial({color:0xffd000}));ring.position.y=-2.94;rig.add(ring);const shock=new THREE.Mesh(new THREE.RingGeometry(1,1.08,72).rotateX(-Math.PI/2),new THREE.MeshBasicMaterial({color:0xffd000,transparent:true,opacity:0}));shock.position.y=-2.9;rig.add(shock);
+ // étiquettes de diagnostic
+ const defs=[['Processeur','5,2 GHz · 38 °C',[-.4,1.1,-.5],4],['Mémoire','32 Go DDR5',[.65,2.03,-.9],5],['Carte graphique','16 Go · 3 ventilateurs',[1.4,-.7,.7],6],['Alimentation','850 W · 80+ Gold',[-2.0,-2.25,1.0],2]];
+ const tags=defs.map(d=>{const e=document.createElement('div');e.className='tag';e.innerHTML='<i></i><u></u><span><b>'+d[0]+'</b>'+d[1]+'</span>';tagBox.appendChild(e);return{e,p:new THREE.Vector3(...d[2]),part:parts[d[3]]}});
+ const caps=[[0,'Châssis','pose du plateau'],[.24,'Alimentation + carte mère','câblage de base'],[.46,'Processeur + mémoire','montage du ventirad'],[.68,'Carte graphique','vérification du port PCIe'],[.82,'Ventilation + vitre','flux d’air OK'],[.93,'Mise sous tension','POST en cours…'],[.99,'Machine prête','diagnostic : tout est vert']];
  const ease=t=>t<=0?0:t>=1?1:1-Math.pow(1-t,3),clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
- let cur=reduce?1:0,tgt=0,mx=0,my=0,smx=0,smy=0,last='',mob=false,flash=0,fired=false,sw=9;
- function size(){const w=stick.clientWidth,h=stick.clientHeight;R.setSize(w,h,false);C.aspect=w/h;mob=w/h<.9;C.updateProjectionMatrix()}
+ let t0=null,flash=0,fired=false,sw=9,cur=reduce?1:0,tgt=0,mx=0,my=0,smx=0,smy=0,last='',baseZ=17,mob=false;
+ function size(){const w=stick.clientWidth,h=stick.clientHeight;R.setSize(w,h,false);C.aspect=w/h;mob=w/h<.9;baseZ=mob?27:17.5;
+  rig.position.set(mob?0:3.3,mob?-2.4:-.2,0);rig.scale.setScalar(mob?.8:1);C.updateProjectionMatrix()}
  addEventListener('resize',size);size();
  addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5},{passive:true});
- const clk=new THREE.Clock(),v=new THREE.Vector3();
- function frame(){const dt=Math.min(clk.getDelta(),.05),t=clk.elapsedTime,r=hero.getBoundingClientRect();
+ const hsl=new THREE.Color(),base=new THREE.Color(0x2a2a2a),gc=new THREE.Color(0xffd000),v=new THREE.Vector3();
+ function frame(t){t*=.001;const r=hero.getBoundingClientRect();
   if(r.bottom>0&&r.top<innerHeight){
-   tgt=Math.max(clamp(-r.top/(hero.offsetHeight-stick.clientHeight-70),0,1),reduce?0:Math.min(1,t/2.4)*.5);
-   cur=reduce?1:cur+(tgt-cur)*.14;smx+=(mx-smx)*.05;smy+=(my-smy)*.05;
-   const spd=reduce?0:(30+50*ease(clamp(cur/.7,0,1)))*(1-ease((cur-.72)/.26)),u=spd*.14;
-   for(const a of scn){a[0].position.x-=u*dt;if(a[0].position.x<-a[1]/2)a[0].position.x+=a[1]}
-   for(const w of wheels)w.rotation.z-=u*dt/.36;
-   van.position.x=reduce?0:-16*(1-ease(Math.min(1,t/2.2)));van.position.y=Math.sin(t*38)*.012*(spd/80);
-   lm.opacity=Math.min(.5,spd/80*.5);for(const l of lines){l.position.x-=(u*3+2)*dt;if(l.position.x<-24)l.position.x+=48}
-   if(!fired&&cur>.9&&spd<3&&!reduce){fired=true;flash=1;sw=0}if(cur<.8)fired=false;
-   sw=Math.min(sw+.03,9);shock.position.x=van.position.x;shock.scale.setScalar(1+sw*4);shock.material.opacity=sw<1.5?(1-sw/1.5)*.9:0;flash*=.94;bm.opacity=.1+flash*.25;
-   const ec=ease(cur),k=mob?1.3:1;
-   C.position.set(6.5-3.5*ec+smx*1.8,1.1+.7*ec+(mob?1.4:0)-smy*.4+Math.sin(t*41)*.012*(spd/80),(8.5+3.5*ec)*k-flash*.8);
-   C.lookAt(mob?0:-2.4,mob?2.2:1.0,0);
-   R.render(S,C);
-   if(!mob){const w=stick.clientWidth,h=stick.clientHeight;
-    for(const g of tags){v.copy(g.p);van.localToWorld(v);v.project(C);g.e.style.transform='translate('+((v.x+1)/2*w)+'px,'+((1-v.y)/2*h)+'px)';g.e.style.opacity=cur>.86?1:0}}
+   if(t0===null)t0=t;tgt=Math.max(clamp(-r.top/(hero.offsetHeight-stick.clientHeight-70),0,1),reduce?0:Math.min(1,(t-t0)/2.4)*.5);cur=reduce?1:cur+(tgt-cur)*.16;smx+=(mx-smx)*.05;smy+=(my-smy)*.05;
+   for(const p of parts){const k=ease((cur-p.s)/(p.e-p.s));p.k=k;p.g.visible=k>0;p.g.position.copy(p.from).multiplyScalar(1-k);
+    p.g.rotation.set(p.rot.x*(1-k),p.rot.y*(1-k),p.rot.z*(1-k));p.g.scale.setScalar(.7+.3*k);
+    const solid=clamp((k-.45)/.55,0,1);for(const m of p.mats){m.opacity=.06+.94*solid;m.depthWrite=solid>.5}
+    for(const l of p.lines)l.opacity=.1+.9*(1-solid)}
+   const lv=clamp((cur-.9)/.08,0,1);hsl.setHSL((.13+t*.07)%1,1,.55);glow.color.copy(base).lerp(hsl,lv);rgbL.color.copy(hsl);rgbL.intensity=lv*2.4+flash*5;if(cur>.93&&!fired&&!reduce){fired=true;flash=1;sw=0}if(cur<.85)fired=false;sw=Math.min(sw+.025,9);shock.scale.setScalar(1+sw*5);shock.material.opacity=sw<1.5?(1-sw/1.5)*.9:0;flash*=.93;grid.position.z=(t*(.6+lv*3))%1;
+   ring.material.color.copy(gc).lerp(hsl,lv);
+   const sp=.05+lv*.6;for(const f of fans)f.rotation.z-=sp;
+   const ec=ease(cur);C.position.set(Math.sin(t*.7)*.5,.8+(1-ec)*2.8+Math.sin(t*.9)*.15,baseZ*(1.3-.3*ec)-flash*1.5);C.lookAt(0,0,0);
+   rig.rotation.y=-.7+cur*1.7+smx*.7+(reduce?0:Math.sin(t*.35)*.1);rig.rotation.x=smy*.18;
+   pts.rotation.y=t*(.05+lv*.25);pts.position.y=Math.sin(t*.6)*.3;R.render(S,C);
+   if(!mob){const w=stick.clientWidth,h=stick.clientHeight;rig.updateMatrixWorld();
+    for(const g of tags){v.copy(g.p);rig.localToWorld(v);v.project(C);g.e.style.transform='translate('+((v.x+1)/2*w)+'px,'+((1-v.y)/2*h)+'px)';g.e.style.opacity=g.part.k>.98?1:0}}
    let c=caps[0];for(const a of caps)if(cur>=a[0]-.005)c=a;
-   if(c!==last){cap.innerHTML=c[1]+'<small>'+c[2]+'</small>';last=c}pct.textContent=Math.round(spd)}
+   if(c!==last){cap.innerHTML=c[1]+'<small>'+c[2]+'</small>';last=c}pct.textContent=Math.round(cur*100)}
   requestAnimationFrame(frame)}
  requestAnimationFrame(frame);
 }catch(e){document.body.classList.add('nogl')}
@@ -364,7 +283,7 @@ try{
  addEventListener('scroll',()=>{const h=document.documentElement;sp.style.width=(scrollY/(h.scrollHeight-innerHeight)*100)+'%'},{passive:true});
  if(reduce||!('IntersectionObserver' in window))return;
  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const t=e.target;t.classList.add('in');io.unobserve(t);setTimeout(()=>t.style.transitionDelay='0s',1400)}}),{threshold:.15});
- document.querySelectorAll('.section h2,.intro p,.row,.quote,.review,.work,.split>div,.contact-copy').forEach((el,i)=>{el.classList.add('rv');el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+ document.querySelectorAll('.section h2,.intro p,.row,.quote,.review,.split>div,.contact-copy').forEach((el,i)=>{el.classList.add('rv');el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
  if(!fine)return;
  const cg=document.getElementById('cg');addEventListener('pointermove',e=>{cg.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)'},{passive:true});
  document.querySelectorAll('.cta').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.2)+'px,'+((e.clientY-r.top-r.height/2)*.3)+'px)'});b.addEventListener('pointerleave',()=>b.style.transform='')});
