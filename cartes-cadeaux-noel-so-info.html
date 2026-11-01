@@ -17,6 +17,17 @@ header{position:sticky;top:0;z-index:20;background:#080807eF;border-bottom:1px s
 .selection{margin:34px auto 0;max-width:760px;padding:19px 22px;border:1px solid #65501d;border-radius:18px;background:linear-gradient(110deg,#1b1608,#0e0e0c);display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 15px 40px #0005}.selection small{display:block;color:#aaa18d;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800}.selection strong{font-size:1.55rem;color:var(--gold)}.selection .btn{white-space:nowrap}
 .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.feature{border:1px solid #393326;border-radius:16px;padding:22px;background:linear-gradient(145deg,#17150f,#0c0c0a)}.feature-icon{font-size:1.45rem;color:var(--gold)}.feature h3{font-size:1rem;margin:9px 0 4px}.feature p{font-size:.87rem;color:var(--muted);margin:0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.step{padding:23px;border:1px solid #393326;border-radius:16px;background:#11100d}.num{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#100e08;font-weight:800;margin-bottom:14px}.step h3{margin:0 0 7px;font-size:1rem}.step p{margin:0;color:var(--muted);font-size:.88rem}.notice{border:1px solid #6c541e;background:linear-gradient(120deg,#211a08,#100f0c);padding:23px;border-radius:16px;color:#d8d1c0}.notice strong{color:var(--gold)}.contact{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:28px 30px;border-radius:20px;background:linear-gradient(105deg,#f7d45a,#e4aa0a);color:#111;box-shadow:0 18px 45px #d9a60020}.contact h2{font:700 clamp(1.5rem,3vw,2.3rem)/1.1 'Playfair Display',Georgia,serif;margin:0 0 7px}.contact p{margin:0;font-size:.92rem}.contact .btn{background:#10100e;color:var(--gold);border-color:#10100e;box-shadow:none;white-space:nowrap}.foot{padding:30px 0;color:#999386;font-size:.8rem;border-top:1px solid #332b1c;margin-top:55px}.footin{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a:hover{color:var(--gold)}
 @media(max-width:900px){.gift-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}.navlinks{gap:14px}.navlinks a:not(.active):not(.contact-link){display:none}}@media(max-width:620px){.wrap{width:calc(100% - 30px)}.nav{height:66px}.navlinks .active{display:none}.navlinks .contact-link{font-size:.74rem;padding:9px 12px}.hero{padding:50px 0 38px}.hero h1{font-size:clamp(2.5rem,12vw,4rem)}.lead{font-size:.96rem}.section{padding:42px 0}.gift-grid{gap:22px 12px}.gift-card{border-radius:13px}.gift-inner{padding:12px}.gift-brand{font-size:.62rem}.gift-brand .mini-logo{width:21px;height:21px}.gift-label{font-size:.5rem}.gift-value{font-size:2.25rem}.gift-ribbon{right:17px;width:25px}.gift-bow{right:0;transform:translateZ(42px) scale(.72)}.gift-select{font-size:.78rem}.gift-option .caption{font-size:.7rem}.selection{align-items:flex-start;flex-direction:column}.selection .btn{width:100%}.feature-grid,.steps{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column;padding:23px}.contact .btn{width:100%}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+.checkout-panel{display:none;margin:22px auto 0;max-width:760px;padding:24px;border:1px solid #65501d;border-radius:18px;background:linear-gradient(110deg,#1b1608,#0e0e0c);box-shadow:0 15px 40px #0005}
+.checkout-panel.open{display:block}.checkout-panel h3{margin:0 0 14px;color:var(--gold);font:700 1.5rem 'Playfair Display',Georgia,serif}
+.checkout-panel label{display:block;margin:12px 0 6px;color:#e6dfcf;font-weight:700;font-size:.88rem}
+.checkout-panel input[type=email],.checkout-panel input[type=text]{width:100%;padding:13px 14px;border:1px solid #65501d;border-radius:10px;background:#090908;color:#fff;font:inherit}
+.checkout-panel input:focus{outline:2px solid var(--gold);outline-offset:2px}
+.delivery-options{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0 18px}.delivery-options label{display:flex;align-items:center;gap:8px;margin:0}
+.checkout-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.checkout-message{min-height:24px;color:#ffe99a;font-size:.9rem;margin-top:12px}
+.checkout-panel .btn:disabled{opacity:.55;cursor:wait;transform:none}
+
 </style>
 </head>
 <body>
@@ -30,7 +41,28 @@ header{position:sticky;top:0;z-index:20;background:#080807eF;border-bottom:1px s
 <div class="gift-option"><button class="gift-card" type="button" data-amount="75" aria-pressed="false" style="--accent:#f08065;--accent2:#ffd0ad;--cardbg:#32110e"><span class="shine"></span><span class="gift-ribbon"></span><span class="gift-bow"><i></i></span><span class="gift-inner"><span class="gift-brand"><span class="mini-logo">S</span> SO INFO</span><span><span class="gift-label">Un cadeau généreux</span><br><strong class="gift-value">75 €</strong></span></span></button><label class="gift-select"><input type="radio" name="giftAmount" value="75"> Choisir 75 €</label><span class="caption">Pour faire encore plus plaisir</span></div>
 <div class="gift-option"><button class="gift-card" type="button" data-amount="100" aria-pressed="false" style="--accent:#e8c45b;--accent2:#fff0b1;--cardbg:#211b0c"><span class="shine"></span><span class="gift-ribbon"></span><span class="gift-bow"><i></i></span><span class="gift-inner"><span class="gift-brand"><span class="mini-logo">S</span> SO INFO</span><span><span class="gift-label">Le grand cadeau</span><br><strong class="gift-value">100 €</strong></span></span></button><label class="gift-select"><input type="radio" name="giftAmount" value="100"> Choisir 100 €</label><span class="caption">Une belle enveloppe cadeau</span></div>
 </div>
-<div class="selection" aria-live="polite"><div><small>Montant sélectionné</small><strong id="selectedAmount">25 €</strong></div><a class="btn" id="requestGift" href="mailto:contact@so-info.fr?subject=Demande%20de%20carte%20cadeau%20SO%20INFO%20-%2025%20%E2%82%AC">Demander cette carte <span>→</span></a></div>
+<div class="selection" aria-live="polite"><div><small>Montant sélectionné</small><strong id="selectedAmount">25 €</strong></div><button class="btn" id="requestGift" type="button">Acheter cette carte <span>→</span></button></div>
+<div class="checkout-panel" id="checkoutPanel" aria-live="polite">
+<h3>Préparer votre carte cadeau</h3>
+<p class="sub" style="margin:0 0 12px">Choisissez à qui envoyer la carte. Le paiement sera effectué de manière sécurisée sur Stripe.</p>
+<div class="delivery-options">
+<label><input type="radio" name="deliveryChoice" value="self" checked> Pour moi</label>
+<label><input type="radio" name="deliveryChoice" value="gift"> Pour offrir</label>
+</div>
+<label for="buyerEmail">Votre adresse e-mail (acheteur)</label>
+<input id="buyerEmail" type="email" autocomplete="email" placeholder="vous@exemple.fr" required>
+<div id="recipientFields" hidden>
+<label for="recipientName">Prénom du bénéficiaire (facultatif)</label>
+<input id="recipientName" type="text" maxlength="100" placeholder="Prénom">
+<label for="recipientEmail">Adresse e-mail du bénéficiaire</label>
+<input id="recipientEmail" type="email" placeholder="destinataire@exemple.fr">
+</div>
+<div class="checkout-actions">
+<button class="btn" id="checkoutButton" type="button">Continuer vers le paiement <span>→</span></button>
+<button class="btn secondary" id="closeCheckout" type="button">Annuler</button>
+</div>
+<p class="checkout-message" id="checkoutMessage" role="status"></p>
+</div>
 </div></section>
 <section class="section"><div class="wrap"><div class="section-head"><div class="kicker">Un cadeau qui a du sens</div><h2>À quoi peut-elle servir ?</h2><p class="sub">La carte cadeau est destinée aux prestations et achats proposés par SO INFO, selon les services et produits disponibles au moment de son utilisation.</p></div><div class="feature-grid"><article class="feature"><div class="feature-icon">⌘</div><h3>Réparation informatique</h3><p>Ordinateurs, smartphones et équipements pris en charge par SO INFO.</p></article><article class="feature"><div class="feature-icon">⚙</div><h3>Entretien &amp; optimisation</h3><p>Maintenance, diagnostic et amélioration des équipements.</p></article><article class="feature"><div class="feature-icon">▣</div><h3>Accessoires &amp; matériel</h3><p>Participation à l’achat d’accessoires ou de matériel disponible.</p></article></div></div></section>
 <section class="section"><div class="wrap"><div class="section-head"><div class="kicker">Simple et personnalisé</div><h2>Comment obtenir votre carte ?</h2><p class="sub">Contactez-nous pour confirmer le montant, les modalités de règlement et la remise de votre carte.</p></div><div class="steps"><article class="step"><div class="num">1</div><h3>Choisissez un montant</h3><p>Sélectionnez 25 €, 50 €, 75 € ou 100 € sur cette page.</p></article><article class="step"><div class="num">2</div><h3>Contactez SO INFO</h3><p>Envoyez votre demande par e-mail ou contactez-nous pour connaître les modalités.</p></article><article class="step"><div class="num">3</div><h3>Offrez votre cadeau</h3><p>Les modalités de remise et d’utilisation vous seront précisées avant la validation de l’achat.</p></article></div></div></section>
@@ -39,7 +71,105 @@ header{position:sticky;top:0;z-index:20;background:#080807eF;border-bottom:1px s
 </main>
 <footer class="foot"><div class="wrap footin"><span><strong>SO INFO</strong> · Réparation &amp; Maintenance</span><span><a href="mailto:contact@so-info.fr">contact@so-info.fr</a> · <a href="/">Retour au site</a></span><span>© 2026 SO INFO</span></div></footer>
 <script>
-(()=>{const cards=[...document.querySelectorAll('.gift-card')],radios=[...document.querySelectorAll('input[name="giftAmount"]')],amount=document.getElementById('selectedAmount'),link=document.getElementById('requestGift');function select(value){cards.forEach(c=>{const on=c.dataset.amount===value;c.classList.toggle('selected',on);c.setAttribute('aria-pressed',String(on));});radios.forEach(r=>r.checked=r.value===value);amount.textContent=value+' €';const subject=encodeURIComponent('Demande de carte cadeau SO INFO - '+value+' €');link.href='mailto:contact@so-info.fr?subject='+subject;}
-cards.forEach(card=>{card.addEventListener('click',()=>select(card.dataset.amount));card.addEventListener('pointermove',e=>{if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`rotateY(${x*11}deg) rotateX(${-y*9}deg) translateY(-4px)`;});card.addEventListener('pointerleave',()=>card.style.transform='');});radios.forEach(r=>r.addEventListener('change',()=>select(r.value)));})();
+(()=> {
+  const WORKER_URL = "https://so-info-cartes-cadeaux.gerard-sylvain60.workers.dev";
+  const cards = [...document.querySelectorAll('.gift-card')];
+  const radios = [...document.querySelectorAll('input[name="giftAmount"]')];
+  const amountLabel = document.getElementById('selectedAmount');
+  const openButton = document.getElementById('requestGift');
+  const panel = document.getElementById('checkoutPanel');
+  const buyerEmail = document.getElementById('buyerEmail');
+  const recipientFields = document.getElementById('recipientFields');
+  const recipientEmail = document.getElementById('recipientEmail');
+  const recipientName = document.getElementById('recipientName');
+  const checkoutButton = document.getElementById('checkoutButton');
+  const closeButton = document.getElementById('closeCheckout');
+  const message = document.getElementById('checkoutMessage');
+  let selectedAmount = "25";
+
+  function select(value) {
+    selectedAmount = value;
+    cards.forEach(card => {
+      const on = card.dataset.amount === value;
+      card.classList.toggle('selected', on);
+      card.setAttribute('aria-pressed', String(on));
+    });
+    radios.forEach(radio => radio.checked = radio.value === value);
+    amountLabel.textContent = value + ' €';
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => select(card.dataset.amount));
+    card.addEventListener('pointermove', event => {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const rect = card.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - .5;
+      const y = (event.clientY - rect.top) / rect.height - .5;
+      card.style.transform = `rotateY(${x*11}deg) rotateX(${-y*9}deg) translateY(-4px)`;
+    });
+    card.addEventListener('pointerleave', () => card.style.transform = '');
+  });
+  radios.forEach(radio => radio.addEventListener('change', () => select(radio.value)));
+
+  function updateDeliveryChoice() {
+    const choice = document.querySelector('input[name="deliveryChoice"]:checked')?.value;
+    recipientFields.hidden = choice !== "gift";
+    recipientEmail.required = choice === "gift";
+  }
+  document.querySelectorAll('input[name="deliveryChoice"]').forEach(radio =>
+    radio.addEventListener('change', updateDeliveryChoice)
+  );
+
+  openButton.addEventListener('click', () => {
+    panel.classList.add('open');
+    message.textContent = '';
+    panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    buyerEmail.focus();
+  });
+  closeButton.addEventListener('click', () => {
+    panel.classList.remove('open');
+    message.textContent = '';
+  });
+
+  checkoutButton.addEventListener('click', async () => {
+    const buyer = buyerEmail.value.trim().toLowerCase();
+    const choice = document.querySelector('input[name="deliveryChoice"]:checked')?.value;
+    const recipient = choice === "gift" ? recipientEmail.value.trim().toLowerCase() : buyer;
+    const name = choice === "gift" ? recipientName.value.trim() : "";
+
+    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(buyer)) {
+      message.textContent = "Veuillez saisir une adresse e-mail valide pour l'acheteur.";
+      buyerEmail.focus();
+      return;
+    }
+    if (choice === "gift" && !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(recipient)) {
+      message.textContent = "Veuillez saisir une adresse e-mail valide pour le bénéficiaire.";
+      recipientEmail.focus();
+      return;
+    }
+
+    checkoutButton.disabled = true;
+    message.textContent = "Préparation du paiement sécurisé…";
+    try {
+      const response = await fetch(WORKER_URL + "/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          amount: Number(selectedAmount) * 100,
+          buyerEmail: buyer,
+          recipientEmail: recipient,
+          recipientName: name
+        })
+      });
+      const result = await response.json();
+      if (!response.ok || !result.url) throw new Error(result.error || "Impossible de préparer le paiement.");
+      window.location.assign(result.url);
+    } catch (error) {
+      message.textContent = error.message || "Une erreur est survenue. Réessayez.";
+      checkoutButton.disabled = false;
+    }
+  });
+  updateDeliveryChoice();
+})();
 </script>
 </body></html>
