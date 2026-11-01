@@ -137,12 +137,12 @@ main{background-color:transparent!important;color:#faf8f1!important}.section{pad
     const recipient = choice === "gift" ? recipientEmail.value.trim().toLowerCase() : buyer;
     const name = choice === "gift" ? recipientName.value.trim() : "";
 
-    if (!/^[^\s@]+@[^\s@]+\\.[^\s@]+$/.test(buyer)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(buyer)) {
       message.textContent = "Veuillez saisir une adresse e-mail valide pour l'acheteur.";
       buyerEmail.focus();
       return;
     }
-    if (choice === "gift" && !/^[^\s@]+@[^\s@]+\\.[^\s@]+$/.test(recipient)) {
+    if (choice === "gift" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(recipient)) {
       message.textContent = "Veuillez saisir une adresse e-mail valide pour le bénéficiaire.";
       recipientEmail.focus();
       return;
