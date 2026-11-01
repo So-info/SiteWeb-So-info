@@ -113,6 +113,35 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
 .row:hover h3{transform:translateX(10px)}.row h3{transition:transform .3s}
 @media(prefers-reduced-motion:reduce){.stick:after{display:none}.logo,.cta:after,.ln.gold>span{animation:none}.ln.gold>span{transform:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta,.row{transition:none}.boot.pre p{opacity:1;animation:none!important}}
+
+/* BANNIÈRE CONCOURS — VERSION PREMIUM */
+.contest-banner{position:relative;isolation:isolate;overflow:hidden;background:#11100b;border-bottom:1px solid #4a3b00}
+.contest-banner:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 78% 50%,#ffd00019,transparent 43%),linear-gradient(100deg,#11100b 0%,#191506 54%,#100f0b 100%)}
+.contest-banner:after{content:"";position:absolute;right:12%;top:-80px;width:250px;height:250px;border:1px solid #ffd00016;border-radius:50%;box-shadow:0 0 0 24px #ffd00008,0 0 0 48px #ffd00005;pointer-events:none}
+.contest-banner-inner{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:19px;padding:18px 0}
+.contest-banner-mark{width:48px;height:48px;display:grid;place-items:center;border:1px solid #8c7100;border-radius:14px;background:linear-gradient(145deg,#302600,#171300);color:var(--gold);font-size:22px;box-shadow:inset 0 1px #ffffff16,0 7px 24px #0008}
+.contest-banner-copy{min-width:0}
+.contest-banner-kicker{display:flex;align-items:center;gap:8px;margin:0 0 3px;color:var(--gold);font-size:.62rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
+.contest-banner-kicker:before{content:"";width:17px;height:1px;background:var(--gold)}
+.contest-banner-title{margin:0;color:#f7f3e8;font-size:clamp(1rem,2vw,1.28rem);font-weight:800;line-height:1.25;letter-spacing:-.035em}
+.contest-banner-title strong{color:var(--gold);font-weight:800}
+.contest-banner-sub{margin:4px 0 0;color:#aaa493;font-size:.72rem;line-height:1.5}
+.contest-banner-meta{display:flex;align-items:center;gap:8px;margin-top:7px;flex-wrap:wrap}
+.contest-banner-pill{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border:1px solid #514310;border-radius:4px;color:#d8d0b6;font-size:.61rem;font-weight:700;letter-spacing:.025em}
+.contest-banner-pill b{color:var(--gold);font-weight:800}
+.contest-banner-action{display:inline-flex;align-items:center;justify-content:center;gap:15px;min-width:154px;min-height:44px;padding:11px 17px;border:1px solid var(--gold);border-radius:4px;background:var(--gold);color:#11100b;font-size:.72rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;transition:background .2s,color .2s,transform .2s,box-shadow .2s}
+.contest-banner-action:hover{background:#ffe36a;transform:translateY(-2px);box-shadow:0 8px 24px #ffd00025}
+.contest-banner-action span{font-size:1rem;line-height:1}
+@media(max-width:700px){.contest-banner-inner{grid-template-columns:40px minmax(0,1fr);gap:12px;padding:14px 0}.contest-banner-mark{width:40px;height:40px;border-radius:11px;font-size:18px}.contest-banner-kicker{font-size:.55rem}.contest-banner-title{font-size:.96rem}.contest-banner-sub{font-size:.66rem}.contest-banner-meta{gap:5px;margin-top:6px}.contest-banner-pill{font-size:.55rem;padding:4px 6px}.contest-banner-action{grid-column:2;justify-self:start;min-height:37px;min-width:145px;padding:9px 13px;font-size:.64rem}.contest-banner:after{right:-80px}}
+@media(max-width:390px){.contest-banner-inner{grid-template-columns:34px minmax(0,1fr);gap:9px}.contest-banner-mark{width:34px;height:34px;font-size:16px}.contest-banner-title{font-size:.88rem}.contest-banner-sub{font-size:.62rem}}
+
+
+/* Bannière Noël : visuel plein largeur, lien vers le formulaire */
+.contest-banner-image{width:100%;background:#080705;overflow:hidden;line-height:0}
+.contest-banner-image a{display:block;width:100%;cursor:pointer}
+.contest-banner-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.contest-banner-image a:focus-visible{outline:3px solid var(--gold);outline-offset:-4px}
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ComputerRepair","name":"SO INFO","url":"https://so-info.fr/","telephone":"+33781232763","email":"contact@so-info.fr","description":"Dépannage, réparation et maintenance informatique pour particuliers à Argelès-sur-Mer et alentours.","areaServed":{"@type":"City","name":"Argelès-sur-Mer"},"serviceType":["Dépannage informatique à domicile","Réparation PC et Mac","Maintenance informatique","Assistance informatique à distance"]}
@@ -125,6 +154,14 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
 <nav class="links" aria-label="Navigation principale"><a href="#services">Services</a><a href="#methode">Déroulement</a><a href="#avis">Avis</a><a href="#contact">Contact</a><a class="cta" href="#contact">Demander un dépannage</a></nav>
 </div></header>
 <main>
+
+<!-- Bannière visuelle du Concours de Noël SO INFO -->
+<section class="contest-banner contest-banner-image" aria-label="Concours de Noël SO INFO">
+  <a href="/concours/" aria-label="Participer au concours de Noël SO INFO : tenter de gagner un Apple iMac 24 pouces">
+    <img src="/banniere-noel-so-info.png" alt="Concours de Noël SO INFO : tentez de gagner un Apple iMac 24 pouces. Ouverture le 15 novembre 2026, clôture le 15 décembre 2026, résultat le 16 décembre 2026. Je participe au concours." loading="eager" fetchpriority="high">
+  </a>
+</section>
+
 <section class="hero" id="accueil"><div class="stick">
 <canvas id="gl" aria-hidden="true"></canvas><div class="tags" id="tags" aria-hidden="true"></div>
 <div class="wrap" style="height:100%"><div class="hero-copy">
