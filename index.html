@@ -136,11 +136,21 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
 @media(max-width:390px){.contest-banner-inner{grid-template-columns:34px minmax(0,1fr);gap:9px}.contest-banner-mark{width:34px;height:34px;font-size:16px}.contest-banner-title{font-size:.88rem}.contest-banner-sub{font-size:.62rem}}
 
 
-/* Bannière Noël : visuel plein largeur, lien vers le formulaire */
-.contest-banner-image{width:100%;background:#080705;overflow:hidden;line-height:0}
-.contest-banner-image a{display:block;width:100%;cursor:pointer}
-.contest-banner-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+/* Bannière Noël : format compact, centrée et responsive */
+.contest-banner-image{width:min(1536px,calc(100% - 48px));margin:28px auto 34px;overflow:hidden;line-height:0;border:1px solid #806500;border-radius:20px;background:#080705;box-shadow:0 16px 48px #0008,0 0 30px #ffd00012}
+.contest-banner-image>a{display:block;width:100%;cursor:pointer}
+.contest-banner-image img{display:block;width:100%;height:auto;object-fit:contain}
 .contest-banner-image a:focus-visible{outline:3px solid var(--gold);outline-offset:-4px}
+.contest-mobile{display:none;line-height:1.35;padding:25px 20px;text-align:center;background:radial-gradient(ellipse at 80% 0,#6b4b002e,transparent 55%),linear-gradient(135deg,#171208,#080706);color:#fff}
+.contest-mobile .eyebrow{margin:0 0 9px;color:var(--gold);font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.contest-mobile h2{font-size:clamp(1.45rem,7vw,2.15rem);line-height:1.05;margin:0 auto 9px;max-width:500px}
+.contest-mobile h2 strong{color:var(--gold)}
+.contest-mobile p{margin:0 0 15px;color:#d5cdb8;font-size:.9rem}
+.contest-mobile .dates{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-bottom:17px}
+.contest-mobile .dates span{border:1px solid #695300;border-radius:7px;padding:7px 9px;font-size:.72rem;color:#eee4c8}
+.contest-mobile .dates b{display:block;color:var(--gold)}
+.contest-mobile .join{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 20px;border-radius:999px;background:var(--gold);color:#111;font-weight:900;font-size:.82rem}
+@media(max-width:700px){.contest-banner-image{width:calc(100% - 24px);margin:16px auto 24px;border-radius:14px}.contest-banner-image>a>img{display:none}.contest-mobile{display:block}}
 
 </style>
 <script type="application/ld+json">
@@ -159,6 +169,13 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
 <section class="contest-banner contest-banner-image" aria-label="Concours de Noël SO INFO">
   <a href="/concours/" aria-label="Participer au concours de Noël SO INFO : tenter de gagner un Apple iMac 24 pouces">
     <img src="/banniere-noel-so-info.png" alt="Concours de Noël SO INFO : tentez de gagner un Apple iMac 24 pouces. Ouverture le 15 novembre 2026, clôture le 15 décembre 2026, résultat le 16 décembre 2026. Je participe au concours." loading="eager" fetchpriority="high">
+    <div class="contest-mobile">
+      <p class="eyebrow">🎄 Concours de Noël SO INFO</p>
+      <h2>Tentez de gagner un <strong>Apple iMac 24 pouces&nbsp;!</strong></h2>
+      <p>Un cadeau d’exception pour les fêtes.</p>
+      <div class="dates"><span>Ouverture<b>15 nov. 2026</b></span><span>Clôture<b>15 déc. 2026</b></span><span>Résultat<b>16 déc. 2026</b></span></div>
+      <span class="join">JE PARTICIPE AU CONCOURS →</span>
+    </div>
   </a>
 </section>
 
