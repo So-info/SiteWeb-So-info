@@ -63,11 +63,78 @@ header{position:sticky;top:0;z-index:30;background:#08090cdd;border-bottom:1px s
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 
 </style>
+<style>
+
+/* Direction artistique — édition boutique cadeau */
+:root{--cream:#f5f0e7;--ink:#17251f;--forest:#193a30;--forest2:#285345;--wine:#713c43;--foil:#c9a96b;--muted:#686b65}
+html,body{background:#f5f0e7!important;color:#17251f!important}
+body{background:radial-gradient(ellipse at 80% 12%,#e6dcc9 0,transparent 35%),#f5f0e7!important;font-family:'DM Sans',Arial,sans-serif}
+header{background:#f8f4eced;border-bottom:1px solid #d9cfbd;backdrop-filter:blur(18px)}
+.brand{color:#17251f}.brand small{color:#73756d}.logo{background:#193a30;color:#e9d5a5;border:1px solid #c9a96b;border-radius:50%;box-shadow:none}
+.navlinks{color:#28382f}.navlinks .active{color:#76552c;border-color:#c9a96b;background:#eadfc9}.navlinks .contact-link{background:#193a30;color:#f8f1e3;box-shadow:none}
+.hero{padding:76px 0 82px;background:linear-gradient(120deg,#f5f0e7 0%,#eee5d5 52%,#e5dac6 100%);text-align:left;overflow:hidden}
+.hero:before{width:650px;height:650px;left:auto;right:-160px;top:-270px;transform:none;border:1px solid #b99b6650;box-shadow:0 0 0 35px #b99b6610,0 0 0 75px #b99b660b}
+.hero:after{background:linear-gradient(90deg,transparent,#b99b6670,transparent)}
+.hero-layout{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:40px;min-height:475px}
+.hero-copy{position:relative;z-index:2}.eyebrow{background:#193a30;color:#f3e7ca;border:1px solid #c9a96b;padding:9px 15px;font-size:.66rem;letter-spacing:.16em}
+.hero h1{color:#17251f;font-size:clamp(3.2rem,5.6vw,5.5rem);line-height:.98;margin:27px 0 22px;max-width:680px}
+.hero h1 em{color:#8a4c4c;text-shadow:none}.lead{margin:0;max-width:550px;color:#565c55;font-size:1.05rem;line-height:1.85}
+.hero-cta{justify-content:flex-start;margin-top:28px}.btn{background:#193a30;color:#f9f1e1;border:1px solid #193a30;box-shadow:0 10px 24px #193a3026}
+.btn:hover{background:#285345;color:white;box-shadow:0 14px 30px #193a3038}.btn.secondary{background:transparent;color:#193a30;border-color:#b8a987}
+.hero-trust{display:flex;gap:17px;flex-wrap:wrap;margin-top:28px;color:#687067;font-size:.72rem;font-weight:700}.hero-trust span{white-space:nowrap}
+.hero-art{position:relative;min-height:435px;display:grid;place-items:center;perspective:1200px}
+.hero-art:before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:linear-gradient(145deg,#e3d5b8,#d5c19c);box-shadow:inset 0 0 0 1px #fff9,0 30px 70px #8d76552c}
+.art-card{position:absolute;width:min(370px,82%);aspect-ratio:1.58/1;border-radius:18px;padding:24px 27px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;box-shadow:0 28px 55px #26372e40,0 2px 0 #ffffff60 inset}
+.art-card:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 15px,#ffffff0c 16px 17px,transparent 18px 34px),radial-gradient(circle at 90% 100%,#c9a96b45,transparent 40%);pointer-events:none}
+.art-back{background:linear-gradient(135deg,#8b5554,#512f39);transform:rotate(10deg) translate(35px,18px);color:#f7e8d1}
+.art-front{background:linear-gradient(135deg,#285345,#102c25 72%,#10231e);transform:rotate(-8deg) translate(-20px,-7px);border:1px solid #d5bd86;color:#f7efd9}
+.art-brand{position:relative;font-weight:800;letter-spacing:.16em;font-size:.83rem}.art-brand small{display:block;font-size:.5rem;letter-spacing:.24em;opacity:.75;margin-top:3px}
+.art-gift{position:relative;font:italic 600 2.1rem/1.02 'Playfair Display',Georgia,serif;color:#f1dfb7}
+.art-amount{position:relative;font:700 3.5rem/.9 'Playfair Display',Georgia,serif;color:#e8d09b;letter-spacing:-.06em}.art-amount small{font-size:1.7rem}
+.art-foot{position:relative;font-size:.48rem;letter-spacing:.22em;opacity:.8}.art-seal{position:absolute;right:24px;bottom:25px;width:48px;height:48px;border:1px solid #e8d09b;border-radius:50%;display:grid;place-items:center;color:#e8d09b;font:italic 1.6rem 'Playfair Display',Georgia,serif}
+.art-back-mark{position:absolute;right:25px;bottom:15px;font:italic 8rem 'Playfair Display',Georgia,serif;color:#ffffff16}
+.art-spark{position:absolute;z-index:4;color:#a27d43;text-shadow:0 3px 12px #b69a6940}.spark-one{top:30px;right:13%;font-size:2rem}.spark-two{bottom:42px;left:10%;font-size:2.7rem}
+.art-caption{position:absolute;bottom:0;right:4%;font-size:.6rem;letter-spacing:.24em;color:#7b6a4c;font-weight:800}
+.section{background:#f5f0e7!important;color:#17251f!important;border-top:1px solid #ded4c3;padding:76px 0}
+.section-head .kicker{color:#8a6740}.section h2{color:#17251f}.sub{color:#697068}
+#montants{background:linear-gradient(180deg,#f5f0e7,#eee6d8)!important}
+.gift-grid{gap:23px}
+.gift-card{aspect-ratio:1.38/1;border:1px solid #c9a96b;border-radius:16px;background:linear-gradient(145deg,#315d4d,#15372c 70%,#10271f);box-shadow:0 16px 30px #1d34251c,0 2px 0 #ffffff38 inset}
+.gift-option:nth-child(2) .gift-card{background:linear-gradient(145deg,#6c8a99,#294d60 70%,#172f3d)}
+.gift-option:nth-child(3) .gift-card{background:linear-gradient(145deg,#a96b5c,#713e42 70%,#47282f)}
+.gift-option:nth-child(4) .gift-card{background:linear-gradient(145deg,#c3a66b,#806638 70%,#49391f)}
+.gift-card:before{z-index:0;opacity:.9;background:radial-gradient(circle at 85% 85%,#ffffff18,transparent 34%),repeating-linear-gradient(135deg,transparent 0 19px,#ffffff0a 20px 21px,transparent 22px 40px)}
+.gift-card:after{width:190px;height:190px;right:-85px;bottom:-105px;border:1px solid #f3dfb07a;box-shadow:0 0 0 12px #f3dfb00e,0 0 0 27px #f3dfb00b}
+.gift-card:hover{box-shadow:0 24px 42px #20372a35,0 0 0 2px #c9a96b}
+.gift-card.selected{outline:2px solid #8a6740;outline-offset:4px;box-shadow:0 22px 40px #20372a30}
+.gift-inner{z-index:2;padding:21px 22px}.gift-brand{letter-spacing:.17em}.gift-brand .mini-logo{border-color:#e8d09b;color:#f0dfb8}
+.gift-label{color:#f1e6d0}.gift-value{color:#fff0c9;font-size:clamp(2.8rem,3.9vw,4rem);text-shadow:0 4px 16px #071b14a6}
+.gift-ribbon{z-index:1;right:25px;width:15px;background:linear-gradient(90deg,#98713a,#f3dfa9,#a47b3c);opacity:.9}
+.gift-bow{z-index:3}.gift-bow:before,.gift-bow:after{border-color:#f3dfa9}.gift-bow i{background:#f3dfa9}
+.gift-select{color:#27382f}.gift-select input{accent-color:#285345}.gift-option .caption{color:#77766e}
+.selection{background:#fffaf1;border:1px solid #d6c6a7;box-shadow:0 15px 35px #40321b12}
+.selection small{color:#7c7567}.selection strong{color:#193a30}
+.selection .btn{background:#193a30;color:#fff4dd;border-color:#193a30}
+.feature,.step{background:#fffaf2;border:1px solid #e0d5c3;box-shadow:0 12px 30px #3c2d1910}
+.feature h3,.step h3{color:#20382e}.feature p,.step p{color:#687067}.feature-icon{color:#9b7945}
+.num{background:#193a30;color:#f5e6c4}
+.notice{background:#eae1d1;border:1px solid #d4c3a2;color:#4f554e}.notice strong{color:#71464a}
+.contact{background:linear-gradient(120deg,#193a30,#285345);border:1px solid #c9a96b;box-shadow:0 18px 40px #193a3020}
+.contact h2{color:#f4e4c1}.contact p{color:#e1e0d6}.contact .btn{background:#f1dfb8;color:#193a30;border-color:#f1dfb8}
+.foot{color:#6c7068;border-color:#ddd2c0}.foot strong{color:#193a30}
+.checkout-panel{background:#fffaf2;border:1px solid #d6c6a7;box-shadow:0 15px 35px #40321b12}
+.checkout-panel h3{color:#193a30}.checkout-panel label{color:#293a31}
+.checkout-panel input[type=email],.checkout-panel input[type=text]{background:#fff;border-color:#d5c8b3;color:#17251f}
+.checkout-message{color:#78552e}
+@media(max-width:850px){.hero-layout{grid-template-columns:1fr;gap:18px}.hero-copy{text-align:center}.hero h1{margin-left:auto;margin-right:auto}.lead{margin:auto}.hero-cta{justify-content:center}.hero-trust{justify-content:center}.hero-art{min-height:390px}.art-card{width:min(360px,75%)}}
+@media(max-width:620px){.hero{padding:52px 0 48px}.hero h1{font-size:clamp(2.8rem,12vw,4rem)}.hero-art{min-height:330px}.hero-art:before{width:290px;height:290px}.art-card{width:80%;padding:18px 20px}.art-gift{font-size:1.65rem}.art-amount{font-size:2.8rem}.art-seal{width:38px;height:38px}.hero-trust{gap:8px 13px;font-size:.65rem}.gift-grid{gap:22px 12px}.gift-inner{padding:13px}.gift-value{font-size:2.45rem}.gift-brand{font-size:.62rem}.gift-ribbon{right:18px;width:12px}}
+
+</style>
 </head>
 <body>
 <header><div class="wrap nav"><a class="brand" href="/" aria-label="SO INFO, accueil"><span class="logo">S</span><span>SO INFO<small>RÉPARATION &amp; MAINTENANCE</small></span></a><nav class="navlinks"><a href="/">Accueil</a><a href="/#services">Services</a><a href="/concours/">Concours de Noël</a><a class="active" href="/cartes-cadeaux-noel-so-info.html">🎁 Cartes cadeaux</a><a class="contact-link" href="mailto:contact@so-info.fr?subject=Cartes%20cadeaux%20SO%20INFO">Contact</a></nav></div></header>
 <main>
-<section class="hero"><div class="wrap"><div class="eyebrow"><span>✦</span> L’ART D’OFFRIR · SO INFO <span>✦</span></div><h1>Le cadeau qui fait<br><em>vraiment plaisir.</em></h1><p class="lead">Une attention élégante, utile et libre. Offrez une carte cadeau à utiliser pour les services et équipements informatiques SO INFO.</p><div class="hero-cta"><a class="btn" href="#montants">Découvrir les cartes <span>↓</span></a><a class="btn secondary" href="mailto:contact@so-info.fr?subject=Renseignements%20cartes%20cadeaux">Une question ?</a></div></div></section>
+<section class="hero"><div class="wrap hero-layout"><div class="hero-copy"><div class="eyebrow"><span>✦</span> LE PLAISIR D’OFFRIR · SO INFO <span>✦</span></div><h1>Le cadeau parfait<br>n’a pas besoin<br><em>d’être deviné.</em></h1><p class="lead">Une carte élégante, un montant au choix, et la liberté de se faire plaisir chez SO INFO. Le cadeau utile qui fait vraiment plaisir.</p><div class="hero-cta"><a class="btn" href="#montants">Choisir ma carte cadeau <span>→</span></a><a class="btn secondary" href="mailto:contact@so-info.fr?subject=Renseignements%20cartes%20cadeaux">Besoin d’un conseil ?</a></div><div class="hero-trust"><span>✦ Envoi numérique par e-mail</span><span>✦ Paiement sécurisé</span><span>✦ Valable 12 mois</span></div></div><div class="hero-art" aria-label="Mise en scène des cartes cadeaux SO INFO"><div class="art-spark spark-one">✦</div><div class="art-spark spark-two">✧</div><div class="art-card art-back"><span class="art-brand">SO INFO <small>CARTE CADEAU</small></span><span class="art-back-mark">S</span><span class="art-foot">LE PLAISIR D’OFFRIR</span></div><div class="art-card art-front"><span class="art-brand">SO INFO <small>CARTE CADEAU</small></span><span class="art-gift">Un beau<br>geste.</span><span class="art-amount">100 <small>€</small></span><span class="art-foot">À OFFRIR · À CHOISIR · À AIMER</span><span class="art-seal">S</span></div><div class="art-caption">UNE ATTENTION QUI COMPTE</div></div></div></section>
 <section class="section" id="montants"><div class="wrap"><div class="section-head"><div class="kicker">Quatre montants au choix</div><h2>Choisissez votre carte cadeau</h2><p class="sub">Survolez les cartes pour les voir prendre vie, puis sélectionnez le montant qui vous convient.</p></div>
 <div class="gift-grid" id="giftGrid">
 <div class="gift-option"><button class="gift-card selected" type="button" data-amount="25" aria-pressed="true" style="--accent:#f2c84b;--accent2:#fff0a6;--cardbg:#10100d"><span class="shine"></span><span class="gift-ribbon"></span><span class="gift-bow"><i></i></span><span class="gift-inner"><span class="gift-brand"><span class="mini-logo">S</span> SO INFO</span><span><span class="gift-label">Une attention utile</span><br><strong class="gift-value">25 €</strong></span></span></button><label class="gift-select"><input type="radio" name="giftAmount" value="25" checked> Choisir 25 €</label><span class="caption">Le petit coup de pouce</span></div>
