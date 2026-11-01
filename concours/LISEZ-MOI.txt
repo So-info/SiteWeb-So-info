@@ -1,0 +1,16 @@
+SO INFO — VERSION GITHUB PAGES
+
+1) Décompressez le ZIP.
+2) Dans votre dépôt GitHub, créez un dossier `concours` (ou utilisez la racine si vous préférez).
+3) Envoyez dans ce dossier : index.html, merci.html, politique-confidentialite.html, banniere-concours.jpg, post-instagram.jpg et imac-prize.png.
+4) Ajoutez le règlement officiel sous le nom reglement-concours.pdf.
+5) Le formulaire est relié à FormSubmit avec contact@so-info.fr. Au premier envoi, FormSubmit doit envoyer un e-mail de validation à cette adresse : ouvrez-le et confirmez l'activation. Faites ensuite un test.
+6) Si la page est publiée dans /concours/, le retour après envoi est configuré sur https://www.so-info.fr/concours/merci.html. Si votre URL réelle diffère, modifiez le champ caché `_next` dans index.html.
+
+IMPORTANT
+- GitHub Pages ne lance pas PHP ni aucun code serveur : cette version est en HTML statique et délègue la réception des formulaires à FormSubmit.
+- Vérifiez les conditions, le fonctionnement, les limites et la politique de confidentialité de FormSubmit avant utilisation.
+- Les inscriptions contiennent des données personnelles. Complétez la notice avec l'identité légale de l'organisateur, coordonnées, finalités, bases légales, durées de conservation, destinataires, hébergeur et droits des personnes. Faites vérifier la conformité RGPD.
+- Ajoutez un règlement officiel complet avant lancement. Vérifiez aussi la référence exacte du modèle iMac et ses caractéristiques auprès du fournisseur.
+- La case marketing est facultative et décochée par défaut. Ne conditionnez pas la participation à l'acceptation de prospection.
+- Ne publiez pas les données des participants dans le dépôt GitHub. Le dépôt ne doit contenir que le code et les visuels.
