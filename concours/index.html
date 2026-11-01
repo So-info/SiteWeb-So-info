@@ -2,147 +2,119 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090909">
-<meta name="description" content="Grand concours SO INFO : tentez de gagner un Apple iMac 24 pouces. Participation gratuite, règlement disponible en ligne.">
-<title>Grand concours SO INFO | Gagnez un iMac 24 pouces</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Grand concours SO INFO : participez gratuitement et tentez de gagner un Apple iMac 24 pouces.">
+<title>Grand concours SO INFO — Gagnez un iMac 24 pouces</title>
 <style>
-:root{--gold:#ffd21a;--gold2:#ffae00;--ink:#080808;--panel:#131313;--muted:#b9b9b9;--line:rgba(255,210,26,.35);--white:#fff}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(ellipse at 75% 15%,rgba(255,174,0,.13),transparent 34%),radial-gradient(ellipse at 10% 70%,rgba(255,210,26,.07),transparent 30%),var(--ink);color:var(--white);font-family:Inter,Arial,Helvetica,sans-serif}
-a{color:inherit}
-.shell{width:min(1180px,calc(100% - 44px));margin:auto}
-header{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08)}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand-mark{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#ffe66a,#f5ad00);color:#111;font-size:27px;font-weight:1000;box-shadow:0 0 25px rgba(255,195,0,.2)}
-.brand-name{font-weight:900;font-size:25px;letter-spacing:-1px}.brand-name small{display:block;font-size:9px;letter-spacing:3.2px;font-weight:600;margin-top:3px;color:#d9d9d9}
-.header-link{font-size:13px;text-decoration:none;color:#eee;border:1px solid var(--line);padding:11px 17px;border-radius:30px}
-.hero{padding:66px 0 56px;display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border-radius:7px;background:linear-gradient(100deg,var(--gold),var(--gold2));color:#111;font-weight:900;font-size:12px;letter-spacing:1.4px;text-transform:uppercase}
-.eyebrow:before{content:"";width:7px;height:7px;background:#111;border-radius:50%}
-h1{font-size:clamp(43px,6vw,76px);line-height:.98;letter-spacing:-3.6px;margin:24px 0 18px;max-width:680px}
-h1 span{color:var(--gold)}
-.intro{font-size:18px;line-height:1.6;color:#d5d5d5;max-width:570px;margin:0}
-.prize-wrap{position:relative;margin-top:30px;padding:23px 25px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,rgba(255,210,26,.10),rgba(255,255,255,.025));max-width:590px}
-.prize-title{font-size:12px;color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:13px}
-.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
-.spec{display:flex;gap:10px;align-items:center;color:#eee;font-size:13px}
-.spec i{width:25px;height:25px;border-radius:8px;background:rgba(255,210,26,.12);display:grid;place-items:center;color:var(--gold);font-style:normal}
-.visual{position:relative;min-width:0}
-.visual:before{content:"";position:absolute;inset:12% 4%;background:var(--gold);filter:blur(75px);opacity:.13}
-.product-card{position:relative;border:1px solid rgba(255,210,26,.38);border-radius:26px;padding:16px;background:linear-gradient(145deg,#242424,#0d0d0d);box-shadow:0 28px 80px rgba(0,0,0,.5),0 0 45px rgba(255,190,0,.09)}
-.product-card img{display:block;width:100%;height:auto;border-radius:15px}
-.product-caption{display:flex;justify-content:space-between;align-items:center;padding:15px 6px 5px;gap:12px}
-.product-caption strong{font-size:16px}.product-caption span{font-size:11px;color:var(--gold);letter-spacing:1px;text-transform:uppercase}
-.form-section{padding:0 0 70px}
-.form-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:26px;align-items:stretch}
-.info-panel,.form-panel{border:1px solid rgba(255,255,255,.1);border-radius:20px;background:rgba(20,20,20,.92);padding:28px}
-.info-panel{background:linear-gradient(145deg,rgba(255,210,26,.12),rgba(18,18,18,.96) 65%);border-color:var(--line)}
-.info-panel h2,.form-panel h2{font-size:25px;margin:0 0 9px;letter-spacing:-.6px}
-.info-panel p{color:#c8c8c8;line-height:1.6;font-size:14px}
-.date-list{display:grid;gap:13px;margin-top:22px}
-.date-item{display:flex;align-items:center;gap:12px;font-size:13px;color:#ddd}
-.date-item b{display:block;color:#fff;font-size:14px;margin-bottom:2px}
-.date-icon{width:36px;height:36px;display:grid;place-items:center;border-radius:11px;background:rgba(255,210,26,.13);color:var(--gold);font-size:17px}
-.form-panel{padding:30px}
-.form-heading{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:20px}
-.form-heading p{margin:6px 0 0;color:var(--muted);font-size:13px}
-.free-pill{white-space:nowrap;border:1px solid rgba(255,210,26,.35);color:var(--gold);padding:7px 10px;border-radius:30px;font-size:11px;font-weight:800}
-label.field{display:block;font-size:12px;font-weight:700;color:#e9e9e9;margin:15px 0 7px}
-input[type=text],input[type=email]{width:100%;height:48px;border-radius:9px;border:1px solid #484848;background:#090909;color:#fff;padding:0 14px;font-size:14px;outline:none;transition:.2s}
-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(255,210,26,.12)}
-.check{display:flex;gap:10px;align-items:flex-start;color:#bdbdbd;font-size:11px;line-height:1.55;margin:15px 0}
-.check input{margin:2px 0 0;accent-color:var(--gold)}
-.check a,.legal-links a{color:var(--gold);text-underline-offset:3px}
-.submit{width:100%;height:52px;border:0;border-radius:10px;background:linear-gradient(100deg,#ffe35a,#ffb800);color:#111;font-size:14px;font-weight:950;letter-spacing:.5px;cursor:pointer;margin-top:8px;box-shadow:0 8px 28px rgba(255,190,0,.16)}
-.submit:hover{filter:brightness(1.08);transform:translateY(-1px)}
-.submit:disabled{opacity:.45;cursor:not-allowed;transform:none}
-.form-status{display:none;padding:13px;border-radius:9px;background:#302600;color:#ffe58a;font-size:13px;line-height:1.5;margin-bottom:15px}
-.form-status.show{display:block}
-.smallprint{font-size:10px;line-height:1.55;color:#8f8f8f;margin-top:13px}
-footer{border-top:1px solid rgba(255,255,255,.09);padding:24px 0 35px;color:#888;font-size:11px}
-.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.legal-links{display:flex;gap:18px;flex-wrap:wrap}
-.legal-links a{color:#aaa}
-@media(max-width:850px){.hero{grid-template-columns:1fr;gap:30px;padding:45px 0}.visual{max-width:620px;margin:auto}.form-layout{grid-template-columns:1fr}.info-panel{order:2}.form-panel{order:1}}
-@media(max-width:560px){.shell{width:min(100% - 28px,1180px)}header{height:72px}.brand-mark{width:36px;height:36px}.brand-name{font-size:21px}.header-link{font-size:11px;padding:9px 11px}.hero{padding:35px 0 38px}h1{font-size:45px;letter-spacing:-2.2px}.intro{font-size:15px}.prize-wrap{padding:18px}.spec-grid{grid-template-columns:1fr}.form-panel,.info-panel{padding:21px}.form-heading{display:block}.free-pill{display:inline-block;margin-top:12px}}
+:root{--gold:#ffd21a;--gold2:#ffad00;--black:#070707;--surface:#111;--muted:#b7b7b7;--line:rgba(255,210,26,.24);--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 78% 20%,rgba(255,184,0,.12),transparent 32%),radial-gradient(ellipse at 8% 85%,rgba(255,184,0,.07),transparent 28%);z-index:-1}
+a{color:inherit}.container{width:min(1160px,calc(100% - 44px));margin:auto}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08)}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}.brand-symbol{width:40px;height:40px;border-radius:12px;background:linear-gradient(145deg,#ffe76b,#ffb800);display:grid;place-items:center;color:#111;font-size:26px;font-weight:1000;box-shadow:0 0 28px #ffc40035}.brand-text{font-size:23px;font-weight:950;letter-spacing:-1px}.brand-text small{display:block;font-size:8px;letter-spacing:3px;color:#d0d0d0;margin-top:2px}
+.nav-right{display:flex;align-items:center;gap:14px}.nav-link{font-size:12px;color:#ddd;text-decoration:none}.nav-cta{font-size:12px;font-weight:850;text-decoration:none;color:#111;background:var(--gold);padding:11px 17px;border-radius:30px}
+.hero{display:grid;grid-template-columns:1.04fr .96fr;gap:42px;align-items:center;padding:64px 0 56px;min-height:550px}
+.kicker{display:inline-flex;align-items:center;gap:9px;border:1px solid #ffcf36;background:rgba(255,207,54,.09);color:var(--gold);padding:9px 13px;border-radius:5px;font-size:10px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase}
+.kicker:before{content:"";width:6px;height:6px;background:var(--gold);border-radius:50%;box-shadow:0 0 10px var(--gold)}
+h1{font-size:clamp(46px,6.2vw,78px);line-height:.96;letter-spacing:-4.5px;margin:24px 0 20px;max-width:650px}
+h1 span{color:var(--gold);text-shadow:0 0 28px rgba(255,210,26,.13)}
+.hero-copy{max-width:570px;color:#c9c9c9;font-size:16px;line-height:1.65;margin:0}
+.hero-actions{display:flex;align-items:center;gap:17px;flex-wrap:wrap;margin-top:27px}
+.primary-cta{display:inline-flex;align-items:center;gap:13px;background:linear-gradient(100deg,#ffe25b,#ffb800);color:#111;text-decoration:none;padding:15px 22px;border-radius:8px;font-size:13px;font-weight:950;box-shadow:0 10px 30px rgba(255,190,0,.16);transition:.2s}
+.primary-cta:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.microcopy{font-size:11px;color:#aaa}
+.prize-specs{display:grid;grid-template-columns:1fr 1fr;gap:11px 16px;margin-top:30px;padding:18px 19px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(130deg,rgba(255,210,26,.08),rgba(255,255,255,.015))}
+.spec{display:flex;gap:10px;align-items:center;font-size:12px;color:#e5e5e5}.spec-icon{width:26px;height:26px;border-radius:7px;background:rgba(255,210,26,.12);color:var(--gold);display:grid;place-items:center;font-size:13px}
+.product-stage{position:relative;max-width:520px;margin-left:auto}
+.product-stage:before{content:"";position:absolute;inset:12% 8%;background:#ffc000;filter:blur(90px);opacity:.18}
+.product-frame{position:relative;padding:12px;border:1px solid rgba(255,210,26,.4);border-radius:22px;background:linear-gradient(145deg,#242424,#090909);box-shadow:0 25px 85px #000b,0 0 45px #ffbf0015;transform:rotate(1deg)}
+.product-frame img{display:block;width:100%;border-radius:13px}
+.prize-ribbon{position:absolute;right:-14px;top:24px;background:linear-gradient(100deg,#ffe56a,#ffb400);color:#111;padding:11px 16px;border-radius:7px;font-weight:950;font-size:12px;box-shadow:0 8px 30px #ffbd0055;transform:rotate(4deg)}
+.product-under{display:flex;justify-content:space-between;gap:12px;padding:14px 7px 5px;align-items:center}.product-under strong{font-size:14px}.product-under span{font-size:9px;color:var(--gold);letter-spacing:1.2px;font-weight:900;text-transform:uppercase}
+.separator{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+.participate{padding:42px 0 70px}
+.section-head{text-align:center;margin-bottom:26px}.section-head .eyebrow{color:var(--gold);font-size:10px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.section-head h2{font-size:clamp(27px,4vw,39px);letter-spacing:-1.4px;margin:10px 0 8px}.section-head p{margin:0;color:#aaa;font-size:13px}
+.columns{display:grid;grid-template-columns:.78fr 1.22fr;gap:20px;align-items:stretch}
+.timeline,.form-card{border:1px solid rgba(255,255,255,.09);border-radius:17px;background:linear-gradient(145deg,#171717,#0e0e0e);padding:27px}
+.timeline{border-color:var(--line);background:linear-gradient(145deg,rgba(255,210,26,.11),#111 65%)}
+.timeline h3,.form-card h3{font-size:22px;letter-spacing:-.6px;margin:0 0 7px}.timeline-intro,.form-intro{font-size:12px;color:#bcbcbc;line-height:1.6;margin:0}
+.steps{display:grid;gap:17px;margin:25px 0}
+.step{display:flex;gap:12px;align-items:center}.step-icon{width:37px;height:37px;border-radius:10px;display:grid;place-items:center;background:#302600;color:var(--gold);font-size:16px;flex:none}.step-text{font-size:12px;color:#bbb;line-height:1.45}.step-text b{display:block;color:#fff;font-size:13px}
+.delivery-note{border-top:1px solid rgba(255,255,255,.1);padding-top:15px;color:#bcbcbc;font-size:11px;line-height:1.6}.delivery-note strong{color:#fff}
+.form-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:20px}.free-tag{white-space:nowrap;border:1px solid rgba(255,210,26,.35);border-radius:30px;padding:7px 10px;color:var(--gold);font-size:9px;font-weight:900;letter-spacing:.8px}
+label.field{display:block;margin:14px 0 7px;font-size:11px;font-weight:800;color:#e8e8e8}
+input[type=text],input[type=email]{height:46px;width:100%;border-radius:8px;border:1px solid #414141;background:#080808;color:#fff;padding:0 13px;font-size:13px;outline:none;transition:.2s}
+input:focus{border-color:var(--gold);box-shadow:0 0 0 3px #ffd21a19}
+.check{display:flex;align-items:flex-start;gap:9px;margin:14px 0;color:#bcbcbc;font-size:10px;line-height:1.55}.check input{margin:2px 0 0;accent-color:var(--gold);flex:none}.check a{color:var(--gold);text-underline-offset:2px}
+.submit{width:100%;height:49px;border:0;border-radius:8px;background:linear-gradient(100deg,#ffe35c,#ffb500);color:#111;font-weight:950;font-size:12px;letter-spacing:.5px;margin-top:7px;cursor:pointer;transition:.2s}.submit:hover{filter:brightness(1.07);transform:translateY(-1px)}.submit:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.form-note{font-size:9px;line-height:1.55;color:#858585;margin:12px 0 0}
+.status{display:none;padding:12px 13px;border-radius:8px;background:#332800;color:#ffe58a;font-size:12px;line-height:1.5;margin-bottom:15px}.status.show{display:block}
+footer{border-top:1px solid rgba(255,255,255,.08);padding:23px 0 30px;color:#858585;font-size:10px}.footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a{color:#aaa;text-decoration:none}.footer-links a:hover{color:var(--gold)}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:35px;padding:45px 0}.product-stage{width:min(100%,530px);margin:0 auto}.columns{grid-template-columns:1fr}.timeline{order:2}}
+@media(max-width:560px){.container{width:calc(100% - 30px)}header{height:70px}.brand-symbol{width:35px;height:35px}.brand-text{font-size:20px}.nav-link{display:none}.nav-cta{padding:10px 12px;font-size:10px}.hero{padding:35px 0 38px;min-height:0}h1{font-size:47px;letter-spacing:-2.8px}.hero-copy{font-size:14px}.prize-specs{grid-template-columns:1fr;gap:9px;padding:15px}.product-frame{transform:none}.prize-ribbon{right:-5px;top:15px}.participate{padding:32px 0 48px}.timeline,.form-card{padding:21px}.form-top{display:block}.free-tag{display:inline-block;margin-top:12px}}
 </style>
 </head>
 <body>
-<header class="shell">
-<a class="brand" href="https://www.so-info.fr" aria-label="SO INFO, accueil">
- <span class="brand-mark">S</span><span class="brand-name">SO INFO<small>RÉPARATION &amp; MAINTENANCE</small></span>
-</a>
-<a class="header-link" href="https://www.so-info.fr">www.so-info.fr ↗</a>
+<header class="container">
+<a class="brand" href="https://www.so-info.fr"><span class="brand-symbol">S</span><span class="brand-text">SO INFO<small>RÉPARATION &amp; MAINTENANCE</small></span></a>
+<div class="nav-right"><a class="nav-link" href="#deroulement">Comment participer ?</a><a class="nav-cta" href="#participer">JE PARTICIPE ↗</a></div>
 </header>
 <main>
-<section class="hero shell">
+<section class="hero container">
 <div>
- <div class="eyebrow">Grand concours SO INFO</div>
- <h1>Tentez de gagner un <span>iMac 24"</span></h1>
- <p class="intro">Un ordinateur Apple peut bientôt rejoindre votre bureau. Inscrivez-vous gratuitement et participez au tirage au sort organisé par SO INFO.</p>
- <div class="prize-wrap">
-  <div class="prize-title">Le cadeau à remporter</div>
-  <div class="spec-grid">
-   <div class="spec"><i>▣</i><span>Écran Retina 4,5K</span></div>
-   <div class="spec"><i>⌘</i><span>Puce M6 · CPU 10 / GPU 10 cœurs</span></div>
-   <div class="spec"><i>▤</i><span>Mémoire 16 Go</span></div>
-   <div class="spec"><i>▱</i><span>SSD 256 Go · Argent</span></div>
-  </div>
- </div>
+<div class="kicker">Grand concours · SO INFO</div>
+<h1>Un nouvel iMac.<br><span>Et si c'était le vôtre ?</span></h1>
+<p class="hero-copy">Tentez votre chance pour remporter un Apple iMac 24 pouces. L'inscription est gratuite : quelques instants suffisent pour participer au tirage au sort.</p>
+<div class="hero-actions"><a class="primary-cta" href="#participer">PARTICIPER AU CONCOURS <span>→</span></a><span class="microcopy">Gratuit · Réservé aux personnes majeures</span></div>
+<div class="prize-specs">
+<div class="spec"><span class="spec-icon">▣</span>Écran Retina 4,5K</div>
+<div class="spec"><span class="spec-icon">⌘</span>Puce M6 · CPU 10 / GPU 10 cœurs</div>
+<div class="spec"><span class="spec-icon">▤</span>Mémoire 16 Go</div>
+<div class="spec"><span class="spec-icon">▱</span>SSD 256 Go · Argent</div>
 </div>
-<div class="visual">
- <div class="product-card">
-  <img src="imac-prize.png" alt="Illustration du lot : ordinateur Apple iMac 24 pouces argent">
-  <div class="product-caption"><strong>Apple iMac 24 pouces</strong><span>Un cadeau exceptionnel</span></div>
- </div>
 </div>
+<div class="product-stage"><div class="product-frame"><img src="imac-prize.png" alt="Illustration du lot : Apple iMac 24 pouces argent"><div class="product-under"><strong>Apple iMac 24 pouces</strong><span>Le cadeau à remporter</span></div></div><div class="prize-ribbon">À VOUS DE JOUER ✦</div></div>
 </section>
-<section class="form-section shell" id="participer">
-<div class="form-layout">
- <aside class="info-panel">
-  <h2>À vos agendas !</h2>
-  <p>La participation est gratuite et ouverte aux personnes majeures résidant dans l'Union européenne, sous réserve du règlement.</p>
-  <div class="date-list">
-   <div class="date-item"><span class="date-icon">◷</span><span><b>Ouverture</b>15 novembre 2026</span></div>
-   <div class="date-item"><span class="date-icon">⌁</span><span><b>Clôture</b>15 décembre 2026 à 23 h 59 (heure de Paris)</span></div>
-   <div class="date-item"><span class="date-icon">★</span><span><b>Tirage au sort</b>4 janvier 2027</span></div>
-  </div>
-  <p><strong style="color:#fff">Livraison :</strong> gratuite en France métropolitaine. Pour un gagnant résidant dans un autre pays de l'Union européenne, les modalités de remise devront être convenues avec l'organisateur avant validation définitive du règlement.</p>
- </aside>
- <div class="form-panel">
-  <div class="form-heading"><div><h2>Je participe !</h2><p>Quelques informations suffisent pour valider votre inscription.</p></div><span class="free-pill">100 % GRATUIT</span></div>
-  <div id="formStatus" class="form-status" role="status"></div>
-  <form id="contestForm" action="https://formsubmit.co/contact@so-info.fr" method="POST">
-   <input type="hidden" name="_subject" value="Nouvelle participation — Concours SO INFO">
-   <input type="hidden" name="_template" value="table">
-   <input type="hidden" name="_next" value="https://www.so-info.fr/concours/merci.html">
-   <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-   <label class="field" for="prenom">Prénom *</label><input id="prenom" name="Prénom" type="text" maxlength="80" autocomplete="given-name" required>
-   <label class="field" for="nom">Nom *</label><input id="nom" name="Nom" type="text" maxlength="80" autocomplete="family-name" required>
-   <label class="field" for="email">Adresse e-mail *</label><input id="email" name="email" type="email" maxlength="190" autocomplete="email" required>
-   <label class="check"><input type="checkbox" name="notice_confidentialite" value="acceptée" required><span>J'ai pris connaissance de la <a href="politique-confidentialite.html" target="_blank" rel="noopener">notice de confidentialité</a> et comprends que mes données sont utilisées pour gérer ma participation au concours. *</span></label>
-   <label class="check"><input type="checkbox" name="prospection_commerciale" value="oui"><span>J'accepte de recevoir les actualités et offres commerciales de SO INFO par e-mail. Ce choix est facultatif et je pourrai me désinscrire à tout moment.</span></label>
-   <button class="submit" id="submitBtn" type="submit">JE PARTICIPE AU CONCOURS&nbsp; →</button>
-   <p class="smallprint">* Champs obligatoires. La participation est soumise au règlement officiel. L'accord pour recevoir des offres commerciales est facultatif et n'influence pas vos chances de gagner.</p>
-  </form>
- </div>
+<div class="separator"></div>
+<section class="participate container" id="participer">
+<div class="section-head"><div class="eyebrow">Votre chance commence ici</div><h2>Participez en quelques clics</h2><p>Renseignez vos coordonnées et validez votre inscription.</p></div>
+<div class="columns">
+<aside class="timeline" id="deroulement">
+<h3>Les dates à retenir</h3><p class="timeline-intro">Le concours est ouvert aux personnes de 18 ans et plus résidant dans l'Union européenne, sous réserve du règlement.</p>
+<div class="steps">
+<div class="step"><span class="step-icon">◷</span><div class="step-text"><b>Ouverture des inscriptions</b>15 novembre 2026</div></div>
+<div class="step"><span class="step-icon">⌁</span><div class="step-text"><b>Clôture des inscriptions</b>15 décembre 2026 à 23 h 59 (heure de Paris)</div></div>
+<div class="step"><span class="step-icon">★</span><div class="step-text"><b>Tirage au sort</b>4 janvier 2027</div></div>
+</div>
+<div class="delivery-note"><strong>Remise du lot :</strong> livraison gratuite en France métropolitaine. Pour un gagnant résidant dans un autre pays de l'Union européenne, les modalités devront être précisées dans le règlement définitif avant le lancement.</div>
+</aside>
+<div class="form-card">
+<div class="form-top"><div><h3>Je participe !</h3><p class="form-intro">Vos coordonnées pour enregistrer votre participation.</p></div><span class="free-tag">100 % GRATUIT</span></div>
+<div id="status" class="status" role="status"></div>
+<form id="contestForm" action="https://formsubmit.co/contact@so-info.fr" method="POST">
+<input type="hidden" name="_subject" value="Nouvelle participation — Concours SO INFO"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://www.so-info.fr/concours/merci.html">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+<label class="field" for="prenom">PRÉNOM *</label><input id="prenom" name="Prénom" type="text" maxlength="80" autocomplete="given-name" required>
+<label class="field" for="nom">NOM *</label><input id="nom" name="Nom" type="text" maxlength="80" autocomplete="family-name" required>
+<label class="field" for="email">ADRESSE E-MAIL *</label><input id="email" name="email" type="email" maxlength="190" autocomplete="email" required>
+<label class="check"><input type="checkbox" name="notice_confidentialite" value="acceptée" required><span>J'ai pris connaissance de la <a href="politique-confidentialite.html" target="_blank" rel="noopener">notice de confidentialité</a> et comprends que mes données sont utilisées pour gérer ma participation au concours. *</span></label>
+<label class="check"><input type="checkbox" name="prospection_commerciale" value="oui"><span>J'accepte de recevoir par e-mail les actualités et offres commerciales de SO INFO. Cette autorisation est facultative et je pourrai la retirer à tout moment.</span></label>
+<button class="submit" id="submitBtn" type="submit">VALIDER MA PARTICIPATION&nbsp; →</button>
+<p class="form-note">* Champs obligatoires. La participation est soumise au règlement officiel. L'accord pour recevoir des offres commerciales est facultatif et n'influence pas vos chances de gagner.</p>
+</form>
+</div>
 </div>
 </section>
 </main>
-<footer><div class="shell footer-inner"><span>© 2026 SO INFO · Réparation &amp; Maintenance</span><nav class="legal-links"><a href="reglement-concours.html">Règlement du concours</a><a href="politique-confidentialite.html">Confidentialité</a><a href="https://www.so-info.fr">Site SO INFO</a></nav></div></footer>
+<footer><div class="container footer-row"><span>© 2026 SO INFO · Réparation &amp; Maintenance</span><nav class="footer-links"><a href="reglement-concours.html">Règlement du concours</a><a href="politique-confidentialite.html">Confidentialité</a><a href="https://www.so-info.fr">Site SO INFO</a></nav></div></footer>
 <script>
 (function(){
- const now=new Date();
- const open=new Date('2026-11-15T00:00:00+01:00');
- const close=new Date('2026-12-15T23:59:59+01:00');
- const form=document.getElementById('contestForm');
- const btn=document.getElementById('submitBtn');
- const status=document.getElementById('formStatus');
- if(now<open){btn.disabled=true;status.textContent="Les inscriptions ouvriront le 15 novembre 2026. Revenez à cette date pour participer.";status.classList.add('show');}
- else if(now>close){btn.disabled=true;status.textContent="Le concours est terminé depuis le 15 décembre 2026. Merci de votre intérêt pour SO INFO.";status.classList.add('show');}
+ const now=new Date(),open=new Date('2026-11-15T00:00:00+01:00'),close=new Date('2026-12-15T23:59:59+01:00');
+ const form=document.getElementById('contestForm'),btn=document.getElementById('submitBtn'),status=document.getElementById('status');
+ if(now<open){btn.disabled=true;status.textContent="Les inscriptions ouvriront le 15 novembre 2026. Revenez à cette date pour participer.";status.classList.add('show')}
+ else if(now>close){btn.disabled=true;status.textContent="Le concours est terminé depuis le 15 décembre 2026. Merci de votre intérêt pour SO INFO.";status.classList.add('show')}
 })();
 </script>
-</body>
-</html>
+</body></html>
