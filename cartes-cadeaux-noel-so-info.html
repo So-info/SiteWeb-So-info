@@ -2,597 +2,234 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#080807">
-<meta name="description" content="Offrez une carte cadeau SO INFO de 25 €, 50 €, 75 € ou 100 €. Un cadeau élégant pour les services et équipements informatiques.">
+<meta name="theme-color" content="#0a0a09">
+<meta name="description" content="Offrez une carte cadeau SO INFO de 25 €, 50 €, 75 €, 100 € ou le montant de votre choix. Réparation, maintenance et matériel informatique.">
 <title>Cartes cadeaux SO INFO | Offrez le choix</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
+:root{--ink:#0a0a09;--panel:#121210;--line:#2b2a26;--y:#ffd000;--y2:#ffe36b;--text:#f4f1ea;--muted:#aaa69b;--f:"Plus Jakarta Sans",system-ui,Arial,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--ink)}
+body{margin:0;background:var(--ink);color:var(--text);font:400 16px/1.65 var(--f);overflow-x:hidden}
+a{color:inherit;text-decoration:none}button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--y);outline-offset:3px}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:#0a0a09ec;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:42px;height:42px;border:2px solid var(--y);border-radius:50%;display:grid;place-items:center;color:var(--y);font-weight:800}
+.brand b{display:block;font-weight:800;font-size:1.1rem;letter-spacing:-.03em;line-height:1.1}.brand small{color:#8e8a80;font-size:.68rem}
+.back{font-size:.84rem;font-weight:700;color:var(--muted)}.back:hover{color:var(--y)}
 
-:root{--bg:#0a0a09;--paper:#11110f;--line:#2b2a26;--gold:#ffd000;--gold2:#ffe36b;--text:#f4f1ea;--muted:#b4b0a6;--max:1200px;--serif:"Plus Jakarta Sans",Arial,sans-serif;--sans:"Plus Jakarta Sans",Arial,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px;background:var(--bg);color-scheme:dark}
-body{margin:0!important;background:radial-gradient(ellipse 65% 48% at 75% 8%,#3328004d,transparent 70%),#0a0a09!important;color:var(--text)!important;font:400 16px/1.65 var(--sans);overflow-x:hidden}
-a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
-:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
-header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
-.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;font:800 1.1rem var(--sans);letter-spacing:-.04em;color:var(--text)}
-.logo{width:40px;height:40px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:1rem;background:transparent}
-.brand small{display:block;color:#8e8a80;font:500 .56rem var(--sans);letter-spacing:0}
-.navlinks{display:flex;align-items:center;gap:24px;font-size:.84rem;font-weight:700;color:var(--text)}
-.navlinks a:hover{color:var(--gold)}
-.navlinks .active{color:var(--gold);border:1px solid #ffd00055;border-radius:999px;padding:8px 14px;background:#ffd0000b}
-.navlinks .contact-link{background:var(--gold);color:#0a0a09;padding:12px 22px;border-radius:999px;font-weight:800}
-.hero{position:relative;isolation:isolate;overflow:hidden;padding:75px 0 68px;background:radial-gradient(ellipse 62% 85% at 74% 48%,#322800 0,#151207 42%,#0a0a09 78%)}
-.hero:before{content:"";position:absolute;z-index:-1;width:650px;height:650px;right:-200px;top:-340px;border:1px solid #ffd00035;border-radius:50%;box-shadow:0 0 0 35px #ffd0000a,0 0 0 75px #ffd00007,0 0 90px #ffd00012}
-.hero:after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,#ffd00065,transparent)}
-.hero-layout{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:40px;min-height:460px}
-.hero-copy{position:relative;z-index:2}.eyebrow{display:inline-flex;align-items:center;gap:9px;background:#ffd00012;color:var(--gold);border:1px solid #ffd00066;padding:9px 15px;border-radius:999px;font-size:.65rem;letter-spacing:.16em;font-weight:800}
-.eyebrow span{color:#fff0a1}
-.hero h1{font:800 clamp(3rem,5.4vw,5.3rem)/1.02 var(--sans);letter-spacing:-.065em;color:var(--text);margin:27px 0 20px;max-width:700px}
-.hero h1 em{color:var(--gold);font-style:normal;font-weight:800;text-shadow:0 0 38px #ffd00026}
-.lead{margin:0;max-width:550px;color:#c8c4b9;font-size:1.02rem;line-height:1.85}
-.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:49px;padding:13px 23px;border:1px solid var(--gold);border-radius:999px;background:var(--gold);color:#0a0a09;font-weight:800;font-size:.86rem;box-shadow:0 10px 30px #ffd00026;transition:transform .22s,box-shadow .22s,background .22s}
-.btn:hover{transform:translateY(-2px);background:#ffe05a;box-shadow:0 12px 34px #ffd00045}
-.btn.secondary{background:#0a0a09a8;color:var(--text);border-color:#6b675c;box-shadow:none}
-.btn.secondary:hover{border-color:var(--gold);color:var(--gold)}
-.hero-trust{display:flex;gap:13px 17px;flex-wrap:wrap;margin-top:25px;color:#aaa69b;font-size:.7rem;font-weight:700}
-.hero-trust span{white-space:nowrap}
-.hero-art{position:relative;min-height:430px;display:grid;place-items:center;perspective:1200px}
-.hero-art:before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,#ffd00024 0,#ffd0000a 48%,transparent 70%);border:1px solid #ffd00032;box-shadow:0 0 0 25px #ffd00008,0 0 75px #ffd00018}
-.art-card{position:absolute;width:min(370px,82%);aspect-ratio:1.58/1;border-radius:17px;padding:23px 26px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;box-shadow:0 28px 65px #000b,0 1px 0 #ffffff24 inset}
-.art-card:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 15px,#ffffff0b 16px 17px,transparent 18px 34px),radial-gradient(circle at 90% 100%,#ffd00032,transparent 40%);pointer-events:none}
-.art-back{background:linear-gradient(135deg,#3b3010,#17150d 65%,#0d0d0b);transform:rotate(10deg) translate(35px,18px);color:#f7e8c1;border:1px solid #b99126}
-.art-front{background:linear-gradient(135deg,#26251d,#10110d 72%,#080908);transform:rotate(-8deg) translate(-20px,-7px);border:1px solid #ffd000;color:#f7efd9;box-shadow:0 28px 65px #000c,0 0 34px #ffd00020,0 1px 0 #ffffff28 inset}
-.art-brand{position:relative;font-weight:800;letter-spacing:.16em;font-size:.83rem}.art-brand small{display:block;font-size:.5rem;letter-spacing:.24em;opacity:.75;margin-top:3px;color:#d0c5a4}
-.art-gift{position:relative;font:800 2rem/1.02 var(--sans);color:#fff1b4;letter-spacing:-.05em}
-.art-amount{position:relative;font:800 3.5rem/.9 var(--sans);color:var(--gold);letter-spacing:-.07em;text-shadow:0 0 22px #ffd00030}.art-amount small{font-size:1.7rem}
-.art-foot{position:relative;font-size:.48rem;letter-spacing:.22em;opacity:.8}.art-seal{position:absolute;right:24px;bottom:25px;width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font:800 1.4rem var(--sans)}
-.art-back-mark{position:absolute;right:25px;bottom:15px;font:800 8rem var(--sans);color:#ffffff10}
-.art-spark{position:absolute;z-index:4;color:var(--gold);text-shadow:0 0 20px #ffd00080}.spark-one{top:30px;right:13%;font-size:2rem}.spark-two{bottom:42px;left:10%;font-size:2.7rem}
-.art-caption{position:absolute;bottom:0;right:4%;font-size:.6rem;letter-spacing:.24em;color:#bda64b;font-weight:800}
-.section{padding:76px 0;border-top:1px solid #2b2a26;background:#0c0c0a;color:var(--text)}
-.section-head{text-align:center;margin:0 auto 38px}
-.kicker{color:var(--gold);font-size:.67rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
-.section h2{font:800 clamp(2rem,4vw,3.2rem)/1.08 var(--sans);letter-spacing:-.055em;color:var(--text);margin:10px 0 13px}
-.sub{color:#aaa69b;max-width:720px;margin:0 auto;line-height:1.75}
-#montants{background:radial-gradient(ellipse 65% 65% at 50% 0%,#2a2208 0,transparent 70%),#0b0b09}
-.gift-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:21px;align-items:stretch}
-.gift-option{position:relative;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px}
-.gift-card{--accent:#ffd000;--accent2:#fff0a1;position:relative;width:100%;aspect-ratio:1.42/1;border:1px solid color-mix(in srgb,var(--accent) 78%,white 8%);border-radius:16px;overflow:hidden;cursor:pointer;text-align:left;color:white;background:radial-gradient(ellipse at 82% 15%,#ffd00026,transparent 46%),linear-gradient(135deg,#252319,#11110d 65%,#080908);box-shadow:0 17px 36px #0009,0 1px 0 #ffffff20 inset;transform-style:preserve-3d;transition:transform .25s,box-shadow .25s,border-color .25s;isolation:isolate;padding:0}
-.gift-option:nth-child(2) .gift-card{--accent:#9ac9e7;--accent2:#d8f0ff;background:radial-gradient(ellipse at 82% 15%,#78bce82b,transparent 46%),linear-gradient(135deg,#172c3a,#0d1720 70%,#080b0e)}
-.gift-option:nth-child(3) .gift-card{--accent:#e58c70;--accent2:#ffd0ad;background:radial-gradient(ellipse at 82% 15%,#e58c702b,transparent 46%),linear-gradient(135deg,#3a211d,#1d1111 70%,#0b0909)}
-.gift-option:nth-child(4) .gift-card{--accent:#ffd000;--accent2:#fff0a1;background:radial-gradient(ellipse at 82% 15%,#ffd00030,transparent 46%),linear-gradient(135deg,#3b3010,#19160b 70%,#0b0b08)}
-.gift-card:before{content:"";position:absolute;inset:0;z-index:0;opacity:.9;background:radial-gradient(circle at 85% 85%,#ffffff18,transparent 34%),repeating-linear-gradient(135deg,transparent 0 19px,#ffffff0a 20px 21px,transparent 22px 40px);pointer-events:none}
-.gift-card:after{content:"";position:absolute;width:190px;height:190px;right:-85px;bottom:-105px;border:1px solid color-mix(in srgb,var(--accent) 65%,transparent);border-radius:50%;box-shadow:0 0 0 12px color-mix(in srgb,var(--accent) 7%,transparent),0 0 0 27px color-mix(in srgb,var(--accent) 5%,transparent);pointer-events:none}
-.gift-card:hover{transform:translateY(-5px);box-shadow:0 25px 45px #000c,0 0 24px color-mix(in srgb,var(--accent) 20%,transparent)}
-.gift-card.selected{outline:2px solid var(--gold);outline-offset:4px;box-shadow:0 22px 40px #000c,0 0 28px #ffd00028}
-.gift-card .shine{position:absolute;inset:-80% -35%;z-index:2;background:linear-gradient(110deg,transparent 43%,#ffffff25 49%,transparent 55%);transform:translateX(-45%) rotate(8deg);transition:transform .85s;pointer-events:none}
-.gift-card:hover .shine{transform:translateX(45%) rotate(8deg)}
-.gift-inner{position:absolute;inset:0;padding:19px 20px;display:flex;flex-direction:column;justify-content:space-between;z-index:2;transform:translateZ(25px)}
-.gift-brand{display:flex;align-items:center;gap:9px;font-size:.73rem;font-weight:800;letter-spacing:.15em}
-.gift-brand .mini-logo{width:26px;height:26px;border:1px solid var(--accent);border-radius:50%;display:grid;place-items:center;color:var(--accent);font-size:.76rem}
-.gift-label{font-size:.57rem;letter-spacing:.19em;text-transform:uppercase;color:#c9c3b5}
-.gift-value{display:inline-block;margin-top:5px;color:var(--accent2);font:800 clamp(2.55rem,3.5vw,3.7rem)/.95 var(--sans);letter-spacing:-.07em;text-shadow:0 0 22px color-mix(in srgb,var(--accent) 25%,transparent)}
-.gift-ribbon{position:absolute;right:25px;top:-24px;width:15px;height:145%;background:linear-gradient(90deg,#8b6b16,#fff0a1,#a17b16);transform:rotate(17deg) translateZ(12px);box-shadow:0 0 22px #0009;opacity:.9;z-index:1}
-.gift-bow{position:absolute;right:8px;top:38%;width:57px;height:35px;transform:translateZ(42px) rotate(15deg);z-index:3}
-.gift-bow:before,.gift-bow:after{content:"";position:absolute;width:27px;height:20px;border:4px solid var(--accent);border-radius:80% 15% 80% 15%;box-shadow:0 0 12px color-mix(in srgb,var(--accent) 38%,transparent)}
-.gift-bow:before{left:0;transform:rotate(20deg)}.gift-bow:after{right:0;transform:scaleX(-1) rotate(20deg)}.gift-bow i{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--accent);left:22px;top:11px}
-.gift-select{display:flex;align-items:center;gap:8px;color:#e5dfd2;font-size:.82rem;font-weight:700;cursor:pointer}.gift-select input{accent-color:var(--gold);width:17px;height:17px}
-.gift-option .caption{font-size:.72rem;color:#928e83;text-align:center}
-.selection{margin:37px auto 0;max-width:780px;padding:21px 24px;border:1px solid #65521c;border-radius:17px;background:linear-gradient(110deg,#1c190e,#11110e);display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 15px 35px #0007}
-.selection small{display:block;color:#aaa18c;font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800}.selection strong{font:800 1.9rem var(--sans);color:var(--gold)}.selection .btn{white-space:nowrap}
-.feature-grid,.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.feature,.step{border:1px solid #2d2c27;border-radius:16px;padding:25px;background:linear-gradient(145deg,#171714,#10100e);box-shadow:0 12px 30px #0005}
-.feature-icon{font-size:1.55rem;color:var(--gold)}.feature h3,.step h3{font-size:1rem;margin:10px 0 5px;color:var(--text)}.feature p,.step p{font-size:.87rem;color:var(--muted);margin:0}
-.num{width:39px;height:39px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#0a0a09;font-weight:900;margin-bottom:15px}
-.notice{border:1px solid #66551d;background:linear-gradient(120deg,#1d190b,#11110e);padding:24px;border-radius:16px;color:#c9c3b5}.notice strong{color:var(--gold)}
-.contact{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:33px;border:1px solid #66551d;border-radius:19px;background:radial-gradient(ellipse at 100% 0%,#ffd00020,transparent 45%),linear-gradient(110deg,#201b0b,#11110e);color:#fff;box-shadow:0 18px 40px #0007}
-.contact h2{font:800 clamp(1.7rem,3vw,2.5rem)/1.1 var(--sans);margin:0 0 9px;color:var(--text)}.contact p{margin:0;color:#c5c0b4;font-size:.92rem}.contact .btn{background:var(--gold);color:#0a0a09;border-color:var(--gold)}
-.foot{padding:28px 0;color:#969187;border-top:1px solid #2b2a26;margin-top:25px;font-size:.78rem}.footin{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.foot strong{color:var(--gold)}.foot a:hover{color:var(--gold)}
-.checkout-panel{display:none;margin:25px auto 0;max-width:780px;padding:27px;border:1px solid #65521c;border-radius:19px;background:linear-gradient(110deg,#1c190e,#11110e);box-shadow:0 15px 35px #0007}
-.checkout-panel.open{display:block}.checkout-panel h3{margin:0 0 14px;color:var(--gold);font:800 1.65rem var(--sans)}
-.checkout-panel label{display:block;margin:12px 0 6px;color:#e5dfd2;font-weight:700;font-size:.88rem}
-.checkout-panel input[type=email],.checkout-panel input[type=text]{width:100%;padding:14px 15px;border:1px solid #4a4638;border-radius:11px;background:#0a0a09;color:#fff;font:inherit}
-.checkout-panel input:focus{outline:2px solid var(--gold);outline-offset:2px}
-.delivery-options{display:flex;gap:20px;flex-wrap:wrap;margin:14px 0 20px}.delivery-options label{display:flex;align-items:center;gap:8px;margin:0}.delivery-options input{accent-color:var(--gold)}
-.checkout-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:19px}.checkout-message{min-height:24px;color:#ffe36b;font-size:.9rem}
-.checkout-panel .btn:disabled{opacity:.55;cursor:wait;transform:none}
-@media(max-width:950px){.gift-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px}.navlinks{gap:12px}.navlinks a:not(.active):not(.contact-link){display:none}}
-@media(max-width:700px){.wrap{width:calc(100% - 32px)}.nav{height:66px}.hero-layout{grid-template-columns:1fr;gap:10px;min-height:0}.hero{padding:50px 0 38px}.hero-copy{text-align:center}.hero h1{font-size:clamp(2.7rem,11vw,4rem);margin:22px auto 17px}.lead{font-size:.94rem;margin:0 auto}.hero-cta{justify-content:center;margin-top:22px}.hero-cta .btn{width:min(100%,390px);min-height:54px;font-size:.92rem}.hero-trust{justify-content:center;gap:8px 12px;font-size:.64rem;margin-top:20px}.hero-art{min-height:330px;margin-top:5px}.hero-art:before{width:290px;height:290px}.art-card{width:80%;padding:18px 20px}.art-gift{font-size:1.65rem}.art-amount{font-size:2.8rem}.art-seal{width:38px;height:38px}.section{padding:54px 0}.section-head{margin-bottom:28px}.section h2{font-size:2.15rem}.gift-grid{gap:22px 12px}.gift-card{border-radius:14px}.gift-inner{padding:13px}.gift-brand{font-size:.61rem;letter-spacing:.1em}.gift-brand .mini-logo{width:22px;height:22px}.gift-label{font-size:.46rem;letter-spacing:.13em}.gift-value{font-size:clamp(2rem,8vw,2.55rem)}.gift-ribbon{right:18px;width:12px}.gift-bow{right:0;transform:translateZ(42px) scale(.72)}.gift-select{font-size:.73rem;gap:6px}.gift-select input{width:15px;height:15px}.gift-option .caption{font-size:.64rem}.selection{align-items:flex-start;flex-direction:column;padding:19px}.selection .btn{width:100%}.feature-grid,.steps{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column;padding:24px}.contact .btn{width:100%}.checkout-panel{padding:19px}.footin{flex-direction:column;gap:8px}}
-@media(max-width:370px){.gift-inner{padding:10px}.gift-value{font-size:1.9rem}.gift-ribbon{right:14px}.gift-bow{right:-6px;transform:translateZ(42px) scale(.6)}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:12px 26px;border-radius:999px;border:2px solid var(--y);background:var(--y);color:#0a0a09;font-weight:800;font-size:.92rem;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:var(--y2);box-shadow:0 10px 28px #ffd00040}
+.btn.ghost{background:transparent;color:var(--text);border-color:#5f5b4f}.btn.ghost:hover{border-color:var(--y);color:var(--y);box-shadow:none}
+.btn:disabled{opacity:.55;cursor:wait;transform:none}
 
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:76px 0 84px;background:radial-gradient(ellipse 60% 85% at 76% 45%,#3a2e00,#14110500 70%)}
+.hero:before{content:"";position:absolute;width:640px;height:640px;right:-190px;top:-330px;border:1px solid #ffd00040;border-radius:50%;box-shadow:0 0 0 38px #ffd0000a,0 0 0 80px #ffd00006}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.hero h1{font-weight:800;font-size:clamp(2.9rem,5.8vw,5.2rem);line-height:1;letter-spacing:-.06em;margin:0 0 22px}
+.hero h1 em{font-style:normal;color:var(--y)}
+.lead{max-width:480px;color:#cfcbbf;font-size:1.04rem;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:8px 22px;flex-wrap:wrap;margin:28px 0 0;padding:0;list-style:none;color:var(--muted);font-size:.8rem;font-weight:700}
+.trust li:before{content:"✦ ";color:var(--y)}
+.fan{position:relative;height:370px}
+.fan .gc{position:absolute;left:50%;top:50%;width:min(290px,70%);margin:-90px 0 0 -145px;transform:rotate(var(--r)) translate(var(--x),var(--y2x));animation:fan 1s cubic-bezier(.2,.8,.2,1) both}
+.fan .gc:nth-child(1){--r:-16deg;--x:-46px;--y2x:-8px}.fan .gc:nth-child(2){--r:-5deg;--x:-14px;--y2x:2px;animation-delay:.07s}
+.fan .gc:nth-child(3){--r:6deg;--x:18px;--y2x:10px;animation-delay:.14s}.fan .gc:nth-child(4){--r:17deg;--x:50px;--y2x:20px;animation-delay:.21s}
+@keyframes fan{from{transform:rotate(0) translate(0,0);opacity:0}}
 
-.hero-art{position:relative;min-height:500px;display:block;perspective:1100px}
-#gift3d{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:2}
-.hero-art:before{width:430px;height:430px;background:radial-gradient(circle,#ffd00020 0,#ffd00008 48%,transparent 72%);border-color:#ffd00030;box-shadow:0 0 0 30px #ffd00006,0 0 100px #ffd00016}
-.gift3d-caption{position:absolute;z-index:3;bottom:4px;left:0;right:0;text-align:center;color:#c5a72d;font-size:.62rem;font-weight:800;letter-spacing:.22em}
-.gift3d-caption span{color:var(--gold);padding:0 8px}
-.gift3d-fallback{display:none;position:absolute;z-index:1;inset:0;place-items:center}
-.fallback-card{width:270px;aspect-ratio:1.6;background:linear-gradient(145deg,#24231d,#080908);border:1px solid var(--gold);border-radius:16px;padding:25px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 50px #000b;color:#f5edda;transform:rotate(-9deg)}
-.fallback-card strong{font-size:3rem;color:var(--gold)}.fallback-card small{letter-spacing:.2em}
-@media(max-width:700px){.hero-art{min-height:370px;margin-top:0}.hero-art:before{width:300px;height:300px}.gift3d-caption{bottom:0;font-size:.54rem}}
+/* The card visual: more yellow as the amount grows */
+.gc{--bg:linear-gradient(140deg,#1b1a15,#0b0b09);--fg:var(--y);--sub:#cfc9b4;--ring:#ffd00055;--st:#ffffff0a;position:relative;aspect-ratio:1.586;border-radius:20px;overflow:hidden;color:var(--fg);background:var(--bg);border:1.5px solid var(--y);box-shadow:0 22px 44px #000b,inset 0 1px 0 #ffffff30;isolation:isolate}
+.gc:before{content:"";position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(135deg,transparent 0 17px,var(--st) 18px 19px,transparent 20px 38px)}
+.gc:after{content:"";position:absolute;width:210px;height:210px;right:-80px;bottom:-110px;border-radius:50%;border:1.5px solid var(--ring);box-shadow:0 0 0 14px color-mix(in srgb,var(--ring) 40%,transparent),0 0 0 30px color-mix(in srgb,var(--ring) 20%,transparent);z-index:-1}
+.gc.t2{--bg:linear-gradient(140deg,#262212,#0d0c08);--ring:#ffd00077}
+.gc.t3{--bg:linear-gradient(140deg,#ffd000,#a97f00);--fg:#0a0a09;--sub:#2b2100;--ring:#0a0a0955;--st:#ffffff22;border-color:#fff0a1}
+.gc.t4{--bg:linear-gradient(140deg,#fff0a1,#ffd000 45%,#e3b300);--fg:#0a0a09;--sub:#2b2100;--ring:#0a0a0966;--st:#ffffff40;border-color:#fff7cc}
+.gc-in{height:100%;padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between}
+.gc-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.gc-brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:.76rem;letter-spacing:.14em}
+.gc-brand i{width:24px;height:24px;border:1.5px solid currentColor;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:.72rem;letter-spacing:0}
+.gc-tier{font-size:.68rem;font-weight:800;letter-spacing:.14em;border:1px solid currentColor;border-radius:999px;padding:3px 11px;opacity:.9}
+.gc-amt{font-weight:800;font-size:clamp(3rem,4.7vw,4rem);line-height:.9;letter-spacing:-.07em}
+.gc-amt small{font-size:.5em;letter-spacing:0;margin-left:2px}
+.gc-foot{font-size:.62rem;letter-spacing:.2em;font-weight:700;color:var(--sub)}
 
+/* Offers */
+.section{padding:84px 0;border-top:1px solid var(--line)}
+.head{max-width:640px;margin:0 0 42px}.head.c{margin-left:auto;margin-right:auto;text-align:center}
+.kicker{color:var(--y);font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.head h2{font-weight:800;font-size:clamp(2rem,4.2vw,3.2rem);line-height:1.06;letter-spacing:-.05em;margin:10px 0 12px}
+.head p{margin:0;color:var(--muted)}
+#montants{background:radial-gradient(ellipse 70% 45% at 50% 0,#2a2208,transparent 72%),var(--ink)}
+.offers{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.offer{display:flex;flex-direction:column;gap:14px;padding:14px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(170deg,#171612,#0f0f0c);transition:border-color .25s,transform .25s}
+.offer:hover{border-color:#ffd00099;transform:translateY(-4px)}
+.offer .gc{transition:transform .25s}.offer:hover .gc{transform:rotate(-1.5deg) scale(1.02)}
+.offer-info{padding:0 6px;font-size:.88rem;color:var(--muted);line-height:1.45;min-height:2.9em}
+.offer .btn{width:100%}
+.offer-note{text-align:center;font-size:.7rem;color:#8e8a80;margin:-4px 0 2px;font-weight:700}
 
-.hero-art{min-height:500px}
-#gift3d{filter:drop-shadow(0 25px 35px #0009)}
-.gift3d-caption{letter-spacing:.24em;text-shadow:0 0 18px #ffd00035}
-@media(max-width:700px){.hero-art{min-height:385px}#gift3d{filter:drop-shadow(0 18px 24px #0009)}}
+/* Custom amount card */
+.custom{position:relative;overflow:hidden;margin-top:20px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:36px;border:2px solid var(--y);border-radius:28px;background:radial-gradient(ellipse at 100% 0,#ffd00028,transparent 55%),linear-gradient(120deg,#1d1a0b,#0c0c0a);box-shadow:0 0 50px #ffd00014}
+.custom:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 26px,#ffd0000a 27px 28px,transparent 29px 54px);pointer-events:none}
+.custom>*{position:relative}
+.custom h3{font-weight:800;font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1.05;letter-spacing:-.05em;margin:8px 0 10px}
+.custom h3 em{font-style:normal;color:var(--y)}
+.custom p{margin:0 0 20px;color:#c8c3b6;max-width:420px}
+.field{display:flex;align-items:center;gap:10px;max-width:340px;height:68px;padding:0 22px;border:2px solid #6b5a1e;border-radius:18px;background:#080807;transition:border-color .2s}
+.field:focus-within{border-color:var(--y);box-shadow:0 0 0 4px #ffd00022}
+.field span{color:var(--y);font-weight:800;font-size:1.7rem}.field input{width:100%;min-width:0;border:0;outline:0;background:none;font-weight:800;font-size:2rem;letter-spacing:-.04em}
+.field input::placeholder{color:#4e4a3e}.field input::-webkit-inner-spin-button{display:none}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 22px}
+.chip{padding:7px 16px;border-radius:999px;border:1px solid #5f5b4f;background:none;font-weight:700;font-size:.82rem;cursor:pointer;transition:.2s}
+.chip:hover{border-color:var(--y);color:var(--y)}
+.custom-hint{font-size:.74rem;color:#8e8a80;margin-top:10px}
+.preview{transform:rotate(-5deg);transition:transform .3s}.custom:hover .preview{transform:rotate(-2deg) scale(1.02)}
+.preview .gc-amt{font-size:clamp(2.6rem,4.4vw,3.8rem)}
 
+/* Dialog */
+dialog{width:min(520px,calc(100% - 28px));max-height:calc(100% - 28px);padding:0;border:1px solid #6b5a1e;border-radius:24px;background:#12110d;color:var(--text);box-shadow:0 30px 80px #000}
+dialog::backdrop{background:#000c;backdrop-filter:blur(4px)}
+.dlg{padding:28px}
+.dlg-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:6px}
+.dlg h3{margin:0;font-weight:800;font-size:1.6rem;letter-spacing:-.04em}
+.dlg-amt{color:var(--y);font-weight:800;font-size:2.3rem;letter-spacing:-.05em;line-height:1}
+.x{border:1px solid #4a4638;background:none;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.1rem;flex:none}.x:hover{border-color:var(--y);color:var(--y)}
+.dlg .sub{margin:4px 0 14px;color:var(--muted);font-size:.9rem}
+.dlg label{display:block;margin:14px 0 6px;font-weight:700;font-size:.86rem}
+.dlg input[type=email],.dlg input[type=text]{width:100%;height:50px;padding:0 16px;border:1px solid #4a4638;border-radius:12px;background:var(--ink);outline:0}
+.dlg input[type=email]:focus,.dlg input[type=text]:focus{border-color:var(--y)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg label{display:flex;align-items:center;justify-content:center;gap:8px;margin:0;height:46px;border:1px solid #4a4638;border-radius:12px;cursor:pointer;font-weight:700}
+.seg label:has(input:checked){border-color:var(--y);background:#ffd00014;color:var(--y)}
+input[type=radio]{accent-color:var(--y)}
+.dlg .btn{width:100%;margin-top:20px}
+.msg{min-height:22px;margin:12px 0 0;color:var(--y2);font-size:.88rem}
 
-/* Collection coffrets premium SO INFO */
-.gift-header .nav{height:78px;justify-content:flex-start}.gift-header .logo{width:48px;height:48px;box-shadow:0 0 24px #ffd00022}.gift-header .brand>span:last-child{font-size:1.2rem}
-#montants{padding-top:66px;background:radial-gradient(ellipse 70% 45% at 50% 0%,#2b2208 0,transparent 72%),#090908}
-#montants .section-head h2{font-size:clamp(2.1rem,4.4vw,3.5rem)}
-.gift-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:960px;margin:auto}
-.gift-option{gap:10px;align-items:stretch}
-.gift-option .gift-card{--metal:#d98a50;position:relative;display:block;width:100%;height:244px;aspect-ratio:auto;border:1px solid var(--metal);border-radius:19px;overflow:hidden;text-align:left;color:white;background:radial-gradient(ellipse at 72% 38%,color-mix(in srgb,var(--metal) 25%,transparent),transparent 54%),linear-gradient(130deg,#20150f,#0d0d0c 70%);box-shadow:0 18px 42px #0009,inset 0 1px 0 #ffffff24;transition:transform .28s,box-shadow .28s;isolation:isolate;padding:24px 25px}
-.gift-option .gift-card:before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 95% 10%,#ffffff13,transparent 35%),repeating-linear-gradient(135deg,transparent 0 24px,#ffffff08 25px 26px,transparent 27px 48px);pointer-events:none}
-.gift-option .gift-card:after{content:"";position:absolute;inset:8px;border:1px solid color-mix(in srgb,var(--metal) 35%,transparent);border-radius:13px;pointer-events:none}
-.tier-bronze .gift-card{--metal:#d98a50;background:radial-gradient(ellipse at 72% 38%,#a953203f,transparent 54%),linear-gradient(130deg,#321b12,#0e0d0c 72%)}
-.tier-silver .gift-card{--metal:#c5ced8;background:radial-gradient(ellipse at 72% 38%,#a9c5e53d,transparent 54%),linear-gradient(130deg,#202a36,#0b0e12 72%)}
-.tier-gold .gift-card{--metal:#ffd000;background:radial-gradient(ellipse at 72% 38%,#b886003d,transparent 54%),linear-gradient(130deg,#302408,#0d0c09 72%)}
-.tier-platinum .gift-card{--metal:#c7b9e8;background:radial-gradient(ellipse at 72% 38%,#9885c53d,transparent 54%),linear-gradient(130deg,#292238,#0d0c11 72%)}
-.gift-option .gift-card:hover{transform:translateY(-5px);box-shadow:0 27px 50px #000c,0 0 24px color-mix(in srgb,var(--metal) 22%,transparent)}
-.gift-option .gift-card.selected{outline:2px solid var(--gold);outline-offset:3px;box-shadow:0 20px 45px #000b,0 0 28px #ffd00028}
-.tier-pill{position:relative;z-index:4;display:inline-flex;padding:6px 15px;border-radius:999px;border:1px solid color-mix(in srgb,var(--metal) 75%,white 12%);background:color-mix(in srgb,var(--metal) 22%,#0b0b0b);color:#fff;font-size:.68rem;font-weight:900;letter-spacing:.18em}
-.tier-value{position:relative;z-index:4;display:block;margin-top:10px;font-size:clamp(2.5rem,5vw,3.45rem);font-weight:900;line-height:1;letter-spacing:-.07em;color:#fff;text-shadow:0 3px 20px #000}.tier-value small{font-size:.65em;color:var(--metal)}
-.tier-desc{position:relative;z-index:4;display:block;margin-top:8px;max-width:190px;color:#d0ccc3;font-size:.82rem;line-height:1.45}
-.gift-object{position:absolute;z-index:2;width:150px;height:132px;right:25px;top:55px;filter:drop-shadow(0 17px 14px #0009);transform:rotate(-5deg);transition:transform .35s}
-.gift-card:hover .gift-object,.gift-card.selected .gift-object{transform:translateY(-7px) rotate(-2deg) scale(1.04)}
-.gift-object i{position:absolute;display:block}
-.gift-object .gift-front{left:25px;top:44px;width:100px;height:78px;border:1px solid color-mix(in srgb,var(--metal) 80%,white 10%);border-radius:4px;background:linear-gradient(135deg,color-mix(in srgb,var(--metal) 26%,#29231a),#15130f 65%);box-shadow:inset 0 0 18px #ffffff10,8px 12px 20px #0008}
-.gift-object .gift-front b{position:absolute;left:34px;top:20px;width:31px;height:31px;border:1px solid var(--metal);border-radius:50%;display:grid;place-items:center;color:var(--metal);font-size:1.1rem}
-.gift-object .gift-side{left:125px;top:49px;width:19px;height:72px;background:linear-gradient(90deg,color-mix(in srgb,var(--metal) 45%,#1a1711),#090909);transform:skewY(-22deg);transform-origin:left}
-.gift-object .gift-top{left:31px;top:30px;width:105px;height:22px;background:linear-gradient(145deg,color-mix(in srgb,var(--metal) 70%,#fff),color-mix(in srgb,var(--metal) 32%,#1a1711));transform:skewX(-38deg) rotate(-1deg);border:1px solid color-mix(in srgb,var(--metal) 80%,white 12%);box-shadow:0 4px 8px #0008}
-.gift-object .gift-ribbon{left:69px;top:30px;width:13px;height:92px;background:linear-gradient(90deg,color-mix(in srgb,var(--metal) 55%,#30200d),var(--metal),#fff4c8aa);box-shadow:0 0 12px color-mix(in srgb,var(--metal) 35%,transparent)}
-.gift-object .gift-bow{left:56px;top:11px;width:43px;height:30px;border:5px solid var(--metal);border-bottom-color:transparent;border-radius:80% 80% 20% 20%;transform:rotate(12deg);filter:drop-shadow(0 0 5px color-mix(in srgb,var(--metal) 45%,transparent))}
-.gift-object .gift-shadow{left:8px;top:118px;width:145px;height:15px;border-radius:50%;background:color-mix(in srgb,var(--metal) 25%,transparent);filter:blur(8px)}
-.gift-choose{position:absolute;z-index:5;left:22px;right:22px;bottom:16px;display:flex;align-items:center;justify-content:center;gap:10px;min-height:39px;border:1px solid color-mix(in srgb,var(--metal) 65%,#ffffff40);border-radius:999px;background:#08080899;color:#f5f2e9;font-size:.78rem;font-weight:800}
-.choose-dot{width:17px;height:17px;border:2px solid #e8e5dc;border-radius:50%;display:inline-block}.gift-card.selected .choose-dot{border:5px solid var(--gold);background:#fff}
-.gift-select{display:flex;align-items:center;justify-content:center;gap:8px;color:#c9c4b9;font-size:.77rem;font-weight:700;cursor:pointer}.gift-select input{accent-color:var(--gold);width:16px;height:16px}
-.tier-custom{grid-column:1/-1}
-.gift-custom-card{--metal:#c58cf0;position:relative;min-height:230px;padding:25px 27px;display:grid;grid-template-columns:1fr 200px;align-items:center;gap:12px;overflow:hidden;border:1px solid #9b67c6;border-radius:19px;background:radial-gradient(ellipse at 78% 48%,#8150a52d,transparent 55%),linear-gradient(120deg,#21152c,#0c0b10 75%);box-shadow:0 18px 42px #0009,inset 0 1px 0 #ffffff22}
-.gift-custom-card:after{content:"";position:absolute;inset:8px;border:1px solid #c58cf044;border-radius:13px;pointer-events:none}
-.custom-copy{position:relative;z-index:4}.custom-copy h3{font-size:2rem;line-height:1.1;margin:12px 0 7px;color:#fff}.custom-copy p{max-width:370px;margin:0 0 14px;color:#c8bdd2;font-size:.84rem}
-.custom-copy label{display:block;color:#e8dcf2;font-size:.74rem;font-weight:800;margin-bottom:6px}.custom-input-wrap{display:flex;align-items:center;gap:10px;width:min(230px,100%);padding:8px 12px;border:1px solid #a77ac5;border-radius:10px;background:#09080c}
-.custom-input-wrap span{color:#d8b5f5;font-weight:900}.custom-input-wrap input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:white;font-size:1.05rem;font-weight:800}
-.custom-select{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;display:inline-flex!important;width:auto!important;height:auto!important;min-height:39px!important;margin-top:13px;padding:0 19px!important;border-color:#c58cf0!important;background:#171020!important}
-.custom-object{right:40px;top:40px;transform:scale(1.15) rotate(-8deg);--metal:#d3a6f5}
-.custom-object .gift-front{background:linear-gradient(135deg,#402b50,#171020 70%)}
-.selection{max-width:960px;margin-top:30px;border-color:#6b571b;background:linear-gradient(110deg,#211b0b,#10100d)}
+/* Content */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.col{padding:26px;border:1px solid #2d2c27;border-radius:20px;background:linear-gradient(145deg,#171714,#10100e)}
+.col h3{margin:0 0 6px;font-size:1.05rem;font-weight:800}.col p{margin:0;color:var(--muted);font-size:.9rem}
+.num{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--y);color:#0a0a09;font-weight:800;margin-bottom:14px}
+.notice{padding:24px 28px;border:1px solid #66551d;border-radius:18px;background:linear-gradient(120deg,#1d190b,#11110e);color:#cdc8bb;font-size:.94rem}.notice strong{color:var(--y)}
+.contact{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:40px;border-radius:26px;background:var(--y);color:#0a0a09}
+.contact h2{margin:0 0 6px;font-weight:800;font-size:clamp(1.8rem,3.4vw,2.6rem);letter-spacing:-.05em;line-height:1.05}.contact p{margin:0;font-weight:500}
+.contact .btn{background:#0a0a09;color:var(--y);border-color:#0a0a09}.contact .btn:hover{background:#1c1b16;box-shadow:0 10px 26px #0006}
+.foot{padding:28px 0;border-top:1px solid var(--line);color:#969187;font-size:.8rem}
+.footin{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.foot strong{color:var(--y)}.foot a:hover{color:var(--y)}
+
+@media(max-width:960px){.offers{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}.fan{height:300px}}
 @media(max-width:700px){
-.gift-header .nav{height:68px}.gift-header .logo{width:44px;height:44px}#montants{padding-top:48px}.gift-grid{gap:17px 12px}
-.gift-option .gift-card{height:226px;padding:17px 15px;border-radius:15px}.tier-pill{font-size:.57rem;padding:5px 10px;letter-spacing:.14em}.tier-value{font-size:2.5rem;margin-top:12px}.tier-desc{font-size:.69rem;max-width:125px}
-.gift-object{width:116px;height:112px;right:7px;top:72px;transform:scale(.82) rotate(-5deg);transform-origin:center}
-.gift-card:hover .gift-object,.gift-card.selected .gift-object{transform:scale(.86) translateY(-5px) rotate(-2deg)}
-.gift-choose{left:10px;right:10px;bottom:11px;min-height:35px;font-size:.66rem;gap:7px}.choose-dot{width:14px;height:14px}.gift-select{font-size:.68rem}
-.gift-custom-card{min-height:245px;padding:20px 17px;grid-template-columns:1fr 115px;gap:0}.custom-copy h3{font-size:1.6rem}.custom-copy p{font-size:.72rem;max-width:210px}
-.custom-object{right:-10px;top:82px;transform:scale(.75) rotate(-8deg);transform-origin:center}.custom-input-wrap{width:170px}.custom-select{font-size:.68rem!important;padding:0 12px!important}
-.selection{padding:18px}.selection .btn{width:100%}
+ .hero{padding:44px 0 46px}.hero h1{font-size:clamp(2.6rem,12vw,3.6rem)}.section{padding:56px 0}
+ .offers{gap:12px}.offer{padding:9px;gap:10px;border-radius:20px}.offer .gc{border-radius:14px;aspect-ratio:1.2}
+ .gc-in{padding:12px}.gc-amt{font-size:2.7rem}.gc-brand{font-size:.62rem;letter-spacing:.08em}.gc-brand i{width:20px;height:20px;font-size:.6rem}.gc-tier{font-size:.56rem;padding:2px 8px}.gc-foot{font-size:.5rem;letter-spacing:.14em}
+ .offer-info{font-size:.74rem;padding:0 3px;min-height:4.2em}.offer .btn{min-height:46px;padding:10px;font-size:.86rem}.offer-note{display:none}
+ .fan .gc{width:230px;margin:-70px 0 0 -115px;aspect-ratio:1.586}.fan .gc .gc-amt{font-size:2.6rem}
+ .custom{grid-template-columns:1fr;padding:24px 18px;gap:20px;border-radius:22px}.preview{order:-1;max-width:290px;margin:0 auto}.field{max-width:none}.custom .btn{width:100%}
+ .cols{grid-template-columns:1fr}.contact{padding:28px 22px}.contact .btn{width:100%}.dlg{padding:22px 18px}
 }
-@media(max-width:390px){.gift-option .gift-card{height:210px;padding:14px 12px}.tier-value{font-size:2.2rem}.gift-object{right:-1px;transform:scale(.73) rotate(-5deg);transform-origin:center}.gift-card:hover .gift-object,.gift-card.selected .gift-object{transform:scale(.76) translateY(-4px) rotate(-2deg)}.gift-choose{font-size:.61rem}.gift-custom-card{grid-template-columns:1fr 85px}.custom-object{right:-26px;transform:scale(.62) rotate(-8deg)}.custom-input-wrap{width:150px}
-}
-
-
-/* Coffrets cadeaux : scène WebGL 3D par carte */
-.gift-option .gift-card{overflow:hidden}
-.gift-option .gift-card .tier-pill,.gift-option .gift-card .tier-value,.gift-option .gift-card .tier-desc{z-index:6;position:relative}
-.gift-option .gift-card .tier-desc{max-width:55%;min-height:2.7em}
-.gift-object{position:absolute;z-index:3;right:5px;top:48px;width:52%;height:165px;pointer-events:none;filter:drop-shadow(0 16px 13px #0009);transform:none!important}
-.gift-object canvas{display:block;width:100%;height:100%;outline:0}
-.gift-card.selected .gift-object{filter:drop-shadow(0 18px 16px #000b) drop-shadow(0 0 9px color-mix(in srgb,var(--metal) 22%,transparent))}
-.gift-custom-card .custom-object{right:10px;top:30px;width:205px;height:185px;transform:none!important}
-.gift-custom-card .custom-copy{max-width:64%}
-@media(max-width:700px){
- .gift-option .gift-card{height:238px}
- .gift-object{right:0;top:62px;width:53%;height:155px}
- .gift-option .gift-card .tier-desc{max-width:53%;font-size:.68rem}
- .gift-custom-card .custom-object{right:-5px;top:40px;width:145px;height:150px}
- .gift-custom-card .custom-copy{max-width:70%}
-}
-@media(max-width:390px){
- .gift-option .gift-card{height:226px}
- .gift-object{right:-5px;top:70px;width:55%;height:140px}
- .gift-option .gift-card .tier-desc{max-width:52%}
-}
-
-
-/* Luxury product rendering + 360-degree touch interaction */
-.gift-object{pointer-events:auto!important;z-index:5;right:0;top:35px;width:57%;height:190px;filter:drop-shadow(0 18px 18px #000b)}
-.gift-object canvas{pointer-events:auto!important;touch-action:pan-y;display:block;width:100%;height:100%;cursor:grab}
-.gift-option .gift-card .tier-pill,.gift-option .gift-card .tier-value,.gift-option .gift-card .tier-desc{z-index:7}
-.gift-card.selected .gift-object{filter:drop-shadow(0 20px 22px #000c) drop-shadow(0 0 12px color-mix(in srgb,var(--accent) 30%,transparent))}
-.gift-custom-card .custom-object{right:0;top:20px;width:230px;height:205px}
-@media(max-width:700px){
- .gift-option .gift-card{height:248px}
- .gift-object{top:45px;right:-3px;width:60%;height:185px}
- .gift-custom-card .custom-object{top:28px;right:-5px;width:170px;height:170px}
-}
-@media(max-width:390px){
- .gift-option .gift-card{height:232px}
- .gift-object{top:54px;right:-7px;width:62%;height:165px}
-}
-
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<header class="gift-header"><div class="wrap nav"><a class="brand" href="/" aria-label="SO INFO, accueil"><span class="logo">S</span><span>SO INFO<small>RÉPARATION &amp; MAINTENANCE</small></span></a></div></header>
+<header><div class="wrap nav"><a class="brand" href="/" aria-label="SO INFO, accueil"><span class="logo">S</span><span><b>SO INFO</b><small>RÉPARATION &amp; MAINTENANCE</small></span></a><a class="back" href="/">Retour au site</a></div></header>
 <main>
-<section class="hero"><div class="wrap hero-layout"><div class="hero-copy"><div class="eyebrow"><span>✦</span> LE PLAISIR D’OFFRIR · SO INFO <span>✦</span></div><h1>Le cadeau parfait<br>n’a pas besoin<br><em>d’être deviné.</em></h1><p class="lead">Une carte élégante, un montant au choix, et la liberté de se faire plaisir chez SO INFO. Le cadeau utile qui fait vraiment plaisir.</p><div class="hero-cta"><a class="btn" href="#montants">Choisir ma carte cadeau <span>→</span></a><a class="btn secondary" href="mailto:contact@so-info.fr?subject=Renseignements%20cartes%20cadeaux">Besoin d’un conseil ?</a></div><div class="hero-trust"><span>✦ Envoi numérique par e-mail</span><span>✦ Paiement sécurisé</span><span>✦ Valable 12 mois</span></div></div><div class="hero-art" aria-label="Carte cadeau SO INFO en rendu 3D"><canvas id="gift3d" aria-hidden="true"></canvas><div class="gift3d-caption"><span>✦</span> UNE CARTE QUI FAIT PLAISIR <span>✦</span></div><div class="gift3d-fallback" aria-hidden="true"><div class="fallback-card"><b>SO INFO</b><strong>100 €</strong><small>CARTE CADEAU</small></div></div></div></div></section>
-<section class="section" id="montants"><div class="wrap">
-<div class="section-head"><div class="kicker">✦ Collection SO INFO ✦</div><h2>Choisissez votre carte cadeau</h2><p class="sub">Un coffret élégant, un montant adapté, et le plaisir d'offrir un vrai coup de pouce numérique.</p></div>
-<div class="gift-grid" id="giftGrid">
-<article class="gift-option tier-bronze"><button class="gift-card selected" type="button" data-amount="25" aria-pressed="true"><span class="tier-pill">BRONZE</span><span class="tier-value">25 <small>€</small></span><span class="tier-desc">Le petit coup de pouce</span><span class="gift-object" aria-hidden="true"><canvas class="box3d" aria-hidden="true"></canvas></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="25" checked> Sélectionner 25 €</label></article><article class="gift-option tier-silver"><button class="gift-card " type="button" data-amount="50" aria-pressed="false"><span class="tier-pill">ARGENT</span><span class="tier-value">50 <small>€</small></span><span class="tier-desc">Un beau geste pour son matériel</span><span class="gift-object" aria-hidden="true"><canvas class="box3d" aria-hidden="true"></canvas></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="50" > Sélectionner 50 €</label></article><article class="gift-option tier-gold"><button class="gift-card " type="button" data-amount="75" aria-pressed="false"><span class="tier-pill">OR</span><span class="tier-value">75 <small>€</small></span><span class="tier-desc">Pour faire encore plus plaisir</span><span class="gift-object" aria-hidden="true"><canvas class="box3d" aria-hidden="true"></canvas></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="75" > Sélectionner 75 €</label></article><article class="gift-option tier-platinum"><button class="gift-card " type="button" data-amount="100" aria-pressed="false"><span class="tier-pill">PLATINE</span><span class="tier-value">100 <small>€</small></span><span class="tier-desc">Le grand cadeau sans compromis</span><span class="gift-object" aria-hidden="true"><canvas class="box3d" aria-hidden="true"></canvas></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="100" > Sélectionner 100 €</label></article>
-<article class="gift-option tier-custom"><div class="gift-custom-card"><div class="custom-copy"><span class="tier-pill">SUR MESURE</span><h3>Montant libre</h3><p>Choisissez le montant qui vous ressemble, à partir de 10 €.</p><label for="customAmount">Votre montant (€)</label><div class="custom-input-wrap"><span>€</span><input id="customAmount" type="number" min="10" max="500" step="1" placeholder="Ex. 120" inputmode="numeric"></div><button class="gift-card custom-select" type="button" data-amount="custom" aria-pressed="false"><span class="gift-choose"><span class="choose-dot"></span> Définir ce montant</span></button></div><span class="gift-object custom-object" aria-hidden="true"><canvas class="box3d" aria-hidden="true"></canvas></span></div><label class="gift-select"><input type="radio" name="giftAmount" value="custom"> Sélectionner mon montant</label></article>
-</div>
-<div class="selection" aria-live="polite"><div><small>Montant sélectionné</small><strong id="selectedAmount">25 €</strong></div><button class="btn" id="requestGift" type="button">Acheter cette carte <span>→</span></button></div>
-<div class="checkout-panel" id="checkoutPanel" aria-live="polite"><h3>Préparer votre carte cadeau</h3><p class="sub" style="margin:0 0 12px">Choisissez à qui envoyer la carte. Le paiement sera effectué de manière sécurisée sur Stripe.</p><div class="delivery-options"><label><input type="radio" name="deliveryChoice" value="self" checked> Pour moi</label><label><input type="radio" name="deliveryChoice" value="gift"> Pour offrir</label></div><label for="buyerEmail">Votre adresse e-mail (acheteur)</label><input id="buyerEmail" type="email" autocomplete="email" placeholder="vous@exemple.fr" required><div id="recipientFields" hidden><label for="recipientName">Prénom du bénéficiaire (facultatif)</label><input id="recipientName" type="text" maxlength="100" placeholder="Prénom"><label for="recipientEmail">Adresse e-mail du bénéficiaire</label><input id="recipientEmail" type="email" placeholder="destinataire@exemple.fr"></div><div class="checkout-actions"><button class="btn" id="checkoutButton" type="button">Continuer vers le paiement <span>→</span></button><button class="btn secondary" id="closeCheckout" type="button">Annuler</button></div><p class="checkout-message" id="checkoutMessage" role="status"></p></div>
+<section class="hero"><div class="wrap hero-grid">
+ <div>
+  <h1>Le cadeau parfait n’a pas besoin <em>d’être deviné.</em></h1>
+  <p class="lead">Une carte élégante, un montant au choix, et la liberté de se faire plaisir chez SO INFO. Le cadeau utile qui fait vraiment plaisir.</p>
+  <div class="cta"><a class="btn" href="#montants">Choisir ma carte cadeau</a><a class="btn ghost" href="mailto:contact@so-info.fr?subject=Renseignements%20cartes%20cadeaux">Besoin d’un conseil ?</a></div>
+  <ul class="trust"><li>Envoi par e-mail</li><li>Paiement sécurisé</li><li>Valable 12 mois</li></ul>
+ </div>
+ <div class="fan" aria-hidden="true">
+  <div class="gc"><div class="gc-in"><div class="gc-top"><span class="gc-brand"><i>S</i>SO INFO</span></div><div class="gc-amt">25<small>€</small></div></div></div>
+  <div class="gc t2"><div class="gc-in"><div class="gc-top"><span class="gc-brand"><i>S</i>SO INFO</span></div><div class="gc-amt">50<small>€</small></div></div></div>
+  <div class="gc t3"><div class="gc-in"><div class="gc-top"><span class="gc-brand"><i>S</i>SO INFO</span></div><div class="gc-amt">75<small>€</small></div></div></div>
+  <div class="gc t4"><div class="gc-in"><div class="gc-top"><span class="gc-brand"><i>S</i>SO INFO</span></div><div class="gc-amt">100<small>€</small></div></div></div>
+ </div>
 </div></section>
-<section class="section"><div class="wrap"><div class="section-head"><div class="kicker">Un cadeau qui a du sens</div><h2>À quoi peut-elle servir ?</h2><p class="sub">La carte cadeau est destinée aux prestations et achats proposés par SO INFO, selon les services et produits disponibles au moment de son utilisation.</p></div><div class="feature-grid"><article class="feature"><div class="feature-icon">⌘</div><h3>Réparation informatique</h3><p>Ordinateurs, smartphones et équipements pris en charge par SO INFO.</p></article><article class="feature"><div class="feature-icon">⚙</div><h3>Entretien &amp; optimisation</h3><p>Maintenance, diagnostic et amélioration des équipements.</p></article><article class="feature"><div class="feature-icon">▣</div><h3>Accessoires &amp; matériel</h3><p>Participation à l’achat d’accessoires ou de matériel disponible.</p></article></div></div></section>
-<section class="section"><div class="wrap"><div class="section-head"><div class="kicker">Simple et personnalisé</div><h2>Comment obtenir votre carte ?</h2><p class="sub">Choisissez votre montant, indiquez l’adresse e-mail de réception, puis réglez votre achat en toute sécurité avec Stripe.</p></div><div class="steps"><article class="step"><div class="num">1</div><h3>Choisissez un montant</h3><p>Sélectionnez 25 €, 50 €, 75 € ou 100 € sur cette page.</p></article><article class="step"><div class="num">2</div><h3>Renseignez les e-mails</h3><p>Recevez la carte vous-même ou envoyez-la directement à la personne de votre choix.</p></article><article class="step"><div class="num">3</div><h3>Recevez la carte</h3><p>Après confirmation du paiement, la carte cadeau numérique est envoyée par e-mail.</p></article></div></div></section>
-<section class="section"><div class="wrap"><div class="notice"><strong>Informations sur la carte cadeau</strong><br>La carte cadeau est numérique et envoyée par e-mail après confirmation du paiement. Elle est valable 12 mois à compter de sa date d’émission. Pour toute question concernant son utilisation, contactez SO INFO à contact@so-info.fr.</div></div></section>
-<section class="section"><div class="wrap"><div class="contact"><div><h2>Un cadeau SO INFO sous le sapin ?</h2><p>Choisissez votre montant et contactez-nous pour préparer votre carte cadeau.</p></div><a class="btn" href="mailto:contact@so-info.fr?subject=Demande%20de%20carte%20cadeau%20SO%20INFO">Contacter SO INFO →</a></div></div></section>
+
+<section class="section" id="montants"><div class="wrap">
+ <div class="head c"><div class="kicker">Collection SO INFO</div><h2>Choisissez votre carte cadeau</h2><p>Chaque carte s’achète en un geste. Touchez « Acheter » sous le montant qui vous plaît.</p></div>
+ <div class="offers">
+  <article class="offer"><div class="gc"><div class="gc-in"><div class="gc-top"><span class="gc-brand"><i>S</i>SO INFO</span><span class="gc-tier">BRONZE</span></div><div class="gc-amt">25<small>€</small></div><div class="gc-foot">CARTE CADEAU</div></div></div><div class="offer-info">Le petit coup de pouce</div><button class="btn buy" type="button" data-amount="25">Acheter 25 €</button><div class="offer-note">Envoi immédiat par e-mail</div></article>
+  <article class="offer"><div class="gc t2"><div class="gc-in"><div class="gc-top"><span class="gc-brand"><i>S</i>SO INFO</span><span class="gc-tier">ARGENT</span></div><div class="gc-amt">50<small>€</small></div><div class="gc-foot">CARTE CADEAU</div></div></div><div class="offer-info">Un beau geste pour son matériel</div><button class="btn buy" type="button" data-amount="50">Acheter 50 €</button><div class="offer-note">Envoi immédiat par e-mail</div></article>
+  <article class="offer"><div class="gc t3"><div class="gc-in"><div class="gc-top"><span class="gc-brand"><i>S</i>SO INFO</span><span class="gc-tier">OR</span></div><div class="gc-amt">75<small>€</small></div><div class="gc-foot">CARTE CADEAU</div></div></div><div class="offer-info">Pour faire encore plus plaisir</div><button class="btn buy" type="button" data-amount="75">Acheter 75 €</button><div class="offer-note">Envoi immédiat par e-mail</div></article>
+  <article class="offer"><div class="gc t4"><div class="gc-in"><div class="gc-top"><span class="gc-brand"><i>S</i>SO INFO</span><span class="gc-tier">PLATINE</span></div><div class="gc-amt">100<small>€</small></div><div class="gc-foot">CARTE CADEAU</div></div></div><div class="offer-info">Le grand cadeau sans compromis</div><button class="btn buy" type="button" data-amount="100">Acheter 100 €</button><div class="offer-note">Envoi immédiat par e-mail</div></article>
+ </div>
+
+ <div class="custom">
+  <div>
+   <div class="kicker">Sur mesure</div>
+   <h3>Votre montant, <em>votre carte.</em></h3>
+   <p>Entrez la somme exacte que vous voulez offrir. La carte se met à jour en direct.</p>
+   <div class="field"><span>€</span><input id="customAmount" type="number" min="10" max="500" step="1" placeholder="120" inputmode="numeric" aria-label="Montant libre en euros"></div>
+   <div class="chips" role="group" aria-label="Montants rapides"><button class="chip" type="button" data-v="30">30 €</button><button class="chip" type="button" data-v="60">60 €</button><button class="chip" type="button" data-v="150">150 €</button><button class="chip" type="button" data-v="250">250 €</button></div>
+   <button class="btn buy" id="buyCustom" type="button">Acheter ce montant</button>
+   <div class="custom-hint">De 10 € à 500 €, en euros entiers.</div>
+  </div>
+  <div class="gc t4 preview" aria-hidden="true"><div class="gc-in"><div class="gc-top"><span class="gc-brand"><i>S</i>SO INFO</span><span class="gc-tier">SUR MESURE</span></div><div class="gc-amt"><span id="previewAmt">—</span><small>€</small></div><div class="gc-foot">CARTE CADEAU</div></div></div>
+ </div>
+</div></section>
+
+<dialog id="dlg" aria-labelledby="dlgTitle"><div class="dlg">
+ <div class="dlg-top"><div><h3 id="dlgTitle">Votre carte cadeau</h3><div class="dlg-amt" id="dlgAmt">25 €</div></div><button class="x" id="closeCheckout" type="button" aria-label="Fermer">✕</button></div>
+ <p class="sub">Indiquez qui reçoit la carte. Le paiement se fait ensuite sur Stripe, de façon sécurisée.</p>
+ <div class="seg"><label><input type="radio" name="deliveryChoice" value="self" checked> Pour moi</label><label><input type="radio" name="deliveryChoice" value="gift"> Pour offrir</label></div>
+ <label for="buyerEmail">Votre adresse e-mail</label><input id="buyerEmail" type="email" autocomplete="email" placeholder="vous@exemple.fr" required>
+ <div id="recipientFields" hidden><label for="recipientName">Prénom du bénéficiaire (facultatif)</label><input id="recipientName" type="text" maxlength="100" placeholder="Prénom"><label for="recipientEmail">E-mail du bénéficiaire</label><input id="recipientEmail" type="email" placeholder="destinataire@exemple.fr"></div>
+ <button class="btn" id="checkoutButton" type="button">Continuer vers le paiement</button>
+ <p class="msg" id="checkoutMessage" role="status"></p>
+</div></dialog>
+
+<section class="section"><div class="wrap"><div class="head"><div class="kicker">Un cadeau qui a du sens</div><h2>À quoi peut-elle servir ?</h2><p>Aux prestations et achats proposés par SO INFO, selon les services et produits disponibles au moment de l’utilisation.</p></div>
+ <div class="cols"><article class="col"><h3>Réparation informatique</h3><p>Ordinateurs, smartphones et équipements pris en charge par SO INFO.</p></article><article class="col"><h3>Entretien &amp; optimisation</h3><p>Maintenance, diagnostic et amélioration des équipements.</p></article><article class="col"><h3>Accessoires &amp; matériel</h3><p>Participation à l’achat d’accessoires ou de matériel disponible.</p></article></div></div></section>
+
+<section class="section"><div class="wrap"><div class="head"><div class="kicker">Simple et rapide</div><h2>Comment obtenir votre carte ?</h2></div>
+ <div class="cols"><article class="col"><div class="num">1</div><h3>Choisissez un montant</h3><p>25 €, 50 €, 75 €, 100 € ou le montant de votre choix.</p></article><article class="col"><div class="num">2</div><h3>Renseignez les e-mails</h3><p>Recevez la carte vous-même ou envoyez-la à la personne de votre choix.</p></article><article class="col"><div class="num">3</div><h3>Recevez la carte</h3><p>Après confirmation du paiement, la carte numérique arrive par e-mail.</p></article></div></div></section>
+
+<section class="section"><div class="wrap"><div class="notice"><strong>À savoir.</strong> La carte cadeau est numérique et envoyée par e-mail après confirmation du paiement. Elle est valable 12 mois à compter de sa date d’émission. Pour toute question, écrivez à contact@so-info.fr.</div></div></section>
+
+<section class="section"><div class="wrap"><div class="contact"><div><h2>Un cadeau SO INFO sous le sapin ?</h2><p>Une question avant de choisir ? On vous répond rapidement.</p></div><a class="btn" href="mailto:contact@so-info.fr?subject=Demande%20de%20carte%20cadeau%20SO%20INFO">Contacter SO INFO</a></div></div></section>
 </main>
 <footer class="foot"><div class="wrap footin"><span><strong>SO INFO</strong> · Réparation &amp; Maintenance</span><span><a href="mailto:contact@so-info.fr">contact@so-info.fr</a> · <a href="/">Retour au site</a></span><span>© 2026 SO INFO</span></div></footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (()=> {
- const canvas=document.getElementById('gift3d'),fallback=document.querySelector('.gift3d-fallback');
- if(!canvas||!window.THREE){if(fallback)fallback.style.display='grid';return;}
- const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
- try{
-  const THREE=window.THREE;
-  const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'high-performance'});
-  renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));
-  renderer.outputEncoding=THREE.sRGBEncoding;
-  renderer.toneMapping=THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure=1.12;
-  const scene=new THREE.Scene();
-  const camera=new THREE.PerspectiveCamera(29,1,.1,80);
-  camera.position.set(0,0,9.2);
-  scene.add(new THREE.HemisphereLight(0xfff1c8,0x17130a,1.25));
-  const key=new THREE.DirectionalLight(0xffe4a0,2.7);key.position.set(-3,5,7);scene.add(key);
-  const soft=new THREE.DirectionalLight(0xffffff,1.15);soft.position.set(5,-2,5);scene.add(soft);
-  const rim=new THREE.PointLight(0xffc400,2.1,14);rim.position.set(-4,1,2);scene.add(rim);
-  const gold=new THREE.MeshPhysicalMaterial({color:0xd9ad37,metalness:.92,roughness:.2,clearcoat:1,clearcoatRoughness:.14});
-  const edgeGold=new THREE.MeshStandardMaterial({color:0x8e6b1d,metalness:.95,roughness:.25});
-  const black=new THREE.MeshPhysicalMaterial({color:0x11120f,metalness:.55,roughness:.29,clearcoat:1,clearcoatRoughness:.22});
-  const faceMat=new THREE.MeshPhysicalMaterial({color:0x191a15,metalness:.42,roughness:.24,clearcoat:1,clearcoatRoughness:.16});
-  const cardRoot=new THREE.Group();scene.add(cardRoot);
-  const card=new THREE.Group();cardRoot.add(card);
-  // Credit-card proportions, softly bevelled edges and a fine gold metal core
-  const w=4.35,h=2.72,depth=.105,r=.19;
-  function roundedShape(width,height,radius){
-   const sh=new THREE.Shape(),x=-width/2,y=-height/2;
-   sh.moveTo(x+radius,y);sh.lineTo(x+width-radius,y);sh.quadraticCurveTo(x+width,y,x+width,y+radius);
-   sh.lineTo(x+width,y+height-radius);sh.quadraticCurveTo(x+width,y+height,x+width-radius,y+height);
-   sh.lineTo(x+radius,y+height);sh.quadraticCurveTo(x,y+height,x,y+height-radius);
-   sh.lineTo(x,y+radius);sh.quadraticCurveTo(x,y,x+radius,y);return sh;
-  }
-  const bodyGeo=new THREE.ExtrudeGeometry(roundedShape(w,h,r),{depth,bevelEnabled:true,bevelSegments:4,steps:1,bevelSize:.045,bevelThickness:.045,curveSegments:12});
-  bodyGeo.center();
-  const body=new THREE.Mesh(bodyGeo,gold);card.add(body);
-  const faceGeo=new THREE.ShapeGeometry(roundedShape(w-.09,h-.09,r-.035),20);
-  const face=new THREE.Mesh(faceGeo,faceMat);face.position.z=depth/2+.052;card.add(face);
-  // Satin diagonal micro-pattern on the face
-  const patternCanvas=document.createElement('canvas');patternCanvas.width=1024;patternCanvas.height=640;
-  const pctx=patternCanvas.getContext('2d');pctx.fillStyle='#171812';pctx.fillRect(0,0,1024,640);
-  const grad=pctx.createLinearGradient(0,0,1024,640);grad.addColorStop(0,'#24251d');grad.addColorStop(.52,'#11120f');grad.addColorStop(1,'#282318');
-  pctx.fillStyle=grad;pctx.fillRect(0,0,1024,640);
-  for(let i=-700;i<1500;i+=42){pctx.strokeStyle='rgba(255,218,126,.055)';pctx.lineWidth=2;pctx.beginPath();pctx.moveTo(i,0);pctx.lineTo(i+640,640);pctx.stroke();}
-  const tex=new THREE.CanvasTexture(patternCanvas);tex.encoding=THREE.sRGBEncoding;
-  const faceOverlay=new THREE.Mesh(new THREE.ShapeGeometry(roundedShape(w-.12,h-.12,r-.045),20),new THREE.MeshBasicMaterial({map:tex,transparent:false}));
-  faceOverlay.position.z=depth/2+.054;card.add(faceOverlay);
-  // Gold pinstripe frame
-  const frameShape=roundedShape(w-.27,h-.27,r-.09);
-  const frameGeo=new THREE.EdgesGeometry(new THREE.ShapeGeometry(frameShape,20));
-  const frame=new THREE.LineSegments(frameGeo,new THREE.LineBasicMaterial({color:0xe5bd58,transparent:true,opacity:.82}));
-  frame.position.z=depth/2+.058;card.add(frame);
-  // Premium typographic artwork, rendered sharply onto a texture
-  const art=document.createElement('canvas');art.width=1400;art.height=875;
-  const ctx=art.getContext('2d');
-  ctx.clearRect(0,0,art.width,art.height);
-  const goldGrad=ctx.createLinearGradient(0,0,1200,500);goldGrad.addColorStop(0,'#fff0b0');goldGrad.addColorStop(.45,'#e5bf60');goldGrad.addColorStop(1,'#b88b2b');
-  ctx.textAlign='left';ctx.fillStyle='#f7f2e5';ctx.font='800 55px Arial';ctx.letterSpacing='8px';ctx.fillText('SO INFO',100,135);
-  ctx.fillStyle='#c7b98f';ctx.font='500 23px Arial';ctx.letterSpacing='9px';ctx.fillText('RÉPARATION & MAINTENANCE',103,177);
-  ctx.strokeStyle='#b38d3d';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(100,220);ctx.lineTo(1300,220);ctx.stroke();
-  ctx.fillStyle='#f2e7c7';ctx.font='italic 600 67px Georgia';ctx.letterSpacing='0px';ctx.fillText('Le plaisir d’offrir.',100,370);
-  ctx.fillStyle=goldGrad;ctx.font='800 150px Arial';ctx.fillText('100 €',95,590);
-  ctx.fillStyle='#cbbd9b';ctx.font='500 23px Arial';ctx.letterSpacing='8px';ctx.fillText('CARTE CADEAU  ·  À UTILISER CHEZ SO INFO',102,680);
-  // Fine corner ornament
-  ctx.strokeStyle='#d5ae4d';ctx.lineWidth=3;ctx.beginPath();ctx.arc(1220,735,50,Math.PI,Math.PI*1.5);ctx.stroke();
-  const artTex=new THREE.CanvasTexture(art);artTex.encoding=THREE.sRGBEncoding;artTex.anisotropy=renderer.capabilities.getMaxAnisotropy();
-  const artwork=new THREE.Mesh(new THREE.PlaneGeometry(w-.18,h-.18),new THREE.MeshBasicMaterial({map:artTex,transparent:true,depthWrite:false}));
-  artwork.position.z=depth/2+.066;card.add(artwork);
-  // Embossed chip on the left lower quadrant
-  const chip=new THREE.Group();chip.position.set(-1.42,-.42,depth/2+.075);card.add(chip);
-  const chipBase=new THREE.Mesh(new THREE.BoxGeometry(.58,.43,.035),gold);chip.add(chipBase);
-  const chipLineMat=new THREE.LineBasicMaterial({color:0x76571c,transparent:true,opacity:.9});
-  for(const x of [-.1,.1]){const line=new THREE.Mesh(new THREE.BoxGeometry(.018,.38,.008),edgeGold);line.position.x=x;chip.add(line);}
-  const lineH=new THREE.Mesh(new THREE.BoxGeometry(.54,.018,.008),edgeGold);chip.add(lineH);
-  // Small embossed SO seal
-  const seal=new THREE.Mesh(new THREE.TorusGeometry(.23,.018,8,48),gold);seal.position.set(1.68,-.82,depth/2+.07);card.add(seal);
-  // Floating gold dust and subtle elliptical light stage
-  const stage=new THREE.Group();scene.add(stage);
-  const halo=new THREE.Mesh(new THREE.TorusGeometry(2.9,.012,6,128),new THREE.MeshBasicMaterial({color:0x80631f,transparent:true,opacity:.62}));
-  halo.rotation.x=-.12;halo.position.y=-1.9;stage.add(halo);
-  const count=100,positions=new Float32Array(count*3);
-  for(let i=0;i<count;i++){positions[i*3]=(Math.random()-.5)*8;positions[i*3+1]=(Math.random()-.5)*5;positions[i*3+2]=(Math.random()-.5)*2-1;}
-  const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(positions,3));
-  const dust=new THREE.Points(pg,new THREE.PointsMaterial({color:0xffd000,size:.018,transparent:true,opacity:.48}));scene.add(dust);
-  // The card glides into the scene, then floats; touch and pointer motion add a restrained parallax
-  let targetX=0,targetY=0,scrollMix=0,visible=true,raf=0,last=0;
-  const pointer=e=>{const rect=canvas.getBoundingClientRect();targetY=((e.clientX-rect.left)/rect.width-.5)*.18;targetX=-((e.clientY-rect.top)/rect.height-.5)*.13;};
-  canvas.addEventListener('pointermove',pointer,{passive:true});
-  canvas.addEventListener('pointerleave',()=>{targetX=0;targetY=0;});
-  function resize(){const width=Math.max(1,canvas.clientWidth),height=Math.max(1,canvas.clientHeight);renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();const mobile=width<520;camera.position.z=mobile?10.8:9.2;card.scale.setScalar(mobile?.86:1);}
-  const ro=new ResizeObserver(resize);ro.observe(canvas);resize();
-  function draw(t){
-   raf=requestAnimationFrame(draw);
-   if(!visible)return;
-   const time=t*.001;
-   const hero=canvas.closest('.hero');
-   if(hero){const b=hero.getBoundingClientRect();scrollMix=Math.max(-.28,Math.min(.28,-b.top/Math.max(1,b.height)*.22));}
-   const glide=reduced?0:Math.min(1,t/1250);
-   const ease=1-Math.pow(1-glide,3);
-   cardRoot.position.x=(1-ease)*2.1+Math.sin(time*.7)*.025;
-   cardRoot.position.y=(1-ease)*-.18+Math.sin(time*1.15)*.065+scrollMix;
-   cardRoot.rotation.y+=(targetY+Math.sin(time*.48)*.035-cardRoot.rotation.y)*.035;
-   cardRoot.rotation.x+=(targetX+Math.sin(time*.62)*.022-cardRoot.rotation.x)*.035;
-   card.rotation.z=Math.sin(time*.42)*.018;
-   dust.rotation.y=time*.025;
-   renderer.render(scene,camera);
-  }
-  document.addEventListener('visibilitychange',()=>{visible=!document.hidden;if(visible&&!raf)draw(performance.now());});
-  draw(0);
- }catch(err){console.warn('Rendu 3D carte cadeau indisponible',err);if(fallback)fallback.style.display='grid';}
-})();
-</script>
-
-
-<script>
-(()=> {
- if(!window.THREE)return;
- const T=window.THREE;
- const palette={
- bronze:{metal:0xc88955,bright:0xf3c99b,dark:0x3b2116,inner:0x17100c},
- silver:{metal:0xbacbd8,bright:0xf5fbff,dark:0x354b5b,inner:0x101923},
- gold:{metal:0xe8bd45,bright:0xffedab,dark:0x60470e,inner:0x1d1709},
- platinum:{metal:0xc9b8e7,bright:0xf5edff,dark:0x57486e,inner:0x17121f},
- custom:{metal:0xc58ce9,bright:0xf0d8ff,dark:0x593a70,inner:0x1a1022}
- };
- const mat=(color,metalness,roughness,extra={})=>new T.MeshPhysicalMaterial({color,metalness,roughness,clearcoat:1,clearcoatRoughness:.12,...extra});
- function roundedPanel(w,h,r){
-  const s=new T.Shape();
-  s.moveTo(-w/2+r,-h/2);s.lineTo(w/2-r,-h/2);s.quadraticCurveTo(w/2,-h/2,w/2,-h/2+r);
-  s.lineTo(w/2,h/2-r);s.quadraticCurveTo(w/2,h/2,w/2-r,h/2);
-  s.lineTo(-w/2+r,h/2);s.quadraticCurveTo(-w/2,h/2,-w/2,h/2-r);
-  s.lineTo(-w/2,-h/2+r);s.quadraticCurveTo(-w/2,-h/2,-w/2+r,-h/2);
-  return s;
- }
- function createLuxuryBox(canvas,kind,index){
-  const p=palette[kind]||palette.gold;
-  const renderer=new T.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'high-performance'});
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
-  renderer.outputEncoding=T.sRGBEncoding;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.28;
-  const scene=new T.Scene();
-  const camera=new T.PerspectiveCamera(31,1,.1,50);camera.position.set(3.7,2.4,7.3);camera.lookAt(0,.05,0);
-  scene.add(new T.HemisphereLight(0xfff4df,0x17111c,1.7));
-  const main=new T.DirectionalLight(0xffedc2,3.1);main.position.set(-4,6,7);scene.add(main);
-  const soft=new T.DirectionalLight(0xffffff,1.4);soft.position.set(5,1,5);scene.add(soft);
-  const rim=new T.PointLight(p.metal,3.2,14);rim.position.set(3,3,-3);scene.add(rim);
-  const floorLight=new T.PointLight(p.bright,1.4,9);floorLight.position.set(-3,-2,4);scene.add(floorLight);
-  const gold=mat(p.metal,.96,.19),goldLight=mat(p.bright,.9,.16),dark=mat(p.dark,.72,.24),inside=mat(p.inner,.25,.38);
-  const ribbon=mat(p.metal,.78,.24),ribbonLight=mat(p.bright,.82,.2);
-  const root=new T.Group();scene.add(root);
-  // Floating presentation plinth
-  const plinth=new T.Mesh(new T.CylinderGeometry(1.65,1.72,.13,96),mat(0x11110f,.55,.24));
-  plinth.position.y=-1.05;root.add(plinth);
-  const plinthEdge=new T.Mesh(new T.TorusGeometry(1.66,.018,10,100),gold);plinthEdge.rotation.x=Math.PI/2;plinthEdge.position.y=-.98;root.add(plinthEdge);
-  // Rounded rigid gift case, layered lacquer shell and inset inner tray
-  const bodyShape=roundedPanel(2.25,1.45,.16);
-  const bodyGeo=new T.ExtrudeGeometry(bodyShape,{depth:1.25,bevelEnabled:true,bevelSegments:5,steps:1,bevelSize:.055,bevelThickness:.055,curveSegments:12});
-  bodyGeo.translate(0,0,-.625);
-  const body=new T.Mesh(bodyGeo,dark);body.position.y=-.12;root.add(body);
-  const innerShape=roundedPanel(2.02,1.24,.12);
-  const innerGeo=new T.ExtrudeGeometry(innerShape,{depth:.035,bevelEnabled:true,bevelSegments:3,bevelSize:.015,bevelThickness:.015});
-  innerGeo.translate(0,0,-.018);
-  const inset=new T.Mesh(innerGeo,inside);inset.position.set(0,-.12,.632);root.add(inset);
-  // Fine metallic piping around the case
-  const edgeShape=roundedPanel(2.29,1.49,.17);
-  const edgePts=edgeShape.getPoints(18).map(v=>new T.Vector3(v.x,v.y,.64));
-  const edgeCurve=new T.CatmullRomCurve3(edgePts,true);
-  root.add(new T.Mesh(new T.TubeGeometry(edgeCurve,120,.012,8,true),goldLight)).position.y=-.12;
-  // Lid is a separate hinged object: the customer can see its thickness and inner lining
-  const lidPivot=new T.Group();lidPivot.position.set(-1.06,.62,-.58);root.add(lidPivot);
-  const lidShape=roundedPanel(2.32,.24,.12);
-  const lidGeo=new T.ExtrudeGeometry(lidShape,{depth:1.32,bevelEnabled:true,bevelSegments:5,bevelSize:.045,bevelThickness:.045,curveSegments:12});
-  lidGeo.translate(1.16,0,-.66);
-  const lid=new T.Mesh(lidGeo,gold);lidPivot.add(lid);lid.position.y=.12;
-  const lidTop=new T.Mesh(new T.BoxGeometry(2.12,.035,1.12),dark);lidTop.position.set(0,.31,0);lidPivot.add(lidTop);
-  const lidInset=new T.Mesh(new T.BoxGeometry(2.04,.025,1.04),inside);lidInset.position.set(0,-.035,0);lidPivot.add(lidInset);
-  // Silk ribbon, broad bands wrapping the box in two directions
-  const bandFront=new T.Mesh(new T.BoxGeometry(.22,1.49,1.31),ribbon);bandFront.position.set(0,-.12,.638);root.add(bandFront);
-  const bandTop=new T.Mesh(new T.BoxGeometry(.24,.035,1.34),ribbonLight);bandTop.position.set(0,.63,0);root.add(bandTop);
-  const bandSide=new T.Mesh(new T.BoxGeometry(2.27,1.49,.035),ribbon);bandSide.position.set(0,-.12,-.64);root.add(bandSide);
-  const crossFront=new T.Mesh(new T.BoxGeometry(2.27,.17,.035),ribbonLight);crossFront.position.set(0,.43,.66);root.add(crossFront);
-  // A sculpted double-loop bow, tapered tails, and a raised knot
-  const bow=new T.Group();bow.position.set(0,.82,.04);root.add(bow);
-  const loopMaterial=mat(p.bright,.82,.16);
-  for(const side of [-1,1]){
-   const loop=new T.Mesh(new T.TorusGeometry(.34,.085,18,64),loopMaterial);
-   loop.scale.set(1.12,.78,.58);loop.position.set(side*.27,.2,.06);loop.rotation.z=side*.35;bow.add(loop);
-   const tailShape=new T.Shape();tailShape.moveTo(0,0);tailShape.lineTo(.18,.46);tailShape.lineTo(.02,.39);tailShape.lineTo(-.14,.47);tailShape.closePath();
-   const tail=new T.Mesh(new T.ExtrudeGeometry(tailShape,{depth:.035,bevelEnabled:true,bevelSize:.012,bevelThickness:.012,bevelSegments:2}),ribbon);
-   tail.position.set(side*.12,-.28,.1);tail.rotation.z=side*.12;bow.add(tail);
-  }
-  const knot=new T.Mesh(new T.SphereGeometry(.145,32,24),goldLight);knot.scale.set(1,.78,.7);knot.position.set(0,.18,.17);bow.add(knot);
-  // SO INFO signature seal, raised rim and central S medallion
-  const seal=new T.Group();seal.position.set(.64,-.1,.665);root.add(seal);
-  const ring=new T.Mesh(new T.TorusGeometry(.19,.022,12,64),goldLight);seal.add(ring);
-  const disk=new T.Mesh(new T.CylinderGeometry(.155,.155,.026,64),dark);disk.rotation.x=Math.PI/2;seal.add(disk);
-  const sText=document.createElement('canvas');sText.width=256;sText.height=256;
-  const ctx=sText.getContext('2d');ctx.clearRect(0,0,256,256);ctx.fillStyle='#fff0b5';ctx.font='bold 170px Georgia';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('S',128,133);
-  const tex=new T.CanvasTexture(sText);tex.needsUpdate=true;
-  const letter=new T.Mesh(new T.PlaneGeometry(.18,.18),new T.MeshBasicMaterial({map:tex,transparent:true,depthWrite:false}));letter.position.z=.018;seal.add(letter);
-  // A discreet gold orbit and soft contact shadow
-  const orbit=new T.Mesh(new T.TorusGeometry(1.72,.009,8,128),new T.MeshBasicMaterial({color:p.metal,transparent:true,opacity:.55}));orbit.rotation.x=Math.PI/2;orbit.position.y=-1.12;root.add(orbit);
-  const shadow=new T.Mesh(new T.CircleGeometry(1.4,64),new T.MeshBasicMaterial({color:0x000000,transparent:true,opacity:.4}));shadow.rotation.x=-Math.PI/2;shadow.position.y=-1.125;shadow.scale.set(1,.48,1);root.add(shadow);
-  // Real pointer/touch orbit: drag horizontally for a full 360° view
-  let dragging=false,lastX=0,lastY=0,velocity=0,tilt=0;
-  canvas.style.pointerEvents='auto';canvas.style.touchAction='pan-y';canvas.style.cursor='grab';
-  canvas.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture(e.pointerId);canvas.style.cursor='grabbing';});
-  canvas.addEventListener('pointermove',e=>{if(!dragging)return;const dx=e.clientX-lastX,dy=e.clientY-lastY;root.rotation.y+=dx*.012;tilt=Math.max(-.34,Math.min(.34,tilt+dy*.006));velocity=dx*.0009;lastX=e.clientX;lastY=e.clientY;});
-  const release=()=>{dragging=false;canvas.style.cursor='grab';};canvas.addEventListener('pointerup',release);canvas.addEventListener('pointercancel',release);
-  canvas.addEventListener('wheel',e=>{root.rotation.y+=e.deltaY*.002;},{passive:true});
-  function resize(){const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight);renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}
-  const ro=new ResizeObserver(resize);ro.observe(canvas);resize();
-  let raf=0,visible=true;
-  function frame(t){
-   raf=requestAnimationFrame(frame);if(!visible||document.hidden)return;
-   if(!dragging){root.rotation.y+=velocity;velocity*=.96;if(Math.abs(velocity)<.00012)velocity=0;root.rotation.y+=.0018;}
-   root.rotation.x+=(tilt-root.rotation.x)*.045;
-   const time=t*.001;
-   root.position.y=Math.sin(time*.8+index)*.025;
-   // slow premium opening reveal, then a gentle close; pause while the user rotates
-   const open=(Math.sin(time*.42+index*.4)+1)*.5;
-   lidPivot.rotation.x=-(.04+open*.10);
-   bow.rotation.y=Math.sin(time*.7+index)*.035;
-   renderer.render(scene,camera);
-  }
-  document.addEventListener('visibilitychange',()=>{visible=!document.hidden;});
-  frame(0);
- }
- document.querySelectorAll('.gift-option').forEach((card,i)=>{
-  const canvas=card.querySelector('canvas.box3d');if(!canvas)return;
-  const kind=card.classList.contains('tier-bronze')?'bronze':card.classList.contains('tier-silver')?'silver':card.classList.contains('tier-gold')?'gold':card.classList.contains('tier-platinum')?'platinum':'custom';
-  try{createLuxuryBox(canvas,kind,i);}catch(e){console.error('3D SO INFO:',e);}
+ const WORKER_URL="https://so-info-cartes-cadeaux.gerard-sylvain60.workers.dev";
+ const $=id=>document.getElementById(id);
+ const dlg=$('dlg'),dlgAmt=$('dlgAmt'),buyer=$('buyerEmail'),rf=$('recipientFields'),rEmail=$('recipientEmail'),rName=$('recipientName'),go=$('checkoutButton'),msg=$('checkoutMessage'),custom=$('customAmount'),prev=$('previewAmt');
+ let amount="";
+ const ok=s=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
+ const validCustom=()=>{const n=Number(custom.value);return Number.isInteger(n)&&n>=10&&n<=500?String(n):""};
+ function openCheckout(v){amount=v;dlgAmt.textContent=v+" €";msg.textContent="";go.disabled=false;dlg.showModal();buyer.focus();}
+ document.querySelectorAll('.offer .buy').forEach(b=>b.addEventListener('click',()=>openCheckout(b.dataset.amount)));
+ custom.addEventListener('input',()=>{prev.textContent=custom.value||"—";});
+ document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{custom.value=c.dataset.v;prev.textContent=c.dataset.v;}));
+ $('buyCustom').addEventListener('click',()=>{const v=validCustom();if(!v){custom.focus();custom.style.borderColor="";custom.parentElement.style.borderColor="#ff6b4a";setTimeout(()=>custom.parentElement.style.borderColor="",1400);return;}openCheckout(v);});
+ $('closeCheckout').addEventListener('click',()=>dlg.close());
+ dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
+ const upd=()=>{const g=document.querySelector('input[name="deliveryChoice"]:checked').value==="gift";rf.hidden=!g;rEmail.required=g;};
+ document.querySelectorAll('input[name="deliveryChoice"]').forEach(r=>r.addEventListener('change',upd));
+ go.addEventListener('click',async()=>{
+  const b=buyer.value.trim().toLowerCase(),gift=document.querySelector('input[name="deliveryChoice"]:checked').value==="gift";
+  const r=gift?rEmail.value.trim().toLowerCase():b,n=gift?rName.value.trim():"";
+  if(!ok(b)){msg.textContent="Veuillez saisir une adresse e-mail valide pour l’acheteur.";buyer.focus();return;}
+  if(gift&&!ok(r)){msg.textContent="Veuillez saisir une adresse e-mail valide pour le bénéficiaire.";rEmail.focus();return;}
+  go.disabled=true;msg.textContent="Préparation du paiement sécurisé…";
+  try{
+   const res=await fetch(WORKER_URL+"/create-checkout-session",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({amount:Number(amount)*100,buyerEmail:b,recipientEmail:r,recipientName:n})});
+   const out=await res.json();
+   if(!res.ok||!out.url)throw new Error(out.error||"Impossible de préparer le paiement.");
+   window.location.assign(out.url);
+  }catch(e){msg.textContent=e.message||"Une erreur est survenue. Réessayez.";go.disabled=false;}
  });
+ upd();
 })();
 </script>
-
-<script>
-(()=> {
-  const WORKER_URL = "https://so-info-cartes-cadeaux.gerard-sylvain60.workers.dev";
-  const cards = [...document.querySelectorAll('.gift-card')];
-  const radios = [...document.querySelectorAll('input[name="giftAmount"]')];
-  const amountLabel = document.getElementById('selectedAmount');
-  const openButton = document.getElementById('requestGift');
-  const panel = document.getElementById('checkoutPanel');
-  const buyerEmail = document.getElementById('buyerEmail');
-  const recipientFields = document.getElementById('recipientFields');
-  const recipientEmail = document.getElementById('recipientEmail');
-  const recipientName = document.getElementById('recipientName');
-  const checkoutButton = document.getElementById('checkoutButton');
-  const closeButton = document.getElementById('closeCheckout');
-  const message = document.getElementById('checkoutMessage');
-  let selectedAmount = "25";
-  let selectedTier = "25";
-  const customAmountInput = document.getElementById('customAmount');
-  function select(value) {
-    selectedTier = value;
-    if (value === "custom") {
-      const n = Number(customAmountInput?.value);
-      selectedAmount = Number.isInteger(n) && n >= 10 && n <= 500 ? String(n) : "";
-    } else selectedAmount = value;
-    cards.forEach(card => {
-      const on = card.dataset.amount === value;
-      card.classList.toggle('selected', on);
-      card.setAttribute('aria-pressed', String(on));
-    });
-    radios.forEach(radio => radio.checked = radio.value === value);
-    amountLabel.textContent = selectedAmount ? selectedAmount + ' €' : 'À définir';
-  }
-
-  cards.forEach(card => {
-    card.addEventListener('click', () => select(card.dataset.amount));
-    card.addEventListener('pointermove', event => {
-      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      const rect = card.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width - .5;
-      const y = (event.clientY - rect.top) / rect.height - .5;
-      card.style.transform = `rotateY(${x*11}deg) rotateX(${-y*9}deg) translateY(-4px)`;
-    });
-    card.addEventListener('pointerleave', () => card.style.transform = '');
-  });
-  radios.forEach(radio => radio.addEventListener('change', () => select(radio.value)));
-  customAmountInput?.addEventListener('input', () => { if (selectedTier === "custom") select("custom"); });
-
-
-  function updateDeliveryChoice() {
-    const choice = document.querySelector('input[name="deliveryChoice"]:checked')?.value;
-    recipientFields.hidden = choice !== "gift";
-    recipientEmail.required = choice === "gift";
-  }
-  document.querySelectorAll('input[name="deliveryChoice"]').forEach(radio =>
-    radio.addEventListener('change', updateDeliveryChoice)
-  );
-
-  openButton.addEventListener('click', () => {
-    if (selectedTier === "custom" && (!selectedAmount || Number(selectedAmount) < 10 || Number(selectedAmount) > 500)) {
-      panel.classList.add('open');
-      message.textContent = "Choisissez un montant entier entre 10 € et 500 €.";
-      panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      customAmountInput?.focus();
-      return;
-    }
-    panel.classList.add('open');
-    message.textContent = '';
-    panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    buyerEmail.focus();
-  });
-  closeButton.addEventListener('click', () => {
-    panel.classList.remove('open');
-    message.textContent = '';
-  });
-
-  checkoutButton.addEventListener('click', async () => {
-    const buyer = buyerEmail.value.trim().toLowerCase();
-    const choice = document.querySelector('input[name="deliveryChoice"]:checked')?.value;
-    const recipient = choice === "gift" ? recipientEmail.value.trim().toLowerCase() : buyer;
-    const name = choice === "gift" ? recipientName.value.trim() : "";
-    if (selectedTier === "custom") {
-      message.textContent = "Le choix du montant libre est prêt côté boutique, mais le service de paiement doit encore être adapté pour accepter les montants personnalisés. Les quatre montants fixes restent disponibles.";
-      return;
-    }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(buyer)) {
-      message.textContent = "Veuillez saisir une adresse e-mail valide pour l'acheteur.";
-      buyerEmail.focus();
-      return;
-    }
-    if (choice === "gift" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(recipient)) {
-      message.textContent = "Veuillez saisir une adresse e-mail valide pour le bénéficiaire.";
-      recipientEmail.focus();
-      return;
-    }
-
-    checkoutButton.disabled = true;
-    message.textContent = "Préparation du paiement sécurisé…";
-    try {
-      const response = await fetch(WORKER_URL + "/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          amount: Number(selectedAmount) * 100,
-          buyerEmail: buyer,
-          recipientEmail: recipient,
-          recipientName: name
-        })
-      });
-      const result = await response.json();
-      if (!response.ok || !result.url) throw new Error(result.error || "Impossible de préparer le paiement.");
-      window.location.assign(result.url);
-    } catch (error) {
-      message.textContent = error.message || "Une erreur est survenue. Réessayez.";
-      checkoutButton.disabled = false;
-    }
-  });
-  updateDeliveryChoice();
-})();
-</script>
-</body></html>
+</body>
+</html>
