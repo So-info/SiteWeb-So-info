@@ -176,6 +176,29 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
 @media(max-width:390px){.gift-option .gift-card{height:210px;padding:14px 12px}.tier-value{font-size:2.2rem}.gift-object{right:-1px;transform:scale(.73) rotate(-5deg);transform-origin:center}.gift-card:hover .gift-object,.gift-card.selected .gift-object{transform:scale(.76) translateY(-4px) rotate(-2deg)}.gift-choose{font-size:.61rem}.gift-custom-card{grid-template-columns:1fr 85px}.custom-object{right:-26px;transform:scale(.62) rotate(-8deg)}.custom-input-wrap{width:150px}
 }
 
+
+/* Coffrets cadeaux : scène WebGL 3D par carte */
+.gift-option .gift-card{overflow:hidden}
+.gift-option .gift-card .tier-pill,.gift-option .gift-card .tier-value,.gift-option .gift-card .tier-desc{z-index:6;position:relative}
+.gift-option .gift-card .tier-desc{max-width:55%;min-height:2.7em}
+.gift-object{position:absolute;z-index:3;right:5px;top:48px;width:52%;height:165px;pointer-events:none;filter:drop-shadow(0 16px 13px #0009);transform:none!important}
+.gift-object canvas{display:block;width:100%;height:100%;outline:0}
+.gift-card.selected .gift-object{filter:drop-shadow(0 18px 16px #000b) drop-shadow(0 0 9px color-mix(in srgb,var(--metal) 22%,transparent))}
+.gift-custom-card .custom-object{right:10px;top:30px;width:205px;height:185px;transform:none!important}
+.gift-custom-card .custom-copy{max-width:64%}
+@media(max-width:700px){
+ .gift-option .gift-card{height:238px}
+ .gift-object{right:0;top:62px;width:53%;height:155px}
+ .gift-option .gift-card .tier-desc{max-width:53%;font-size:.68rem}
+ .gift-custom-card .custom-object{right:-5px;top:40px;width:145px;height:150px}
+ .gift-custom-card .custom-copy{max-width:70%}
+}
+@media(max-width:390px){
+ .gift-option .gift-card{height:226px}
+ .gift-object{right:-5px;top:70px;width:55%;height:140px}
+ .gift-option .gift-card .tier-desc{max-width:52%}
+}
+
 </style>
 </head>
 <body>
@@ -185,8 +208,8 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
 <section class="section" id="montants"><div class="wrap">
 <div class="section-head"><div class="kicker">✦ Collection SO INFO ✦</div><h2>Choisissez votre carte cadeau</h2><p class="sub">Un coffret élégant, un montant adapté, et le plaisir d'offrir un vrai coup de pouce numérique.</p></div>
 <div class="gift-grid" id="giftGrid">
-<article class="gift-option tier-bronze"><button class="gift-card selected" type="button" data-amount="25" aria-pressed="true"><span class="tier-pill">BRONZE</span><span class="tier-value">25 <small>€</small></span><span class="tier-desc">Le petit coup de pouce</span><span class="gift-object" aria-hidden="true"><i class="gift-top"></i><i class="gift-side"></i><i class="gift-front"><b>S</b></i><i class="gift-ribbon"></i><i class="gift-bow"></i><i class="gift-shadow"></i></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="25" checked> Sélectionner 25 €</label></article><article class="gift-option tier-silver"><button class="gift-card " type="button" data-amount="50" aria-pressed="false"><span class="tier-pill">ARGENT</span><span class="tier-value">50 <small>€</small></span><span class="tier-desc">Un beau geste pour son matériel</span><span class="gift-object" aria-hidden="true"><i class="gift-top"></i><i class="gift-side"></i><i class="gift-front"><b>S</b></i><i class="gift-ribbon"></i><i class="gift-bow"></i><i class="gift-shadow"></i></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="50" > Sélectionner 50 €</label></article><article class="gift-option tier-gold"><button class="gift-card " type="button" data-amount="75" aria-pressed="false"><span class="tier-pill">OR</span><span class="tier-value">75 <small>€</small></span><span class="tier-desc">Pour faire encore plus plaisir</span><span class="gift-object" aria-hidden="true"><i class="gift-top"></i><i class="gift-side"></i><i class="gift-front"><b>S</b></i><i class="gift-ribbon"></i><i class="gift-bow"></i><i class="gift-shadow"></i></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="75" > Sélectionner 75 €</label></article><article class="gift-option tier-platinum"><button class="gift-card " type="button" data-amount="100" aria-pressed="false"><span class="tier-pill">PLATINE</span><span class="tier-value">100 <small>€</small></span><span class="tier-desc">Le grand cadeau sans compromis</span><span class="gift-object" aria-hidden="true"><i class="gift-top"></i><i class="gift-side"></i><i class="gift-front"><b>S</b></i><i class="gift-ribbon"></i><i class="gift-bow"></i><i class="gift-shadow"></i></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="100" > Sélectionner 100 €</label></article>
-<article class="gift-option tier-custom"><div class="gift-custom-card"><div class="custom-copy"><span class="tier-pill">SUR MESURE</span><h3>Montant libre</h3><p>Choisissez le montant qui vous ressemble, à partir de 10 €.</p><label for="customAmount">Votre montant (€)</label><div class="custom-input-wrap"><span>€</span><input id="customAmount" type="number" min="10" max="500" step="1" placeholder="Ex. 120" inputmode="numeric"></div><button class="gift-card custom-select" type="button" data-amount="custom" aria-pressed="false"><span class="gift-choose"><span class="choose-dot"></span> Définir ce montant</span></button></div><span class="gift-object custom-object" aria-hidden="true"><i class="gift-top"></i><i class="gift-side"></i><i class="gift-front"><b>S</b></i><i class="gift-ribbon"></i><i class="gift-bow"></i><i class="gift-shadow"></i></span></div><label class="gift-select"><input type="radio" name="giftAmount" value="custom"> Sélectionner mon montant</label></article>
+<article class="gift-option tier-bronze"><button class="gift-card selected" type="button" data-amount="25" aria-pressed="true"><span class="tier-pill">BRONZE</span><span class="tier-value">25 <small>€</small></span><span class="tier-desc">Le petit coup de pouce</span><span class="gift-object" aria-hidden="true"><canvas class="box3d" aria-hidden="true"></canvas></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="25" checked> Sélectionner 25 €</label></article><article class="gift-option tier-silver"><button class="gift-card " type="button" data-amount="50" aria-pressed="false"><span class="tier-pill">ARGENT</span><span class="tier-value">50 <small>€</small></span><span class="tier-desc">Un beau geste pour son matériel</span><span class="gift-object" aria-hidden="true"><canvas class="box3d" aria-hidden="true"></canvas></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="50" > Sélectionner 50 €</label></article><article class="gift-option tier-gold"><button class="gift-card " type="button" data-amount="75" aria-pressed="false"><span class="tier-pill">OR</span><span class="tier-value">75 <small>€</small></span><span class="tier-desc">Pour faire encore plus plaisir</span><span class="gift-object" aria-hidden="true"><canvas class="box3d" aria-hidden="true"></canvas></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="75" > Sélectionner 75 €</label></article><article class="gift-option tier-platinum"><button class="gift-card " type="button" data-amount="100" aria-pressed="false"><span class="tier-pill">PLATINE</span><span class="tier-value">100 <small>€</small></span><span class="tier-desc">Le grand cadeau sans compromis</span><span class="gift-object" aria-hidden="true"><canvas class="box3d" aria-hidden="true"></canvas></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="100" > Sélectionner 100 €</label></article>
+<article class="gift-option tier-custom"><div class="gift-custom-card"><div class="custom-copy"><span class="tier-pill">SUR MESURE</span><h3>Montant libre</h3><p>Choisissez le montant qui vous ressemble, à partir de 10 €.</p><label for="customAmount">Votre montant (€)</label><div class="custom-input-wrap"><span>€</span><input id="customAmount" type="number" min="10" max="500" step="1" placeholder="Ex. 120" inputmode="numeric"></div><button class="gift-card custom-select" type="button" data-amount="custom" aria-pressed="false"><span class="gift-choose"><span class="choose-dot"></span> Définir ce montant</span></button></div><span class="gift-object custom-object" aria-hidden="true"><canvas class="box3d" aria-hidden="true"></canvas></span></div><label class="gift-select"><input type="radio" name="giftAmount" value="custom"> Sélectionner mon montant</label></article>
 </div>
 <div class="selection" aria-live="polite"><div><small>Montant sélectionné</small><strong id="selectedAmount">25 €</strong></div><button class="btn" id="requestGift" type="button">Acheter cette carte <span>→</span></button></div>
 <div class="checkout-panel" id="checkoutPanel" aria-live="polite"><h3>Préparer votre carte cadeau</h3><p class="sub" style="margin:0 0 12px">Choisissez à qui envoyer la carte. Le paiement sera effectué de manière sécurisée sur Stripe.</p><div class="delivery-options"><label><input type="radio" name="deliveryChoice" value="self" checked> Pour moi</label><label><input type="radio" name="deliveryChoice" value="gift"> Pour offrir</label></div><label for="buyerEmail">Votre adresse e-mail (acheteur)</label><input id="buyerEmail" type="email" autocomplete="email" placeholder="vous@exemple.fr" required><div id="recipientFields" hidden><label for="recipientName">Prénom du bénéficiaire (facultatif)</label><input id="recipientName" type="text" maxlength="100" placeholder="Prénom"><label for="recipientEmail">Adresse e-mail du bénéficiaire</label><input id="recipientEmail" type="email" placeholder="destinataire@exemple.fr"></div><div class="checkout-actions"><button class="btn" id="checkoutButton" type="button">Continuer vers le paiement <span>→</span></button><button class="btn secondary" id="closeCheckout" type="button">Annuler</button></div><p class="checkout-message" id="checkoutMessage" role="status"></p></div>
@@ -310,6 +333,101 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
   document.addEventListener('visibilitychange',()=>{visible=!document.hidden;if(visible&&!raf)draw(performance.now());});
   draw(0);
  }catch(err){console.warn('Rendu 3D carte cadeau indisponible',err);if(fallback)fallback.style.display='grid';}
+})();
+</script>
+
+
+<script>
+(()=> {
+ if(!window.THREE)return;
+ const T=window.THREE;
+ const palettes={
+  bronze:{metal:0xc9824c,light:0xf1c18b,dark:0x402113,base:0x1a100b},
+  silver:{metal:0xb9c8d7,light:0xf3f7fb,dark:0x46596b,base:0x101b27},
+  gold:{metal:0xf2c33a,light:0xffed9b,dark:0x71500a,base:0x241b08},
+  platinum:{metal:0xc8b6e8,light:0xf1eaff,dark:0x55466e,base:0x191322},
+  custom:{metal:0xc28be8,light:0xf0d6ff,dark:0x55356e,base:0x1a1022}
+ };
+ function createBox(canvas,kind,index){
+  const colors=palettes[kind]||palettes.gold;
+  const renderer=new T.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'low-power'});
+  renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
+  renderer.outputEncoding=T.sRGBEncoding;
+  renderer.toneMapping=T.ACESFilmicToneMapping;
+  renderer.toneMappingExposure=1.2;
+  const scene=new T.Scene();
+  const camera=new T.PerspectiveCamera(34,1,.1,30);camera.position.set(3.8,2.5,6.7);camera.lookAt(0,.1,0);
+  scene.add(new T.HemisphereLight(0xfff3db,0x17101a,1.5));
+  const key=new T.DirectionalLight(colors.light,2.6);key.position.set(-3,5,6);scene.add(key);
+  const rim=new T.PointLight(colors.metal,2.1,12);rim.position.set(3,2,2);scene.add(rim);
+  const fill=new T.DirectionalLight(0xffffff,.65);fill.position.set(4,-2,4);scene.add(fill);
+  const metal=new T.MeshPhysicalMaterial({color:colors.metal,metalness:.9,roughness:.22,clearcoat:1,clearcoatRoughness:.16});
+  const satin=new T.MeshPhysicalMaterial({color:colors.base,metalness:.35,roughness:.3,clearcoat:1,clearcoatRoughness:.2});
+  const darkMetal=new T.MeshStandardMaterial({color:colors.dark,metalness:.75,roughness:.28});
+  const group=new T.Group();scene.add(group);
+  // Main rigid box with rounded-looking bevel edges
+  const bodyGeo=new T.BoxGeometry(2.25,1.45,1.55,1,1,1);
+  const body=new T.Mesh(bodyGeo,satin);body.position.y=-.1;group.add(body);
+  const edge=new T.LineSegments(new T.EdgesGeometry(bodyGeo),new T.LineBasicMaterial({color:colors.metal,transparent:true,opacity:.72}));
+  edge.position.copy(body.position);group.add(edge);
+  // Satin lid, visibly separated from the box to create a premium unboxing effect
+  const lid=new T.Group();group.add(lid);lid.position.y=.68;
+  const lidBase=new T.Mesh(new T.BoxGeometry(2.34,.24,1.64),metal);lid.add(lidBase);
+  const lidTop=new T.Mesh(new T.BoxGeometry(2.26,.055,1.56),satin);lidTop.position.y=.145;lid.add(lidTop);
+  const lidLine=new T.LineSegments(new T.EdgesGeometry(new T.BoxGeometry(2.28,.06,1.58)),new T.LineBasicMaterial({color:colors.light,transparent:true,opacity:.85}));
+  lidLine.position.y=.15;lid.add(lidLine);
+  // Wide silk ribbon over front, top and visible side
+  const ribbonMat=new T.MeshPhysicalMaterial({color:colors.metal,metalness:.8,roughness:.2,clearcoat:1});
+  const frontRibbon=new T.Mesh(new T.BoxGeometry(.25,1.47,1.58),ribbonMat);frontRibbon.position.set(0,-.1,.79);group.add(frontRibbon);
+  const topRibbon=new T.Mesh(new T.BoxGeometry(.27,.035,1.64),ribbonMat);topRibbon.position.set(0,.82,0);group.add(topRibbon);
+  const sideRibbon=new T.Mesh(new T.BoxGeometry(2.25,1.47,.035),ribbonMat);sideRibbon.position.set(0,-.1,-.79);group.add(sideRibbon);
+  // Sculpted bow loops, ribbon tails and a small central knot
+  const bow=new T.Group();bow.position.set(0,.86,.02);group.add(bow);
+  const loopMat=new T.MeshPhysicalMaterial({color:colors.light,metalness:.72,roughness:.2,clearcoat:1});
+  for(const side of [-1,1]){
+   const loop=new T.Mesh(new T.TorusGeometry(.34,.085,16,48),loopMat);
+   loop.scale.set(1.05,.68,.48);loop.position.set(side*.28,.22,.05);loop.rotation.z=side*.3;bow.add(loop);
+   const tail=new T.Mesh(new T.BoxGeometry(.17,.48,.07),metal);tail.position.set(side*.18,-.23,.07);tail.rotation.z=side*.22;bow.add(tail);
+  }
+  const knot=new T.Mesh(new T.SphereGeometry(.14,24,18),metal);knot.scale.set(1,.85,.7);knot.position.set(0,.17,.14);bow.add(knot);
+  // Small circular SO INFO seal on the front panel
+  const seal=new T.Mesh(new T.TorusGeometry(.22,.018,8,48),metal);seal.position.set(.62,-.12,.795);group.add(seal);
+  const sealS=new T.Mesh(new T.SphereGeometry(.1,16,12),new T.MeshStandardMaterial({color:colors.light,metalness:.35,roughness:.4}));
+  sealS.position.set(.62,-.12,.8);group.add(sealS);
+  // Ground shadow and subtle halo
+  const shadow=new T.Mesh(new T.CircleGeometry(1.55,64),new T.MeshBasicMaterial({color:0x000000,transparent:true,opacity:.34}));shadow.rotation.x=-Math.PI/2;shadow.position.y=-.91;shadow.scale.set(1,.48,1);group.add(shadow);
+  const halo=new T.Mesh(new T.TorusGeometry(1.55,.012,6,90),new T.MeshBasicMaterial({color:colors.metal,transparent:true,opacity:.36}));halo.rotation.x=Math.PI/2;halo.position.y=-.89;halo.scale.set(1,.52,1);group.add(halo);
+  function resize(){const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight);renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}
+  const ro=new ResizeObserver(resize);ro.observe(canvas);resize();
+  let pointerX=0,pointerY=0,rx=0,ry=0;
+  const parent=canvas.closest('.gift-card,.gift-custom-card');
+  if(parent){
+   parent.addEventListener('pointermove',e=>{const r=parent.getBoundingClientRect();pointerY=((e.clientX-r.left)/r.width-.5)*.22;pointerX=-((e.clientY-r.top)/r.height-.5)*.14;},{passive:true});
+   parent.addEventListener('pointerleave',()=>{pointerX=0;pointerY=0;});
+  }
+  let raf=0,active=true;
+  function frame(t){
+   raf=requestAnimationFrame(frame);if(!active)return;
+   const time=t*.001;
+   if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    rx+=(pointerX+Math.sin(time*.7+index)*.025-rx)*.045;
+    ry+=(pointerY+Math.sin(time*.52+index)*.04-ry)*.045;
+    group.rotation.x=rx;group.rotation.y=ry;
+    group.position.y=Math.sin(time*1.15+index)*.045;
+    lid.position.y=.68+Math.sin(time*1.35+index)*.025;
+    bow.rotation.y=Math.sin(time*.8+index)*.07;
+   }
+   renderer.render(scene,camera);
+  }
+  document.addEventListener('visibilitychange',()=>{active=!document.hidden;if(active&&!raf)frame(performance.now());});
+  frame(0);
+ }
+ const cards=[...document.querySelectorAll('.gift-option')];
+ cards.forEach((card,i)=>{
+  const canvas=card.querySelector('canvas.box3d');if(!canvas)return;
+  const kind=card.classList.contains('tier-bronze')?'bronze':card.classList.contains('tier-silver')?'silver':card.classList.contains('tier-gold')?'gold':card.classList.contains('tier-platinum')?'platinum':'custom';
+  try{createBox(canvas,kind,i);}catch(e){console.warn('Coffret 3D indisponible',e);}
+ });
 })();
 </script>
 
