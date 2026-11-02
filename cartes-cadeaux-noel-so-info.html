@@ -121,41 +121,75 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
 .gift3d-caption{letter-spacing:.24em;text-shadow:0 0 18px #ffd00035}
 @media(max-width:700px){.hero-art{min-height:385px}#gift3d{filter:drop-shadow(0 18px 24px #0009)}}
 
+
+/* Collection coffrets premium SO INFO */
+.gift-header .nav{height:78px;justify-content:flex-start}.gift-header .logo{width:48px;height:48px;box-shadow:0 0 24px #ffd00022}.gift-header .brand>span:last-child{font-size:1.2rem}
+#montants{padding-top:66px;background:radial-gradient(ellipse 70% 45% at 50% 0%,#2b2208 0,transparent 72%),#090908}
+#montants .section-head h2{font-size:clamp(2.1rem,4.4vw,3.5rem)}
+.gift-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:960px;margin:auto}
+.gift-option{gap:10px;align-items:stretch}
+.gift-option .gift-card{--metal:#d98a50;position:relative;display:block;width:100%;height:244px;aspect-ratio:auto;border:1px solid var(--metal);border-radius:19px;overflow:hidden;text-align:left;color:white;background:radial-gradient(ellipse at 72% 38%,color-mix(in srgb,var(--metal) 25%,transparent),transparent 54%),linear-gradient(130deg,#20150f,#0d0d0c 70%);box-shadow:0 18px 42px #0009,inset 0 1px 0 #ffffff24;transition:transform .28s,box-shadow .28s;isolation:isolate;padding:24px 25px}
+.gift-option .gift-card:before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 95% 10%,#ffffff13,transparent 35%),repeating-linear-gradient(135deg,transparent 0 24px,#ffffff08 25px 26px,transparent 27px 48px);pointer-events:none}
+.gift-option .gift-card:after{content:"";position:absolute;inset:8px;border:1px solid color-mix(in srgb,var(--metal) 35%,transparent);border-radius:13px;pointer-events:none}
+.tier-bronze .gift-card{--metal:#d98a50;background:radial-gradient(ellipse at 72% 38%,#a953203f,transparent 54%),linear-gradient(130deg,#321b12,#0e0d0c 72%)}
+.tier-silver .gift-card{--metal:#c5ced8;background:radial-gradient(ellipse at 72% 38%,#a9c5e53d,transparent 54%),linear-gradient(130deg,#202a36,#0b0e12 72%)}
+.tier-gold .gift-card{--metal:#ffd000;background:radial-gradient(ellipse at 72% 38%,#b886003d,transparent 54%),linear-gradient(130deg,#302408,#0d0c09 72%)}
+.tier-platinum .gift-card{--metal:#c7b9e8;background:radial-gradient(ellipse at 72% 38%,#9885c53d,transparent 54%),linear-gradient(130deg,#292238,#0d0c11 72%)}
+.gift-option .gift-card:hover{transform:translateY(-5px);box-shadow:0 27px 50px #000c,0 0 24px color-mix(in srgb,var(--metal) 22%,transparent)}
+.gift-option .gift-card.selected{outline:2px solid var(--gold);outline-offset:3px;box-shadow:0 20px 45px #000b,0 0 28px #ffd00028}
+.tier-pill{position:relative;z-index:4;display:inline-flex;padding:6px 15px;border-radius:999px;border:1px solid color-mix(in srgb,var(--metal) 75%,white 12%);background:color-mix(in srgb,var(--metal) 22%,#0b0b0b);color:#fff;font-size:.68rem;font-weight:900;letter-spacing:.18em}
+.tier-value{position:relative;z-index:4;display:block;margin-top:10px;font-size:clamp(2.5rem,5vw,3.45rem);font-weight:900;line-height:1;letter-spacing:-.07em;color:#fff;text-shadow:0 3px 20px #000}.tier-value small{font-size:.65em;color:var(--metal)}
+.tier-desc{position:relative;z-index:4;display:block;margin-top:8px;max-width:190px;color:#d0ccc3;font-size:.82rem;line-height:1.45}
+.gift-object{position:absolute;z-index:2;width:150px;height:132px;right:25px;top:55px;filter:drop-shadow(0 17px 14px #0009);transform:rotate(-5deg);transition:transform .35s}
+.gift-card:hover .gift-object,.gift-card.selected .gift-object{transform:translateY(-7px) rotate(-2deg) scale(1.04)}
+.gift-object i{position:absolute;display:block}
+.gift-object .gift-front{left:25px;top:44px;width:100px;height:78px;border:1px solid color-mix(in srgb,var(--metal) 80%,white 10%);border-radius:4px;background:linear-gradient(135deg,color-mix(in srgb,var(--metal) 26%,#29231a),#15130f 65%);box-shadow:inset 0 0 18px #ffffff10,8px 12px 20px #0008}
+.gift-object .gift-front b{position:absolute;left:34px;top:20px;width:31px;height:31px;border:1px solid var(--metal);border-radius:50%;display:grid;place-items:center;color:var(--metal);font-size:1.1rem}
+.gift-object .gift-side{left:125px;top:49px;width:19px;height:72px;background:linear-gradient(90deg,color-mix(in srgb,var(--metal) 45%,#1a1711),#090909);transform:skewY(-22deg);transform-origin:left}
+.gift-object .gift-top{left:31px;top:30px;width:105px;height:22px;background:linear-gradient(145deg,color-mix(in srgb,var(--metal) 70%,#fff),color-mix(in srgb,var(--metal) 32%,#1a1711));transform:skewX(-38deg) rotate(-1deg);border:1px solid color-mix(in srgb,var(--metal) 80%,white 12%);box-shadow:0 4px 8px #0008}
+.gift-object .gift-ribbon{left:69px;top:30px;width:13px;height:92px;background:linear-gradient(90deg,color-mix(in srgb,var(--metal) 55%,#30200d),var(--metal),#fff4c8aa);box-shadow:0 0 12px color-mix(in srgb,var(--metal) 35%,transparent)}
+.gift-object .gift-bow{left:56px;top:11px;width:43px;height:30px;border:5px solid var(--metal);border-bottom-color:transparent;border-radius:80% 80% 20% 20%;transform:rotate(12deg);filter:drop-shadow(0 0 5px color-mix(in srgb,var(--metal) 45%,transparent))}
+.gift-object .gift-shadow{left:8px;top:118px;width:145px;height:15px;border-radius:50%;background:color-mix(in srgb,var(--metal) 25%,transparent);filter:blur(8px)}
+.gift-choose{position:absolute;z-index:5;left:22px;right:22px;bottom:16px;display:flex;align-items:center;justify-content:center;gap:10px;min-height:39px;border:1px solid color-mix(in srgb,var(--metal) 65%,#ffffff40);border-radius:999px;background:#08080899;color:#f5f2e9;font-size:.78rem;font-weight:800}
+.choose-dot{width:17px;height:17px;border:2px solid #e8e5dc;border-radius:50%;display:inline-block}.gift-card.selected .choose-dot{border:5px solid var(--gold);background:#fff}
+.gift-select{display:flex;align-items:center;justify-content:center;gap:8px;color:#c9c4b9;font-size:.77rem;font-weight:700;cursor:pointer}.gift-select input{accent-color:var(--gold);width:16px;height:16px}
+.tier-custom{grid-column:1/-1}
+.gift-custom-card{--metal:#c58cf0;position:relative;min-height:230px;padding:25px 27px;display:grid;grid-template-columns:1fr 200px;align-items:center;gap:12px;overflow:hidden;border:1px solid #9b67c6;border-radius:19px;background:radial-gradient(ellipse at 78% 48%,#8150a52d,transparent 55%),linear-gradient(120deg,#21152c,#0c0b10 75%);box-shadow:0 18px 42px #0009,inset 0 1px 0 #ffffff22}
+.gift-custom-card:after{content:"";position:absolute;inset:8px;border:1px solid #c58cf044;border-radius:13px;pointer-events:none}
+.custom-copy{position:relative;z-index:4}.custom-copy h3{font-size:2rem;line-height:1.1;margin:12px 0 7px;color:#fff}.custom-copy p{max-width:370px;margin:0 0 14px;color:#c8bdd2;font-size:.84rem}
+.custom-copy label{display:block;color:#e8dcf2;font-size:.74rem;font-weight:800;margin-bottom:6px}.custom-input-wrap{display:flex;align-items:center;gap:10px;width:min(230px,100%);padding:8px 12px;border:1px solid #a77ac5;border-radius:10px;background:#09080c}
+.custom-input-wrap span{color:#d8b5f5;font-weight:900}.custom-input-wrap input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:white;font-size:1.05rem;font-weight:800}
+.custom-select{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;display:inline-flex!important;width:auto!important;height:auto!important;min-height:39px!important;margin-top:13px;padding:0 19px!important;border-color:#c58cf0!important;background:#171020!important}
+.custom-object{right:40px;top:40px;transform:scale(1.15) rotate(-8deg);--metal:#d3a6f5}
+.custom-object .gift-front{background:linear-gradient(135deg,#402b50,#171020 70%)}
+.selection{max-width:960px;margin-top:30px;border-color:#6b571b;background:linear-gradient(110deg,#211b0b,#10100d)}
+@media(max-width:700px){
+.gift-header .nav{height:68px}.gift-header .logo{width:44px;height:44px}#montants{padding-top:48px}.gift-grid{gap:17px 12px}
+.gift-option .gift-card{height:226px;padding:17px 15px;border-radius:15px}.tier-pill{font-size:.57rem;padding:5px 10px;letter-spacing:.14em}.tier-value{font-size:2.5rem;margin-top:12px}.tier-desc{font-size:.69rem;max-width:125px}
+.gift-object{width:116px;height:112px;right:7px;top:72px;transform:scale(.82) rotate(-5deg);transform-origin:center}
+.gift-card:hover .gift-object,.gift-card.selected .gift-object{transform:scale(.86) translateY(-5px) rotate(-2deg)}
+.gift-choose{left:10px;right:10px;bottom:11px;min-height:35px;font-size:.66rem;gap:7px}.choose-dot{width:14px;height:14px}.gift-select{font-size:.68rem}
+.gift-custom-card{min-height:245px;padding:20px 17px;grid-template-columns:1fr 115px;gap:0}.custom-copy h3{font-size:1.6rem}.custom-copy p{font-size:.72rem;max-width:210px}
+.custom-object{right:-10px;top:82px;transform:scale(.75) rotate(-8deg);transform-origin:center}.custom-input-wrap{width:170px}.custom-select{font-size:.68rem!important;padding:0 12px!important}
+.selection{padding:18px}.selection .btn{width:100%}
+}
+@media(max-width:390px){.gift-option .gift-card{height:210px;padding:14px 12px}.tier-value{font-size:2.2rem}.gift-object{right:-1px;transform:scale(.73) rotate(-5deg);transform-origin:center}.gift-card:hover .gift-object,.gift-card.selected .gift-object{transform:scale(.76) translateY(-4px) rotate(-2deg)}.gift-choose{font-size:.61rem}.gift-custom-card{grid-template-columns:1fr 85px}.custom-object{right:-26px;transform:scale(.62) rotate(-8deg)}.custom-input-wrap{width:150px}
+}
+
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="/" aria-label="SO INFO, accueil"><span class="logo">S</span><span>SO INFO<small>RÉPARATION &amp; MAINTENANCE</small></span></a><nav class="navlinks"><a href="/">Accueil</a><a href="/#services">Services</a><a href="/concours/">Concours de Noël</a><a class="active" href="/cartes-cadeaux-noel-so-info.html">🎁 Cartes cadeaux</a><a class="contact-link" href="mailto:contact@so-info.fr?subject=Cartes%20cadeaux%20SO%20INFO">Contact</a></nav></div></header>
+<header class="gift-header"><div class="wrap nav"><a class="brand" href="/" aria-label="SO INFO, accueil"><span class="logo">S</span><span>SO INFO<small>RÉPARATION &amp; MAINTENANCE</small></span></a></div></header>
 <main>
 <section class="hero"><div class="wrap hero-layout"><div class="hero-copy"><div class="eyebrow"><span>✦</span> LE PLAISIR D’OFFRIR · SO INFO <span>✦</span></div><h1>Le cadeau parfait<br>n’a pas besoin<br><em>d’être deviné.</em></h1><p class="lead">Une carte élégante, un montant au choix, et la liberté de se faire plaisir chez SO INFO. Le cadeau utile qui fait vraiment plaisir.</p><div class="hero-cta"><a class="btn" href="#montants">Choisir ma carte cadeau <span>→</span></a><a class="btn secondary" href="mailto:contact@so-info.fr?subject=Renseignements%20cartes%20cadeaux">Besoin d’un conseil ?</a></div><div class="hero-trust"><span>✦ Envoi numérique par e-mail</span><span>✦ Paiement sécurisé</span><span>✦ Valable 12 mois</span></div></div><div class="hero-art" aria-label="Carte cadeau SO INFO en rendu 3D"><canvas id="gift3d" aria-hidden="true"></canvas><div class="gift3d-caption"><span>✦</span> UNE CARTE QUI FAIT PLAISIR <span>✦</span></div><div class="gift3d-fallback" aria-hidden="true"><div class="fallback-card"><b>SO INFO</b><strong>100 €</strong><small>CARTE CADEAU</small></div></div></div></div></section>
-<section class="section" id="montants"><div class="wrap"><div class="section-head"><div class="kicker">Quatre montants au choix</div><h2>Choisissez votre carte cadeau</h2><p class="sub">Survolez les cartes pour les voir prendre vie, puis sélectionnez le montant qui vous convient.</p></div>
+<section class="section" id="montants"><div class="wrap">
+<div class="section-head"><div class="kicker">✦ Collection SO INFO ✦</div><h2>Choisissez votre carte cadeau</h2><p class="sub">Un coffret élégant, un montant adapté, et le plaisir d'offrir un vrai coup de pouce numérique.</p></div>
 <div class="gift-grid" id="giftGrid">
-<div class="gift-option"><button class="gift-card selected" type="button" data-amount="25" aria-pressed="true" style="--accent:#f2c84b;--accent2:#fff0a6;--cardbg:#10100d"><span class="shine"></span><span class="gift-ribbon"></span><span class="gift-bow"><i></i></span><span class="gift-inner"><span class="gift-brand"><span class="mini-logo">S</span> SO INFO</span><span><span class="gift-label">Une attention utile</span><br><strong class="gift-value">25 €</strong></span></span></button><label class="gift-select"><input type="radio" name="giftAmount" value="25" checked> Choisir 25 €</label><span class="caption">Le petit coup de pouce</span></div>
-<div class="gift-option"><button class="gift-card" type="button" data-amount="50" aria-pressed="false" style="--accent:#78bce8;--accent2:#c9efff;--cardbg:#0b1c2c"><span class="shine"></span><span class="gift-ribbon"></span><span class="gift-bow"><i></i></span><span class="gift-inner"><span class="gift-brand"><span class="mini-logo">S</span> SO INFO</span><span><span class="gift-label">Un beau geste</span><br><strong class="gift-value">50 €</strong></span></span></button><label class="gift-select"><input type="radio" name="giftAmount" value="50"> Choisir 50 €</label><span class="caption">Pour contribuer à un projet</span></div>
-<div class="gift-option"><button class="gift-card" type="button" data-amount="75" aria-pressed="false" style="--accent:#f08065;--accent2:#ffd0ad;--cardbg:#32110e"><span class="shine"></span><span class="gift-ribbon"></span><span class="gift-bow"><i></i></span><span class="gift-inner"><span class="gift-brand"><span class="mini-logo">S</span> SO INFO</span><span><span class="gift-label">Un cadeau généreux</span><br><strong class="gift-value">75 €</strong></span></span></button><label class="gift-select"><input type="radio" name="giftAmount" value="75"> Choisir 75 €</label><span class="caption">Pour faire encore plus plaisir</span></div>
-<div class="gift-option"><button class="gift-card" type="button" data-amount="100" aria-pressed="false" style="--accent:#e8c45b;--accent2:#fff0b1;--cardbg:#211b0c"><span class="shine"></span><span class="gift-ribbon"></span><span class="gift-bow"><i></i></span><span class="gift-inner"><span class="gift-brand"><span class="mini-logo">S</span> SO INFO</span><span><span class="gift-label">Le grand cadeau</span><br><strong class="gift-value">100 €</strong></span></span></button><label class="gift-select"><input type="radio" name="giftAmount" value="100"> Choisir 100 €</label><span class="caption">Une belle enveloppe cadeau</span></div>
+<article class="gift-option tier-bronze"><button class="gift-card selected" type="button" data-amount="25" aria-pressed="true"><span class="tier-pill">BRONZE</span><span class="tier-value">25 <small>€</small></span><span class="tier-desc">Le petit coup de pouce</span><span class="gift-object" aria-hidden="true"><i class="gift-top"></i><i class="gift-side"></i><i class="gift-front"><b>S</b></i><i class="gift-ribbon"></i><i class="gift-bow"></i><i class="gift-shadow"></i></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="25" checked> Sélectionner 25 €</label></article><article class="gift-option tier-silver"><button class="gift-card " type="button" data-amount="50" aria-pressed="false"><span class="tier-pill">ARGENT</span><span class="tier-value">50 <small>€</small></span><span class="tier-desc">Un beau geste pour son matériel</span><span class="gift-object" aria-hidden="true"><i class="gift-top"></i><i class="gift-side"></i><i class="gift-front"><b>S</b></i><i class="gift-ribbon"></i><i class="gift-bow"></i><i class="gift-shadow"></i></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="50" > Sélectionner 50 €</label></article><article class="gift-option tier-gold"><button class="gift-card " type="button" data-amount="75" aria-pressed="false"><span class="tier-pill">OR</span><span class="tier-value">75 <small>€</small></span><span class="tier-desc">Pour faire encore plus plaisir</span><span class="gift-object" aria-hidden="true"><i class="gift-top"></i><i class="gift-side"></i><i class="gift-front"><b>S</b></i><i class="gift-ribbon"></i><i class="gift-bow"></i><i class="gift-shadow"></i></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="75" > Sélectionner 75 €</label></article><article class="gift-option tier-platinum"><button class="gift-card " type="button" data-amount="100" aria-pressed="false"><span class="tier-pill">PLATINE</span><span class="tier-value">100 <small>€</small></span><span class="tier-desc">Le grand cadeau sans compromis</span><span class="gift-object" aria-hidden="true"><i class="gift-top"></i><i class="gift-side"></i><i class="gift-front"><b>S</b></i><i class="gift-ribbon"></i><i class="gift-bow"></i><i class="gift-shadow"></i></span><span class="gift-choose"><span class="choose-dot"></span> Choisir ce coffret</span></button><label class="gift-select"><input type="radio" name="giftAmount" value="100" > Sélectionner 100 €</label></article>
+<article class="gift-option tier-custom"><div class="gift-custom-card"><div class="custom-copy"><span class="tier-pill">SUR MESURE</span><h3>Montant libre</h3><p>Choisissez le montant qui vous ressemble, à partir de 10 €.</p><label for="customAmount">Votre montant (€)</label><div class="custom-input-wrap"><span>€</span><input id="customAmount" type="number" min="10" max="500" step="1" placeholder="Ex. 120" inputmode="numeric"></div><button class="gift-card custom-select" type="button" data-amount="custom" aria-pressed="false"><span class="gift-choose"><span class="choose-dot"></span> Définir ce montant</span></button></div><span class="gift-object custom-object" aria-hidden="true"><i class="gift-top"></i><i class="gift-side"></i><i class="gift-front"><b>S</b></i><i class="gift-ribbon"></i><i class="gift-bow"></i><i class="gift-shadow"></i></span></div><label class="gift-select"><input type="radio" name="giftAmount" value="custom"> Sélectionner mon montant</label></article>
 </div>
 <div class="selection" aria-live="polite"><div><small>Montant sélectionné</small><strong id="selectedAmount">25 €</strong></div><button class="btn" id="requestGift" type="button">Acheter cette carte <span>→</span></button></div>
-<div class="checkout-panel" id="checkoutPanel" aria-live="polite">
-<h3>Préparer votre carte cadeau</h3>
-<p class="sub" style="margin:0 0 12px">Choisissez à qui envoyer la carte. Le paiement sera effectué de manière sécurisée sur Stripe.</p>
-<div class="delivery-options">
-<label><input type="radio" name="deliveryChoice" value="self" checked> Pour moi</label>
-<label><input type="radio" name="deliveryChoice" value="gift"> Pour offrir</label>
-</div>
-<label for="buyerEmail">Votre adresse e-mail (acheteur)</label>
-<input id="buyerEmail" type="email" autocomplete="email" placeholder="vous@exemple.fr" required>
-<div id="recipientFields" hidden>
-<label for="recipientName">Prénom du bénéficiaire (facultatif)</label>
-<input id="recipientName" type="text" maxlength="100" placeholder="Prénom">
-<label for="recipientEmail">Adresse e-mail du bénéficiaire</label>
-<input id="recipientEmail" type="email" placeholder="destinataire@exemple.fr">
-</div>
-<div class="checkout-actions">
-<button class="btn" id="checkoutButton" type="button">Continuer vers le paiement <span>→</span></button>
-<button class="btn secondary" id="closeCheckout" type="button">Annuler</button>
-</div>
-<p class="checkout-message" id="checkoutMessage" role="status"></p>
-</div>
+<div class="checkout-panel" id="checkoutPanel" aria-live="polite"><h3>Préparer votre carte cadeau</h3><p class="sub" style="margin:0 0 12px">Choisissez à qui envoyer la carte. Le paiement sera effectué de manière sécurisée sur Stripe.</p><div class="delivery-options"><label><input type="radio" name="deliveryChoice" value="self" checked> Pour moi</label><label><input type="radio" name="deliveryChoice" value="gift"> Pour offrir</label></div><label for="buyerEmail">Votre adresse e-mail (acheteur)</label><input id="buyerEmail" type="email" autocomplete="email" placeholder="vous@exemple.fr" required><div id="recipientFields" hidden><label for="recipientName">Prénom du bénéficiaire (facultatif)</label><input id="recipientName" type="text" maxlength="100" placeholder="Prénom"><label for="recipientEmail">Adresse e-mail du bénéficiaire</label><input id="recipientEmail" type="email" placeholder="destinataire@exemple.fr"></div><div class="checkout-actions"><button class="btn" id="checkoutButton" type="button">Continuer vers le paiement <span>→</span></button><button class="btn secondary" id="closeCheckout" type="button">Annuler</button></div><p class="checkout-message" id="checkoutMessage" role="status"></p></div>
 </div></section>
 <section class="section"><div class="wrap"><div class="section-head"><div class="kicker">Un cadeau qui a du sens</div><h2>À quoi peut-elle servir ?</h2><p class="sub">La carte cadeau est destinée aux prestations et achats proposés par SO INFO, selon les services et produits disponibles au moment de son utilisation.</p></div><div class="feature-grid"><article class="feature"><div class="feature-icon">⌘</div><h3>Réparation informatique</h3><p>Ordinateurs, smartphones et équipements pris en charge par SO INFO.</p></article><article class="feature"><div class="feature-icon">⚙</div><h3>Entretien &amp; optimisation</h3><p>Maintenance, diagnostic et amélioration des équipements.</p></article><article class="feature"><div class="feature-icon">▣</div><h3>Accessoires &amp; matériel</h3><p>Participation à l’achat d’accessoires ou de matériel disponible.</p></article></div></div></section>
 <section class="section"><div class="wrap"><div class="section-head"><div class="kicker">Simple et personnalisé</div><h2>Comment obtenir votre carte ?</h2><p class="sub">Choisissez votre montant, indiquez l’adresse e-mail de réception, puis réglez votre achat en toute sécurité avec Stripe.</p></div><div class="steps"><article class="step"><div class="num">1</div><h3>Choisissez un montant</h3><p>Sélectionnez 25 €, 50 €, 75 € ou 100 € sur cette page.</p></article><article class="step"><div class="num">2</div><h3>Renseignez les e-mails</h3><p>Recevez la carte vous-même ou envoyez-la directement à la personne de votre choix.</p></article><article class="step"><div class="num">3</div><h3>Recevez la carte</h3><p>Après confirmation du paiement, la carte cadeau numérique est envoyée par e-mail.</p></article></div></div></section>
@@ -295,16 +329,21 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
   const closeButton = document.getElementById('closeCheckout');
   const message = document.getElementById('checkoutMessage');
   let selectedAmount = "25";
-
+  let selectedTier = "25";
+  const customAmountInput = document.getElementById('customAmount');
   function select(value) {
-    selectedAmount = value;
+    selectedTier = value;
+    if (value === "custom") {
+      const n = Number(customAmountInput?.value);
+      selectedAmount = Number.isInteger(n) && n >= 10 && n <= 500 ? String(n) : "";
+    } else selectedAmount = value;
     cards.forEach(card => {
       const on = card.dataset.amount === value;
       card.classList.toggle('selected', on);
       card.setAttribute('aria-pressed', String(on));
     });
     radios.forEach(radio => radio.checked = radio.value === value);
-    amountLabel.textContent = value + ' €';
+    amountLabel.textContent = selectedAmount ? selectedAmount + ' €' : 'À définir';
   }
 
   cards.forEach(card => {
@@ -319,6 +358,8 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
     card.addEventListener('pointerleave', () => card.style.transform = '');
   });
   radios.forEach(radio => radio.addEventListener('change', () => select(radio.value)));
+  customAmountInput?.addEventListener('input', () => { if (selectedTier === "custom") select("custom"); });
+
 
   function updateDeliveryChoice() {
     const choice = document.querySelector('input[name="deliveryChoice"]:checked')?.value;
@@ -330,6 +371,13 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
   );
 
   openButton.addEventListener('click', () => {
+    if (selectedTier === "custom" && (!selectedAmount || Number(selectedAmount) < 10 || Number(selectedAmount) > 500)) {
+      panel.classList.add('open');
+      message.textContent = "Choisissez un montant entier entre 10 € et 500 €.";
+      panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      customAmountInput?.focus();
+      return;
+    }
     panel.classList.add('open');
     message.textContent = '';
     panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -345,6 +393,10 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
     const choice = document.querySelector('input[name="deliveryChoice"]:checked')?.value;
     const recipient = choice === "gift" ? recipientEmail.value.trim().toLowerCase() : buyer;
     const name = choice === "gift" ? recipientName.value.trim() : "";
+    if (selectedTier === "custom") {
+      message.textContent = "Le choix du montant libre est prêt côté boutique, mais le service de paiement doit encore être adapté pour accepter les montants personnalisés. Les quatre montants fixes restent disponibles.";
+      return;
+    }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(buyer)) {
       message.textContent = "Veuillez saisir une adresse e-mail valide pour l'acheteur.";
