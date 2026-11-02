@@ -199,6 +199,23 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
  .gift-option .gift-card .tier-desc{max-width:52%}
 }
 
+
+/* Luxury product rendering + 360-degree touch interaction */
+.gift-object{pointer-events:auto!important;z-index:5;right:0;top:35px;width:57%;height:190px;filter:drop-shadow(0 18px 18px #000b)}
+.gift-object canvas{pointer-events:auto!important;touch-action:pan-y;display:block;width:100%;height:100%;cursor:grab}
+.gift-option .gift-card .tier-pill,.gift-option .gift-card .tier-value,.gift-option .gift-card .tier-desc{z-index:7}
+.gift-card.selected .gift-object{filter:drop-shadow(0 20px 22px #000c) drop-shadow(0 0 12px color-mix(in srgb,var(--accent) 30%,transparent))}
+.gift-custom-card .custom-object{right:0;top:20px;width:230px;height:205px}
+@media(max-width:700px){
+ .gift-option .gift-card{height:248px}
+ .gift-object{top:45px;right:-3px;width:60%;height:185px}
+ .gift-custom-card .custom-object{top:28px;right:-5px;width:170px;height:170px}
+}
+@media(max-width:390px){
+ .gift-option .gift-card{height:232px}
+ .gift-object{top:54px;right:-7px;width:62%;height:165px}
+}
+
 </style>
 </head>
 <body>
@@ -341,92 +358,120 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
 (()=> {
  if(!window.THREE)return;
  const T=window.THREE;
- const palettes={
-  bronze:{metal:0xc9824c,light:0xf1c18b,dark:0x402113,base:0x1a100b},
-  silver:{metal:0xb9c8d7,light:0xf3f7fb,dark:0x46596b,base:0x101b27},
-  gold:{metal:0xf2c33a,light:0xffed9b,dark:0x71500a,base:0x241b08},
-  platinum:{metal:0xc8b6e8,light:0xf1eaff,dark:0x55466e,base:0x191322},
-  custom:{metal:0xc28be8,light:0xf0d6ff,dark:0x55356e,base:0x1a1022}
+ const palette={
+ bronze:{metal:0xc88955,bright:0xf3c99b,dark:0x3b2116,inner:0x17100c},
+ silver:{metal:0xbacbd8,bright:0xf5fbff,dark:0x354b5b,inner:0x101923},
+ gold:{metal:0xe8bd45,bright:0xffedab,dark:0x60470e,inner:0x1d1709},
+ platinum:{metal:0xc9b8e7,bright:0xf5edff,dark:0x57486e,inner:0x17121f},
+ custom:{metal:0xc58ce9,bright:0xf0d8ff,dark:0x593a70,inner:0x1a1022}
  };
- function createBox(canvas,kind,index){
-  const colors=palettes[kind]||palettes.gold;
-  const renderer=new T.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'low-power'});
-  renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
-  renderer.outputEncoding=T.sRGBEncoding;
-  renderer.toneMapping=T.ACESFilmicToneMapping;
-  renderer.toneMappingExposure=1.2;
+ const mat=(color,metalness,roughness,extra={})=>new T.MeshPhysicalMaterial({color,metalness,roughness,clearcoat:1,clearcoatRoughness:.12,...extra});
+ function roundedPanel(w,h,r){
+  const s=new T.Shape();
+  s.moveTo(-w/2+r,-h/2);s.lineTo(w/2-r,-h/2);s.quadraticCurveTo(w/2,-h/2,w/2,-h/2+r);
+  s.lineTo(w/2,h/2-r);s.quadraticCurveTo(w/2,h/2,w/2-r,h/2);
+  s.lineTo(-w/2+r,h/2);s.quadraticCurveTo(-w/2,h/2,-w/2,h/2-r);
+  s.lineTo(-w/2,-h/2+r);s.quadraticCurveTo(-w/2,-h/2,-w/2+r,-h/2);
+  return s;
+ }
+ function createLuxuryBox(canvas,kind,index){
+  const p=palette[kind]||palette.gold;
+  const renderer=new T.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'high-performance'});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  renderer.outputEncoding=T.sRGBEncoding;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.28;
   const scene=new T.Scene();
-  const camera=new T.PerspectiveCamera(34,1,.1,30);camera.position.set(3.8,2.5,6.7);camera.lookAt(0,.1,0);
-  scene.add(new T.HemisphereLight(0xfff3db,0x17101a,1.5));
-  const key=new T.DirectionalLight(colors.light,2.6);key.position.set(-3,5,6);scene.add(key);
-  const rim=new T.PointLight(colors.metal,2.1,12);rim.position.set(3,2,2);scene.add(rim);
-  const fill=new T.DirectionalLight(0xffffff,.65);fill.position.set(4,-2,4);scene.add(fill);
-  const metal=new T.MeshPhysicalMaterial({color:colors.metal,metalness:.9,roughness:.22,clearcoat:1,clearcoatRoughness:.16});
-  const satin=new T.MeshPhysicalMaterial({color:colors.base,metalness:.35,roughness:.3,clearcoat:1,clearcoatRoughness:.2});
-  const darkMetal=new T.MeshStandardMaterial({color:colors.dark,metalness:.75,roughness:.28});
-  const group=new T.Group();scene.add(group);
-  // Main rigid box with rounded-looking bevel edges
-  const bodyGeo=new T.BoxGeometry(2.25,1.45,1.55,1,1,1);
-  const body=new T.Mesh(bodyGeo,satin);body.position.y=-.1;group.add(body);
-  const edge=new T.LineSegments(new T.EdgesGeometry(bodyGeo),new T.LineBasicMaterial({color:colors.metal,transparent:true,opacity:.72}));
-  edge.position.copy(body.position);group.add(edge);
-  // Satin lid, visibly separated from the box to create a premium unboxing effect
-  const lid=new T.Group();group.add(lid);lid.position.y=.68;
-  const lidBase=new T.Mesh(new T.BoxGeometry(2.34,.24,1.64),metal);lid.add(lidBase);
-  const lidTop=new T.Mesh(new T.BoxGeometry(2.26,.055,1.56),satin);lidTop.position.y=.145;lid.add(lidTop);
-  const lidLine=new T.LineSegments(new T.EdgesGeometry(new T.BoxGeometry(2.28,.06,1.58)),new T.LineBasicMaterial({color:colors.light,transparent:true,opacity:.85}));
-  lidLine.position.y=.15;lid.add(lidLine);
-  // Wide silk ribbon over front, top and visible side
-  const ribbonMat=new T.MeshPhysicalMaterial({color:colors.metal,metalness:.8,roughness:.2,clearcoat:1});
-  const frontRibbon=new T.Mesh(new T.BoxGeometry(.25,1.47,1.58),ribbonMat);frontRibbon.position.set(0,-.1,.79);group.add(frontRibbon);
-  const topRibbon=new T.Mesh(new T.BoxGeometry(.27,.035,1.64),ribbonMat);topRibbon.position.set(0,.82,0);group.add(topRibbon);
-  const sideRibbon=new T.Mesh(new T.BoxGeometry(2.25,1.47,.035),ribbonMat);sideRibbon.position.set(0,-.1,-.79);group.add(sideRibbon);
-  // Sculpted bow loops, ribbon tails and a small central knot
-  const bow=new T.Group();bow.position.set(0,.86,.02);group.add(bow);
-  const loopMat=new T.MeshPhysicalMaterial({color:colors.light,metalness:.72,roughness:.2,clearcoat:1});
+  const camera=new T.PerspectiveCamera(31,1,.1,50);camera.position.set(3.7,2.4,7.3);camera.lookAt(0,.05,0);
+  scene.add(new T.HemisphereLight(0xfff4df,0x17111c,1.7));
+  const key=new T.AreaLight?null:null;
+  const main=new T.DirectionalLight(0xffedc2,3.1);main.position.set(-4,6,7);scene.add(main);
+  const soft=new T.DirectionalLight(0xffffff,1.4);soft.position.set(5,1,5);scene.add(soft);
+  const rim=new T.PointLight(p.metal,3.2,14);rim.position.set(3,3,-3);scene.add(rim);
+  const floorLight=new T.PointLight(p.bright,1.4,9);floorLight.position.set(-3,-2,4);scene.add(floorLight);
+  const gold=mat(p.metal,.96,.19),goldLight=mat(p.bright,.9,.16),dark=mat(p.dark,.72,.24),inside=mat(p.inner,.25,.38);
+  const ribbon=mat(p.metal,.78,.24),ribbonLight=mat(p.bright,.82,.2);
+  const root=new T.Group();scene.add(root);
+  // Floating presentation plinth
+  const plinth=new T.Mesh(new T.CylinderGeometry(1.65,1.72,.13,96),mat(0x11110f,.55,.24));
+  plinth.position.y=-1.05;root.add(plinth);
+  const plinthEdge=new T.Mesh(new T.TorusGeometry(1.66,.018,10,100),gold);plinthEdge.rotation.x=Math.PI/2;plinthEdge.position.y=-.98;root.add(plinthEdge);
+  // Rounded rigid gift case, layered lacquer shell and inset inner tray
+  const bodyShape=roundedPanel(2.25,1.45,.16);
+  const bodyGeo=new T.ExtrudeGeometry(bodyShape,{depth:1.25,bevelEnabled:true,bevelSegments:5,steps:1,bevelSize:.055,bevelThickness:.055,curveSegments:12});
+  bodyGeo.translate(0,0,-.625);
+  const body=new T.Mesh(bodyGeo,dark);body.position.y=-.12;root.add(body);
+  const innerShape=roundedPanel(2.02,1.24,.12);
+  const innerGeo=new T.ExtrudeGeometry(innerShape,{depth:.035,bevelEnabled:true,bevelSegments:3,bevelSize:.015,bevelThickness:.015});
+  innerGeo.translate(0,0,-.018);
+  const inset=new T.Mesh(innerGeo,inside);inset.position.set(0,-.12,.632);root.add(inset);
+  // Fine metallic piping around the case
+  const edgeShape=roundedPanel(2.29,1.49,.17);
+  const edgePts=edgeShape.getPoints(18).map(v=>new T.Vector3(v.x,v.y,.64));
+  const edgeCurve=new T.CatmullRomCurve3(edgePts,true);
+  root.add(new T.Mesh(new T.TubeGeometry(edgeCurve,120,.012,8,true),goldLight)).position.y=-.12;
+  // Lid is a separate hinged object: the customer can see its thickness and inner lining
+  const lidPivot=new T.Group();lidPivot.position.set(-1.06,.62,-.58);root.add(lidPivot);
+  const lidShape=roundedPanel(2.32,.24,.12);
+  const lidGeo=new T.ExtrudeGeometry(lidShape,{depth:1.32,bevelEnabled:true,bevelSegments:5,bevelSize:.045,bevelThickness:.045,curveSegments:12});
+  lidGeo.translate(1.16,0,-.66);
+  const lid=new T.Mesh(lidGeo,gold);lidPivot.add(lid);lid.position.y=.12;
+  const lidTop=new T.Mesh(new T.BoxGeometry(2.12,.035,1.12),dark);lidTop.position.set(0,.31,0);lidPivot.add(lidTop);
+  const lidInset=new T.Mesh(new T.BoxGeometry(2.04,.025,1.04),inside);lidInset.position.set(0,-.035,0);lidPivot.add(lidInset);
+  // Silk ribbon, broad bands wrapping the box in two directions
+  const bandFront=new T.Mesh(new T.BoxGeometry(.22,1.49,1.31),ribbon);bandFront.position.set(0,-.12,.638);root.add(bandFront);
+  const bandTop=new T.Mesh(new T.BoxGeometry(.24,.035,1.34),ribbonLight);bandTop.position.set(0,.63,0);root.add(bandTop);
+  const bandSide=new T.Mesh(new T.BoxGeometry(2.27,1.49,.035),ribbon);bandSide.position.set(0,-.12,-.64);root.add(bandSide);
+  const crossFront=new T.Mesh(new T.BoxGeometry(2.27,.17,.035),ribbonLight);crossFront.position.set(0,.43,.66);root.add(crossFront);
+  // A sculpted double-loop bow, tapered tails, and a raised knot
+  const bow=new T.Group();bow.position.set(0,.82,.04);root.add(bow);
+  const loopMaterial=mat(p.bright,.82,.16);
   for(const side of [-1,1]){
-   const loop=new T.Mesh(new T.TorusGeometry(.34,.085,16,48),loopMat);
-   loop.scale.set(1.05,.68,.48);loop.position.set(side*.28,.22,.05);loop.rotation.z=side*.3;bow.add(loop);
-   const tail=new T.Mesh(new T.BoxGeometry(.17,.48,.07),metal);tail.position.set(side*.18,-.23,.07);tail.rotation.z=side*.22;bow.add(tail);
+   const loop=new T.Mesh(new T.TorusGeometry(.34,.085,18,64),loopMaterial);
+   loop.scale.set(1.12,.78,.58);loop.position.set(side*.27,.2,.06);loop.rotation.z=side*.35;bow.add(loop);
+   const tailShape=new T.Shape();tailShape.moveTo(0,0);tailShape.lineTo(.18,.46);tailShape.lineTo(.02,.39);tailShape.lineTo(-.14,.47);tailShape.closePath();
+   const tail=new T.Mesh(new T.ExtrudeGeometry(tailShape,{depth:.035,bevelEnabled:true,bevelSize:.012,bevelThickness:.012,bevelSegments:2}),ribbon);
+   tail.position.set(side*.12,-.28,.1);tail.rotation.z=side*.12;bow.add(tail);
   }
-  const knot=new T.Mesh(new T.SphereGeometry(.14,24,18),metal);knot.scale.set(1,.85,.7);knot.position.set(0,.17,.14);bow.add(knot);
-  // Small circular SO INFO seal on the front panel
-  const seal=new T.Mesh(new T.TorusGeometry(.22,.018,8,48),metal);seal.position.set(.62,-.12,.795);group.add(seal);
-  const sealS=new T.Mesh(new T.SphereGeometry(.1,16,12),new T.MeshStandardMaterial({color:colors.light,metalness:.35,roughness:.4}));
-  sealS.position.set(.62,-.12,.8);group.add(sealS);
-  // Ground shadow and subtle halo
-  const shadow=new T.Mesh(new T.CircleGeometry(1.55,64),new T.MeshBasicMaterial({color:0x000000,transparent:true,opacity:.34}));shadow.rotation.x=-Math.PI/2;shadow.position.y=-.91;shadow.scale.set(1,.48,1);group.add(shadow);
-  const halo=new T.Mesh(new T.TorusGeometry(1.55,.012,6,90),new T.MeshBasicMaterial({color:colors.metal,transparent:true,opacity:.36}));halo.rotation.x=Math.PI/2;halo.position.y=-.89;halo.scale.set(1,.52,1);group.add(halo);
+  const knot=new T.Mesh(new T.SphereGeometry(.145,32,24),goldLight);knot.scale.set(1,.78,.7);knot.position.set(0,.18,.17);bow.add(knot);
+  // SO INFO signature seal, raised rim and central S medallion
+  const seal=new T.Group();seal.position.set(.64,-.1,.665);root.add(seal);
+  const ring=new T.Mesh(new T.TorusGeometry(.19,.022,12,64),goldLight);seal.add(ring);
+  const disk=new T.Mesh(new T.CylinderGeometry(.155,.155,.026,64),dark);disk.rotation.x=Math.PI/2;seal.add(disk);
+  const sText=document.createElement('canvas');sText.width=256;sText.height=256;
+  const ctx=sText.getContext('2d');ctx.clearRect(0,0,256,256);ctx.fillStyle='#fff0b5';ctx.font='bold 170px Georgia';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('S',128,133);
+  const tex=new T.CanvasTexture(sText);tex.needsUpdate=true;
+  const letter=new T.Mesh(new T.PlaneGeometry(.18,.18),new T.MeshBasicMaterial({map:tex,transparent:true,depthWrite:false}));letter.position.z=.018;seal.add(letter);
+  // A discreet gold orbit and soft contact shadow
+  const orbit=new T.Mesh(new T.TorusGeometry(1.72,.009,8,128),new T.MeshBasicMaterial({color:p.metal,transparent:true,opacity:.55}));orbit.rotation.x=Math.PI/2;orbit.position.y=-1.12;root.add(orbit);
+  const shadow=new T.Mesh(new T.CircleGeometry(1.4,64),new T.MeshBasicMaterial({color:0x000000,transparent:true,opacity:.4}));shadow.rotation.x=-Math.PI/2;shadow.position.y=-1.125;shadow.scale.set(1,.48,1);root.add(shadow);
+  // Real pointer/touch orbit: drag horizontally for a full 360° view
+  let dragging=false,lastX=0,lastY=0,velocity=0,tilt=0;
+  canvas.style.pointerEvents='auto';canvas.style.touchAction='pan-y';canvas.style.cursor='grab';
+  canvas.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture(e.pointerId);canvas.style.cursor='grabbing';});
+  canvas.addEventListener('pointermove',e=>{if(!dragging)return;const dx=e.clientX-lastX,dy=e.clientY-lastY;root.rotation.y+=dx*.012;tilt=Math.max(-.34,Math.min(.34,tilt+dy*.006));velocity=dx*.0009;lastX=e.clientX;lastY=e.clientY;});
+  const release=()=>{dragging=false;canvas.style.cursor='grab';};canvas.addEventListener('pointerup',release);canvas.addEventListener('pointercancel',release);
+  canvas.addEventListener('wheel',e=>{root.rotation.y+=e.deltaY*.002;},{passive:true});
   function resize(){const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight);renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}
   const ro=new ResizeObserver(resize);ro.observe(canvas);resize();
-  let pointerX=0,pointerY=0,rx=0,ry=0;
-  const parent=canvas.closest('.gift-card,.gift-custom-card');
-  if(parent){
-   parent.addEventListener('pointermove',e=>{const r=parent.getBoundingClientRect();pointerY=((e.clientX-r.left)/r.width-.5)*.22;pointerX=-((e.clientY-r.top)/r.height-.5)*.14;},{passive:true});
-   parent.addEventListener('pointerleave',()=>{pointerX=0;pointerY=0;});
-  }
-  let raf=0,active=true;
+  let raf=0,visible=true;
   function frame(t){
-   raf=requestAnimationFrame(frame);if(!active)return;
+   raf=requestAnimationFrame(frame);if(!visible||document.hidden)return;
+   if(!dragging){root.rotation.y+=velocity;velocity*=.96;if(Math.abs(velocity)<.00012)velocity=0;root.rotation.y+=.0018;}
+   root.rotation.x+=(tilt-root.rotation.x)*.045;
    const time=t*.001;
-   if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
-    rx+=(pointerX+Math.sin(time*.7+index)*.025-rx)*.045;
-    ry+=(pointerY+Math.sin(time*.52+index)*.04-ry)*.045;
-    group.rotation.x=rx;group.rotation.y=ry;
-    group.position.y=Math.sin(time*1.15+index)*.045;
-    lid.position.y=.68+Math.sin(time*1.35+index)*.025;
-    bow.rotation.y=Math.sin(time*.8+index)*.07;
-   }
+   root.position.y=Math.sin(time*.8+index)*.025;
+   // slow premium opening reveal, then a gentle close; pause while the user rotates
+   const open=(Math.sin(time*.42+index*.4)+1)*.5;
+   lidPivot.rotation.x=-(.04+open*.10);
+   bow.rotation.y=Math.sin(time*.7+index)*.035;
    renderer.render(scene,camera);
   }
-  document.addEventListener('visibilitychange',()=>{active=!document.hidden;if(active&&!raf)frame(performance.now());});
+  document.addEventListener('visibilitychange',()=>{visible=!document.hidden;});
   frame(0);
  }
- const cards=[...document.querySelectorAll('.gift-option')];
- cards.forEach((card,i)=>{
+ document.querySelectorAll('.gift-option').forEach((card,i)=>{
   const canvas=card.querySelector('canvas.box3d');if(!canvas)return;
   const kind=card.classList.contains('tier-bronze')?'bronze':card.classList.contains('tier-silver')?'silver':card.classList.contains('tier-gold')?'gold':card.classList.contains('tier-platinum')?'platinum':'custom';
-  try{createBox(canvas,kind,i);}catch(e){console.warn('Coffret 3D indisponible',e);}
+  try{createLuxuryBox(canvas,kind,i);}catch(e){console.error('3D SO INFO:',e);}
  });
 })();
 </script>
