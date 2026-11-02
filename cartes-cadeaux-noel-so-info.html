@@ -382,7 +382,6 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
   const scene=new T.Scene();
   const camera=new T.PerspectiveCamera(31,1,.1,50);camera.position.set(3.7,2.4,7.3);camera.lookAt(0,.05,0);
   scene.add(new T.HemisphereLight(0xfff4df,0x17111c,1.7));
-  const key=new T.AreaLight?null:null;
   const main=new T.DirectionalLight(0xffedc2,3.1);main.position.set(-4,6,7);scene.add(main);
   const soft=new T.DirectionalLight(0xffffff,1.4);soft.position.set(5,1,5);scene.add(soft);
   const rim=new T.PointLight(p.metal,3.2,14);rim.position.set(3,3,-3);scene.add(rim);
