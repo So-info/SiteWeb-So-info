@@ -104,12 +104,23 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
 @media(max-width:370px){.gift-inner{padding:10px}.gift-value{font-size:1.9rem}.gift-ribbon{right:14px}.gift-bow{right:-6px;transform:translateZ(42px) scale(.6)}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 
+
+.hero-art{position:relative;min-height:500px;display:block;perspective:1100px}
+#gift3d{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:2}
+.hero-art:before{width:430px;height:430px;background:radial-gradient(circle,#ffd00020 0,#ffd00008 48%,transparent 72%);border-color:#ffd00030;box-shadow:0 0 0 30px #ffd00006,0 0 100px #ffd00016}
+.gift3d-caption{position:absolute;z-index:3;bottom:4px;left:0;right:0;text-align:center;color:#c5a72d;font-size:.62rem;font-weight:800;letter-spacing:.22em}
+.gift3d-caption span{color:var(--gold);padding:0 8px}
+.gift3d-fallback{display:none;position:absolute;z-index:1;inset:0;place-items:center}
+.fallback-card{width:270px;aspect-ratio:1.6;background:linear-gradient(145deg,#24231d,#080908);border:1px solid var(--gold);border-radius:16px;padding:25px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 50px #000b;color:#f5edda;transform:rotate(-9deg)}
+.fallback-card strong{font-size:3rem;color:var(--gold)}.fallback-card small{letter-spacing:.2em}
+@media(max-width:700px){.hero-art{min-height:370px;margin-top:0}.hero-art:before{width:300px;height:300px}.gift3d-caption{bottom:0;font-size:.54rem}}
+
 </style>
 </head>
 <body>
 <header><div class="wrap nav"><a class="brand" href="/" aria-label="SO INFO, accueil"><span class="logo">S</span><span>SO INFO<small>RÉPARATION &amp; MAINTENANCE</small></span></a><nav class="navlinks"><a href="/">Accueil</a><a href="/#services">Services</a><a href="/concours/">Concours de Noël</a><a class="active" href="/cartes-cadeaux-noel-so-info.html">🎁 Cartes cadeaux</a><a class="contact-link" href="mailto:contact@so-info.fr?subject=Cartes%20cadeaux%20SO%20INFO">Contact</a></nav></div></header>
 <main>
-<section class="hero"><div class="wrap hero-layout"><div class="hero-copy"><div class="eyebrow"><span>✦</span> LE PLAISIR D’OFFRIR · SO INFO <span>✦</span></div><h1>Le cadeau parfait<br>n’a pas besoin<br><em>d’être deviné.</em></h1><p class="lead">Une carte élégante, un montant au choix, et la liberté de se faire plaisir chez SO INFO. Le cadeau utile qui fait vraiment plaisir.</p><div class="hero-cta"><a class="btn" href="#montants">Choisir ma carte cadeau <span>→</span></a><a class="btn secondary" href="mailto:contact@so-info.fr?subject=Renseignements%20cartes%20cadeaux">Besoin d’un conseil ?</a></div><div class="hero-trust"><span>✦ Envoi numérique par e-mail</span><span>✦ Paiement sécurisé</span><span>✦ Valable 12 mois</span></div></div><div class="hero-art" aria-label="Mise en scène des cartes cadeaux SO INFO"><div class="art-spark spark-one">✦</div><div class="art-spark spark-two">✧</div><div class="art-card art-back"><span class="art-brand">SO INFO <small>CARTE CADEAU</small></span><span class="art-back-mark">S</span><span class="art-foot">LE PLAISIR D’OFFRIR</span></div><div class="art-card art-front"><span class="art-brand">SO INFO <small>CARTE CADEAU</small></span><span class="art-gift">Un beau<br>geste.</span><span class="art-amount">100 <small>€</small></span><span class="art-foot">À OFFRIR · À CHOISIR · À AIMER</span><span class="art-seal">S</span></div><div class="art-caption">UNE ATTENTION QUI COMPTE</div></div></div></section>
+<section class="hero"><div class="wrap hero-layout"><div class="hero-copy"><div class="eyebrow"><span>✦</span> LE PLAISIR D’OFFRIR · SO INFO <span>✦</span></div><h1>Le cadeau parfait<br>n’a pas besoin<br><em>d’être deviné.</em></h1><p class="lead">Une carte élégante, un montant au choix, et la liberté de se faire plaisir chez SO INFO. Le cadeau utile qui fait vraiment plaisir.</p><div class="hero-cta"><a class="btn" href="#montants">Choisir ma carte cadeau <span>→</span></a><a class="btn secondary" href="mailto:contact@so-info.fr?subject=Renseignements%20cartes%20cadeaux">Besoin d’un conseil ?</a></div><div class="hero-trust"><span>✦ Envoi numérique par e-mail</span><span>✦ Paiement sécurisé</span><span>✦ Valable 12 mois</span></div></div><div class="hero-art" aria-label="Carte cadeau SO INFO en rendu 3D"><canvas id="gift3d" aria-hidden="true"></canvas><div class="gift3d-caption"><span>✦</span> UNE CARTE QUI FAIT PLAISIR <span>✦</span></div><div class="gift3d-fallback" aria-hidden="true"><div class="fallback-card"><b>SO INFO</b><strong>100 €</strong><small>CARTE CADEAU</small></div></div></div></div></section>
 <section class="section" id="montants"><div class="wrap"><div class="section-head"><div class="kicker">Quatre montants au choix</div><h2>Choisissez votre carte cadeau</h2><p class="sub">Survolez les cartes pour les voir prendre vie, puis sélectionnez le montant qui vous convient.</p></div>
 <div class="gift-grid" id="giftGrid">
 <div class="gift-option"><button class="gift-card selected" type="button" data-amount="25" aria-pressed="true" style="--accent:#f2c84b;--accent2:#fff0a6;--cardbg:#10100d"><span class="shine"></span><span class="gift-ribbon"></span><span class="gift-bow"><i></i></span><span class="gift-inner"><span class="gift-brand"><span class="mini-logo">S</span> SO INFO</span><span><span class="gift-label">Une attention utile</span><br><strong class="gift-value">25 €</strong></span></span></button><label class="gift-select"><input type="radio" name="giftAmount" value="25" checked> Choisir 25 €</label><span class="caption">Le petit coup de pouce</span></div>
@@ -146,6 +157,80 @@ header{position:sticky;top:0;z-index:30;background:#0a0a09e8;border-bottom:1px s
 <section class="section"><div class="wrap"><div class="contact"><div><h2>Un cadeau SO INFO sous le sapin ?</h2><p>Choisissez votre montant et contactez-nous pour préparer votre carte cadeau.</p></div><a class="btn" href="mailto:contact@so-info.fr?subject=Demande%20de%20carte%20cadeau%20SO%20INFO">Contacter SO INFO →</a></div></div></section>
 </main>
 <footer class="foot"><div class="wrap footin"><span><strong>SO INFO</strong> · Réparation &amp; Maintenance</span><span><a href="mailto:contact@so-info.fr">contact@so-info.fr</a> · <a href="/">Retour au site</a></span><span>© 2026 SO INFO</span></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(()=> {
+ const canvas=document.getElementById('gift3d');
+ if(!canvas||!window.THREE){const f=document.querySelector('.gift3d-fallback');if(f)f.style.display='grid';return;}
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ try{
+  const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  renderer.outputEncoding=THREE.sRGBEncoding;
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure=1.25;
+  const scene=new THREE.Scene();
+  const camera=new THREE.PerspectiveCamera(32,1,.1,100);
+  camera.position.set(0,0,10.8);
+  scene.add(new THREE.AmbientLight(0xffffff,.85));
+  const key=new THREE.DirectionalLight(0xffe39a,2.5);key.position.set(4,6,7);scene.add(key);
+  const rim=new THREE.PointLight(0xffc400,3.2,18);rim.position.set(-4,1,4);scene.add(rim);
+  const fill=new THREE.PointLight(0xffffff,1.2,15);fill.position.set(3,-3,2);scene.add(fill);
+  const gold=new THREE.MeshStandardMaterial({color:0xffd000,metalness:.88,roughness:.22});
+  const goldSoft=new THREE.MeshStandardMaterial({color:0xc49a27,metalness:.82,roughness:.28});
+  const dark=new THREE.MeshStandardMaterial({color:0x151510,metalness:.72,roughness:.3});
+  const dark2=new THREE.MeshStandardMaterial({color:0x27251b,metalness:.65,roughness:.28});
+  const cream=new THREE.MeshStandardMaterial({color:0xffe9a6,metalness:.35,roughness:.3});
+  const root=new THREE.Group();scene.add(root);
+  function box(w,h,d,mat,x,y,z,parent=root){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.set(x,y,z);parent.add(m);return m;}
+  function edges(mesh,color=0xffd000){const e=new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry),new THREE.LineBasicMaterial({color,transparent:true,opacity:.7}));e.position.copy(mesh.position);e.rotation.copy(mesh.rotation);mesh.parent.add(e);}
+  // Cadeau cubique, métal noir et ruban or
+  const gift=box(2.45,2.15,1.65,dark,0,-.12,0);edges(gift);
+  box(2.53,.12,1.72,gold,0,1.02,0);
+  box(.22,2.2,1.74,goldSoft,0,-.08,.01);
+  box(2.48,2.17,.10,dark2,0,-.12,.84);
+  box(.18,2.16,.05,gold,0,-.12,.91);
+  // Carte cadeau flottante devant le coffret
+  const cardGroup=new THREE.Group();root.add(cardGroup);cardGroup.position.set(.12,.08,1.12);cardGroup.rotation.set(-.08,-.12,-.08);
+  const card=box(2.55,1.58,.12,dark2,0,0,0,cardGroup);edges(card);
+  box(2.42,1.45,.025,dark,0,0,.075,cardGroup);
+  // Filet de bordure doré
+  const frame=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(2.43,1.46,.03)),new THREE.LineBasicMaterial({color:0xffd000,linewidth:2}));
+  frame.position.z=.1;cardGroup.add(frame);
+  // Marque et montant en géométrie 3D lisible
+  function textMesh(message,size,mat,x,y,z,parent){
+   const c=document.createElement('canvas');c.width=1024;c.height=512;const ctx=c.getContext('2d');
+   ctx.clearRect(0,0,1024,512);ctx.fillStyle=mat===gold?'#ffd000':'#f4f1ea';
+   ctx.font='800 64px Arial';ctx.textAlign='left';ctx.fillText(message,75,100);
+   const tex=new THREE.CanvasTexture(c);tex.encoding=THREE.sRGBEncoding;
+   const plane=new THREE.Mesh(new THREE.PlaneGeometry(size,size*.5),new THREE.MeshBasicMaterial({map:tex,transparent:true,depthWrite:false}));
+   plane.position.set(x,y,z);parent.add(plane);return plane;
+  }
+  textMesh('SO INFO  ·  CARTE CADEAU',1.8,cream,-1.05,.42,.11,cardGroup);
+  textMesh('100 €',2.0,gold,-1.02,-.23,.115,cardGroup);
+  // Anneau et nœud stylisé au-dessus du paquet
+  const loop1=new THREE.Mesh(new THREE.TorusGeometry(.38,.055,12,48),gold);loop1.position.set(-.28,1.13,.1);loop1.rotation.x=.35;root.add(loop1);
+  const loop2=new THREE.Mesh(new THREE.TorusGeometry(.38,.055,12,48),gold);loop2.position.set(.28,1.13,.1);loop2.rotation.x=.35;root.add(loop2);
+  const knot=new THREE.Mesh(new THREE.SphereGeometry(.13,20,16),gold);knot.position.set(0,1.12,.18);root.add(knot);
+  // Socle circulaire lumineux comme la scène 3D de la page d'accueil
+  const ring=new THREE.Mesh(new THREE.TorusGeometry(2.15,.018,8,120),gold);ring.rotation.x=Math.PI/2;ring.position.y=-1.42;root.add(ring);
+  const ring2=new THREE.Mesh(new THREE.TorusGeometry(2.35,.008,6,120),goldSoft);ring2.rotation.x=Math.PI/2;ring2.position.y=-1.43;root.add(ring2);
+  // Particules dorées dans l'espace
+  const count=90,positions=new Float32Array(count*3);
+  for(let i=0;i<count;i++){positions[i*3]=(Math.random()-.5)*7;positions[i*3+1]=(Math.random()-.5)*5;positions[i*3+2]=(Math.random()-.5)*3-1;}
+  const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.BufferAttribute(positions,3));
+  const particles=new THREE.Points(geo,new THREE.PointsMaterial({color:0xffd000,size:.025,transparent:true,opacity:.7}));
+  scene.add(particles);
+  function resize(){const w=canvas.clientWidth||500,h=canvas.clientHeight||500;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}
+  resize();const ro=new ResizeObserver(resize);ro.observe(canvas);
+  let raf=0;
+  function render(t){raf=requestAnimationFrame(render);const time=t*.00045;if(!reduced){root.rotation.y=Math.sin(time)*.16;root.rotation.x=Math.sin(time*.7)*.035;cardGroup.position.y=.08+Math.sin(time*1.8)*.055;particles.rotation.y=time*.08;}renderer.render(scene,camera);}
+  render(0);
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(raf);}else if(!raf)render(0);});
+ }catch(err){console.warn('Scène 3D indisponible',err);const f=document.querySelector('.gift3d-fallback');if(f)f.style.display='grid';}
+})();
+</script>
 <script>
 (()=> {
   const WORKER_URL = "https://so-info-cartes-cadeaux.gerard-sylvain60.workers.dev";
