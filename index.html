@@ -233,6 +233,65 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
  .advent-desc{font-size:.73rem;line-height:1.5}
  .advent-action{grid-column:1/-1;justify-self:stretch;min-height:46px;font-size:.74rem}
 }
+
+/* Campagne de Noël : composition éditoriale, pas deux encarts identiques */
+.christmas-campaigns{width:min(1536px,calc(100% - 48px));margin:26px auto 64px;display:grid;grid-template-columns:1.08fr .92fr;gap:16px;align-items:stretch}
+.contest-banner.contest-banner-image,.advent-home{width:auto;max-width:none;min-width:0;margin:0;overflow:hidden;border-radius:22px;position:relative;isolation:isolate;min-height:355px;border:1px solid #66520b;background:#0d0c09;box-shadow:0 18px 55px #0008}
+.contest-banner-image>a{height:100%;min-height:355px;display:flex;align-items:center;position:relative;overflow:hidden;padding:34px}
+.contest-banner-image>a:before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse at 78% 42%,#e8b90025,transparent 43%),linear-gradient(130deg,#090908,#171307 72%,#080807)}
+.contest-banner-image>a:after{content:"";position:absolute;right:-75px;top:30px;width:310px;height:310px;border:1px solid #ffd00030;border-radius:50%;box-shadow:0 0 0 24px #ffd00008,0 0 0 55px #ffd00006;z-index:-1}
+.contest-banner-image>a>img{display:none}
+.contest-mobile{padding:0;max-width:100%;text-align:left;background:transparent;position:relative;z-index:2}
+.contest-mobile .eyebrow,.advent-kicker{color:#ffd000;font-size:.65rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin:0 0 14px}
+.contest-mobile h2{font-size:clamp(1.8rem,3vw,2.65rem);line-height:1.04;letter-spacing:-.055em;margin:0 0 12px;max-width:450px}
+.contest-mobile h2 strong,.advent-title strong{color:#ffd000}
+.contest-mobile>p:not(.eyebrow){font-size:.88rem;color:#c5bdac;margin:0 0 18px}
+.contest-art{position:absolute;right:24px;bottom:25px;width:190px;height:145px;z-index:1;filter:drop-shadow(0 15px 25px #0009);pointer-events:none}
+.contest-art:before{content:"";position:absolute;left:16px;top:0;width:155px;height:100px;border:5px solid #c8c8c5;border-bottom-width:9px;border-radius:9px;background:linear-gradient(135deg,#d7e8e8,#66777a 42%,#10191b 43%,#20292a);box-shadow:inset 0 0 0 2px #fff8,0 0 35px #ffd00025}
+.contest-art:after{content:"";position:absolute;left:84px;top:101px;width:20px;height:27px;background:linear-gradient(90deg,#777,#ddd,#777);clip-path:polygon(25% 0,75% 0,100% 100%,0 100%)}
+.contest-art i{position:absolute;left:59px;bottom:3px;width:70px;height:9px;border-radius:3px 3px 9px 9px;background:linear-gradient(#eee,#777)}
+.apple-mark{position:absolute;left:83px;top:35px;color:#fff;font-size:0}
+.apple-mark:after{content:"✦";font-size:29px;text-shadow:0 0 18px #fff}
+.imac-label{position:absolute;right:0;bottom:0;color:#e8dcae;font-size:.66rem;letter-spacing:.08em}
+.contest-mobile .dates{display:flex;justify-content:flex-start;gap:7px;margin:17px 0 20px}
+.contest-mobile .dates span{flex:1;min-width:0;padding:9px 8px;border:1px solid #59490f;border-radius:10px;background:#0808069c;color:#c9c1af;font-size:.65rem;text-align:center}
+.contest-mobile .dates b{display:block;color:#ffd000;font-size:.73rem;margin-top:4px}
+.contest-mobile .join{display:inline-flex;align-items:center;gap:15px;padding:13px 18px;border-radius:999px;background:#ffd000;color:#0a0906;font-size:.72rem;font-weight:950;letter-spacing:.035em;box-shadow:0 8px 24px #ffd00022}
+.advent-home{border-color:#695400;background:radial-gradient(ellipse at 15% 85%,#a47d0029,transparent 48%),linear-gradient(145deg,#211a08,#0b0b09 70%);box-shadow:0 18px 55px #0008}
+.advent-home:before{content:"";position:absolute;inset:12px;border:1px solid #ffd00020;border-radius:15px;pointer-events:none}
+.advent-inner{height:100%;min-height:355px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:17px;padding:30px;position:relative}
+.advent-mark{width:100%;height:auto;min-height:0;border:0;border-radius:0;background:none;box-shadow:none;display:flex;align-items:baseline;gap:12px;position:relative}
+.advent-mark:before{content:none}
+.advent-mark:after{content:none}
+.advent-mark span{font-size:clamp(4rem,7vw,6rem);font-weight:950;line-height:.8;letter-spacing:-.09em;color:#ffd000;text-shadow:0 0 35px #ffd00038}
+.advent-mark small{font-size:.56rem;letter-spacing:.18em;color:#e8dcae;font-weight:900}
+.advent-mark i{position:absolute;right:5px;top:-12px;color:#ffd000;font-size:1.7rem;font-style:normal}
+.advent-copy{width:100%}
+.advent-kicker{margin-bottom:10px}
+.advent-title{font-size:clamp(1.5rem,2.5vw,2.1rem);line-height:1.07;letter-spacing:-.05em;margin:0 0 10px}
+.advent-desc{font-size:.82rem;line-height:1.65;color:#c5bdac;margin:0 0 13px;max-width:460px}
+.advent-date{color:#e5c74b;font-size:.62rem;font-weight:900;letter-spacing:.14em;margin:0 0 16px}
+.advent-action{display:inline-flex;align-items:center;gap:12px;min-height:45px;padding:12px 17px;font-size:.69rem;letter-spacing:.035em;box-shadow:0 8px 25px #ffd00020}
+@media(max-width:760px){
+ .christmas-campaigns{width:calc(100% - 24px);margin:15px auto 46px;grid-template-columns:1fr;gap:12px}
+ .contest-banner.contest-banner-image,.advent-home{min-height:0;border-radius:18px}
+ .contest-banner-image>a{min-height:0;padding:24px 19px 21px;display:block}
+ .contest-banner-image>a:after{right:-120px;top:45px;width:245px;height:245px;opacity:.7}
+ .contest-art{right:12px;top:105px;bottom:auto;transform:scale(.72);transform-origin:top right;opacity:.8}
+ .contest-mobile{padding:0}
+ .contest-mobile .eyebrow,.advent-kicker{font-size:.57rem;letter-spacing:.12em;margin-bottom:11px}
+ .contest-mobile h2{font-size:clamp(1.85rem,8vw,2.35rem);max-width:340px;margin-bottom:10px}
+ .contest-mobile>p:not(.eyebrow){font-size:.78rem;max-width:260px}
+ .contest-mobile .dates{gap:5px;margin:15px 0}
+ .contest-mobile .dates span{padding:8px 4px;font-size:.59rem}
+ .contest-mobile .dates b{font-size:.65rem}
+ .contest-mobile .join{width:100%;justify-content:center;min-height:46px;font-size:.7rem}
+ .advent-inner{min-height:0;padding:23px 20px;gap:13px}
+ .advent-mark span{font-size:4.1rem}
+ .advent-title{font-size:1.65rem}
+ .advent-desc{font-size:.77rem;line-height:1.55}
+ .advent-action{width:100%;justify-content:center;min-height:46px}
+}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ComputerRepair","name":"SO INFO","url":"https://so-info.fr/","telephone":"+33781232763","email":"contact@so-info.fr","description":"Dépannage, réparation et maintenance informatique pour particuliers à Argelès-sur-Mer et alentours.","areaServed":{"@type":"City","name":"Argelès-sur-Mer"},"serviceType":["Dépannage informatique à domicile","Réparation PC et Mac","Maintenance informatique","Assistance informatique à distance"]}
@@ -246,33 +305,33 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
 </div></header>
 <main>
 
-<!-- Bannière visuelle du Concours de Noël SO INFO -->
-<section class="contest-banner contest-banner-image" aria-label="Concours de Noël SO INFO">
-  <a href="/concours/" aria-label="Participer au concours de Noël SO INFO : tenter de gagner un Apple iMac 24 pouces">
-    <img src="/banniere-noel-so-info.png" alt="Concours de Noël SO INFO : tentez de gagner un Apple iMac 24 pouces. Ouverture le 15 novembre 2026, clôture le 15 décembre 2026, résultat le 16 décembre 2026. Je participe au concours." loading="eager" fetchpriority="high">
-    <div class="contest-mobile">
-      <p class="eyebrow">🎄 Concours de Noël SO INFO</p>
-      <h2>Tentez de gagner un <strong>Apple iMac 24 pouces&nbsp;!</strong></h2>
-      <p>Un cadeau d’exception pour les fêtes.</p>
-      <div class="dates"><span>Ouverture<b>15 nov. 2026</b></span><span>Clôture<b>15 déc. 2026</b></span><span>Résultat<b>16 déc. 2026</b></span></div>
-      <span class="join">JE PARTICIPE AU CONCOURS →</span>
+<!-- Les deux opérations de Noël SO INFO -->
+<div class="christmas-campaigns">
+  <section class="contest-banner contest-banner-image" aria-label="Concours de Noël SO INFO">
+    <a href="/concours/" aria-label="Participer au concours pour tenter de gagner un Apple iMac 24 pouces">
+      <div class="contest-art" aria-hidden="true"><span class="apple-mark">●</span><span class="imac-label">iMac <b>24”</b></span><i></i></div>
+      <div class="contest-mobile">
+        <p class="eyebrow">✦ LE GRAND CADEAU DE NOËL SO INFO</p>
+        <h2>Et si vous gagniez <strong>un iMac 24 pouces ?</strong></h2>
+        <p>Un cadeau exceptionnel pour terminer l’année en beauté.</p>
+        <div class="dates"><span>Ouverture<b>15 nov. 2026</b></span><span>Clôture<b>15 déc. 2026</b></span><span>Tirage<b>16 déc. 2026</b></span></div>
+        <span class="join">DÉCOUVRIR LE CONCOURS <b>↗</b></span>
+      </div>
+    </a>
+  </section>
+  <section class="advent-home" aria-label="Calendrier de l'Avent SO INFO">
+    <div class="advent-inner">
+      <div class="advent-mark" aria-hidden="true"><span>24</span><small>PORTES À OUVRIR</small><i>✦</i></div>
+      <div class="advent-copy">
+        <p class="advent-kicker">✦ LE RENDEZ-VOUS DE DÉCEMBRE</p>
+        <h2 class="advent-title">Chaque jour réserve <strong>sa surprise.</strong></h2>
+        <p class="advent-desc">24 jours de cadeaux, de réductions et de petites attentions signées SO INFO. Inscrivez-vous pour ne rien manquer dès le 1er décembre.</p>
+        <p class="advent-date">DU 1<sup>ER</sup> AU 24 DÉCEMBRE 2026</p>
+        <a class="advent-action" href="/calendrier-avent-2026.html#inscription">JE RÉSERVE MA PLACE <b>→</b></a>
+      </div>
     </div>
-  </a>
-</section>
-
-<!-- Invitation à rejoindre le calendrier de l'Avent -->
-<section class="advent-home" aria-label="Inscription au calendrier de l'Avent SO INFO">
-  <div class="advent-inner">
-    <div class="advent-mark" aria-hidden="true">✦</div>
-    <div>
-      <p class="advent-kicker">🎄 Bientôt · dès le 1er décembre 2026</p>
-      <h2 class="advent-title">24 jours, 24 surprises : <strong>préparez votre Avent avec SO INFO !</strong></h2>
-      <p class="advent-desc">Rejoignez le calendrier et préparez-vous à découvrir chaque jour une nouvelle surprise, une offre ou un cadeau.</p>
-    </div>
-    <a class="advent-action" href="/calendrier-avent-2026.html#inscription">JE M’INSCRIS →</a>
-  </div>
-</section>
-
+  </section>
+</div>
 <section class="hero" id="accueil"><div class="stick">
 <canvas id="gl" aria-hidden="true"></canvas><div class="tags" id="tags" aria-hidden="true"></div>
 <div class="wrap" style="height:100%"><div class="hero-copy">
