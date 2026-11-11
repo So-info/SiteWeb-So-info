@@ -184,6 +184,55 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
 .advent-action{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:12px 19px;border-radius:999px;background:var(--gold);color:#0a0a09;font-size:.75rem;font-weight:900;white-space:nowrap;transition:transform .2s,box-shadow .2s}
 .advent-action:hover{transform:translateY(-2px);box-shadow:0 10px 26px #ffd00035}
 @media(max-width:700px){.advent-home{width:calc(100% - 24px);margin:0 auto 24px;border-radius:14px}.advent-inner{grid-template-columns:42px minmax(0,1fr);gap:12px;padding:17px 15px}.advent-mark{width:42px;height:42px;border-radius:12px;font-size:20px}.advent-kicker{font-size:.57rem}.advent-title{font-size:1.02rem}.advent-desc{font-size:.69rem}.advent-action{grid-column:2;justify-self:start;min-height:40px;padding:10px 16px;font-size:.68rem}}
+
+/* NOEL 2026 — deux cartes vedettes, cohérentes avec l'identité SO INFO */
+.contest-banner-image{position:relative;width:min(1536px,calc(100% - 48px));margin:28px auto 20px;border:1px solid #8d7200;border-radius:22px;background:#090907;box-shadow:0 22px 60px #0009,0 0 42px #ffd00018;transition:transform .25s,border-color .25s}
+.contest-banner-image:hover{transform:translateY(-3px);border-color:#ffd000}
+.contest-banner-image>a{position:relative;display:block;min-height:245px;overflow:hidden;border-radius:inherit}
+.contest-banner-image>a>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.46;filter:saturate(.82) brightness(.76);transition:transform .6s,opacity .3s}
+.contest-banner-image:hover>a>img{transform:scale(1.035);opacity:.57}
+.contest-banner-image>a:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#080806 0%,#0b0a07ed 42%,#0b0a0780 100%),radial-gradient(ellipse at 85% 45%,#ffd00026,transparent 45%)}
+.contest-mobile{position:relative;z-index:1;display:block;max-width:720px;padding:34px 38px;text-align:left;background:transparent;line-height:1.4}
+.contest-mobile .eyebrow{font-size:.68rem;letter-spacing:.19em}
+.contest-mobile h2{max-width:650px;margin:9px 0 10px;font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.04;letter-spacing:-.055em}
+.contest-mobile p{font-size:.92rem;margin-bottom:15px}
+.contest-mobile .dates{justify-content:flex-start;gap:9px;margin:18px 0}
+.contest-mobile .dates span{min-width:112px;padding:9px 12px;border-radius:9px;background:#080806a8;border-color:#6a570e;font-size:.7rem}
+.contest-mobile .join{padding:14px 22px;box-shadow:0 8px 26px #ffd0002e;letter-spacing:.035em;transition:transform .2s,box-shadow .2s}
+.contest-banner-image:hover .join{transform:translateY(-2px);box-shadow:0 12px 30px #ffd00042}
+.advent-home{width:min(1536px,calc(100% - 48px));margin:20px auto 36px;border:1px solid #705900;border-radius:22px;background:#0d0c09;box-shadow:0 18px 48px #0008;transition:transform .25s,border-color .25s}
+.advent-home:hover{transform:translateY(-3px);border-color:#ffd000}
+.advent-home:before{background:radial-gradient(ellipse at 82% 48%,#ffd0002c,transparent 42%),linear-gradient(105deg,#0c0b08,#211903 62%,#0a0907)}
+.advent-inner{grid-template-columns:minmax(0,1fr) 210px auto;gap:24px;padding:27px 32px}
+.advent-mark{width:100%;height:142px;border:1px solid #8c7100;border-radius:15px;background:linear-gradient(145deg,#2c2309,#100f0a);font-size:0;position:relative;box-shadow:inset 0 1px #ffffff17,0 12px 30px #0008}
+.advent-mark:before{content:"24";font-size:4.4rem;line-height:1;font-weight:900;letter-spacing:-.1em;color:var(--gold);text-shadow:0 0 28px #ffd0004d}
+.advent-mark:after{content:"SURPRISES";position:absolute;bottom:13px;left:0;right:0;text-align:center;color:#e6d69e;font-size:.57rem;font-weight:900;letter-spacing:.2em}
+.advent-kicker{font-size:.67rem;letter-spacing:.18em}
+.advent-title{max-width:680px;margin:7px 0;font-size:clamp(1.45rem,3vw,2.25rem);line-height:1.08}
+.advent-desc{max-width:600px;font-size:.86rem;line-height:1.65}
+.advent-action{min-height:50px;padding:13px 21px;box-shadow:0 8px 25px #ffd00022}
+@media(max-width:700px){
+ .contest-banner-image{width:calc(100% - 24px);margin:15px auto 14px;border-radius:17px}
+ .contest-banner-image>a{min-height:0}
+ .contest-banner-image>a>img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.24}
+ .contest-banner-image>a:after{background:linear-gradient(180deg,#090806d9,#090806f2 65%),radial-gradient(ellipse at 85% 10%,#ffd00024,transparent 60%)}
+ .contest-mobile{padding:25px 19px 23px;text-align:center}
+ .contest-mobile .eyebrow{font-size:.59rem}
+ .contest-mobile h2{font-size:clamp(1.8rem,8vw,2.5rem)}
+ .contest-mobile p{font-size:.83rem}
+ .contest-mobile .dates{justify-content:center;gap:6px;margin:15px 0}
+ .contest-mobile .dates span{min-width:0;flex:1;padding:8px 5px;font-size:.62rem}
+ .contest-mobile .join{width:100%;padding:14px 12px;font-size:.77rem}
+ .advent-home{width:calc(100% - 24px);margin:14px auto 26px;border-radius:17px}
+ .advent-inner{grid-template-columns:76px minmax(0,1fr);gap:14px;padding:19px 16px}
+ .advent-mark{height:94px;border-radius:12px}
+ .advent-mark:before{font-size:3rem}
+ .advent-mark:after{bottom:8px;font-size:.46rem}
+ .advent-kicker{font-size:.53rem;letter-spacing:.12em}
+ .advent-title{font-size:1.2rem;line-height:1.1}
+ .advent-desc{font-size:.73rem;line-height:1.5}
+ .advent-action{grid-column:1/-1;justify-self:stretch;min-height:46px;font-size:.74rem}
+}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ComputerRepair","name":"SO INFO","url":"https://so-info.fr/","telephone":"+33781232763","email":"contact@so-info.fr","description":"Dépannage, réparation et maintenance informatique pour particuliers à Argelès-sur-Mer et alentours.","areaServed":{"@type":"City","name":"Argelès-sur-Mer"},"serviceType":["Dépannage informatique à domicile","Réparation PC et Mac","Maintenance informatique","Assistance informatique à distance"]}
