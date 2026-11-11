@@ -292,6 +292,58 @@ footer{padding:28px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
  .advent-desc{font-size:.77rem;line-height:1.55}
  .advent-action{width:100%;justify-content:center;min-height:46px}
 }
+
+/* Esprit de Noël : sapin, neige, houx et cadeaux — sans perdre le noir & or SO INFO */
+.christmas-campaigns{position:relative}
+.contest-banner.contest-banner-image{
+ border-color:#8a6d16;
+ background:radial-gradient(ellipse at 80% 8%,#1e51332b,transparent 40%),linear-gradient(145deg,#11130d,#171007 58%,#090a08);
+}
+.contest-banner-image>a:before{
+ background:
+ radial-gradient(ellipse at 80% 40%,#c99b1626,transparent 42%),
+ radial-gradient(ellipse at 8% 100%,#17482c45,transparent 45%),
+ linear-gradient(135deg,#0b110d,#171307 68%,#090a08);
+}
+.contest-banner-image>a:after{
+ content:"✦  ❄  ✦  ❄  ✦";
+ width:auto;height:auto;right:18px;top:17px;border:0;border-radius:0;
+ box-shadow:none;color:#e8c85b;letter-spacing:.45em;font-size:15px;opacity:.78;
+}
+.contest-mobile .eyebrow:before{content:"🎄 ";letter-spacing:0}
+.contest-mobile .eyebrow{color:#e8c85b}
+.contest-mobile h2 strong{color:#ffd000;text-shadow:0 0 22px #ffd00026}
+.contest-mobile .dates span{border-color:#64501a;background:linear-gradient(145deg,#10170fdd,#090907ed)}
+.contest-mobile .join{background:linear-gradient(110deg,#ffd000,#f5b900);box-shadow:0 7px 24px #ffd00035}
+.contest-art{right:22px;bottom:75px;transform:scale(.88);transform-origin:bottom right}
+.contest-art:before{background:linear-gradient(135deg,#d9eeee,#819b98 40%,#172c2b 41%,#243b32);box-shadow:inset 0 0 0 2px #fff8,0 0 0 7px #b9932b18,0 0 38px #ffd00035}
+.contest-art .imac-label{color:#e8dcae}
+.advent-home{
+ border-color:#9a7818;
+ background:
+ radial-gradient(ellipse at 90% 10%,#b5202830,transparent 35%),
+ radial-gradient(ellipse at 5% 100%,#14502e48,transparent 50%),
+ linear-gradient(145deg,#11170f,#191307 66%,#090a08);
+}
+.advent-home:before{inset:10px;border:1px solid #d4ae3b42}
+.advent-home:after{
+ content:"🎄   ✦   ❄   ✦   🎁";
+ position:absolute;right:25px;top:20px;color:#e8c85b;font-size:15px;letter-spacing:.22em;opacity:.82;
+}
+.advent-mark span{color:#ffd000;text-shadow:0 0 28px #ffd00050}
+.advent-mark small{color:#e8dcae}
+.advent-kicker:before{content:"🎁 ";letter-spacing:0}
+.advent-date{color:#e8c85b}
+.advent-action{background:linear-gradient(110deg,#ffd000,#f4b900);box-shadow:0 8px 25px #ffd00032}
+@media(max-width:760px){
+ .contest-banner-image>a:after{right:14px;top:12px;font-size:12px;letter-spacing:.22em}
+ .contest-art{right:8px;top:102px;bottom:auto;transform:scale(.55);transform-origin:top right;opacity:.72}
+ .contest-mobile h2{max-width:100%;padding-right:0;text-shadow:0 2px 12px #000}
+ .contest-mobile>p:not(.eyebrow){max-width:75%;min-height:42px}
+ .contest-mobile .dates{margin-top:17px;position:relative;z-index:2}
+ .advent-home:after{right:20px;top:18px;font-size:12px;letter-spacing:.12em}
+ .advent-inner{padding-top:27px}
+}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ComputerRepair","name":"SO INFO","url":"https://so-info.fr/","telephone":"+33781232763","email":"contact@so-info.fr","description":"Dépannage, réparation et maintenance informatique pour particuliers à Argelès-sur-Mer et alentours.","areaServed":{"@type":"City","name":"Argelès-sur-Mer"},"serviceType":["Dépannage informatique à domicile","Réparation PC et Mac","Maintenance informatique","Assistance informatique à distance"]}
