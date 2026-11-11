@@ -71,14 +71,81 @@ footer{padding:27px 0;color:#9a968b;font-size:.76rem;border-top:1px solid var(--
  #calendrier .day .lock{font-size:.8rem;right:8px;top:16px}
  #calendrier .section-head h2{font-size:2.55rem}
 }
+
+/* HERO NOËL — scène de fête généreuse, pas un simple bloc typographique */
+.christmas-hero{padding:58px 0 64px;background:
+ radial-gradient(ellipse at 78% 48%,#1b75454a,transparent 43%),
+ radial-gradient(ellipse at 8% 95%,#9b202d33,transparent 38%),
+ linear-gradient(145deg,#071b12 0%,#0b281a 48%,#100d0b 100%)}
+.christmas-hero:before{right:-180px;top:-220px;border-color:#f4d57b35;box-shadow:0 0 0 32px #f4d57b0c,0 0 0 72px #f4d57b08,0 0 0 120px #f4d57b05}
+.christmas-hero:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.36;background-image:radial-gradient(#fff 1px,transparent 1.8px),radial-gradient(#f7d779 1px,transparent 1.8px);background-size:73px 73px,113px 113px;background-position:0 0,32px 18px}
+.christmas-hero .hero-grid{z-index:1;grid-template-columns:1fr 1fr;gap:28px}
+.christmas-hero .kicker{display:inline-block;padding:9px 14px;border-radius:30px;background:#9d2635;border:1px solid #f2d58c;color:#fff1ce;letter-spacing:.09em}
+.christmas-hero h1{font-size:clamp(3rem,5.5vw,5rem);line-height:.98;margin:22px 0}
+.christmas-hero h1 em{display:inline;color:#ffdc78;text-shadow:0 3px 0 #8d4b21}
+.christmas-hero .lead{max-width:550px;color:#f1e8d7;font-size:1.05rem;line-height:1.75}
+.christmas-hero .btn{background:linear-gradient(#ffe99c,#f2c74e);border-color:#fff0b9;box-shadow:0 5px 0 #96631f,0 12px 25px #0005}
+.christmas-hero .btn.ghost{background:#0b2519;color:#fff0d4;border-color:#e5c66e;box-shadow:none}
+.christmas-hero .countdown{gap:9px;margin-top:25px}
+.christmas-hero .timebox{background:#092719;border:1px solid #e1bd62;border-radius:12px 12px 18px 12px;min-width:83px;box-shadow:0 4px 0 #06170f}
+.christmas-hero .timebox b{color:#ffe17e;font-size:1.55rem}
+.christmas-hero .timebox small{color:#f2e4c6}
+.hero-footnote{margin-top:22px;color:#f3d987;font-size:.78rem;font-weight:700;letter-spacing:.04em}
+.christmas-scene{min-height:480px;border:1px solid #e8c66e;border-radius:38px 12px 38px 12px;overflow:hidden;
+ background:radial-gradient(ellipse at 50% 82%,#ffe08b22,transparent 36%),linear-gradient(150deg,#145235,#0a2d1d 64%,#092117);
+ box-shadow:inset 0 0 0 8px #ffffff08,0 25px 55px #0008}
+.christmas-scene:before{content:"";position:absolute;inset:12px;border:1px dashed #f6dc9a88;border-radius:29px 8px 29px 8px}
+.scene-sparkles{position:absolute;top:24px;left:0;right:0;text-align:center;color:#ffe7a1;font-size:1.3rem;letter-spacing:.5em}
+.scene-tree{position:absolute;top:45px;right:48px;font-size:118px;filter:drop-shadow(0 12px 12px #03170d);z-index:2}
+.scene-present{position:absolute;display:grid;place-items:center;border:2px solid #f8df9b;box-shadow:inset 0 0 0 5px #ffffff16,0 15px 25px #0007;font-size:2rem;font-weight:800;color:#fff5d7}
+.scene-present:before{content:"";position:absolute;left:43%;width:14%;height:100%;background:linear-gradient(90deg,#f5d77c,#fff0b7,#c48d37)}
+.scene-present:after{content:"";position:absolute;top:0;width:100%;height:13px;background:#ffe9a7}
+.scene-present span{position:relative;z-index:1;text-shadow:0 2px 5px #0008}
+.present-one{width:150px;height:118px;left:12%;bottom:68px;background:#a92538;transform:rotate(-8deg);border-radius:8px}
+.present-two{width:175px;height:145px;right:10%;bottom:58px;background:#d8aa43;transform:rotate(7deg);border-radius:8px;color:#3a210b}
+.present-three{width:112px;height:92px;left:39%;bottom:28px;background:#17653d;transform:rotate(-2deg);border-radius:8px;font-size:2.5rem}
+.scene-sign{position:absolute;left:50%;top:43%;transform:translate(-50%,-50%) rotate(-4deg);width:210px;padding:14px 10px;text-align:center;background:#fff0c9;color:#183321;border:5px solid #b52b3a;box-shadow:0 10px 22px #0007;z-index:4}
+.scene-sign small{display:block;font-size:.52rem;font-weight:800;letter-spacing:.12em}
+.scene-sign b{display:block;font-size:4rem;line-height:1.05;color:#b52b3a}
+.scene-sign span{font-size:.6rem;font-weight:800;letter-spacing:.12em}
+.scene-bauble{position:absolute;width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff5d8,#e6bd5c 35%,#9e6724 80%);box-shadow:0 8px 18px #0007}
+.bauble-one{left:13%;top:70px}.bauble-two{right:15%;bottom:35px;width:28px;height:28px;background:radial-gradient(circle at 30% 25%,#ffc5c8,#c52b3c 55%,#6d1421)}
+@media(max-width:800px){
+ .christmas-hero{padding:36px 0 42px}
+ .christmas-hero .hero-grid{grid-template-columns:1fr;gap:28px}
+ .christmas-hero h1{font-size:clamp(2.65rem,11vw,4rem);margin:18px 0}
+ .christmas-hero .lead{font-size:.96rem;line-height:1.65}
+ .christmas-hero .hero-actions{display:grid;grid-template-columns:1fr}
+ .christmas-hero .hero-actions .btn{width:100%}
+ .christmas-scene{min-height:330px;max-width:520px;width:100%;margin:auto}
+ .scene-tree{font-size:85px;right:22px;top:34px}
+ .scene-sign{top:44%;width:175px;padding:10px 7px}
+ .scene-sign b{font-size:3.4rem}
+ .present-one{width:120px;height:94px;left:7%;bottom:50px}
+ .present-two{width:138px;height:112px;right:6%;bottom:43px}
+ .present-three{width:92px;height:75px;left:36%;bottom:18px}
+}
+@media(max-width:390px){.christmas-scene{min-height:290px}.scene-tree{font-size:70px}.present-one{width:100px;height:80px}.present-two{width:115px;height:95px}.present-three{width:76px;height:64px}.scene-sign{width:155px}}
 </style>
 </head>
 <body>
 <header><div class="wrap nav"><a class="brand" href="https://so-info.fr/"><span class="logo">S</span><span><b>SO INFO</b><small>réparation & maintenance</small></span></a><a class="back" href="https://so-info.fr/">← Retour au site</a></div></header>
 <main>
-<section class="hero"><div class="wrap hero-grid">
-<div><div class="kicker">✦ ÉDITION DE NOËL · 2026</div><h1>24 jours.<br><em>24 surprises.</em></h1><p class="lead">Le calendrier de l’Avent SO INFO est arrivé. Chaque jour, une nouvelle case à ouvrir et une surprise à découvrir : offres exclusives, petits cadeaux et attentions pour votre matériel informatique.</p><div class="hero-actions"><a class="btn" href="#calendrier">Découvrir le calendrier →</a><a class="btn ghost" href="#inscription">Recevoir les rappels</a></div><div class="countdown" aria-label="Compte à rebours"><div class="timebox"><b id="days">--</b><small>Jours</small></div><div class="timebox"><b id="hours">--</b><small>Heures</small></div><div class="timebox"><b id="minutes">--</b><small>Minutes</small></div></div></div>
-<div class="hero-art"><div class="giftbox"><div class="gift-inner"><b>24</b><span>SURPRISES SO INFO</span></div></div></div>
+<section class="hero christmas-hero"><div class="wrap hero-grid">
+<div class="hero-copy">
+<div class="kicker">🎄 LE GRAND RENDEZ-VOUS DE DÉCEMBRE · 2026</div>
+<h1>La magie de Noël.<br><em>24 cadeaux à découvrir !</em></h1>
+<p class="lead">Chaque jour de décembre, ouvrez une nouvelle fenêtre et découvrez une surprise imaginée par SO INFO : cadeaux, réductions et attentions pour prendre soin de votre informatique.</p>
+<div class="hero-actions"><a class="btn" href="#calendrier">🎁 Ouvrir les 24 fenêtres</a><a class="btn ghost" href="#inscription">M’inscrire aux rappels</a></div>
+<div class="countdown" aria-label="Compte à rebours"><div class="timebox"><b id="days">--</b><small>Jours</small></div><div class="timebox"><b id="hours">--</b><small>Heures</small></div><div class="timebox"><b id="minutes">--</b><small>Minutes</small></div></div>
+<div class="hero-footnote">✨ 24 jours de surprises • Du 1er au 24 décembre</div>
+</div>
+<div class="hero-art christmas-scene" aria-label="Cadeaux de Noël SO INFO">
+<div class="scene-sparkles">✦　❄　✧　✦　❄</div><div class="scene-tree">🎄</div>
+<div class="scene-present present-one"><span>SO</span></div><div class="scene-present present-two"><span>24</span></div><div class="scene-present present-three"><span>🎁</span></div>
+<div class="scene-sign"><small>LE CALENDRIER SO INFO</small><b>24</b><span>SURPRISES À OUVRIR</span></div>
+<div class="scene-bauble bauble-one"></div><div class="scene-bauble bauble-two"></div>
+</div>
 </div></section>
 <div class="marquee" aria-hidden="true"><div><span>UN CADEAU CHAQUE JOUR</span><span>LA MAGIE DE NOËL VERSION SO INFO</span><span>24 CASES À OUVRIR</span><span>UN CADEAU CHAQUE JOUR</span><span>LA MAGIE DE NOËL VERSION SO INFO</span><span>24 CASES À OUVRIR</span></div></div>
 <section class="section" id="calendrier"><div class="wrap">
