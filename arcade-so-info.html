@@ -50,6 +50,17 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:#8d887d;font-size:.
 /* PC Builder Pro — photographic product interface */
 .builder-pro{display:grid;gap:14px}.builder-topline{display:flex;align-items:center;gap:9px;color:#b9b4a6;font-size:.62rem;letter-spacing:.16em;font-weight:800;padding:4px 2px}.live-dot{width:7px;height:7px;border-radius:50%;background:#66d7a0;box-shadow:0 0 12px #66d7a0}.builder-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:14px;align-items:stretch}.board-panel,.builder-side{border:1px solid #39372e;background:linear-gradient(145deg,#171713,#0d0e0c);border-radius:14px;padding:16px;min-width:0}.board-panel-head,.builder-side-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}.board-panel-head small,.builder-side-head small{font-size:.58rem;letter-spacing:.17em;color:var(--gold);font-weight:800}.board-panel-head h3,.builder-side-head h3{margin:3px 0;font-size:1.12rem;line-height:1.2}.board-panel-head p{margin:4px 0 0;color:#aaa698;font-size:.75rem}.board-chip{border:1px solid #4a432b;border-radius:99px;padding:6px 9px;color:#e9c64a;font-size:.55rem;white-space:nowrap}.board-photo{position:relative;background:radial-gradient(ellipse at center,#272a27,#090a09 70%);border:1px solid #37372f;border-radius:10px;overflow:hidden;min-height:350px;display:flex;align-items:center;justify-content:center}.motherboard-photo{display:block;width:100%;height:100%;max-height:560px;object-fit:contain;padding:12px;filter:drop-shadow(0 20px 24px #000b)}.board-hotspot{position:absolute;border:1px solid #ffd000;background:#17160fdc;color:#fff;border-radius:8px;display:flex;align-items:center;gap:6px;padding:5px 8px;box-shadow:0 0 16px #ffd00040;cursor:pointer;backdrop-filter:blur(5px);transition:.2s}.board-hotspot span{width:19px;height:19px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#111;font-size:.7rem;font-weight:900}.board-hotspot small{font-size:.53rem;letter-spacing:.08em;font-weight:800}.board-hotspot.target{background:#ffd000;color:#111;transform:scale(1.06);box-shadow:0 0 25px #ffd000a8}.board-hotspot.target span{background:#111;color:#ffd000}.board-hotspot.done{background:#103c2b;border-color:#68d7a0;color:#b8f5d5;box-shadow:0 0 18px #68d7a055}.board-hotspot.wrong{border-color:#ff786d;animation:shake .25s}.cpu-spot{left:38%;top:24%}.ram-spot{right:5%;top:23%}.gpu-spot{left:35%;top:59%}.installed-mark{display:none;position:absolute;border:1px solid #68d7a0;background:#103c2bdc;color:#b8f5d5;border-radius:4px;padding:4px 7px;font-size:.48rem;font-weight:900;letter-spacing:.08em;pointer-events:none}.installed-mark.visible{display:block}.cpu-mark{left:38%;top:35%}.ram-mark{right:4%;top:35%}.gpu-mark{left:35%;top:70%}.board-legend{display:flex;flex-wrap:wrap;gap:14px;padding:12px 2px 0;color:#aaa698;font-size:.62rem}.board-legend span{display:flex;align-items:center;gap:6px}.board-legend i{width:7px;height:7px;border-radius:50%;display:inline-block}.legend-gold{background:#ffd000}.legend-green{background:#68d7a0}.builder-side-head{align-items:center}.builder-side-head>b{color:var(--gold);font-size:.9rem}.product-choice{width:100%;display:grid;grid-template-columns:94px minmax(0,1fr) 22px;align-items:center;gap:11px;text-align:left;padding:9px;margin:0 0 9px;border:1px solid #39372e;background:#10110f;border-radius:10px;color:#f4f1ea;cursor:pointer;transition:.2s}.product-choice:hover,.product-choice.selected{border-color:#ffd000;background:#211d0b;box-shadow:0 0 0 1px #ffd00038,0 8px 22px #0005}.product-choice.installed{border-color:#4c9b78;background:#102219}.product-choice:disabled{opacity:1;cursor:default}.product-photo{height:76px;background:#f5f5f2;border-radius:7px;overflow:hidden;display:flex;align-items:center;justify-content:center}.product-photo img{width:100%;height:100%;object-fit:contain;padding:5px}.product-copy{display:grid;gap:3px;min-width:0}.product-copy small{font-size:.53rem;letter-spacing:.13em;color:var(--gold);font-weight:800}.product-copy b{font-size:.77rem;line-height:1.3}.product-copy em{font-style:normal;font-size:.62rem;color:#aaa698;line-height:1.35}.product-choice>strong{color:var(--gold);font-size:1.1rem}.product-choice.installed>strong{color:#68d7a0}.builder-feedback{margin-top:13px;padding:12px;border-left:3px solid var(--gold);background:#080907;border-radius:0 8px 8px 0;display:grid;gap:4px}.builder-feedback b{font-size:.75rem}.builder-feedback span{font-size:.68rem;color:#aaa698;line-height:1.55}.builder-progress{margin-top:16px}.builder-progress>div:first-child{display:flex;justify-content:space-between;color:#aaa698;font-size:.58rem;letter-spacing:.1em}.builder-progress b{color:var(--gold)}.builder-progress-track{height:6px;background:#333229;border-radius:99px;margin-top:8px;overflow:hidden}.builder-progress-track i{display:block;width:0;height:100%;background:linear-gradient(90deg,#c99b00,#ffe16a);transition:width .35s}.builder-footnote{font-size:.58rem;color:#777468;text-align:right}.real-build{max-width:100%}@keyframes shake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
 @media(max-width:760px){.builder-layout{grid-template-columns:1fr}.board-panel,.builder-side{padding:12px}.board-photo{min-height:300px}.motherboard-photo{max-height:420px;padding:6px}.product-choice{grid-template-columns:88px minmax(0,1fr) 18px}.product-photo{height:72px}.board-hotspot small{font-size:.46rem}.cpu-spot{left:33%;top:22%}.ram-spot{right:2%;top:22%}.gpu-spot{left:30%;top:58%}.builder-footnote{text-align:left}}
+
+/* Atelier de montage 3D : glisser-déposer tactile */
+.assembly-stage{position:relative;border:1px solid #454438;background:radial-gradient(ellipse at 50% 55%,#18251f,#080b09 72%);overflow:hidden;min-width:0}
+.assembly-stage-top,.assembly-stage-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px;color:#aaa58f;font-size:.57rem;font-weight:800;letter-spacing:.12em}
+.assembly-stage-top{border-bottom:1px solid #34382f}.assembly-stage-top span:first-child{color:#d7c36e}.assembly-stage-top span:last-child{text-align:right}
+#pc3d{display:block;width:100%;height:360px;touch-action:none;cursor:grab;outline:none}#pc3d:active{cursor:grabbing}
+.assembly-stage-foot{border-top:1px solid #34382f}.assembly-stage-foot button{border:1px solid #5c553a;background:#151811;color:#d8c879;padding:7px 10px;font:inherit;cursor:pointer;white-space:nowrap}
+.drop-hint{padding:10px 12px;background:#0d120f;border-top:1px solid #33372d;color:#c9c2ae;font-size:.68rem;text-align:center}
+.part-drag-ghost{position:fixed;z-index:1000;transform:translate(-50%,-50%);pointer-events:none;padding:10px 14px;border:1px solid var(--gold);background:#211b08;color:#ffe58a;box-shadow:0 10px 35px #000c,0 0 20px #ffd00035;font-size:.7rem;font-weight:800;white-space:nowrap;border-radius:6px}
+.product-choice{touch-action:pan-y}.product-choice.selected{border-color:var(--gold)!important;box-shadow:0 0 0 1px #ffd00055,0 0 24px #ffd00020}
+@media(max-width:600px){#pc3d{height:300px}.assembly-stage-top,.assembly-stage-foot{font-size:.5rem;letter-spacing:.07em}.assembly-stage-foot button{font-size:.58rem}}
 </style>
 </head>
 <body>
@@ -80,36 +91,54 @@ function header(k,t,d,left='MISSION',right='—'){$('modalKicker').textContent=k
 function result(msg){clear();awardXP();$('buddyTalk').innerHTML='<b>MAX · TON TECHNICIEN</b>Mission terminée ! Beau travail, technicien. Prêt pour la suivante ?';const p=document.createElement('div');p.className='result';p.textContent=msg;field.append(p);const b=document.createElement('button');b.className='primary';b.textContent='RECOMMENCER';b.onclick=()=>open(active);field.append(b)}
 function buildGame(){
  header('01 · PC BUILDER','Monte ton PC gaming','Un vrai atelier de montage : identifie les bons emplacements et installe les composants commerciaux.','3 COMPOSANTS','ASSEMBLAGE');
- $('instructions').textContent='Sélectionne une pièce dans le catalogue, puis touche la zone correspondante sur la vraie photo de la carte mère.';
+ $('instructions').textContent='Glisse chaque composant depuis l’inventaire vers son emplacement sur la carte mère 3D. Tu peux aussi toucher une zone après avoir sélectionné une pièce.';
  field.innerHTML=`<div class="builder-pro">
   <div class="builder-topline"><span class="live-dot"></span> ATELIER SO INFO <span>·</span> MSI MAG B650 TOMAHAWK WIFI</div>
   <div class="builder-layout">
    <section class="board-panel">
     <div class="board-panel-head"><div><small>MISSION 01 / ASSEMBLAGE</small><h3>La carte mère</h3><p>Repère le socket AM5, les slots DDR5 et le port PCIe x16.</p></div><span class="board-chip">VUE RÉELLE</span></div>
-    <div class="board-photo" id="boardPhoto">
-     <img class="motherboard-photo" src="https://storage-asset.msi.com/global/picture/image/feature/mb/B650/MAG-B650-TOMAHAWK-WIFI/mag-b650-tomahawk-wifi.png" alt="Carte mère MSI MAG B650 TOMAHAWK WIFI, vue réelle" />
-     <button class="board-hotspot cpu-spot" data-slot="cpu" aria-label="Emplacement processeur"><span>1</span><small>SOCKET AM5</small></button>
-     <button class="board-hotspot ram-spot" data-slot="ram" aria-label="Emplacement mémoire DDR5"><span>2</span><small>DDR5 DIMM</small></button>
-     <button class="board-hotspot gpu-spot" data-slot="gpu" aria-label="Emplacement carte graphique PCIe"><span>3</span><small>PCIe x16</small></button>
-     <div class="installed-mark cpu-mark" id="mark-cpu">CPU INSTALLÉ</div><div class="installed-mark ram-mark" id="mark-ram">DDR5 INSTALLÉE</div><div class="installed-mark gpu-mark" id="mark-gpu">GPU INSTALLÉ</div>
+    <div class="assembly-stage">
+     <div class="assembly-stage-top"><span><i class="live-dot"></i> ATELIER 3D INTERACTIF</span><span>GLISSE UNE PIÈCE SUR LA CARTE MÈRE</span></div>
+     <canvas id="pc3d" aria-label="Carte mère 3D interactive : glisse les composants sur leur emplacement"></canvas>
+     <div class="assembly-stage-foot"><span>FAIS TOURNER · PINCE POUR ZOOMER</span><button type="button" id="viewReset">↺ Vue initiale</button></div>
+     <div class="drop-hint" id="dropHint">Sélectionne une pièce puis glisse-la sur son emplacement en 3D.</div>
     </div>
-    <div class="board-legend"><span><i class="legend-gold"></i> Emplacement à identifier</span><span><i class="legend-green"></i> Composant installé</span></div>
+    <div class="board-legend"><span><i class="legend-gold"></i> Emplacement libre</span><span><i class="legend-green"></i> Pièce installée</span></div>
    </section>
    <aside class="builder-side">
     <div class="builder-side-head"><div><small>INVENTAIRE</small><h3>Les composants</h3></div><b id="installCount">0 / 3</b></div>
     <button class="product-choice" data-part="cpu"><span class="product-photo"><img src="https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-7800x3d-front.jpg" alt="Boîte AMD Ryzen 7 7800X3D"/></span><span class="product-copy"><small>PROCESSEUR · AM5</small><b>AMD Ryzen 7 7800X3D</b><em>8 cœurs · 16 threads · 96 Mo cache</em></span><strong>＋</strong></button>
     <button class="product-choice" data-part="ram"><span class="product-photo"><img src="https://img.overclockers.co.uk/images/MEM-CRS-06838/f8bfcb9b0009c63dc131fa3815d8cf05.jpg?auto=compress%2Cformat&fit=fill&h=900&q=80&w=900" alt="Kit mémoire Corsair Vengeance RGB DDR5"/></span><span class="product-copy"><small>MÉMOIRE · DDR5</small><b>Corsair Vengeance RGB</b><em>32 Go · 2 × 16 Go · RGB</em></span><strong>＋</strong></button>
     <button class="product-choice" data-part="gpu"><span class="product-photo"><img src="https://storage-asset.msi.com/global/picture/product/product_170485143882d96d3619bb5086af39e55e271a102c.webp" alt="Carte graphique MSI GeForce RTX 4070 SUPER Gaming X Slim MLG"/></span><span class="product-copy"><small>CARTE GRAPHIQUE · PCIe</small><b>MSI GeForce RTX 4070 SUPER</b><em>12 Go GDDR6X · Gaming X Slim</em></span><strong>＋</strong></button>
-    <div class="builder-feedback" id="installNote"><b>À toi de jouer</b><span>Choisis un composant, puis touche son emplacement sur la carte mère.</span></div>
+    <div class="builder-feedback" id="installNote"><b>À toi de jouer</b><span>Glisse un composant vers son emplacement sur la carte mère 3D. Sur mobile, tu peux aussi sélectionner puis toucher la zone.</span></div>
     <div class="builder-progress"><div><span>PROGRESSION DU MONTAGE</span><b id="progressLabel">0%</b></div><div class="builder-progress-track"><i id="installBar"></i></div></div>
    </aside>
   </div>
   <div class="builder-footnote">Images produits réelles des fabricants et revendeurs · Les composants affichés sont des références commerciales.</div>
  </div>`;
- let selected=null;const done=new Set();
+ let selected=null;const done=new Set();let dragGhost=null;
  const note=(title,body)=>{$('installNote').innerHTML='<b>'+title+'</b><span>'+body+'</span>'};
- field.querySelectorAll('[data-part]').forEach(b=>b.onclick=()=>{if(done.has(b.dataset.part))return;selected=b.dataset.part;field.querySelectorAll('[data-part]').forEach(x=>x.classList.toggle('selected',x===b));field.querySelectorAll('[data-slot]').forEach(x=>x.classList.toggle('target',x.dataset.slot===selected));note('Composant sélectionné',b.querySelector('.product-copy b').textContent+' : touche maintenant son emplacement indiqué sur la carte mère.')});
- field.querySelectorAll('[data-slot]').forEach(h=>h.onclick=()=>{const kind=h.dataset.slot;if(!selected){note('Choisis une pièce','Sélectionne d’abord un composant dans l’inventaire.');return}if(kind!==selected){note('Pas tout à fait !','Ce connecteur ne correspond pas à la pièce sélectionnée. Regarde les repères 1, 2 et 3.');h.classList.add('wrong');setTimeout(()=>h.classList.remove('wrong'),650);return}done.add(kind);h.classList.remove('target');h.classList.add('done');h.querySelector('span').textContent='✓';$('mark-'+kind).classList.add('visible');const btn=field.querySelector('[data-part="'+kind+'"]');btn.classList.add('installed');btn.querySelector('strong').textContent='✓';btn.disabled=true;score+=100;$('score').textContent=score;$('installCount').textContent=done.size+' / 3';$('installBar').style.width=(done.size/3*100)+'%';$('progressLabel').textContent=Math.round(done.size/3*100)+'%';selected=null;field.querySelectorAll('[data-part]').forEach(x=>x.classList.remove('selected'));field.querySelectorAll('[data-slot]').forEach(x=>x.classList.remove('target'));note('Bien joué !','Composant correctement positionné. Continue ton montage.');if(done.size===3)result('PC ASSEMBLÉ · +300 POINTS')});
+ const install=kind=>{
+  if(done.has(kind))return false;
+  if(!selected){note('Choisis une pièce','Sélectionne un composant dans l’inventaire avant de l’installer.');return false}
+  if(kind!==selected){note('Mauvais emplacement','Cette pièce ne correspond pas à cette zone. Vérifie le socket AM5, les slots DDR5 et le port PCIe.');return false}
+  done.add(kind);const btn=field.querySelector('[data-part="'+kind+'"]');btn.classList.add('installed');btn.querySelector('strong').textContent='✓';btn.disabled=true;
+  score+=100;$('score').textContent=score;$('installCount').textContent=done.size+' / 3';$('installBar').style.width=(done.size/3*100)+'%';$('progressLabel').textContent=Math.round(done.size/3*100)+'%';
+  selected=null;field.querySelectorAll('[data-part]').forEach(x=>x.classList.remove('selected'));
+  $('dropHint').textContent='Composant installé ! La pièce vient de se verrouiller sur la carte mère.';
+  note('Installation réussie',btn.querySelector('.product-copy b').textContent+' est maintenant installé dans son emplacement 3D.');
+  if(done.size===3)result('PC ASSEMBLÉ · +300 POINTS');
+  return true;
+ };
+ window.soInfoOnInstall=install;
+ field.querySelectorAll('[data-part]').forEach(b=>{
+  b.addEventListener('click',()=>{if(done.has(b.dataset.part))return;selected=b.dataset.part;field.querySelectorAll('[data-part]').forEach(x=>x.classList.toggle('selected',x===b));$('dropHint').textContent='Pièce sélectionnée : glisse-la sur la zone correspondante en 3D, ou touche la zone.';note('Prêt à installer',b.querySelector('.product-copy b').textContent+' : glisse cette pièce vers son emplacement sur la carte mère.')});
+  b.addEventListener('pointerdown',e=>{if(done.has(b.dataset.part))return;selected=b.dataset.part;dragGhost=document.createElement('div');dragGhost.className='part-drag-ghost';dragGhost.textContent=b.querySelector('.product-copy b').textContent;document.body.append(dragGhost);dragGhost.style.left=e.clientX+'px';dragGhost.style.top=e.clientY+'px'});
+  b.addEventListener('pointermove',e=>{if(!dragGhost)return;dragGhost.style.left=e.clientX+'px';dragGhost.style.top=e.clientY+'px'});
+  b.addEventListener('pointerup',e=>{if(!dragGhost)return;const rect=field.querySelector('#pc3d').getBoundingClientRect();const over=e.clientX>=rect.left&&e.clientX<=rect.right&&e.clientY>=rect.top&&e.clientY<=rect.bottom;dragGhost.remove();dragGhost=null;if(over&&window.soInfoDropAt){const ok=window.soInfoDropAt(e.clientX,e.clientY,selected);if(!ok)note('Essaie encore','Dépose la pièce sur le bon emplacement lumineux de la carte mère.')}});
+  b.addEventListener('pointercancel',()=>{if(dragGhost){dragGhost.remove();dragGhost=null}});
+ });
+ if(window.soInfoStart3D)window.soInfoStart3D();
 }
 function thermalGame(){header('02 · THERMAL CONTROL','Garde le CPU au frais','La charge du processeur fait monter sa température. Ajuste les ventilateurs pour rester entre 45 et 70 °C.','DURÉE : 45 S','TEMPÉRATURE');$('instructions').textContent='Déplace le curseur pour régler la vitesse des ventilateurs. Trop lent : surchauffe. Trop rapide : pénalité de bruit.';field.innerHTML='<div class="temp-panel"><div class="thermo"><div><strong id="tempValue">48°</strong><small>CPU · CELSIUS</small></div></div><div class="fan-real" id="fanIcon"></div><div style="font-size:.7rem;color:#c8c1ad">Vitesse ventilateurs : <b id="fanValue" style="color:var(--gold)">45%</b></div><input class="temperature" id="fanSlider" type="range" min="0" max="100" value="45" aria-label="Vitesse des ventilateurs"><div class="temp-read" id="tempStatus">Température stable · zone optimale</div></div>';temp=48;fan=45;seconds=45;const slider=$('fanSlider');slider.oninput=()=>{fan=Number(slider.value);$('fanValue').textContent=fan+'%';$('fanIcon').classList.toggle('spin',fan>10);$('fanIcon').style.animationDuration=Math.max(.12,2.5-fan/55)+'s'};interval=setInterval(()=>{seconds--;const load=45+Math.sin((45-seconds)/4)*19+(Math.random()*14);temp+=((load-fan*.62)-temp)*.16;temp=Math.max(25,Math.min(105,temp));$('tempValue').textContent=Math.round(temp)+'°';$('hudRight').textContent=seconds+' S';$('tempStatus').textContent=temp>78?'ALERTE · risque de surchauffe':temp<42&&fan>75?'Ventilation excessive · bruit inutile':'Température '+(temp>45&&temp<70?'optimale':'à surveiller');$('tempValue').style.color=temp>78?'var(--red)':temp>70?'#ffc36a':'var(--gold)';if(temp>78)score=Math.max(0,score-8);else if(temp>=45&&temp<=70&&fan>=25&&fan<=75)score+=4;$('score').textContent=score;if(seconds<=0){result(temp>=45&&temp<=70?'MISSION RÉUSSIE · CPU STABILISÉ':'FIN DE TEST · '+Math.round(temp)+' °C');}},1000)}
 const cases=[{q:'Le PC s’allume, les ventilateurs tournent, mais aucun affichage n’apparaît.',opts:['Vérifier le câble vidéo et la source écran','Remplacer immédiatement le SSD','Réinstaller Windows sans contrôle'],correct:0,why:'On commence par les vérifications simples : câble, entrée vidéo et écran. Ensuite seulement, on isole la carte graphique et la mémoire.'},{q:'L’ordinateur devient très lent et le disque reste à 100 % dans le gestionnaire des tâches.',opts:['Changer la pâte thermique','Contrôler l’état du disque et les processus actifs','Remplacer le clavier'],correct:1,why:'Un disque saturé ou en mauvais état peut ralentir tout le système. On vérifie les processus, l’espace libre et la santé du stockage.'},{q:'Le PC s’éteint brutalement pendant un jeu et redémarre après quelques minutes.',opts:['Nettoyer l’écran','Vérifier températures, ventilation et alimentation','Changer la souris'],correct:1,why:'Une surchauffe ou une alimentation instable peut provoquer une coupure sous forte charge. Il faut mesurer avant de remplacer.'}];
@@ -166,7 +195,7 @@ window.soInfoStart3D=()=>{
  box(1.32,.12,1.32,-.55,.16,-.25,black);
  box(1.15,.07,1.15,-.55,.235,-.25,steel);
  box(1.04,.035,1.04,-.55,.29,-.25,mat(0x303632,.8,.24));
- const cpuGroup=new THREE.Group();scene3d.add(cpuGroup);
+ const cpuGroup=new THREE.Group();scene3d.add(cpuGroup);cpuGroup.position.y=2.6;
  box(.88,.13,.88,-.55,.39,-.25,mat(0x929b9b,.9,.18),cpuGroup);
  box(.72,.008,.72,-.55,.46,-.25,mat(0xb8c0bc,.82,.2),cpuGroup);
  for(const [x,z] of [[-.98,-.68],[-.12,-.68],[-.98,.18],[-.12,.18]])cyl(.035,.025,x,.32,z,gold,cpuGroup);
@@ -176,7 +205,7 @@ window.soInfoStart3D=()=>{
  for(let i=0;i<8;i++){box(.018,.012,.62,-1.13+i*.035,.31,-.25,mat(0xd0ae63,.75,.25));}
  // Four DIMM slots with two Corsair-style black heat spreaders and RGB diffuser rails
  for(let i=0;i<4;i++){const z=-.88+i*.42;box(.16,.09,1.62,1.48,.16,z,black);box(.18,.035,.08,1.48,.22,z-.74,gold);box(.18,.035,.08,1.48,.22,z+.74,gold);}
- const ramGroup=new THREE.Group();scene3d.add(ramGroup);
+ const ramGroup=new THREE.Group();scene3d.add(ramGroup);ramGroup.position.y=2.6;
  for(const z of [-.67,.17]){
   box(.2,.34,1.48,1.48,.43,z,mat(0x171c1c,.72,.23),ramGroup);
   box(.205,.055,1.5,1.48,.62,z,mat(0x8bd9cf,.45,.2),ramGroup);
@@ -192,7 +221,7 @@ window.soInfoStart3D=()=>{
  for(let i=0;i<7;i++)box(.035,.23,.64,1.55+i*.12,.2,-1.48,steel);
  // PCIe reinforced slot and full-size triple-fan graphics card
  box(4.15,.09,.22,.18,.15,1.55,steel);box(3.9,.08,.12,.18,.21,1.55,gold);
- const gpuGroup=new THREE.Group();scene3d.add(gpuGroup);
+ const gpuGroup=new THREE.Group();scene3d.add(gpuGroup);gpuGroup.position.y=2.6;
  box(4.25,.48,.94,.18,.55,1.52,mat(0x202625,.8,.24),gpuGroup);
  box(4.18,.12,.9,.18,.82,1.52,mat(0x303936,.72,.24),gpuGroup);
  // Three large axial fans, rings, hubs and individual swept blades
@@ -224,12 +253,15 @@ window.soInfoStart3D=()=>{
  canvas.onpointermove=e=>{if(!dragging)return;const dx=e.clientX-lastX,dy=e.clientY-lastY;lastX=e.clientX;lastY=e.clientY;rotY+=dx*.008;rotX=Math.max(-.65,Math.min(.4,rotX+dy*.006))};
  canvas.onpointerup=()=>{dragging=false;pointer=null};canvas.onpointercancel=()=>{dragging=false;pointer=null};
  canvas.onwheel=e=>{e.preventDefault();zoom=Math.max(.72,Math.min(1.55,zoom+e.deltaY*.001))};
- canvas.addEventListener('click',e=>{if(dragging)return;const r=canvas.getBoundingClientRect();mouse3d.x=(e.clientX-r.left)/r.width*2-1;mouse3d.y=-(e.clientY-r.top)/r.height*2+1;ray3d.setFromCamera(mouse3d,camera3d);const hit=ray3d.intersectObjects(targets3d,false)[0];if(hit&&window.soInfoOnInstall){const kind=hit.object.userData.kind;if(window.soInfoOnInstall(kind)){hit.object.visible=false;if(kind==='cpu')cpuGroup.visible=true;if(kind==='ram')ramGroup.visible=true;if(kind==='gpu')gpuGroup.visible=true}}});
+ const installAt=(clientX,clientY)=>{const r=canvas.getBoundingClientRect();mouse3d.x=(clientX-r.left)/r.width*2-1;mouse3d.y=-(clientY-r.top)/r.height*2+1;ray3d.setFromCamera(mouse3d,camera3d);const hit=ray3d.intersectObjects(targets3d,false)[0];if(!hit||!window.soInfoOnInstall)return false;const kind=hit.object.userData.kind;if(window.soInfoOnInstall(kind)){hit.object.visible=false;window.soInfoAnimateInstall?.(kind);return true}return false};
+window.soInfoDropAt=(x,y,expected)=>{const r=canvas.getBoundingClientRect();if(x<r.left||x>r.right||y<r.top||y>r.bottom)return false;mouse3d.x=(x-r.left)/r.width*2-1;mouse3d.y=-(y-r.top)/r.height*2+1;ray3d.setFromCamera(mouse3d,camera3d);const hit=ray3d.intersectObjects(targets3d,false)[0];if(!hit||hit.object.userData.kind!==expected)return false;if(window.soInfoOnInstall&&window.soInfoOnInstall(expected)){hit.object.visible=false;window.soInfoAnimateInstall?.(expected);return true}return false};
+canvas.addEventListener('click',e=>{if(dragging)return;installAt(e.clientX,e.clientY)});
  window.soInfoSelect3D=kind=>targets3d.forEach(t=>{t.material.emissiveIntensity=kind&&t.userData.kind===kind?1.25:.25;t.material.opacity=kind&&t.userData.kind===kind?.42:.2});
  document.getElementById('viewReset')?.addEventListener('click',()=>{rotY=-.42;rotX=-.15;zoom=1});
  const resize=()=>{if(!renderer3d)return;const w=canvas.clientWidth;renderer3d.setSize(w,350,false);camera3d.aspect=w/350;camera3d.updateProjectionMatrix()};
  resize3d=resize;window.addEventListener('resize',resize);updateCamera();
- const animate=()=>{frame3d=requestAnimationFrame(animate);updateCamera();renderer3d.render(scene3d,camera3d)};animate();
+ const installTweens={};window.soInfoAnimateInstall=kind=>{const group=kind==='cpu'?cpuGroup:kind==='ram'?ramGroup:gpuGroup;group.visible=true;group.position.y=2.6;group.rotation.set(kind==='gpu'?.18:kind==='ram'?.12:-.2,kind==='gpu'?.35:-.25,kind==='cpu'?.28:kind==='ram'?-.18:.12);installTweens[kind]={group,start:performance.now(),duration:1050};};
+ const animate=()=>{frame3d=requestAnimationFrame(animate);const now=performance.now();for(const [kind,t] of Object.entries(installTweens)){const p=Math.min(1,(now-t.start)/t.duration),ease=1-Math.pow(1-p,3);t.group.position.y=2.6*(1-ease);t.group.rotation.x=(kind==='gpu'?.18:kind==='ram'?.12:-.2)*(1-ease);t.group.rotation.y=(kind==='gpu'?.35:-.25)*(1-ease);t.group.rotation.z=(kind==='cpu'?.28:kind==='ram'?-.18:.12)*(1-ease);if(p>=1){t.group.position.y=0;t.group.rotation.set(0,0,0);delete installTweens[kind]}}updateCamera();renderer3d.render(scene3d,camera3d)};animate();
 };
 window.soInfoSelect3D=null;
 </script>
