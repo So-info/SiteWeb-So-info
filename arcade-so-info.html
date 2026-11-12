@@ -88,58 +88,107 @@ let scene3d,renderer3d,camera3d,frame3d,ray3d,mouse3d,targets3d=[],select3d=null
 window.soInfoStart3D=()=>{
  const canvas=document.getElementById('pc3d');if(!canvas)return;
  if(renderer3d){cancelAnimationFrame(frame3d);renderer3d.dispose();renderer3d=null}
- scene3d=new THREE.Scene();scene3d.background=new THREE.Color(0x101711);
- camera3d=new THREE.PerspectiveCamera(36,canvas.clientWidth/350,.1,100);camera3d.position.set(5.8,6.2,8.5);camera3d.lookAt(0,0,0);
- renderer3d=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false});renderer3d.setPixelRatio(Math.min(devicePixelRatio,2));renderer3d.setSize(canvas.clientWidth,350,false);renderer3d.shadowMap.enabled=true;renderer3d.shadowMap.type=THREE.PCFSoftShadowMap;renderer3d.outputColorSpace=THREE.SRGBColorSpace;renderer3d.toneMapping=THREE.ACESFilmicToneMapping;renderer3d.toneMappingExposure=1.25;
- scene3d.add(new THREE.HemisphereLight(0xc9ddc9,0x25251a,2.1));
- const key=new THREE.DirectionalLight(0xffe6a1,3.2);key.position.set(4,8,5);key.castShadow=true;scene3d.add(key);
- const rim=new THREE.PointLight(0x4a9d76,28,12);rim.position.set(-4,3,-3);scene3d.add(rim);
- const gold=new THREE.PointLight(0xffc83d,20,9);gold.position.set(1,2,4);scene3d.add(gold);
- const mat=(color,metalness=.25,roughness=.42)=>new THREE.MeshStandardMaterial({color,metalness,roughness});
- const board=new THREE.Mesh(new THREE.BoxGeometry(5.5,.18,4.2),mat(0x1b3327,.45,.5));board.position.y=0;board.receiveShadow=true;board.castShadow=true;scene3d.add(board);
- const addBox=(w,h,d,x,y,z,m)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;scene3d.add(o);return o};
- const pcb=mat(0x254734,.35,.65),dark=mat(0x111713,.65,.32),steel=mat(0x8a927f,.8,.25),goldMat=mat(0xc4a54b,.75,.23),black=mat(0x090d0b,.35,.4);
- // Traces and soldered circuitry on the motherboard
- for(let i=0;i<9;i++){let z=-1.7+i*.42;addBox(2.7,.012,.018,-.1,.105,z,mat(0x9a9a57,.55,.4))}
- for(let i=0;i<8;i++){let x=-2.25+i*.58;addBox(.018,.014,2.9,x,.11,.15,mat(0x78916a,.45,.5))}
- // I/O shield and chipset heatsinks
- addBox(.25,.42,3.5,-2.35,.25,0,steel);addBox(1.35,.28,.62,-1.4,.22,-1.48,steel);addBox(.8,.25,.55,1.55,.2,-1.55,dark);
- // CPU socket, metal frame, contact pins
- const socket=addBox(1.2,.16,1.2,-.65,.2,-.25,steel);
- addBox(1.04,.07,1.04,-.65,.3,-.25,mat(0x242b25,.8,.25));
- const cpu=addBox(.82,.16,.82,-.65,.4,-.25,mat(0x89918a,.8,.2));cpu.visible=false;
- addBox(.94,.035,.94,-.65,.49,-.25,goldMat).visible=false;
- // CPU clickable target and glow socket
- const cpuTarget=addBox(1.12,.025,1.12,-.65,.33,-.25,new THREE.MeshStandardMaterial({color:0xd6b44b,emissive:0x71540b,emissiveIntensity:.45,transparent:true,opacity:.25}));cpuTarget.userData.kind='cpu';targets3d.push(cpuTarget);
- // DIMM slots and two RAM modules
- for(let i=0;i<4;i++){const z=.65+i*.32;addBox(.12,.14,1.55,.92,.18,z,mat(0x111915,.5,.4));addBox(.15,.07,.07,.92,.28,z-.69,goldMat);addBox(.15,.07,.07,.92,.28,z+.69,goldMat)}
- const ramTargets=[];
- for(const z of [.85,1.49]){const t=addBox(.25,.025,1.55,.92,.32,z,new THREE.MeshStandardMaterial({color:0xd6b44b,emissive:0x71540b,emissiveIntensity:.35,transparent:true,opacity:.25}));t.userData.kind='ram';targets3d.push(t);ramTargets.push(t)}
+ targets3d=[];
+ scene3d=new THREE.Scene();scene3d.background=new THREE.Color(0x111611);
+ scene3d.fog=new THREE.Fog(0x111611,15,27);
+ camera3d=new THREE.PerspectiveCamera(34,canvas.clientWidth/350,.1,100);
+ renderer3d=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false});
+ renderer3d.setPixelRatio(Math.min(window.devicePixelRatio||1,2));renderer3d.setSize(canvas.clientWidth,350,false);
+ renderer3d.shadowMap.enabled=true;renderer3d.shadowMap.type=THREE.PCFSoftShadowMap;
+ renderer3d.outputColorSpace=THREE.SRGBColorSpace;renderer3d.toneMapping=THREE.ACESFilmicToneMapping;renderer3d.toneMappingExposure=1.35;
+ scene3d.add(new THREE.HemisphereLight(0xdce8ff,0x20251d,2.1));
+ const light=(color,intensity,pos)=>{const l=new THREE.DirectionalLight(color,intensity);l.position.set(...pos);l.castShadow=true;scene3d.add(l);return l};
+ light(0xffe2b0,4,[3,8,5]);light(0x9abaff,2,[-6,5,-3]);
+ const rim=new THREE.PointLight(0x27b9a0,24,12);rim.position.set(-3,3,-4);scene3d.add(rim);
+ const warm=new THREE.PointLight(0xffbd55,18,10);warm.position.set(4,3,4);scene3d.add(warm);
+ const mat=(color,metalness=.25,roughness=.4)=>new THREE.MeshStandardMaterial({color,metalness,roughness});
+ const pcb=mat(0x172b24,.42,.56),black=mat(0x090d0c,.35,.36),dark=mat(0x202724,.72,.28),steel=mat(0x87918d,.82,.22),gold=mat(0xc8a65a,.78,.22),white=mat(0xc9d0cc,.5,.28);
+ const add=(geo,m,x,y,z,parent=scene3d)=>{const o=new THREE.Mesh(geo,m);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;parent.add(o);return o};
+ const box=(w,h,d,x,y,z,m,parent=scene3d)=>add(new THREE.BoxGeometry(w,h,d),m,x,y,z,parent);
+ const cyl=(r,h,x,y,z,m,parent=scene3d,segments=32)=>add(new THREE.CylinderGeometry(r,r,h,segments),m,x,y,z,parent);
+ // Matte black workbench and motherboard PCB with chamfer-like layered edges
+ box(8,.16,6.5,0,-.35,0,mat(0x080b0a,.18,.75));
+ box(5.8,.16,4.55,0,-.04,0,pcb);
+ box(5.65,.025,4.4,0,.055,0,mat(0x203a30,.3,.62));
+ // Board edge contacts and mounting holes
+ for(const [x,z] of [[-2.7,-2],[2.7,-2],[-2.7,2],[2.7,2],[-2.7,0],[2.7,0]]){
+  cyl(.075,.035,x,.085,z,black);cyl(.032,.04,x,.105,z,gold);
+ }
+ // Fine copper traces, solder pads and component clusters
+ for(let i=0;i<14;i++){const z=-1.8+i*.27;box(1.55,.012,.018,-1.7,.083,z,mat(0x9c8050,.7,.34));}
+ for(let i=0;i<12;i++){const x=-2.35+i*.38;box(.014,.012,1.7,x,.084,-1.45,mat(0x9c8050,.7,.34));}
+ for(let i=0;i<28;i++){const x=-2.35+(i%7)*.18,z=-1.55+Math.floor(i/7)*.18;box(.055,.025,.055,x,.105,z,steel);}
+ // VRM bank, finned heatsinks and I/O shield
+ box(.52,.3,2.5,-2.35,.23,-.05,dark);box(.6,.36,2.35,-2.34,.4,-.05,mat(0x303b36,.8,.25));
+ for(let i=0;i<15;i++)box(.025,.39,2.22,-2.62+i*.04,.42,-.05,steel);
+ box(.25,.3,3.5,-2.82,.22,0,black);
+ // CPU AM5 socket and metallic retention bracket
+ box(1.32,.12,1.32,-.55,.16,-.25,black);
+ box(1.15,.07,1.15,-.55,.235,-.25,steel);
+ box(1.04,.035,1.04,-.55,.29,-.25,mat(0x303632,.8,.24));
+ const cpuGroup=new THREE.Group();scene3d.add(cpuGroup);
+ box(.88,.13,.88,-.55,.39,-.25,mat(0x929b9b,.9,.18),cpuGroup);
+ box(.72,.008,.72,-.55,.46,-.25,mat(0xb8c0bc,.82,.2),cpuGroup);
+ for(const [x,z] of [[-.98,-.68],[-.12,-.68],[-.98,.18],[-.12,.18]])cyl(.035,.025,x,.32,z,gold,cpuGroup);
+ const cpuTarget=box(1.18,.025,1.18,-.55,.31,-.25,new THREE.MeshStandardMaterial({color:0xffc94d,emissive:0x8d5d08,emissiveIntensity:.25,transparent:true,opacity:.2}));
+ cpuTarget.userData.kind='cpu';targets3d.push(cpuTarget);cpuGroup.visible=false;
+ // AM5 socket detail pins around the processor
+ for(let i=0;i<8;i++){box(.018,.012,.62,-1.13+i*.035,.31,-.25,mat(0xd0ae63,.75,.25));}
+ // Four DIMM slots with two Corsair-style black heat spreaders and RGB diffuser rails
+ for(let i=0;i<4;i++){const z=.48+i*.3;box(.16,.09,1.62,.92,.16,z,black);box(.18,.035,.08,.92,.22,z-.74,gold);box(.18,.035,.08,.92,.22,z+.74,gold);}
  const ramGroup=new THREE.Group();scene3d.add(ramGroup);
- for(const z of [.85,1.49]){const stick=new THREE.Mesh(new THREE.BoxGeometry(.18,.22,1.4),mat(0x171d1a,.7,.25));stick.position.set(.92,.5,z);stick.visible=false;ramGroup.add(stick);for(let j=0;j<8;j++){const chip=new THREE.Mesh(new THREE.BoxGeometry(.19,.08,.09),mat(0x080b09,.4,.4));chip.position.set(.92,.51,z-.58+j*.16);chip.visible=false;ramGroup.add(chip)}}
- // PCIe slot + GPU with three fans
- addBox(3.7,.1,.2,.25,.2,1.65,steel);
- const gpuTarget=addBox(4.15,.025,.68,.25,.34,1.55,new THREE.MeshStandardMaterial({color:0xd6b44b,emissive:0x71540b,emissiveIntensity:.4,transparent:true,opacity:.22}));gpuTarget.userData.kind='gpu';targets3d.push(gpuTarget);
- const gpuGroup=new THREE.Group();scene3d.add(gpuGroup);const gpuBody=new THREE.Mesh(new THREE.BoxGeometry(4.0,.48,.62),mat(0x242a25,.75,.3));gpuBody.position.set(.25,.57,1.55);gpuGroup.add(gpuBody);
- for(let i=0;i<3;i++){const fan=new THREE.Mesh(new THREE.CylinderGeometry(.19,.19,.045,32),mat(0x101512,.7,.25));fan.rotation.x=Math.PI/2;fan.position.set(-1.05+i*1.3,.83,1.55);gpuGroup.add(fan);const ring=new THREE.Mesh(new THREE.TorusGeometry(.2,.025,8,36),steel);ring.position.set(-1.05+i*1.3,.86,1.55);gpuGroup.add(ring);for(let b=0;b<7;b++){const blade=new THREE.Mesh(new THREE.BoxGeometry(.045,.16,.025),steel);blade.position.set(-1.05+i*1.3,.87,1.55);blade.rotation.z=b*Math.PI*2/7;gpuGroup.add(blade)}}
- gpuGroup.visible=false;
- // M.2, capacitors, VRM blocks and screws
- for(let i=0;i<12;i++){const x=-2.05+(i%6)*.38,z=-1.7+Math.floor(i/6)*.34;const cap=new THREE.Mesh(new THREE.CylinderGeometry(.07,.07,.18,16),mat(0x6d7467,.6,.25));cap.position.set(x,.2,z);scene3d.add(cap)}
- for(let i=0;i<4;i++){const screw=new THREE.Mesh(new THREE.CylinderGeometry(.07,.07,.025,16),steel);screw.position.set([-2.55,2.55,-2.55,2.55][i],.12,[-1.9,-1.9,1.9,1.9][i]);scene3d.add(screw)}
- // Workbench shadow platform
- const floor=new THREE.Mesh(new THREE.BoxGeometry(8,.12,6.5),mat(0x111510,.15,.85));floor.position.y=-.2;floor.receiveShadow=true;scene3d.add(floor);
- ray3d=new THREE.Raycaster();mouse3d=new THREE.Vector2();let dragging=false,lastX=0,lastY=0,rotY=-.35,rotX=-.18,zoom=1;
- // Conserver tous les meshes de la carte mère : les supprimer ici vidait entièrement la scène 3D.
- // Use camera orbit controls with pointer drag and wheel/pinch
- let pointer=null;canvas.onpointerdown=e=>{pointer=e.pointerId;dragging=true;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture(pointer)};
- canvas.onpointermove=e=>{if(!dragging)return;const dx=e.clientX-lastX,dy=e.clientY-lastY;lastX=e.clientX;lastY=e.clientY;rotY+=dx*.008;rotX=Math.max(-.85,Math.min(.45,rotX+dy*.006));};
- canvas.onpointerup=()=>{dragging=false;pointer=null};canvas.onpointercancel=()=>dragging=false;canvas.onwheel=e=>{e.preventDefault();zoom=Math.max(.72,Math.min(1.55,zoom+e.deltaY*.001));},{passive:false};
- const updateCamera=()=>{const r=10/zoom;camera3d.position.set(Math.sin(rotY)*r,4.5+rotX*5,Math.cos(rotY)*r);camera3d.lookAt(0,.1,0)};
- canvas.addEventListener('click',e=>{if(dragging)return;const rect=canvas.getBoundingClientRect();mouse3d.x=((e.clientX-rect.left)/rect.width)*2-1;mouse3d.y=-((e.clientY-rect.top)/rect.height)*2+1;ray3d.setFromCamera(mouse3d,camera3d);const hit=ray3d.intersectObjects(targets3d,false)[0];if(hit&&window.soInfoOnInstall){const kind=hit.object.userData.kind;if(window.soInfoOnInstall(kind)){hit.object.visible=false;if(kind==='cpu'){cpu.visible=true;}if(kind==='ram'){ramGroup.visible=true;}if(kind==='gpu'){gpuGroup.visible=true;}}}});
- window.soInfoSelect3D=kind=>{targets3d.forEach(t=>{t.material.emissiveIntensity=kind&&t.userData.kind===kind?1.8:.35;t.material.opacity=kind&&t.userData.kind===kind?.48:.18})};
- document.getElementById('viewReset')?.addEventListener('click',()=>{rotY=-.35;rotX=-.18;zoom=1});
- const resize=()=>{if(!renderer3d)return;const w=canvas.clientWidth;renderer3d.setSize(w,350,false);camera3d.aspect=w/350;camera3d.updateProjectionMatrix()};resize3d=resize;window.addEventListener('resize',resize);
- updateCamera();
+ for(const z of [.63,1.23]){
+  box(.2,.34,1.48,.92,.43,z,mat(0x171c1c,.72,.23),ramGroup);
+  box(.205,.055,1.5,.92,.62,z,mat(0x8bd9cf,.45,.2),ramGroup);
+  box(.215,.018,1.34,.92,.63,z,mat(0x69b9ad,.25,.22),ramGroup);
+  for(let j=0;j<10;j++)box(.205,.012,.025,.92,.27,z-.58+j*.13,gold,ramGroup);
+  for(let j=0;j<6;j++)box(.012,.19,.012,.81+j*.044,.44,z+.74,steel,ramGroup);
+ }
+ ramGroup.visible=false;
+ // M.2 NVMe drive, heatsink and chipset cooling
+ box(1.7,.07,.42,.45,.17,-1.55,black);box(1.45,.08,.34,.45,.23,-1.55,mat(0x4a514c,.8,.26));
+ for(let i=0;i<8;i++)box(.025,.025,.3,-.18+i*.18,.29,-1.55,steel);
+ box(.9,.14,.7,1.95,.18,-1.48,dark);
+ for(let i=0;i<7;i++)box(.035,.23,.64,1.55+i*.12,.2,-1.48,steel);
+ // PCIe reinforced slot and full-size triple-fan graphics card
+ box(4.15,.09,.22,.18,.15,1.55,steel);box(3.9,.08,.12,.18,.21,1.55,gold);
+ const gpuGroup=new THREE.Group();scene3d.add(gpuGroup);
+ box(4.25,.48,.94,.18,.55,1.52,mat(0x202625,.8,.24),gpuGroup);
+ box(4.18,.12,.9,.18,.82,1.52,mat(0x303936,.72,.24),gpuGroup);
+ // Three large axial fans, rings, hubs and individual swept blades
+ for(let i=0;i<3;i++){
+  const x=-1.22+i*1.4,z=1.52;
+  cyl(.39,.055,x,.91,z,black,gpuGroup,48);
+  const ring=add(new THREE.TorusGeometry(.365,.025,10,64),steel,x,.95,z,gpuGroup);
+  cyl(.105,.07,x,.96,z,mat(0x151a18,.8,.22),gpuGroup);
+  cyl(.065,.075,x,.97,z,gold,gpuGroup);
+  for(let b=0;b<9;b++){
+   const blade=box(.13,.018,.25,x,.963,z-.16,mat(0x68716d,.72,.28),gpuGroup);
+   blade.rotation.y=b*Math.PI*2/9;blade.rotation.x=-.12;
+  }
+ }
+ // Brand plate and metal backplate details
+ box(.72,.035,.22,1.75,.91,1.52,mat(0x111514,.75,.2),gpuGroup);
+ // Power delivery capacitors and audio/network ports
+ for(let i=0;i<10;i++){const x=-2.0+(i%5)*.22,z=.95+Math.floor(i/5)*.28;cyl(.075,.2,x,.19,z,mat(0x6e7771,.75,.25));cyl(.06,.018,x,.3,z,gold);}
+ for(let i=0;i<8;i++)box(.12,.12,.09,-2.8+i*.18,.18,-1.95,steel);
+ // M.2 screws and board-mounted connectors
+ for(let i=0;i<16;i++){const x=-2.35+(i%8)*.64,z=1.25+Math.floor(i/8)*.38;cyl(.035,.025,x,.105,z,steel);}
+ // Subtle illuminated motherboard edge and grounding feet
+ const edge=add(new THREE.BoxGeometry(5.82,.018,.025),mat(0x4cb9a1,.35,.3),0,.01,2.28);
+ const floor=box(200,.1,200,0,-.48,0,mat(0x0b100d,.08,.9));floor.receiveShadow=true;
+ ray3d=new THREE.Raycaster();mouse3d=new THREE.Vector2();
+ let dragging=false,lastX=0,lastY=0,rotY=-.55,rotX=-.2,zoom=1,pointer=null;
+ const updateCamera=()=>{const r=9.8/zoom;camera3d.position.set(Math.sin(rotY)*r,4.0+rotX*4,Math.cos(rotY)*r);camera3d.lookAt(0,.18,0)};
+ canvas.onpointerdown=e=>{pointer=e.pointerId;dragging=true;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture(pointer)};
+ canvas.onpointermove=e=>{if(!dragging)return;const dx=e.clientX-lastX,dy=e.clientY-lastY;lastX=e.clientX;lastY=e.clientY;rotY+=dx*.008;rotX=Math.max(-.65,Math.min(.4,rotX+dy*.006))};
+ canvas.onpointerup=()=>{dragging=false;pointer=null};canvas.onpointercancel=()=>{dragging=false;pointer=null};
+ canvas.onwheel=e=>{e.preventDefault();zoom=Math.max(.72,Math.min(1.55,zoom+e.deltaY*.001))};
+ canvas.addEventListener('click',e=>{if(dragging)return;const r=canvas.getBoundingClientRect();mouse3d.x=(e.clientX-r.left)/r.width*2-1;mouse3d.y=-(e.clientY-r.top)/r.height*2+1;ray3d.setFromCamera(mouse3d,camera3d);const hit=ray3d.intersectObjects(targets3d,false)[0];if(hit&&window.soInfoOnInstall){const kind=hit.object.userData.kind;if(window.soInfoOnInstall(kind)){hit.object.visible=false;if(kind==='cpu')cpuGroup.visible=true;if(kind==='ram')ramGroup.visible=true;if(kind==='gpu')gpuGroup.visible=true}}});
+ window.soInfoSelect3D=kind=>targets3d.forEach(t=>{t.material.emissiveIntensity=kind&&t.userData.kind===kind?1.25:.25;t.material.opacity=kind&&t.userData.kind===kind?.42:.2});
+ document.getElementById('viewReset')?.addEventListener('click',()=>{rotY=-.55;rotX=-.2;zoom=1});
+ const resize=()=>{if(!renderer3d)return;const w=canvas.clientWidth;renderer3d.setSize(w,350,false);camera3d.aspect=w/350;camera3d.updateProjectionMatrix()};
+ resize3d=resize;window.addEventListener('resize',resize);updateCamera();
  const animate=()=>{frame3d=requestAnimationFrame(animate);updateCamera();renderer3d.render(scene3d,camera3d)};animate();
 };
 window.soInfoSelect3D=null;
