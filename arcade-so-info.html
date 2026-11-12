@@ -114,6 +114,88 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:#8d887d;font-size:.
 .future-card{border-radius:3px 14px 3px 14px;min-height:100px}
 @media(max-width:800px){.hero-premium{padding:42px 0 36px}.hero-premium .hero-grid{grid-template-columns:1fr;gap:27px}.hero-copy h1{font-size:clamp(3.7rem,15vw,5.6rem);margin:19px 0}.hero-copy p{font-size:.92rem}.hero-visual{height:300px}.hero-proof{gap:14px;flex-wrap:wrap}.games{grid-template-columns:1fr 1fr}.game:last-child{grid-column:1/-1}.scene-photo{height:200px}}
 @media(max-width:540px){.hero-visual{height:255px}.hero-actions{display:grid;grid-template-columns:1fr}.hero-primary,.hero-secondary{width:100%}.hero-proof{justify-content:space-between;gap:8px}.hero-proof span{font-size:.58rem}.games{grid-template-columns:1fr}.game:last-child{grid-column:auto}.scene-photo{height:215px}.game p{min-height:0}.section-top{display:block}.section-top p{margin-top:12px}.future{grid-template-columns:1fr}.mission-inner{flex-wrap:wrap}}
+
+/* MOBILE GAME MODE — immersive, thumb-first simulator */
+@media(max-width:700px){
+ .overlay{padding:0;align-items:stretch;background:#070807}
+ .overlay.open{display:flex}
+ .modal{width:100%;height:100dvh;max-height:100dvh;border:0;border-radius:0;padding:0;overflow-y:auto;overscroll-behavior:contain;background:radial-gradient(ellipse at 85% 0%,#3b310d55,transparent 34%),linear-gradient(180deg,#14150f,#080908 48%);box-shadow:none}
+ .modal-head{position:sticky;top:0;z-index:12;padding:15px 16px 12px;background:#0b0d0cf2;backdrop-filter:blur(16px);border-bottom:1px solid #363328;align-items:center}
+ .modal-kicker{font-size:.56rem;letter-spacing:.14em}
+ .modal h2{font-size:1.42rem;margin:3px 0 0;letter-spacing:-.045em}
+ .modal-desc{padding:10px 16px 0;margin:0 0 11px;font-size:.73rem;line-height:1.5}
+ .close{width:40px;height:40px;flex:0 0 40px;border-radius:13px;background:#1b1c17;border-color:#62552a;color:#f4d65d}
+ .hud{position:sticky;top:69px;z-index:10;margin:0 12px 12px;padding:10px 12px;border-radius:13px;background:#171912ed;border:1px solid #48412a;box-shadow:0 8px 24px #0008}
+ .hud span{font-size:.59rem;letter-spacing:.04em}
+ .playfield{margin:0 12px 20px;padding:12px;border:0;background:transparent;overflow:visible;min-height:0;display:block}
+ .instructions{margin:0 16px 14px;padding:0 3px;text-align:left;font-size:.69rem;line-height:1.55;color:#b6b09f}
+ .builder-pro{gap:12px}
+ .builder-topline{padding:0 3px;font-size:.54rem;letter-spacing:.11em}
+ .builder-layout{display:flex;flex-direction:column;gap:11px}
+ .board-panel,.builder-side{padding:12px;border-radius:16px;border-color:#3c3b31;background:linear-gradient(150deg,#1a1c16,#10110e)}
+ .board-panel-head{margin-bottom:9px}
+ .board-panel-head h3,.builder-side-head h3{font-size:1rem}
+ .board-panel-head p{font-size:.67rem;line-height:1.4}
+ .board-chip{font-size:.5rem;padding:5px 7px}
+ .simulator-scene{border-radius:13px}
+ .sim-topbar{padding:9px 10px;font-size:.49rem;letter-spacing:.07em;flex-wrap:wrap}
+ .sim-workbench{padding:8px}
+ .bench-tools{font-size:.45rem;letter-spacing:.06em;padding:5px 2px 9px;flex-wrap:wrap}
+ .board-photo{min-height:0;aspect-ratio:1.12/1;border-radius:9px}
+ .motherboard-photo{width:100%;height:100%;max-height:none;padding:3px;object-fit:contain}
+ .photo-target{padding:6px 7px;border-radius:8px;gap:4px;box-shadow:0 4px 15px #0009}
+ .photo-target span{width:17px;height:17px;font-size:.58rem}
+ .photo-target b{font-size:.47rem;letter-spacing:.04em}
+ .bench-caption{font-size:.43rem;padding:8px 2px;letter-spacing:.06em}
+ .sim-bottom{padding:10px;font-size:.57rem;line-height:1.4;align-items:flex-start}
+ .sim-bottom button{font-size:.55rem;white-space:nowrap}
+ .board-legend{font-size:.55rem;gap:10px;flex-wrap:wrap;padding:0 3px}
+ .builder-side{padding:13px 11px 12px}
+ .builder-side-head{align-items:center;margin-bottom:10px}
+ .builder-side-head h3{font-size:1.1rem}
+ .builder-side-head> b{background:#2a250f;color:#f5d54d;border:1px solid #62501c;border-radius:99px;padding:5px 9px;font-size:.65rem}
+ .product-choice{display:flex;gap:10px;min-width:218px;width:78vw;max-width:270px;flex:0 0 auto;padding:9px;border-radius:12px;margin:0;scroll-snap-align:start;background:#11130f}
+ .builder-side .product-choice{display:inline-flex;vertical-align:top}
+ .builder-side{overflow:hidden}
+ .builder-side-head,.builder-feedback,.builder-progress{position:relative}
+ .builder-side:has(.product-choice){display:block}
+ .product-choice .product-photo{width:66px;height:66px;flex:0 0 66px;border-radius:9px}
+ .product-choice .product-copy b{font-size:.7rem}
+ .product-choice .product-copy em{font-size:.55rem}
+ .product-choice .product-copy small{font-size:.48rem}
+ .builder-side-head{display:flex}
+ .builder-side{font-size:.9rem}
+ .builder-side .product-choice{margin-right:7px}
+ .builder-side .product-choice:first-of-type{margin-left:0}
+ .builder-side{white-space:normal}
+ .builder-side .product-choice{white-space:normal}
+ .builder-side .product-choice{scroll-snap-align:start}
+ .builder-side{position:relative}
+ .builder-side .product-choice{touch-action:pan-x}
+ .builder-side .builder-feedback{margin-top:12px}
+ .builder-feedback{padding:11px;border-radius:0 10px 10px 0}
+ .builder-feedback b{font-size:.72rem}
+ .builder-feedback span{font-size:.64rem;line-height:1.5}
+ .builder-progress{margin-top:12px}
+ .builder-progress>div:first-child{font-size:.56rem}
+ .builder-footnote{font-size:.55rem;line-height:1.5;padding:0 3px 5px}
+ .part-drag-ghost{z-index:1000;pointer-events:none}
+ .result{margin:12px 0}
+}
+@media(max-width:700px){
+ .builder-side .product-choice{width:100%;max-width:none;min-width:0;display:grid;grid-template-columns:68px minmax(0,1fr) 18px;margin:0 0 8px}
+}
+@media(min-width:701px){
+ .modal{width:min(1040px,100%);max-height:94vh;padding:25px}
+ .builder-layout{grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr)}
+ .board-photo{min-height:430px}
+}
+@media(prefers-reduced-motion:no-preference){
+ .product-choice.selected{animation:mobilePick .22s ease-out}
+ .photo-target.target{animation:targetPulse 1.5s ease-in-out infinite}
+}
+@keyframes mobilePick{from{transform:scale(.98)}to{transform:scale(1)}}
+@keyframes targetPulse{0%,100%{box-shadow:0 0 0 0 #ffd00022,0 0 14px #ffd00038}50%{box-shadow:0 0 0 5px #ffd00018,0 0 22px #ffd00070}}
 </style>
 </head>
 <body>
@@ -143,7 +225,7 @@ function header(k,t,d,left='MISSION',right='—'){$('modalKicker').textContent=k
 function result(msg){clear();awardXP();$('buddyTalk').innerHTML='<b>MAX · TON TECHNICIEN</b>Mission terminée ! Beau travail, technicien. Prêt pour la suivante ?';const p=document.createElement('div');p.className='result';p.textContent=msg;field.append(p);const b=document.createElement('button');b.className='primary';b.textContent='RECOMMENCER';b.onclick=()=>open(active);field.append(b)}
 function buildGame(){
  header('01 · PC BUILDER','Monte ton PC gaming','Un vrai atelier de montage : identifie les bons emplacements et installe les composants commerciaux.','3 COMPOSANTS','ASSEMBLAGE');
- $('instructions').textContent='Glisse chaque composant depuis l’inventaire vers son emplacement sur la carte mère 3D. Tu peux aussi toucher une zone après avoir sélectionné une pièce.';
+ $('instructions').textContent='Sur mobile : touche une pièce dans l’inventaire, puis touche son emplacement lumineux sur la carte mère. Sur ordinateur, tu peux aussi glisser-déposer.';
  field.innerHTML=`<div class="builder-pro">
   <div class="builder-topline"><span class="live-dot"></span> ATELIER SO INFO <span>·</span> MSI MAG B650 TOMAHAWK WIFI</div>
   <div class="builder-layout">
@@ -175,7 +257,7 @@ function buildGame(){
     <button class="product-choice" data-part="cpu"><span class="product-photo"><img src="https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-7800x3d-front.jpg" alt="Boîte AMD Ryzen 7 7800X3D"/></span><span class="product-copy"><small>PROCESSEUR · AM5</small><b>AMD Ryzen 7 7800X3D</b><em>8 cœurs · 16 threads · 96 Mo cache</em></span><strong>＋</strong></button>
     <button class="product-choice" data-part="ram"><span class="product-photo"><img src="https://img.overclockers.co.uk/images/MEM-CRS-06838/f8bfcb9b0009c63dc131fa3815d8cf05.jpg?auto=compress%2Cformat&fit=fill&h=900&q=80&w=900" alt="Kit mémoire Corsair Vengeance RGB DDR5"/></span><span class="product-copy"><small>MÉMOIRE · DDR5</small><b>Corsair Vengeance RGB</b><em>32 Go · 2 × 16 Go · RGB</em></span><strong>＋</strong></button>
     <button class="product-choice" data-part="gpu"><span class="product-photo"><img src="https://storage-asset.msi.com/global/picture/product/product_170485143882d96d3619bb5086af39e55e271a102c.webp" alt="Carte graphique MSI GeForce RTX 4070 SUPER Gaming X Slim MLG"/></span><span class="product-copy"><small>CARTE GRAPHIQUE · PCIe</small><b>MSI GeForce RTX 4070 SUPER</b><em>12 Go GDDR6X · Gaming X Slim</em></span><strong>＋</strong></button>
-    <div class="builder-feedback" id="installNote"><b>À toi de jouer</b><span>Glisse une pièce sur le bon emplacement de la carte mère. Sur iPhone, fais glisser la fiche produit jusqu'à la zone repérée.</span></div>
+    <div class="builder-feedback" id="installNote"><b>À toi de jouer</b><span>Choisis une pièce dans l’inventaire, puis touche la zone correspondante sur la carte mère.</span></div>
     <div class="builder-progress"><div><span>PROGRESSION DU MONTAGE</span><b id="progressLabel">0%</b></div><div class="builder-progress-track"><i id="installBar"></i></div></div>
    </aside>
   </div>
@@ -196,7 +278,7 @@ function buildGame(){
   if(done.size===3)result('PC ASSEMBLÉ · +300 POINTS');
   return true;
  };
- const choose=kind=>{if(done.has(kind))return;selected=kind;field.querySelectorAll('[data-part]').forEach(x=>x.classList.toggle('selected',x.dataset.part===kind));field.querySelectorAll('[data-slot]').forEach(x=>x.classList.toggle('target',x.dataset.slot===kind));$('dropHint').textContent='Dépose maintenant la pièce sur son emplacement repéré.'};
+ const choose=kind=>{if(done.has(kind))return;selected=kind;field.querySelectorAll('[data-part]').forEach(x=>x.classList.toggle('selected',x.dataset.part===kind));field.querySelectorAll('[data-slot]').forEach(x=>x.classList.toggle('target',x.dataset.slot===kind));$('dropHint').textContent='Touche maintenant son emplacement lumineux sur la carte mère pour l’installer.'};
  field.querySelectorAll('[data-part]').forEach(b=>{
   b.addEventListener('click',()=>choose(b.dataset.part));
   b.addEventListener('pointerdown',e=>{if(done.has(b.dataset.part))return;choose(b.dataset.part);dragPart=b.dataset.part;dragGhost=document.createElement('div');dragGhost.className='part-drag-ghost';dragGhost.textContent=b.querySelector('.product-copy b').textContent;document.body.append(dragGhost);dragGhost.style.left=e.clientX+'px';dragGhost.style.top=e.clientY+'px';b.setPointerCapture(e.pointerId)});
