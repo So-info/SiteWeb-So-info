@@ -59,7 +59,7 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:#8d887d;font-size:.
 .assembly-stage-foot{border-top:1px solid #34382f}.assembly-stage-foot button{border:1px solid #5c553a;background:#151811;color:#d8c879;padding:7px 10px;font:inherit;cursor:pointer;white-space:nowrap}
 .drop-hint{padding:10px 12px;background:#0d120f;border-top:1px solid #33372d;color:#c9c2ae;font-size:.68rem;text-align:center}
 .part-drag-ghost{position:fixed;z-index:1000;transform:translate(-50%,-50%);pointer-events:none;padding:10px 14px;border:1px solid var(--gold);background:#211b08;color:#ffe58a;box-shadow:0 10px 35px #000c,0 0 20px #ffd00035;font-size:.7rem;font-weight:800;white-space:nowrap;border-radius:6px}
-.product-choice{touch-action:pan-y}.product-choice.selected{border-color:var(--gold)!important;box-shadow:0 0 0 1px #ffd00055,0 0 24px #ffd00020}
+.product-choice{touch-action:none}.product-choice.selected{border-color:var(--gold)!important;box-shadow:0 0 0 1px #ffd00055,0 0 24px #ffd00020}
 @media(max-width:600px){#pc3d{height:300px}.assembly-stage-top,.assembly-stage-foot{font-size:.5rem;letter-spacing:.07em}.assembly-stage-foot button{font-size:.58rem}}
 </style>
 </head>
@@ -133,7 +133,7 @@ function buildGame(){
  window.soInfoOnInstall=install;
  field.querySelectorAll('[data-part]').forEach(b=>{
   b.addEventListener('click',()=>{if(done.has(b.dataset.part))return;selected=b.dataset.part;field.querySelectorAll('[data-part]').forEach(x=>x.classList.toggle('selected',x===b));$('dropHint').textContent='Pièce sélectionnée : glisse-la sur la zone correspondante en 3D, ou touche la zone.';note('Prêt à installer',b.querySelector('.product-copy b').textContent+' : glisse cette pièce vers son emplacement sur la carte mère.')});
-  b.addEventListener('pointerdown',e=>{if(done.has(b.dataset.part))return;selected=b.dataset.part;dragGhost=document.createElement('div');dragGhost.className='part-drag-ghost';dragGhost.textContent=b.querySelector('.product-copy b').textContent;document.body.append(dragGhost);dragGhost.style.left=e.clientX+'px';dragGhost.style.top=e.clientY+'px'});
+  b.addEventListener('pointerdown',e=>{if(done.has(b.dataset.part))return;selected=b.dataset.part;b.setPointerCapture(e.pointerId);dragGhost=document.createElement('div');dragGhost.className='part-drag-ghost';dragGhost.textContent=b.querySelector('.product-copy b').textContent;document.body.append(dragGhost);dragGhost.style.left=e.clientX+'px';dragGhost.style.top=e.clientY+'px'});
   b.addEventListener('pointermove',e=>{if(!dragGhost)return;dragGhost.style.left=e.clientX+'px';dragGhost.style.top=e.clientY+'px'});
   b.addEventListener('pointerup',e=>{if(!dragGhost)return;const rect=field.querySelector('#pc3d').getBoundingClientRect();const over=e.clientX>=rect.left&&e.clientX<=rect.right&&e.clientY>=rect.top&&e.clientY<=rect.bottom;dragGhost.remove();dragGhost=null;if(over&&window.soInfoDropAt){const ok=window.soInfoDropAt(e.clientX,e.clientY,selected);if(!ok)note('Essaie encore','Dépose la pièce sur le bon emplacement lumineux de la carte mère.')}});
   b.addEventListener('pointercancel',()=>{if(dragGhost){dragGhost.remove();dragGhost=null}});
