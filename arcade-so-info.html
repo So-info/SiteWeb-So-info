@@ -196,6 +196,12 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:#8d887d;font-size:.
 }
 @keyframes mobilePick{from{transform:scale(.98)}to{transform:scale(1)}}
 @keyframes targetPulse{0%,100%{box-shadow:0 0 0 0 #ffd00022,0 0 14px #ffd00038}50%{box-shadow:0 0 0 5px #ffd00018,0 0 22px #ffd00070}}
+
+@media(max-width:700px){
+ .inventory-list{display:flex;gap:9px;overflow-x:auto;padding:2px 1px 10px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#79651e #171812}
+ .inventory-list .product-choice{display:flex;width:78vw;min-width:230px;max-width:280px;margin:0;scroll-snap-align:start;white-space:normal}
+ .builder-side .inventory-list .product-choice{display:flex;grid-template-columns:none}
+}
 </style>
 </head>
 <body>
@@ -254,10 +260,10 @@ function buildGame(){
    </section>
    <aside class="builder-side">
     <div class="builder-side-head"><div><small>INVENTAIRE</small><h3>Les composants</h3></div><b id="installCount">0 / 3</b></div>
-    <button class="product-choice" data-part="cpu"><span class="product-photo"><img src="https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-7800x3d-front.jpg" alt="Boîte AMD Ryzen 7 7800X3D"/></span><span class="product-copy"><small>PROCESSEUR · AM5</small><b>AMD Ryzen 7 7800X3D</b><em>8 cœurs · 16 threads · 96 Mo cache</em></span><strong>＋</strong></button>
+    <div class="inventory-list"><button class="product-choice" data-part="cpu"><span class="product-photo"><img src="https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-7800x3d-front.jpg" alt="Boîte AMD Ryzen 7 7800X3D"/></span><span class="product-copy"><small>PROCESSEUR · AM5</small><b>AMD Ryzen 7 7800X3D</b><em>8 cœurs · 16 threads · 96 Mo cache</em></span><strong>＋</strong></button>
     <button class="product-choice" data-part="ram"><span class="product-photo"><img src="https://img.overclockers.co.uk/images/MEM-CRS-06838/f8bfcb9b0009c63dc131fa3815d8cf05.jpg?auto=compress%2Cformat&fit=fill&h=900&q=80&w=900" alt="Kit mémoire Corsair Vengeance RGB DDR5"/></span><span class="product-copy"><small>MÉMOIRE · DDR5</small><b>Corsair Vengeance RGB</b><em>32 Go · 2 × 16 Go · RGB</em></span><strong>＋</strong></button>
     <button class="product-choice" data-part="gpu"><span class="product-photo"><img src="https://storage-asset.msi.com/global/picture/product/product_170485143882d96d3619bb5086af39e55e271a102c.webp" alt="Carte graphique MSI GeForce RTX 4070 SUPER Gaming X Slim MLG"/></span><span class="product-copy"><small>CARTE GRAPHIQUE · PCIe</small><b>MSI GeForce RTX 4070 SUPER</b><em>12 Go GDDR6X · Gaming X Slim</em></span><strong>＋</strong></button>
-    <div class="builder-feedback" id="installNote"><b>À toi de jouer</b><span>Choisis une pièce dans l’inventaire, puis touche la zone correspondante sur la carte mère.</span></div>
+    </div><div class="builder-feedback" id="installNote"><b>À toi de jouer</b><span>Choisis une pièce dans l’inventaire, puis touche la zone correspondante sur la carte mère.</span></div>
     <div class="builder-progress"><div><span>PROGRESSION DU MONTAGE</span><b id="progressLabel">0%</b></div><div class="builder-progress-track"><i id="installBar"></i></div></div>
    </aside>
   </div>
